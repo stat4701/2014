@@ -13,6 +13,14 @@ This class is about two things, right there in the title: iteratively drawing pi
 
 I’d like to be largely programming-language-agnostic with respect to your assignments. One of the fundamental texts (Wilkinson) was written in conjunction with a pretty dated technology (SYSTAT), later acquired by SPSS (itself eventually acquired by IBM), and if that’s your language of choice, by all means try and do the assignments in it (I suspect this will be hard to do well). It is fair to say that the reference implementation of Wilkinson’s ideas is Hadley Wickham’s R version, called [ggplot2](http://ggplot2.org). The other paradigm is the functional one of Trellis/[Lattice](http://lmdvr.r-forge.r-project.org/figures/figures.html), and Deepayan Sarkar’s R implementation is standard. If you are an accomplished Pythonista and adept in [Matplotlib](http://matplotlib.org) (and probably [Pandas](http://pandas.pydata.org)), by all means do your assignments in Python. Finally, on the cutting edge, many things are moving toward the browser, and [D3.js](http://d3js.org) (Data-Driven Documents) is the lingua franca. Making your graphs with it will probably be the most challenging, but if you choose to study it in depth, I would expect that it will be the most rewarding in terms of the tricks and techniques you develop in this class.
 
+# Objectives #
+
+1. Learn enough to be dangerous about the modern high- and low-level languages and libraries
+1. Master the everyday, mundane but indispensible tools of the trade: text editors, version control, and the command line
+1. Practice iterative and collaborative (yes, even Agile) development of your projects
+1. Initiate and participate in code and project reviews
+1. Fail early, learn from it, and ask for help
+
 We are here to do what we can to prevent this grim future:
 
 ![xkcd infographics](http://imgs.xkcd.com/comics/tall_infographics.png)
@@ -56,10 +64,18 @@ None of the following are going to happen here:
 - Hand-held language-specific tutoring
 - Infographics
 
-# Objectives #
+# Requirements
 
-1. Learn enough to be dangerous about the modern high- and low-level languages and libraries
-1. Master the everyday, mundane but indispensible tools of the trade: text editors, version control, and the command line
-1. Practice iterative and collaborative (yes, even Agile) development of your projects
-1. Initiate and participate in code and project reviews
-1. Fail early, learn from it, and ask for help
+- Three ‘blog post’ entries (20% each = 60%)
+  - submitted as pull requests of markdown on github, examining published graphs and improving them. Entries should include:
+    - source of original with link
+    - discussion of what was wrong with the graph in the first place
+    - theoretical improvements — if the problem is a color scale, what are you replacing a rainbow with?
+    - methods (preferably code; inline, included, or linked to a branch on your fork of the repo) for retrieving and extracting the data used.
+    - if the data in ‘raw’ form was not suitable for plotting, code to reshape / ‘clean’ the data
+    - if applicable, a link to the clean data file you used
+    - code (inline, markdown) to create your replacement graphic(s)
+- A project in your area of specialization using statistical graphics (30%)
+  - Iteration/sprint plans, progress assessments (10%)
+  - The actual project including a presentation (similar in form to another blog post), explaining code / tools / libraries you learned doing the project (20%)
+- Participation in class — your blog posts are an opportunity to review code and refactor. (10%)
