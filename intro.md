@@ -66,8 +66,8 @@ None of the following are going to happen here:
 
 # Requirements
 
-- Three ‘blog post’ entries (20% each = 60%)
-  - submitted as pull requests of markdown on github, examining published graphs and improving them. Entries should include:
+### Three ‘blog post’ entries (20% each = 60%)
+  Submitted as pull requests of markdown on github, examining published graphs and improving them. Entries should include:
      - source of original with link
      - discussion of what was wrong with the graph in the first place
      - theoretical improvements — if the problem is a color scale, what are you replacing a rainbow with?
@@ -75,7 +75,7 @@ None of the following are going to happen here:
      - if the data in ‘raw’ form was not suitable for plotting, code to reshape / ‘clean’ the data
      - if applicable, a link to the clean data file you used
      - code (inline, markdown) to create your replacement graphic(s)
-- A project in your area of specialization using statistical graphics (30%)
+### A project in your area of specialization using statistical graphics (30%)
    - Iteration/sprint plans, progress assessments (10%)
    - The actual project including a presentation (similar in form to another blog post), explaining code / tools / libraries you learned doing the project (20%)
-- Participation in class — your blog posts are an opportunity to review code and refactor. (10%)
+### Participation in class — your blog posts are an opportunity to review code and refactor. (10%)
