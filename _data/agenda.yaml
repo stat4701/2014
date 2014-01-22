@@ -61,6 +61,7 @@
 
 - date: 2014-02-10
   topic: Data are ugly
+  due: Iteration plan with objective and specific tasks for 3 weeks.
   before: |
     - [Baggerly and Coombes](http://projecteuclid.org/euclid.aoas/1267453942)
     - [NYT on B&C](http://www.nytimes.com/2011/07/08/health/research/08genes.html?_r=0)
@@ -114,6 +115,7 @@
 
 - date: 2014-03-05
   topic: Animation
+  due: Iteration plan. What was left undone, objective and key results for next three weeks.
   before: |
     - [The Joy of Stats](http://www.gapminder.org/videos/the-joy-of-stats/)
     - [Google Charts motion chart doc](https://developers.google.com/chart/interactive/docs/gallery/motionchart) and in [R](http://blog.revolutionanalytics.com/2011/01/create-motion-charts-in-r-with-the-googlevis-package.html)
@@ -144,6 +146,7 @@
 - date: 2014-03-26
   topic: project check-in
   before: Something Agile
+  due: Iteration plan.
   during: |
     - Discuss status of projects: 
       - what's done, what looks on track or not; 
