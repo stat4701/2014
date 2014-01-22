@@ -68,14 +68,14 @@ None of the following are going to happen here:
 
 - Three ‘blog post’ entries (20% each = 60%)
   - submitted as pull requests of markdown on github, examining published graphs and improving them. Entries should include:
-    - source of original with link
-    - discussion of what was wrong with the graph in the first place
-    - theoretical improvements — if the problem is a color scale, what are you replacing a rainbow with?
-    - methods (preferably code; inline, included, or linked to a branch on your fork of the repo) for retrieving and extracting the data used.
-    - if the data in ‘raw’ form was not suitable for plotting, code to reshape / ‘clean’ the data
-    - if applicable, a link to the clean data file you used
-    - code (inline, markdown) to create your replacement graphic(s)
+     - source of original with link
+     - discussion of what was wrong with the graph in the first place
+     - theoretical improvements — if the problem is a color scale, what are you replacing a rainbow with?
+     - methods (preferably code; inline, included, or linked to a branch on your fork of the repo) for retrieving and extracting the data used.
+     - if the data in ‘raw’ form was not suitable for plotting, code to reshape / ‘clean’ the data
+     - if applicable, a link to the clean data file you used
+     - code (inline, markdown) to create your replacement graphic(s)
 - A project in your area of specialization using statistical graphics (30%)
-  - Iteration/sprint plans, progress assessments (10%)
-  - The actual project including a presentation (similar in form to another blog post), explaining code / tools / libraries you learned doing the project (20%)
+   - Iteration/sprint plans, progress assessments (10%)
+   - The actual project including a presentation (similar in form to another blog post), explaining code / tools / libraries you learned doing the project (20%)
 - Participation in class — your blog posts are an opportunity to review code and refactor. (10%)
