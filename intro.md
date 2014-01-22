@@ -75,7 +75,9 @@ None of the following are going to happen here:
      - if the data in ‘raw’ form was not suitable for plotting, code to reshape / ‘clean’ the data
      - if applicable, a link to the clean data file you used
      - code (inline, markdown) to create your replacement graphic(s)
+
 ### A project in your area of specialization using statistical graphics (30%)
    - Iteration/sprint plans, progress assessments (10%)
    - The actual project including a presentation (similar in form to another blog post), explaining code / tools / libraries you learned doing the project (20%)
+
 ### Participation in class — your blog posts are an opportunity to review code and refactor. (10%)
