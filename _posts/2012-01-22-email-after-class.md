@@ -1,4 +1,9 @@
-
+---
+layout: post
+title: Email after first class
+description: Email after the first class
+tags: emails
+---
 Hi all &mdash; 
 
 1. Students not in IDSE are, from my understanding, supposed to make their case to the Statistics department on this [this form](https://docs.google.com/spreadsheet/viewform?formkey=dG1NLUI4emRtVHNxUHpETktlc095VXc6MA). The only knowledge I have of a maximum is that the room says 51. At last I checked a moment ago, there were 52; so it may be that everyone can stay. Just fill out the form, and if there&#39;s something else for me to sign on Monday I will be happy to do.
@@ -14,6 +19,6 @@ Hi all &mdash;
 
 That's all for now, I think. Have a good rest of the week and weekend.
 
-—Malecki
+&mdash;Malecki
 
 [1] Sorry I forgot your name, but I don&#39;t think I knew it to begin with! First day of class.
