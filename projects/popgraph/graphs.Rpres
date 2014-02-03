@@ -1,0 +1,63 @@
+graphs with the city data
+========================================================
+author: malecki
+date: 2014-01-28
+
+Load the data
+========================================================
+
+```{r}
+library(plyr)
+library(ggplot2)
+library(lattice)
+df <- read.csv('citypop.csv')
+df <- ddply(df, .(year), mutate, share=pop/sum(pop))
+df <- join(df, read.csv('uspop.csv'))
+```
+
+The basics with ggplot2
+========================================================
+
+```{r ggplot-basics-1, fig.width=10,fig.height=5}
+ggplot(df) + aes(x=year, y=-rank, col=city) +
+    geom_line()
+```
+========================================================
+```{r ggplot-basics-2, fig.width=10,fig.height=5}
+ggplot(df) + aes(x=year, y=share, col=city) +
+    geom_line(span=1) +
+    geom_point()
+```
+========================================================
+```{r ggplot-basics-3, fig.width=10,fig.height=5}
+ggplot(df) + aes(x=year, y=share, col=city) +
+    geom_point() +
+    geom_smooth(span=1, se=FALSE)
+```
+
+
+The basics with Lattice
+========================================================
+
+```{r lattice-basics-1, fig.width=10, fig.height=5}
+xyplot(-rank~year, groups=city, data=df, subset=rank<10, type="l")
+```
+========================================================
+```{r lattice-basics-2, fig.width=10, fig.height=5}
+xyplot(share~year, groups=city, data=df, type="smooth", subset=rank<10, span=2)
+```
+
+Let's use rCharts to quickly generate and iterate some svg
+================================================
+```{r rcharts-1}
+library(rCharts)
+nv <- nPlot(share ~ year, group = "city", data = df, type = "lineChart")
+nv$chart(tooltipContent= "#! function(key, x, y, e){
+  return '<b>City:</b> ' + e.point.city + '<br/>' +
+    '<b>Year: </b>' + e.point.year
+} !#")
+```
+=========================
+```{r rcharts-output, echo=FALSE, results='asis'}
+print(nv)
+```
