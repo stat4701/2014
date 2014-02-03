@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Introduction - Assignment 0
 description: Who am I / Playing with city data
 ---
