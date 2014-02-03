@@ -41,14 +41,15 @@
     - Yau, ch. 1,2,3,9
     - Gelman&Hill, Appendix B
     - [Climate change, crowbars, and strikeouts](http://chartsnthings.tumblr.com/post/47670081904/climate-change-crowbars-and-strikeouts)
-    - [Heer et al, Visualization Zoo](http://idl.cs.washington.edu/papers/visualization-zoo/)
+    - [Heer et al, Visualization Zoo](http://queue.acm.org/detail.cfm?id=1805128) (note: fixed link)
   during: |
     - Graphics display implementation details. Yes, you probably need to know more than nothing about formats, rendering engines, and the DOM.
 
 - date: 2014-02-05
   topic: Graphics theory
   before: |
-    - Grammer of Graphics ch. TBD
+    - [http://link.springer.com/book/10.1007/0-387-28695-0](Grammer of Graphics) ch. 1,2,5 ([http://www.columbia.edu/cu/lweb/eresources/databases/2402476.html](SpringerLink))
+    - [Heer et al, Visualization Zoo](http://queue.acm.org/detail.cfm?id=1805128) (note: fixed link)
     - [D3 paper](http://idl.cs.washington.edu/papers/d3)
   during: |
     - Discuss non-blogpost projects: 
