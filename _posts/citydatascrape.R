@@ -5,10 +5,7 @@ require(XML)
 
 # scrape table from URL
 theURL <- "http://www.peakbagger.com/pbgeog/histmetropop.aspx"
-uspop <- readHTMLTable(theURL, which=4, header = FALSE, skip.rows= 1, as.data.frame= TRUE, stringsAsFactors=FALSE)
-head(uspop)
-names(uspop)
-tail(uspop)
+uspop <- readHTMLTable(doc=theURL, which=4, header = FALSE, skip.rows= 1, as.data.frame= TRUE, stringsAsFactors=FALSE)
 
 # remove NA columns
 uspop.c <- uspop[,1:3]
@@ -20,6 +17,7 @@ head(uspop.c1)
 uspop.c1[is.na(uspop.c1)] <- 0
 uspop.c2 <- uspop.c1[! grepl("0", uspop.c1$V2),]
 head(uspop.c2)
+
 
 
 # assign column names
@@ -37,6 +35,15 @@ year_2010 <- rep(y, times = 20, length.out = 460, each = 20)
 years <- c(year_1775, year_2010)
 uspop.c2$Year <- years
 
+# split city column into city and state
+citystate <- str_split_fixed(uspop.c2$City, ", ", 2)
+colnames(citystate) <- c("City", "State")
+citystate <- as.data.frame(citystate)
+
+uspop.c2$State <- citystate$State
+uspop.c2$City <- citystate$City
+head(uspop.c2)
+
 
 # write results to file
 write.table(uspop.c2, "uspop.csv", sep=",", col.names= TRUE, row.names = FALSE)
@@ -44,21 +51,23 @@ write.table(uspop.c2, "uspop.csv", sep=",", col.names= TRUE, row.names = FALSE)
 
 
 ########################### Data Exploration
-
-# Plot data to map
+require(plyr)
+require(stringr)
 require(maps)
 require(maptools)
 require(mapproj)
 require(ggplot2)
 
+
+
+
+# Plot data to map
+
 # load US map
-ciityCoords <- read.table("city_latlong.csv", stringsAsFactors = FALSe, header = TRUE, sep= ",")
-stateCoords <- read.table("state_latlon.csv", stringsAsFactor = FALSE, header = TRUE , sep = ",")
-colnames(stateCoords) <- c("State", "lat", "long")
+citydata <- read.table("citydata.csv", stringsAsFactors = FALSE, header = TRUE, sep= ",")
+colnames(citydata) <- c("Zip", "Lat", "Long", "City", "State", "County")
+head(citydata)
 
-
-
-
-
-
-
+citypop <- list(uspop.c2, citydata)
+uspopmap <- join_all(citypop, by="City", match = "all", type = "left" )
+tail(uspopmap)
