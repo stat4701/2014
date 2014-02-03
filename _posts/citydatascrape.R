@@ -43,6 +43,20 @@ write.table(uspop.c2, "uspop.csv", sep=",", col.names= TRUE, row.names = FALSE)
 
 
 
+########################### Data Exploration
+
+# Plot data to map
+require(maps)
+require(maptools)
+require(mapproj)
+require(ggplot2)
+
+# load US map
+ciityCoords <- read.table("city_latlong.csv", stringsAsFactors = FALSe, header = TRUE, sep= ",")
+stateCoords <- read.table("state_latlon.csv", stringsAsFactor = FALSE, header = TRUE , sep = ",")
+colnames(stateCoords) <- c("State", "lat", "long")
+
+
 
 
 
