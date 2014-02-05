@@ -1,13 +1,14 @@
-﻿---
+---
 layout: pres
 title: Mandeep Intro Page
 description: Mandeep Singh Bio and Introduction
-
 ---
+
 <section>
 
 <section>
-# About Me #
+# About Me 
+
 I am an equity research analyst working for Bloomberg. I cover the software sector and my coverage includes companies such as Oracle, SAP and Microsoft. I have a MBA from NYU and a CFA.
 </section>
 
@@ -26,5 +27,4 @@ I am an equity research analyst working for Bloomberg. I cover the software sect
 - Incorporate new data analysis techniques in financial valuation models
 
 </section>
-
 
