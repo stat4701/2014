@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.subunit.CHI { fill: #dcd; }
+.subunit.CHH { fill: #dcd; }
+.subunit.PFA { fill: #dcd; }
+.subunit.TWN { fill: #dcd; }
+.subunit.USB { fill: #ddc; }
+.subunit.USH { fill: #ddc; }
+.subunit.USK { fill: #ddc; }
+
+.subunit-label {
+  fill: #777;
+  fill-opacity: .5;
+  font-size: 20px;
+  font-weight: 300;
+  text-anchor: middle;
+}
+
+.place,
+.place-main-label {
+  fill: #444;
+  font-size: 14px;
+}
+.place-side-label {
+  fill: #888;
+  font-size: 14px;
+}
+
+text {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  pointer-events: none;
+}
+
+</style>
+<body>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+
+    <h3>Who Am I</h3>
+    <script>
+
+    			//Width and height
+    			var w = 960;
+    			var h = 300;
+          
+          // Define dataset
+    			var dataset = [
+    						["Computer", 40], ["Sleep", 30], ["Cook", 10], ["Travel", 10], ["Basketball", 5], ["Music", 5]
+    					];
+
+    			//Create SVG element
+    			var svg = d3.select("body")
+    						.append("svg")
+    						.attr("width", w)
+    						.attr("height", h);
+
+    			var circles = svg.selectAll("circle")
+    			   .data(dataset);
+    			
+    			var elemEnter = circles.enter();
+    			
+    			var circles = elemEnter.append("circle")
+    			   .attr("fill", '#cdd')
+    			   .attr("cx", function(d, i){
+    			     return (i + 1) * 150;
+    			   })
+    			   .attr("cy", h/2)
+    			   .attr("r", function(d){
+    			     return d[1] * 2;
+    			   });
+    			
+    			elemEnter.append("text")
+    			  .attr("dx", function(d,i){return ( i + 1 ) * 150 - d[1];})
+    			  .attr("dy", "3.5em")
+    			  .text(function(d){return d[0]})
+    			
+  				elemEnter.append("text")
+    			  .attr("dx", function(d,i){return ( i + 1 ) * 150 - d[1];})
+    			  .attr("dy", h/2)
+    			  .attr("font-size", function(d){return d[1] + "px"})
+    			  .attr("fill", "#777")
+    			  .text(function(d){return d[1] + "%"})
+
+    </script>
+
+    <h3>Where Am I</h3>
+    <script>
+
+    var width = 960,
+        height = 300;
+
+    var projection = d3.geo.mercator()
+        .scale(200)
+        .translate([width / 2, height]);
+    
+    var path = d3.geo.path()
+        .projection(projection);
+
+    var svg = d3.select("body").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+    
+    d3.json("CN_US.json", function(error, map) {
+  
+        var subunits = topojson.feature(map, map.objects.subunits),
+            places = topojson.feature(map, map.objects.places);
+      
+        svg.selectAll(".subunit")
+            .data(subunits.features)
+          .enter().append("path")
+            .attr("class", function(d) { return "subunit " + d.id; })
+            .attr("d", path);
+
+        svg.selectAll(".subunit-label")
+            .data(subunits.features)
+          .enter().append("text")
+            .attr("class", function(d) { return "subunit-label " + d.id; })
+            .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+            .attr("dy", ".35em")
+            .text(function(d) { 
+              if ( d.properties.name == "U.S.A." || d.properties.name == "China" ) {
+                return d.properties.name; 
+              } else {
+                return "";
+              }
+            });
+      
+        svg.append("path")
+            .datum(places)
+            .attr("d", path)
+            .attr("class", "place");
+
+        svg.selectAll(".place-label")
+            .data(places.features)
+          .enter().append("text")
+            .attr("class", function(d) { 
+              return (d.properties.name == "Jinan") || (d.properties.name == "New York") ? "place-main-label" : "place-side-label" })
+            .attr("transform", function(d) { return "translate(" + projection(d.geometry.coordinates) + ")"; })
+            .attr("x", function(d) { return d.geometry.coordinates[0] > -1 ? 6 : -6; })
+            .attr("dy", ".35em")
+            .style("text-anchor", function(d) { return d.geometry.coordinates[0] > -1 ? "start" : "end"; })
+            .text(function(d) { return d.properties.name; });
+    });
+
+
+    </script>
+    
+    <h3>References</h3>
+    <ul><li><a href="http://alignedleft.com/tutorials/d3/">http://alignedleft.com/tutorials/d3/</a></li>
+    <li><a href="http://bost.ocks.org/mike/map/">http://bost.ocks.org/mike/map/</a>/li>
+    </ul>
+</body>

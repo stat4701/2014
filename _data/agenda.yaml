@@ -48,7 +48,7 @@
 - date: 2014-02-05
   topic: Graphics theory
   before: |
-    - [http://link.springer.com/book/10.1007/0-387-28695-0](Grammer of Graphics) ch. 1,2,5 ([http://www.columbia.edu/cu/lweb/eresources/databases/2402476.html](SpringerLink))
+    - [Grammer of Graphics](http://link.springer.com/book/10.1007/0-387-28695-0) ch. 1,2,5 ([SpringerLink](http://www.columbia.edu/cu/lweb/eresources/databases/2402476.html))
     - [Heer et al, Visualization Zoo](http://queue.acm.org/detail.cfm?id=1805128) (note: fixed link)
     - [D3 paper](http://idl.cs.washington.edu/papers/d3)
   during: |
