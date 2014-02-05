@@ -23,7 +23,7 @@ But the desire to do something computational never left me, and I was always loo
 Then I signed up for the Columbia IDSE e-mail list, and... the rest is history.<br><br><br>
 
 
-Well, not quite. The material I learned via Udacity + the Algorithms class last fall helped me land a job as a Software Engineer at Datadog. Now I'm knee-deep in the programming world, and loving the challenge. I also love the not-brand-new startup environment. Feel free to ask me about any of these things.
+Well, not quite. The material I learned via Udacity + the Algorithms class last fall helped me land a job as a Software Engineer at <a href='http://www.datadoghq.com'>Datadog</a>. Now I'm knee-deep in the programming world, and loving the challenge. I also love the not-brand-new startup environment. Feel free to ask me about any of these things.
 
 celenehchang@gmail.com<br>
 <http://www.linkedin.com/celenehchang><br>
