@@ -13,8 +13,8 @@ for the course include getting better at presenting complicated information in a
 my skills with d3 and other web-based interactive visualizations.
 
 Here are some of my favorite data visualization blogs and sites:
-- [dataisbeautiful](www.reddit.com/r/dataisbeautiful)
-- [chartporn](www.chartporn.org)
-- [Strange Maps](bigthink.com/blogs/strange-maps)
+ \n- [Data is Beautiful Subreddit](www.reddit.com/r/dataisbeautiful)
+ \n- [chartporn](www.chartporn.org)
+ \n- [Strange Maps](bigthink.com/blogs/strange-maps)
 
 
