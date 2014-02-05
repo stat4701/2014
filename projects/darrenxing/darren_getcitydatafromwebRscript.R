@@ -1,5 +1,8 @@
 require(RCurl)
 require(XML)
+require(plyr)
+
+library(ggplot2)
 
 
 mps.doc<-htmlParse("http://www.peakbagger.com/pbgeog/histmetropop.aspx")
@@ -61,4 +64,13 @@ for (i in 1:length(mps.tabs))
     
   }
 }
+
+d=read.csv(file="C:/Users/Zhe.Xing/Documents/datavisizalation/edav-1/projects/darrenxing/citypop.csv", header=TRUE)
+
+e=ddply(d, ~year, summarize, "Population Total in 1000"=sum(pop))
+
+plot(e, type='l')
+title(main="US Top 20 Cities Total Population")
+
+
 
