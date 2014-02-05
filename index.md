@@ -10,3 +10,5 @@ tagline: Viz is modeling. And modeling is software development.
 
 ### [Day-to-day schedule](agenda.html) ###
 
+### [Hello Github.io !](hello.html) ###
+
