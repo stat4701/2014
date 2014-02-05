@@ -20,7 +20,7 @@ I have had a long-standing interest in the Idea of Computer Programming. I consi
 
 But the desire to do something computational never left me, and I was always looking for excuses to learn and apply computations to what I was doing. Then, late in graduate school, I came across an article about 'Big Data'. The field described a three-way marriage of my interests: research and analysis, programming, and practical applications (ahem, graduate school)! So, last summer, this is what I spent my time surfing the 'net for.
 
-Then I signed up for the Columbia IDSE e-mail list, and... the rest is history.
+Then I signed up for the Columbia IDSE e-mail list, and... the rest is history.<br><br><br>
 
 
 Well, not quite. The material I learned via Udacity + the Algorithms class last fall helped me land a job as a Software Engineer at Datadog. Now I'm knee-deep in the programming world, and loving the challenge. I also love the not-brand-new startup environment. Feel free to ask me about any of these things.
