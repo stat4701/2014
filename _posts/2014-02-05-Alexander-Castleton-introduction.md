@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introducing: Alexander Castleton
+title: Introducing— Alexander Castleton
 description: a little bit about myself as an introduction to the class
 ---
 
