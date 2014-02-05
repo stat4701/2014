@@ -1,5 +1,8 @@
 ---
-title: Jed Dougherty's Intro
+layout: post
+title: Introducing - Andrew Yuan
+description: Brief introduction
+tags: emails assignments
 ---
 
 #Jed Dougherty
