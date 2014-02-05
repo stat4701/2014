@@ -24,9 +24,9 @@ Then I signed up for the Columbia IDSE e-mail list, and... the rest is history.
 
 Well, not quite. The material I learned via Udacity + the Algorithms class last fall helped me land a job as a Software Engineer at Datadog. Now I'm knee-deep in the programming world, and loving the challenge. I also love the not-brand-new startup environment. Anyway, feel free to ask me about any of these things.
 
-<http://www.linkedin.com/celenehchang>
-<http://www.twitter.com/celenehchang>
-<http://www.github.com/celenechang>
+<http://www.linkedin.com/celenehchang><br>
+<http://www.twitter.com/celenehchang><br>
+<http://www.github.com/celenechang><br>
 
 
 </section>
