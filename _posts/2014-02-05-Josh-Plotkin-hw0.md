@@ -12,7 +12,6 @@ description: Introduction
 -- took % share of total US population for each city, and plotted the median of the top 20 with each of the top 5 cities
 -- since the median is trending upward, I attempted to normalize by that by dividing the previous numbers (% of total US population) by the median for each year.
 
-![Alt text](https://github.com/joshplotkin/edav/blob/gh-pages/assets/top5pct.png
-)
-![Alt text](https://github.com/joshplotkin/edav/blob/gh-pages/assets/top5pct.png
-)
+https://github.com/joshplotkin/edav/blob/gh-pages/assets/top5pct.png
+
+https://github.com/joshplotkin/edav/blob/gh-pages/assets/top5pct.png
