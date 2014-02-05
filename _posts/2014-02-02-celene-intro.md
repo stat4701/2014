@@ -1,7 +1,7 @@
 ---
-layout: pres
-title: celene's intro
-description: putzing around
+layout: post
+title: Celene's Intro
+description:
 tags: blog
 ---
 <section>
