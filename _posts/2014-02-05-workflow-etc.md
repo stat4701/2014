@@ -5,8 +5,11 @@ description: continuation from 2014-02-03
 tags: slides
 ---
 <section>
+![Train schedule is not]({{ site.baseurl }}/assets/train-schedule-is-not.jpg)
+</section>
+<section>
 	<section>
-# Graphs of the day
+# Graphs of the day (Mon)
 </section>
 	<section>
 ## This sport must be interesting
@@ -28,7 +31,7 @@ tags: slides
 
 <section>
 	<section>
-# Graphs of the day
+# Graphs of the day (Wed)
 </section>
 	<section>
 ## Sigh
