@@ -14,10 +14,10 @@ my skills with d3 and other web-based interactive visualizations.
 
 Here are some of my favorite data visualization blogs and sites:
 
-+ [Data is Beautiful Subreddit](www.reddit.com/r/dataisbeautiful)
++ [Data is Beautiful Subreddit](http://www.reddit.com/r/dataisbeautiful)
 
-+ [chartporn](www.chartporn.org)
++ [chartporn](http://www.chartporn.org)
 
-+ [Strange Maps](bigthink.com/blogs/strange-maps)
++ [Strange Maps](http://bigthink.com/blogs/strange-maps)
 
 
