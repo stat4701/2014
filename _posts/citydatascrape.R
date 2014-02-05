@@ -2,6 +2,8 @@ setwd("/Users/vivianpeng/git/edav/_posts")
 
 
 require(XML)
+require(plyr)
+require(ggplot2)
 
 # scrape table from URL
 theURL <- "http://www.peakbagger.com/pbgeog/histmetropop.aspx"
@@ -22,6 +24,7 @@ head(uspop.c2)
 
 # assign column names
 colnames(uspop.c2) <- c("Rank", "City", "Pop")
+
 
 # create list of all the years
 # years 1680-1775
@@ -59,8 +62,6 @@ require(mapproj)
 require(ggplot2)
 
 
-
-
 # Plot data to map
 
 # load US map
@@ -68,6 +69,10 @@ citydata <- read.table("citydata.csv", stringsAsFactors = FALSE, header = TRUE, 
 colnames(citydata) <- c("Zip", "Lat", "Long", "City", "State", "County")
 head(citydata)
 
-citypop <- list(uspop.c2, citydata)
-uspopmap <- join_all(citypop, by="City", match = "all", type = "left" )
-tail(uspopmap)
+# merge data US pop data wth coordinates data
+
+uspopmap <- join(x=uspop.c2, y= citydata, by = "City", match = "first", type = "left")
+uspopmap <- uspopmap [, -5]
+
+# write results to file
+write.table(uspopmap, "uspopmap.csv", sep=",", col.names= TRUE, row.names = FALSE)
