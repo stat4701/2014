@@ -14,6 +14,6 @@ description: Introduction
 	* since the median is trending upward, I attempted to normalize by that by dividing the previous numbers (% of total US population) by the median for each year.
 
 
-+[![top 5 graph](https://github.com/joshplotkin/edav/blob/gh-pages/assets/top5pct.png)](https://github.com/joshplotkin/edav/blob/gh-pages/assets/top5pct.png)
++[![top 5 graph](https://raw2.github.com/malecki/edav/gh-pages/assets/top5pct.png)](https://raw2.github.com/malecki/edav/gh-pages/assets/top5pct.png)
 
-+[![ratio graph](https://github.com/joshplotkin/edav/blob/gh-pages/assets/top5pct.png)](https://github.com/joshplotkin/edav/blob/gh-pages/assets/top5pct.png)
++[![ratio graph](https://raw2.github.com/malecki/edav/gh-pages/assets/top5ratio.png)](https://raw2.github.com/malecki/edav/gh-pages/assets/top5ratio.png)
