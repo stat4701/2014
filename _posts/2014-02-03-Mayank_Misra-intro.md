@@ -35,7 +35,7 @@ tagline:
 
  I have a MBA from Johnson & Wales University in Providence Rhode Island, a BS in Mathematics from India and various certifications in DWBI specific technologies. 
  
-##Example of what you will see here:
+##Example of what you will see [at my blog](http://mayankmisra.github.io/)
  
  Data visualization starts with a discovery phase.  The intent is to get a sense of the data distrubtion, the various dimensions and the 'dirtiness' (missing data points, formating issues etc) of the data. 
  
