@@ -138,26 +138,29 @@ Bored of the city ranking data? Work on blogpost 1. You'll have to get data and 
 
 - Stash data as RData in `pkg/data/` or as anything else in `pkg/inst/`
 
-<section>
+</section>
 	<section>
 ## Suggestion 1, continued
 
-- begin your vignette with codechunks calling functions you haven't written yet:
+- begin your vignette with codechunks calling functions you haven't written yet: 
 
-    Acquire data from [some place.](link)
-    ```{r setup, eval=TRUE}
-    library(mypacakge)
-    ```
-
-    ```{r get-data, eval=FALSE}
-    getData()
-    ```
+```
+Acquire data from [some place.](link)
+<<delimiters>>{r setup, eval=TRUE}
+library(mypacakge)
+<<delimiters>>
+<<delimiters>>{r get-data, eval=FALSE}
+getData()
+<<delimiters>>
+```
 
 - Then write functions in the package to fulfill that promise.
 - As you go, you can switch the *eval* arg, if you acquire data and stash it somewhere for example; or load saved runs of models.
 </section>	
 	<section>
+
 ## Suggestion 2, also for R
+
 ### (but not necessarily)
 
 @johnmyleswhite's [ProjectTemplate](http://projecttemplate.net)
@@ -170,6 +173,7 @@ Bored of the city ranking data? Work on blogpost 1. You'll have to get data and 
 - Invite collaborators
 </section>
 	<section>
+
 ## Suggestion 4: Trello
 
 [![](https://d2k1ftgv7pobq7.cloudfront.net/images/bd87ee916375920ae72dffadbb10d412/logo-blue-lg.png)](https://trello.com)
