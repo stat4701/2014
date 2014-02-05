@@ -1,12 +1,12 @@
 ---
 layout: pres
-title: prototyping sanely
-description: and quickly
+title: workflow and projects
+description: continuation from 2014-02-03
 tags: slides
 ---
 <section>
 	<section>
-# Graphs of the day	
+# Graphs of the day
 </section>
 	<section>
 ## This sport must be interesting
@@ -23,6 +23,33 @@ tags: slides
 	<section>
 ## Wealthy suburbs
 [![](http://images.bwbx.io/cms/2014-01-28/cities3ch.png)](http://www.businessweek.com/articles/2014-01-29/where-americas-wealthiest-suburbanites-live-and-where-they-dont)		
+</section>
+</section>
+
+<section>
+	<section>
+# Graphs of the day
+</section>
+	<section>
+## Sigh
+
+[![](http://m.chronicle.com/img/photos/biz/05-Delta-Cost-daily.gif)](http://m.chronicle.com/article/Administrator-Hiring-Drove-28-/144519/)
+</section>
+	<section>
+## Split it up
+[![](http://graphics8.nytimes.com//images/2013/05/25/sunday-review/wide-thumb.png)](http://www.nytimes.com/interactive/2013/05/25/sunday-review/corporate-taxes.html?ref=sunday&_r=0)
+
+Very pretty source. Inline.
+</section>
+	<section>
+## Several views
+[![treemap](http://graphics8.nytimes.com//images/2011/02/14/us/politics/graphic-190.jpg)](http://www.nytimes.com/packages/html/newsgraphics/2011/0119-budget/)
+[![packed circles](http://datavisualization.ch/wp-content/uploads/2012/02/four_ways_02-710x409.png)](http://www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html?_r=0)
+</section>
+	<section>
+[![]({{ site.baseurl}}/assets/incomeladder.png)](http://www.nytimes.com/2013/07/22/business/in-climbing-income-ladder-location-matters.html?_r=0)
+
+[Less pretty source](http://graphics8.nytimes.com/newsgraphics/2013/07/02/inequality/assets/charts.min.js?01) | [JSBeautifier](http://jsbeautifier.org)
 </section>
 </section>
 
@@ -94,4 +121,57 @@ If you want to keep working with this data or find some more, keep working on an
 ## Option 3: Start on blogpost 1
 
 Bored of the city ranking data? Work on blogpost 1. You'll have to get data and do all of the above for that.
+</section>
+</section>
+
+
+<section>
+	<section>
+# Some project workflow
+</section>
+	<section>
+## Suggestion 1, for R
+
+- Make a package. Use the vignette (Rmd or Rnw) as a notebook.
+
+- Let knitr run (and cache) results as you go
+
+- Stash data as RData in `pkg/data/` or as anything else in `pkg/inst/`
+
+<section>
+	<section>
+## Suggestion 1, continued
+
+- begin your vignette with codechunks calling functions you haven't written yet:
+
+    Acquire data from [some place.](link)
+    ```{r setup, eval=TRUE}
+    library(mypacakge)
+    ```
+
+    ```{r get-data, eval=FALSE}
+    getData()
+    ```
+
+- Then write functions in the package to fulfill that promise.
+- As you go, you can switch the *eval* arg, if you acquire data and stash it somewhere for example; or load saved runs of models.
+</section>	
+	<section>
+## Suggestion 2, also for R
+### (but not necessarily)
+
+@johnmyleswhite's [ProjectTemplate](http://projecttemplate.net)
+</section>
+	<section>
+## Suggestion 3: General
+- Make a repo
+- Start with a list of what to do
+- Open issues?
+- Invite collaborators
+</section>
+	<section>
+## Suggestion 4: Trello
+
+[![](https://d2k1ftgv7pobq7.cloudfront.net/images/bd87ee916375920ae72dffadbb10d412/logo-blue-lg.png)](https://trello.com)
+</section>
 </section>
