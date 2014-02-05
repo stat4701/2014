@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Introducing - Andrew Yuan
-description: Brief introduction
+title: Jed Dougherty
+description: Introduction Post
 tags: emails assignments
 ---
-
-#Jed Dougherty
 
 Hi everyone, I'm Jed. I'm my second year at Columbia working on the last semester of a QMSS masters program,
 with a concentration in Data Science. I've worked for the past 3 years as an analyst in the public sector,
@@ -15,8 +13,8 @@ for the course include getting better at presenting complicated information in a
 my skills with d3 and other web-based interactive visualizations.
 
 Here are some of my favorite data visualization blogs and sites:
-* [dataisbeautiful](www.reddit.com/r/dataisbeautiful)
-* [chartporn](www.chartporn.org)
-* [Strange Maps](bigthink.com/blogs/strange-maps)
+- [dataisbeautiful](www.reddit.com/r/dataisbeautiful)
+- [chartporn](www.chartporn.org)
+- [Strange Maps](bigthink.com/blogs/strange-maps)
 
 
