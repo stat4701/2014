@@ -12,6 +12,7 @@ Andy Enkeboll
 =============
 
 ![Me](https://s3.amazonaws.com/venmo/j5team/AndyEnkeboll.gif)
+
 This is an introductory paragraph about myself, in which I will also be learning some markdown.
 
 Currently
