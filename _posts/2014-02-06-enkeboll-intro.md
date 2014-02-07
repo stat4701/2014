@@ -8,11 +8,10 @@ tags: intro assignements
 <!-- use tags blogpost1 blogpost2 blogpost3 for easy grouping -->
 <!-- please reserve for @malecki's use only tags 'slides', 'emails' -->
 
-![Me](https://s3.amazonaws.com/venmo/j5team/AndyEnkeboll.gif)
-
 Andy Enkeboll
 =============
 
+![Me](https://s3.amazonaws.com/venmo/j5team/AndyEnkeboll.gif)
 This is an introductory paragraph about myself, in which I will also be learning some markdown.
 
 Currently
