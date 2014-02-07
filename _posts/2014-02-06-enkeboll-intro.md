@@ -2,7 +2,7 @@
 layout: post
 title: Andy Enkeboll Introduction
 description: Assignment 0- Introducing Myself 
-tags: intro assignements
+tags: intro
 ---
 
 <!-- use tags blogpost1 blogpost2 blogpost3 for easy grouping -->
