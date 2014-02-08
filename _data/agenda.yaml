@@ -71,7 +71,7 @@
 - date: 2014-02-12
   topic: More statistical graphics theory
   before: |
-    - Grammar of Graphics, ch. TBD
+    - Gelman and Hill, TBD
 
 - date: 2014-02-17
   topic: Type, Typesetting, Typography, and Strings
