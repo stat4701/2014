@@ -22,49 +22,49 @@ I would like to collect forum data from at least two different vendors. As a sta
 
 Here is an initial list of data and metrics that can be collected from the sites and which might be able to provide useful insight:
 
--    First post timing:
-     - Day of week
-     - Time of day
-     - Month
--    Quantity of participants:
-     - Total
-     - Employees
-     - Moderators
--    Participant reputations
-     - Asker
-     - Average of all respondents
-     - Answerer(s)
--    Forum
-     - Name/Product
-     - # of members
-     - Creation date
--    Keywords in:
-     - Thread title
-     - Question
-     - Responses
--    Time between posts
-     - Average
-     - Time to first response
--    Length (in chars or words) of:
-     - Thread title
-     - Initial question
-     - Responses
--    Ranking/reputation of: 
-     - Asker
-     - Other participants
--    Speed of response
-     - First response
-     - Average time between all messages
--    Success Status
-     - Success = marked completed
-     - Failure = no post for 1 month and not marked solved
-     - Active = not marked completed, but  last post  in less than one month
--    Number of up votes
--    Number of thread views
--    Number of links to:
-     - other threads or documentation
-     - this thread from other threads
-     - # of comments/responses on the thread
+ -     First post timing:
+       - Day of week
+       - Time of day
+       - Month
+ -     Quantity of participants:
+       - Total
+       - Employees
+       - Moderators
+ -     Participant reputations
+       - Asker
+       - Average of all respondents
+       - Answerer(s)
+ -     Forum
+       - Name/Product
+       - # of members
+       - Creation date
+ -     Keywords in:
+       - Thread title
+       - Question
+       - Responses
+ -     Time between posts
+       - Average
+       - Time to first response
+ -     Length (in chars or words) of:
+       - Thread title
+       - Initial question
+       - Responses
+ -     Ranking/reputation of: 
+       - Asker
+       - Other participants
+ -     Speed of response
+       - First response
+       - Average time between all messages
+ -     Success Status
+       - Success = marked completed
+       - Failure = no post for 1 month and not marked solved
+       - Active = not marked completed, but  last post  in less than one month
+ -     Number of up votes
+ -     Number of thread views
+ -     Number of links to:
+       - other threads or documentation
+       - this thread from other threads
+       - # of comments/responses on the thread
 
 ## Project Tasks
 
