@@ -6,7 +6,7 @@ description: My initial thoughts on exploring the effectiveness of forums for my
 
 ## Objective
 
-Working in the support organization of a software firm, I see the significant of "deflecting" issues through the use of self-help  tools, one of which is forums/communities. Forums are preferable to opening support tickets, because:
+Working in the support organization of a software firm, I see the significance of "deflecting" issues through the use of self-help  tools, one of which is forums/communities. Having customers use forums is preferable to having customers open support tickets, because:
 
 
 - Customers are more satisfied if they can solve a problem without having to open up a support ticket with the vendor.
@@ -24,8 +24,11 @@ Here is an initial list of data and metrics that can be collected from the sites
 
 
 - First post timing:
+ 
  - Day of week
+  
  - Time of day
+ 
  - Month
 - Quantity of Participants
  - Total
