@@ -21,3 +21,13 @@ cp _drafts/post-template.md _posts/2014-14-14-is-not-a-valid-date.md
 
 Turn a post into fun reveal.js slides by using the 'pres' layout. Slides then nest in `<section>` tags ([doc](http://lab.hakim.se/reveal-js/#/))
 
+Other useful git tricks
+------------
+
+Add this or [something similar](http://stackoverflow.com/questions/1057564/pretty-git-branch-graphs) to your .gitconfig and then type `git tree` for a nice display in your 
+```{bash}
+[alias]
+        tree = log --graph --decorate --pretty=oneline --abbrev-commit
+        lg = log --graph --abbrev-commit --decorate --date=relative \
+--format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+```
