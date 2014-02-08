@@ -31,3 +31,7 @@ Add this or [something similar](http://stackoverflow.com/questions/1057564/prett
         lg = log --graph --abbrev-commit --decorate --date=relative \
 --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 ```
+
+If you tried to make a commit without a message, you might have gotten an error, or you might have ended up in a special place known as the text editor **vi**.
+  1. To get out of vi type `:q!` and redo your commit with `-m "useful commit message"`
+  2. To change your default editor, see for [mac](http://stackoverflow.com/questions/3957999/mac-specific-optimizations-in-gitconfig) or [windows](http://stackoverflow.com/questions/8951275/git-config-core-editor-how-to-make-sublime-text-the-default-editor-for-git-on)
