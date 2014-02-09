@@ -1,5 +1,5 @@
 ---
-layout: pres
+layout: post
 title: Devin's first post
 description: exploratory data analysis and visualization
 tags: intro post
