@@ -22,49 +22,20 @@ I would like to collect forum data from at least two different vendors. As a sta
 
 Here is an initial list of data and metrics that can be collected from the sites and which might be able to provide useful insight:
 
- -     First post timing:
-       - Day of week
-       - Time of day
-       - Month
- -     Quantity of participants:
-       - Total
-       - Employees
-       - Moderators
- -     Participant reputations
-       - Asker
-       - Average of all respondents
-       - Answerer(s)
- -     Forum
-       - Name/Product
-       - # of members
-       - Creation date
- -     Keywords in:
-       - Thread title
-       - Question
-       - Responses
- -     Time between posts
-       - Average
-       - Time to first response
- -     Length (in chars or words) of:
-       - Thread title
-       - Initial question
-       - Responses
- -     Ranking/reputation of: 
-       - Asker
-       - Other participants
- -     Speed of response
-       - First response
-       - Average time between all messages
- -     Success Status
-       - Success = marked completed
-       - Failure = no post for 1 month and not marked solved
-       - Active = not marked completed, but  last post  in less than one month
+ -     First post timing: month, day of week, and time of day
+ -     Quantity of participants: total, employees, and moderators
+ -     Participant reputations: creator, average of all respondents, answerer(s)
+ -     Forum: name, product, # of members, creation date
+ -     Keywords in: thread title, question, responses
+ -     Time to: first response, creator response to other response
+ -     Number of comments after marked as solved
+ -     Length (in chars or words) of: thread title, initial question, responses
+ -     Reputation of: creator, other participants
+ -     Success status: success = marked completed; failure = no post for 1 month and not marked solved; active = not marked completed, but last post less than one month old
  -     Number of up votes
  -     Number of thread views
- -     Number of links to:
-       - other threads or documentation
-       - this thread from other threads
-       - # of comments/responses on the thread
+ -     Number of links to other threads or documentation from this post and number of links to this thread from other threads
+ -     Number of comments/responses
 
 ## Project Tasks
 
@@ -75,10 +46,3 @@ The main tasks in completing this project will be:
 3.  Export the aggregated data and metrics to a CSV.
 4.  Import the CSV into R and do some exploratory analysis to find correlation and interesting relationships.
 5.  Create a visualization showcasing and allowing further exploration of the most interesting data points and relationships using D3.js and possibly Crossfilter.
-
-Adding this as a test...
-
-* Item 1
-* Item 2
-  * Item 2a
-  * Item 2b
