@@ -8,7 +8,7 @@ tags: blog
 	<section>
 ### What I did
 * Removed the state abbreviations for the few cities that had them
-* Added a column from the googles preadsheet for total populations by year
+* Added a column from the Google spreadsheet for total populations by year
 * Added a column that gave the percentage of total population
 * Made a graph in Excel showing the percentages in the top 4 ranked cities over time
 * Overlayed a graph showing total population trends over time
