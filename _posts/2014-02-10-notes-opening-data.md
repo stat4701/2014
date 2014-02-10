@@ -5,6 +5,8 @@ description: Some R details
 tags: slides
 ---
 
+Fire up an R session to discuss…
+
   1. Data structures -- vectors, lists, arrays, data.frames
   1. Indexing -- dimnames
   1. Factors (enum/categorical/ordered)
