@@ -1,5 +1,8 @@
-# History files
-.Rhistory
+_site
 
-# Example code in package build process
-*-Ex.R
+# Logs
+*.vimlog
+*.log
+
+# OS weirdness
+*.DS_Store
