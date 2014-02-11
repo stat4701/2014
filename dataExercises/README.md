@@ -29,6 +29,19 @@ make watch
 
 Have fun!
 
+## Forked repos
+
+Please work on a **branch** of your fork and **try not to submit solutions** in requests to the `gh-pages` branch here (upstream). Of course you can push to your 'exercises' branch; that will be really useful for sharing your solutions. I might open a `solutions` branch or something, we'll see.
+
+```{bash}
+git fetch upstream
+git checkout gh-pages
+git rebase upstream/gh-pages
+git checkout -b exercises
+```
+
+… and get hacking!
+
 ### TODO
 - A companion Python one using nosetests (anyone want to set up?)
 - other manipulation tasks:
