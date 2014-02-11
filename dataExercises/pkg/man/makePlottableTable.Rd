@@ -9,7 +9,7 @@ makePlottableTable(data)
   demographic indicators}
 }
 \value{
-data.frame suitable for plottingf
+data.frame suitable for plotting
 }
 \description{
 Continuing with toy example using the sample data, a
