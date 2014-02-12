@@ -12,7 +12,7 @@ I have worked for around 4 years now even though I am not that experienced I had
 
 ## Working on ##
 
-- Ramping up on pPthon and R - pre reqs for [EDAV](http://malecki.github.io/edav/agenda.html)
+- Trying to learn pPthon and R - pre reqs for [EDAV](http://malecki.github.io/edav/agenda.html)
 - Have a day job as Production support analyst at Guardian Inc. [Guardian](http://www.guardianlife.com/)
 
 
