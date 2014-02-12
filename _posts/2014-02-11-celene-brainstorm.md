@@ -7,7 +7,9 @@ tags: blog
 <section>
 <section>
 
-### Project objectives
+## Project: Datadog users
+
+### Objectives
 
 * To analyze trends in client requests and needs via communication to support and other channels
 * To gauge trends popular uses of our product
@@ -33,11 +35,11 @@ tags: blog
 
 ### Next 3 weeks
 
-* start by gathering Desk data
-* format it in a usable way
-* make a graph that shows total # Desk and Olark cases over time
-* make a graph that shows # Desk and Olark cases over the course of a day
-* start playing with labels or other categories
+1. start by gathering Desk data
+2. format it in a usable way
+3. make a graph that shows total # Desk and Olark cases over time
+4. make a graph that shows # Desk and Olark cases over the course of a day
+5. start playing with labels or other categories
 
 </section>
 </section>
