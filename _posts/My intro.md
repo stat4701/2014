@@ -23,5 +23,5 @@ I have worked for around 4 years now even though I am not that experienced I had
 - Video Games.
 
 ## Connect ##
-1. [LinkedIn](www.linkedin.com/in/harpreethayer) 
+1. [LinkedIn](https://www.linkedin.com/in/harpreethayer) 
 1. [Twitter](https://twitter.com/harhayer)
