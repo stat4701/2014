@@ -39,7 +39,7 @@ tags: blog
 2. format it in a usable way
 3. make a graph that shows total # Desk and Olark cases over time
 4. make a graph that shows # Desk and Olark cases over the course of a day
-5. start playing with labels or other categories
+5. start playing with labels or other way to categorize cases
 
 </section>
 </section>
