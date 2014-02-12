@@ -3,9 +3,6 @@ layout: page
 title: who am i?
 tagline: 
 ---
-{% include JB/setup %}
-# [Harpreet Hayer] 
-
 
 ## Hello ##
 
