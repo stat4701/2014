@@ -2,7 +2,7 @@
 layout: post
 title: Jed Dougherty
 description: Introduction Post
-tags: emails assignments introduction
+tags: assignments introduction
 ---
 
 Hi everyone, I'm Jed. I'm my second year at Columbia working on the last semester of a QMSS masters program,

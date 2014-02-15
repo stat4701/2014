@@ -1,0 +1,772 @@
+Description: 2012 acs demos
+Samples selected:
+      2012 ACS sample\n            Note: 
+            Density of the full data file:  1.0%
+            Density of your extract: 1.0%
+
+File Type:                    rectangular
+Case Selection:               No
+  Variable               Columns        Len    2012   
+  YEAR               H   1-4            4      X 
+  DATANUM            H   5-6            2      X 
+  SERIAL             H   7-14           8      X 
+  HHWT               H  15-24          10      X 
+  REGION             H  25-26           2      X 
+  STATEICP           H  27-28           2      X 
+  STATEFIP           H  29-30           2      X 
+  PUMA               H  31-35           5      X 
+  GQ                 H  36              1      X 
+  PERNUM             P  37-40           4      X 
+  PERWT              P  41-50          10      X 
+  NCHILD             P  51              1      X 
+  AGE                P  52-54           3      X 
+  SEX                P  55              1      X 
+  MARST              P  56              1      X 
+  RACE               P  57              1      X 
+  RACED              P  58-60           3      X 
+  HISPAN             P  61              1      X 
+  HISPAND            P  62-64           3      X 
+  EDUC               P  65-66           2      X 
+  EDUCD              P  67-69           3      X 
+  INCTOT             P  70-76           7      X 
+  FTOTINC            P  77-83           7      X 
+
+Variable Availability Key:
+All Years X - available in this sample
+All Years . - not available in this sample
+
+
+ YEAR		Census year
+1850		1850
+1860		1860
+1870		1870
+1880		1880
+1900		1900
+1910		1910
+1920		1920
+1930		1930
+1940		1940
+1950		1950
+1960		1960
+1970		1970
+1980		1980
+1990		1990
+2000		2000
+2001		2001
+2002		2002
+2003		2003
+2004		2004
+2005		2005
+2006		2006
+2007		2007
+2008		2008
+2009		2009
+2010		2010
+2011		2011
+
+ REGION		Census region and division
+		NORTHEAST REGION
+11		New England Division
+12		Middle Atlantic Division
+13		Mixed Northeast Divisions (1970 Metro)
+		MIDWEST REGION
+21		East North Central Div.
+22		West North Central Div.
+23		Mixed Midwest Divisions (1970 Metro)
+		SOUTH REGION
+31		South Atlantic Division
+32		East South Central Div.
+33		West South Central Div.
+34		Mixed Southern Divisions (1970 Metro)
+		WEST REGION
+41		Mountain Division
+42		Pacific Division
+43		Mixed Western Divisions (1970 Metro)
+		STATE UNKNOWN
+91		Military/Military reservations
+92		PUMA boundaries cross state lines-1% sample
+97		State not identified
+99		Not identified
+
+ STATEICP		State (ICPSR code)
+01		Connecticut
+02		Maine
+03		Massachusetts
+04		New Hampshire
+05		Rhode Island
+06		Vermont
+11		Delaware
+12		New Jersey
+13		New York
+14		Pennsylvania
+21		Illinois
+22		Indiana
+23		Michigan
+24		Ohio
+25		Wisconsin
+31		Iowa
+32		Kansas
+33		Minnesota
+34		Missouri
+35		Nebraska
+36		North Dakota
+37		South Dakota
+40		Virginia
+41		Alabama
+42		Arkansas
+43		Florida
+44		Georgia
+45		Louisiana
+46		Mississippi
+47		North Carolina
+48		South Carolina
+49		Texas
+51		Kentucky
+52		Maryland
+53		Oklahoma
+54		Tennessee
+56		West Virginia
+61		Arizona
+62		Colorado
+63		Idaho
+64		Montana
+65		Nevada
+66		New Mexico
+67		Utah
+68		Wyoming
+71		California
+72		Oregon
+73		Washington
+81		Alaska
+82		Hawaii
+83		Puerto Rico
+96		State groupings (1980 Urban/rural sample)
+97		Military/Mil. Reservations
+98		District of Columbia
+99		State not identified
+
+ STATEFIP		State (FIPS code)
+01		Alabama
+02		Alaska
+04		Arizona
+05		Arkansas
+06		California
+08		Colorado
+09		Connecticut
+10		Delaware
+11		District of Columbia
+12		Florida
+13		Georgia
+15		Hawaii
+16		Idaho
+17		Illinois
+18		Indiana
+19		Iowa
+20		Kansas
+21		Kentucky
+22		Louisiana
+23		Maine
+24		Maryland
+25		Massachusetts
+26		Michigan
+27		Minnesota
+28		Mississippi
+29		Missouri
+30		Montana
+31		Nebraska
+32		Nevada
+33		New Hampshire
+34		New Jersey
+35		New Mexico
+36		New York
+37		North Carolina
+38		North Dakota
+39		Ohio
+40		Oklahoma
+41		Oregon
+42		Pennsylvania
+44		Rhode Island
+45		South Carolina
+46		South Dakota
+47		Tennessee
+48		Texas
+49		Utah
+50		Vermont
+51		Virginia
+53		Washington
+54		West Virginia
+55		Wisconsin
+56		Wyoming
+		State groups (1980 Urban/rural sample):
+61		Maine-New Hampshire-Vermont
+62		Massachusetts-Rhode Island
+63		Minnesota-Iowa-Missouri-Kansas-Nebraska-S.Dakota-N.Dakota
+64		Maryland-Delaware
+65		Montana-Idaho-Wyoming
+66		Utah-Nevada
+67		Arizona-New Mexico
+68		Alaska-Hawaii
+72		Puerto Rico
+97		Military/Mil. Reservation
+99		State not identified
+
+ GQ		Group quarters status
+0		Vacant unit
+		Households:
+1		Households under 1970 definition
+2		Additional households under 1990 definition
+		Group Quarters:
+3		Group quarters--Institutions
+4		Other group quarters
+5		Additional households under 2000 definition
+6		Fragment
+
+ NCHILD		Number of own children in the household
+0		0 children present
+1		1 child present
+2		2
+3		3
+4		4
+5		5
+6		6
+7		7
+8		8
+9		9+
+
+ AGE		Age
+000		Less than 1 year old
+001		1
+002		2
+003		3
+004		4
+005		5
+006		6
+007		7
+008		8
+009		9
+010		10
+011		11
+012		12
+013		13
+014		14
+015		15
+016		16
+017		17
+018		18
+019		19
+020		20
+021		21
+022		22
+023		23
+024		24
+025		25
+026		26
+027		27
+028		28
+029		29
+030		30
+031		31
+032		32
+033		33
+034		34
+035		35
+036		36
+037		37
+038		38
+039		39
+040		40
+041		41
+042		42
+043		43
+044		44
+045		45
+046		46
+047		47
+048		48
+049		49
+050		50
+051		51
+052		52
+053		53
+054		54
+055		55
+056		56
+057		57
+058		58
+059		59
+060		60
+061		61
+062		62
+063		63
+064		64
+065		65
+066		66
+067		67
+068		68
+069		69
+070		70
+071		71
+072		72
+073		73
+074		74
+075		75
+076		76
+077		77
+078		78
+079		79
+080		80
+081		81
+082		82
+083		83
+084		84
+085		85
+086		86
+087		87
+088		88
+089		89
+090		90 (90+ in 1980 and 1990)
+091		91
+092		92
+093		93
+094		94
+095		95
+096		96
+097		97
+098		98
+099		99
+100		100 (100+ in 1960-1970)
+101		101
+102		102
+103		103
+104		104
+105		105
+106		106
+107		107
+108		108
+109		109
+110		110
+111		111
+112		112 (112+ in the 1980 internal data)
+113		113
+114		114
+115		115 (115+ in the 1990 internal data)
+116		116
+117		117
+118		118
+119		119
+120		120
+121		121
+122		122
+123		123
+124		124
+125		125
+126		126
+129		129
+130		130
+135		135
+
+ SEX		Sex
+1		Male
+2		Female
+
+ MARST		Marital status
+1		Married, spouse present
+2		Married, spouse absent
+3		Separated
+4		Divorced
+5		Widowed
+6		Never married/single
+
+ RACE		Race [general version]
+1		White
+2		Black/Negro
+3		American Indian or Alaska Native
+4		Chinese
+5		Japanese
+6		Other Asian or Pacific Islander
+7		Other race, nec
+8		Two major races
+9		Three or more major races
+
+ RACED		Race [detailed version]
+		ONE MAJOR RACE GROUP
+100		White
+110		Spanish write-in
+120		Blank (white) (1850)
+130		Portuguese
+140		Mexican (1930)
+150		Puerto Rican (1910 Hawaii)
+200		Black/Negro
+210		Mulatto
+300		American Indian/Alaska Native
+301		Alaskan Athabaskan
+302		Apache
+303		Blackfoot
+304		Cherokee
+305		Cheyenne
+306		Chickasaw
+307		Chippewa
+308		Choctaw
+309		Comanche
+310		Creek
+311		Crow
+312		Iroquois
+313		Kiowa
+314		Lumbee
+315		Navajo
+316		Osage
+317		Paiute
+318		Pima
+319		Potawatomi
+320		Pueblo
+321		Seminole
+322		Shoshone
+323		Sioux
+324		Tlingit (Tlingit-Haida, 2000/ACS)
+325		Tohono O Odham
+326		All other tribes (1990)
+327		Tribe not specified
+328		Hopi
+330		Aleut
+340		Eskimo
+341		Alaskan mixed
+342		Inupiat
+343		Yup'ik
+350		Delaware
+351		Latin American Indian
+352		Puget Sound Salish
+353		Yakama
+354		Yaqui
+355		Colville
+356		Houma
+357		Menominee
+358		Yuman
+388		South American Indian
+389		Mexican American Indian
+390		Other Amer. Indian tribe (2000,ACS)
+391		2+ Amer. Indian tribes (2000,ACS)
+392		Other Alaska Native tribe(s) (2000,ACS)
+393		Both Am. Ind. and Alaska Native (2000,ACS)
+400		Chinese
+410		Taiwanese
+420		Chinese and Taiwanese
+500		Japanese
+		Other Asian or Pacific Islander:
+600		Filipino
+610		Asian Indian (Hindu 1920-1940)
+620		Korean
+630		Hawaiian
+631		Hawaiian and Asian (1900,1920)
+632		Hawaiian and European (1900,1920)
+634		Hawaiian mixed
+640		Vietnamese
+641		Bhutanese
+642		Mongolian
+643		Nepalese
+650		Other Asian or Pacific Islander (1920,1980)
+651		Asian only (CPS)
+652		Pacific Islander only (CPS)
+653		Asian or Pacific Islander, n.s. (1990 Internal Census files)
+		Asian:
+660		Cambodian
+661		Hmong
+662		Laotian
+663		Thai
+664		Bangladeshi
+665		Burmese
+666		Indonesian
+667		Malaysian
+668		Okinawan
+669		Pakistani
+670		Sri Lankan
+671		Other Asian, n.e.c.
+672		Asian, not specified
+		Two or more Asian races
+673		Chinese and Japanese
+674		Chinese and Filipino
+675		Chinese and Vietnamese
+676		Chinese and Asian write-in
+677		Japanese and Filipino
+678		Asian Indian and Asian write-in
+679		Other Asian race combinations
+		Pacific Islanders:
+		Polynesian region (also includes Hawaii):
+680		Samoan
+681		Tahitian
+682		Tongan
+683		Other Polynesian (1990)
+684		1+ other Polynesian races (2000,ACS)
+		Micronesian region:
+685		Guamanian/Chamorro
+686		Northern Mariana Islander
+687		Palauan
+688		Other Micronesian (1990)
+689		1+ other Micronesian races (2000,ACS)
+		Melanesian region:
+690		Fijian
+691		Other Melanesian (1990)
+692		1+ other Melanesian races (2000,ACS)
+		Pacific Islanders from two or more PI regions:
+698		2+ PI races from 2+ PI regions
+699		Pacific Islander, n.s.
+700		Other race, n.e.c.
+		TWO OR MORE MAJOR RACE GROUPS
+		Two major race groups:
+801		White and Black
+802		White and AIAN
+810		White and Asian
+811		White and Chinese
+812		White and Japanese
+813		White and Filipino
+814		White and Asian Indian
+815		White and Korean
+816		White and Vietnamese
+817		White and Asian write-in
+818		White and other Asian race(s)
+819		White and two or more Asian groups
+820		White and PI  
+821		White and Native Hawaiian
+822		White and Samoan
+823		White and Guamanian
+824		White and PI write-in
+825		White and other PI race(s)
+826		White and other race write-in
+827		White and other race, n.e.c.
+830		Black and AIAN
+831		Black and Asian
+832		Black and Chinese
+833		Black and Japanese
+834		Black and Filipino
+835		Black and Asian Indian
+836		Black and Korean
+837		Black and Asian write-in
+838		Black and other Asian race(s)
+840		Black and PI
+841		Black and PI write-in
+842		Black and other PI race(s)
+845		Black and other race write-in
+850		AIAN and Asian
+851		AIAN and Filipino (2000 1%)
+852		AIAN and Asian Indian
+853		AIAN and Asian write-in (2000 1%)
+854		AIAN and other Asian race(s)
+855		AIAN and PI
+856		AIAN and other race write-in
+860		Asian and PI
+861		Chinese and Hawaiian
+862		Chinese, Filipino, Hawaiian (2000 1%)
+863		Japanese and Hawaiian (2000 1%)
+864		Filipino and Hawaiian
+865		Filipino and PI write-in
+866		Asian Indian and PI write-in (2000 1%)
+867		Asian write-in and PI write-in
+868		Other Asian race(s) and PI race(s)
+869		Japanese and Korean (ACS)
+880		Asian and other race write-in
+881		Chinese and other race write-in
+882		Japanese and other race write-in
+883		Filipino and other race write-in
+884		Asian Indian and other race write-in
+885		Asian write-in and other race write-in
+886		Other Asian race(s) and other race write-in
+887		Chinese and Korean
+890		PI and other race write-in: 
+891		PI write-in and other race write-in
+892		Other PI race(s) and other race write-in
+893		Native Hawaiian or PI other race(s)
+899		API and other race write-in
+		Three or more major race groups:
+		Three major race groups:
+901		White, Black, AIAN
+902		White, Black, Asian
+903		White, Black, PI
+904		White, Black, other race write-in
+905		White, AIAN, Asian
+906		White, AIAN, PI
+907		White, AIAN, other race write-in
+910		White, Asian, PI 
+911		White, Chinese, Hawaiian
+912		White, Chinese, Filipino, Hawaiian (2000 1%)
+913		White, Japanese, Hawaiian (2000 1%)
+914		White, Filipino, Hawaiian
+915		Other White, Asian race(s), PI race(s)
+916		White, AIAN and Filipino
+917		White, Black, and Filipino
+920		White, Asian, other race write-in
+921		White, Filipino, other race write-in (2000 1%)
+922		White, Asian write-in, other race write-in (2000 1%)
+923		Other White, Asian race(s), other race write-in (2000 1%)
+925		White, PI, other race write-in
+926		White, Chinese, Filipino
+930		Black, AIAN, Asian
+931		Black, AIAN, PI
+932		Black, AIAN, other race write-in
+933		Black, Asian, PI
+934		Black, Asian, other race write-in
+935		Black, PI, other race write-in
+940		AIAN, Asian, PI
+941		AIAN, Asian, other race write-in
+942		AIAN, PI, other race write-in
+943		Asian, PI, other race write-in
+944		Asian (Chinese, Japanese, Korean, Vietnamese); and Native Hawaiian or PI; and Other
+949		2 or 3 races (CPS)
+		Four major race groups:
+950		White, Black, AIAN, Asian
+951		White, Black, AIAN, PI
+952		White, Black, AIAN, other race write-in
+953		White, Black, Asian, PI
+954		White, Black, Asian, other race write-in
+955		White, Black, PI, other race write-in
+960		White, AIAN, Asian, PI
+961		White, AIAN, Asian, other race write-in
+962		White, AIAN, PI, other race write-in
+963		White, Asian, PI, other race write-in
+964		White, Chinese, Japanese, Native Hawaiian
+970		Black, AIAN, Asian, PI
+971		Black, AIAN, Asian, other race write-in
+972		Black, AIAN, PI, other race write-in
+973		Black, Asian, PI, other race write-in
+974		AIAN, Asian, PI, other race write-in
+975		AIAN, Asian, PI, Hawaiian other race write-in
+976		Two specified Asian  (Chinese and other Asian, Chinese and Japanese, Japanese and other Asian, Korean and other Asian); Native Hawaiian/PI; and Other Race
+		Five major race groups:
+980		White, Black, AIAN, Asian, PI
+981		White, Black, AIAN, Asian, other race write-in
+982		White, Black, AIAN, PI, other race write-in
+983		White, Black, Asian, PI, other race write-in
+984		White, AIAN, Asian, PI, other race write-in
+985		Black, AIAN, Asian, PI, other race write-in
+986		Black, AIAN, Asian, PI, Hawaiian, other race write-in
+989		4 or 5 races (CPS)
+		Six major race groups:
+990		White, Black, AIAN, Asian, PI, other race write-in
+991		White race; Some other race; Black or African American race and/or American Indian and Alaska Native race and/or Asian groups and/or Native Hawaiian and Other Pacific Islander groups
+996		2+ races, n.e.c. (CPS)
+
+ HISPAN		Hispanic origin [general version]
+0		Not Hispanic
+1		Mexican
+2		Puerto Rican
+3		Cuban
+4		Other
+9		Not Reported
+
+ HISPAND		Hispanic origin [detailed version]
+000		Not Hispanic
+100		Mexican
+102		Mexican American
+103		Mexicano/Mexicana
+104		Chicano/Chicana
+105		La Raza
+106		Mexican American Indian
+107		Mexico
+200		Puerto Rican
+300		Cuban
+		Other:
+		Central American
+401		Central American Indian
+402		Canal Zone
+411		Costa Rican
+412		Guatemalan
+413		Honduran
+414		Nicaraguan
+415		Panamanian
+416		Salvadoran
+417		Central American, n.e.c.
+		South American
+420		Argentinean
+421		Bolivian
+422		Chilean
+423		Colombian
+424		Ecuadorian
+425		Paraguayan
+426		Peruvian
+427		Uruguayan
+428		Venezuelan
+429		South American Indian
+430		Criollo
+431		South American, n.e.c.
+		Spaniard
+450		Spaniard
+451		Andalusian
+452		Asturian
+453		Castillian
+454		Catalonian
+455		Balearic Islander
+456		Gallego
+457		Valencian
+458		Canarian
+459		Spanish Basque
+460		Dominican
+465		Latin American
+470		Hispanic
+480		Spanish
+490		Californio
+491		Tejano
+492		Nuevo Mexicano
+493		Spanish American
+494		Spanish American Indian
+495		Meso American Indian
+496		Mestizo
+498		Other, n.s. 
+499		Other, n.e.c.
+900		Not Reported
+
+ EDUC		Educational attainment [general version]
+00		N/A or no schooling
+01		Nursery school to grade 4
+02		Grade 5, 6, 7, or 8
+03		Grade 9
+04		Grade 10
+05		Grade 11
+06		Grade 12
+07		1 year of college
+08		2 years of college
+09		3 years of college
+10		4 years of college
+11		5+ years of college
+
+ EDUCD		Educational attainment [detailed version]
+000		N/A or no schooling
+001		N/A
+002		No schooling completed
+010		Nursery school to grade 4
+011		Nursery school, preschool
+012		Kindergarten
+013		Grade 1, 2, 3, or 4
+014		Grade 1
+015		Grade 2
+016		Grade 3
+017		Grade 4
+020		Grade 5, 6, 7, or 8
+021		Grade 5 or 6
+022		Grade 5
+023		Grade 6
+024		Grade 7 or 8
+025		Grade 7
+026		Grade 8
+030		Grade 9
+040		Grade 10
+050		Grade 11
+060		Grade 12
+061		12th grade, no diploma
+062		High school graduate or GED
+063		Regular high school diploma
+064		GED or alternative credential
+065		Some college, but less than 1 year
+070		1 year of college
+071		1 or more years of college credit, no degree
+080		2 years of college
+081		Associate's degree, type not specified
+082		Associate's degree, occupational program
+083		Associate's degree, academic program
+090		3 years of college
+100		4 years of college
+101		Bachelor's degree
+110		5+ years of college
+111		6 years of college (6+ in 1960-1970)
+112		7 years of college
+113		8+ years of college
+114		Master's degree
+115		Professional degree beyond a bachelor's degree
+116		Doctoral degree
