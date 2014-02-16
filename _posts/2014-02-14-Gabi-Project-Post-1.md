@@ -12,8 +12,8 @@ Tags: project
 * To understand current efforts to combat obessity, heart disease and possibly cancer
 
 #### Sources of Data:
-* [health.data.ny.gov](www.health.data.ny.gov)
-* [Data.gov](www.data.gov)
+* [health.data.ny.gov](http://health.data.ny.gov)
+* [Data.gov](http://.data.gov)
 
 
 #### First iteration plan – Next 3 weeks:
