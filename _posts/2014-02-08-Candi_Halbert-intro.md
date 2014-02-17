@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+---
+layout: post
+title: "Introducing - Candi Halbert"
+description: first post
+tags: [edav, intro]
+---
+{% include JB/setup %}
+
+## A Brief Introduction
+
+
+Looking forward to making some really, really bad graphs in the next several weeks so that I never make bad graphs again!
+=======
 ---
 layout: post
 title: "Introducing - Candi Halbert"
@@ -10,3 +24,4 @@ tags: intro
 
 
 Looking forward to making some really, really bad graphs in the next several weeks so that I never make bad graphs again!
+>>>>>>> upstream/gh-pages
