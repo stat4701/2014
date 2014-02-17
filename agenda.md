@@ -1,6 +1,6 @@
 ---
 layout: agenda
-title: "Agenda"
+title: "My Agenda"
 description: ""
 ---
 {% include JB/setup %}
