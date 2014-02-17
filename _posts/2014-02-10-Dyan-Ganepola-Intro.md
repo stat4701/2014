@@ -2,6 +2,7 @@
 layout: post
 title: Introducing - Dyan Ganepola
 description: A short self introduction to the class
+tags: intro
 ---
 
 In my present career, I work at MTA Bridges and Tunnels in New York City in the Technology Department with responsibilities in Application Systems Development.

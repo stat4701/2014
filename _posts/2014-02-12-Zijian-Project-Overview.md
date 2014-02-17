@@ -2,7 +2,7 @@
 layout: post
 title: Project Overview -- Zijian Yi
 description: Overview of Project
-tags: blog
+tags: project assignments
 ---
 <section>
 

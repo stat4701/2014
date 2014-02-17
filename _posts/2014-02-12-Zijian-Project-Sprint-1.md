@@ -2,7 +2,7 @@
 layout: post
 title: Project Sprint 1 -- Zijian Yi
 description: Sprint 1 of Project
-tags: blog
+tags: project iter1
 ---
 <section>
 

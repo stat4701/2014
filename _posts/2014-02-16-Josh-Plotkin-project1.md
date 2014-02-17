@@ -2,7 +2,7 @@
 layout: post
 title: Big Picture Plan (Josh Plotkin)
 description: First crack at structuring project
-tags: project
+tags: project iter1
 ---
 
 **Background:** I like the image below (credit: Joel Grus), which is a parody on a more famous Drew Conway Venn diagram. I think the IDSE is doing a good job of covering us with the hacking skills and math/statistics skills. A big reason I hope to gain admission to the MS program is so I can take electives to build substantive or domain expertise. When brainstorming for this project I asked myself "where do I have domain expertise" and the obvious answer is with poker. My project will involve slicing and dicing a database of around 10 million poker hands. I like this idea because I think there are many directions I can go in, and it will require many different stages of work.

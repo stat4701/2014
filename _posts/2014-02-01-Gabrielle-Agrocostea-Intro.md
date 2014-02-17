@@ -26,6 +26,7 @@ Using ggplot I plotted all the population by years and location - which allowed 
 layout: post
 title: Introducing - Gabrielle Agrocostea
 description: A short intro and Assignment 0 Update
+tags: intro
 ---
 
 >I am a student in the Data Science Certificate Program here at Columbia and my undergraduate degree was in Mathematics from Fordham University.

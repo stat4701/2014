@@ -2,7 +2,7 @@
 layout: page
 title: who am i?
 description: this is my introductory post 
-tags: post
+tags: tags
 ---
 
 ## Hello ##

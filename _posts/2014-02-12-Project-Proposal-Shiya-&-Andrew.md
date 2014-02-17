@@ -2,7 +2,7 @@
 layout: post
 title: 2014 Brazil FIFA World Cup Predictions - And the Winner is...
 description: Project Proposal
-tags: assignments
+tags: assignments project
 ---
 
 **Team Members:** Shiya Wang (sw2876) and Andrew Yuan (agy2108)
