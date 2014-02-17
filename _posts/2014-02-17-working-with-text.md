@@ -36,6 +36,16 @@ From [another interesting paper](http://smr.sagepub.com/content/43/1/73.short).
 
 > For each timeline interaction, we counted the proportion of words expressing positive emotions (like "love", "nice", "happy", etc.) minus the proportion of words expressing negative ones (like "hate", "hurt", "bad", etc.)
 </section>
+	<section>
+## Baby names -- lots of fun data
+[Gelman Post](http://andrewgelman.com/2014/02/14/popularity-certain-baby-names-falling-clifffffffffffff/)
+
+[![](http://home.uchicago.edu/~jsfalk/misc/baby_names/images/final_all.png)](http://home.uchicago.edu/~jsfalk/misc/baby_names/)
+</section>
+	<section>
+## R code from post
+[![](https://pbs.twimg.com/media/Bgc17i1CEAE0xsf.jpg)](http://andrewgelman.com/2014/02/14/popularity-certain-baby-names-falling-clifffffffffffff/#comment-154271)
+</section>
 </section>
 
 <section>
