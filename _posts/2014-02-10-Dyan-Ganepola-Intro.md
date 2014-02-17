@@ -13,3 +13,7 @@ As a hobby, I experiment and tweak systems in the household such as the Home The
 innovative ideas in the past. My recent experiment proved to be far more reaching than the previous ones and paid high dividends to my family during the 
 Sandy disaster of 2012 when we lost electrical power for an extended period.!
 
+update:
+
+Some students wanted know what was the experiment I carried out. It was to convert my gas boiler that runs on AC to also run on DC powered by heavy duty car batteries
+
