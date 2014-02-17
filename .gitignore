@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 _site
 
 # Logs
@@ -6,3 +7,15 @@ _site
 
 # OS weirdness
 *.DS_Store
+=======
+_site
+
+# Logs
+*.vimlog
+*.log
+
+# OS weirdness
+*.DS_Store
+
+.Rhistory
+>>>>>>> upstream/gh-pages
