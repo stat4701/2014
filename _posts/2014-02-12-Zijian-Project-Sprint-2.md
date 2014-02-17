@@ -2,7 +2,7 @@
 layout: post
 title: Project Sprint 2 -- Zijian Yi
 description: Sprint 2 of Project
-tags: blog
+tags: project iter2
 ---
 <section>
 

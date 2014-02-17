@@ -2,7 +2,7 @@
 layout: post
 title: Project Plan - Alexander Castleton (awc2134)
 description: Magic The Gathering Format Analysis Tool
-tags: blog project_plan
+tags: blog project_plan iter1
 ---
 
 ## Project: Magic: the Gathering Format Analysis Tool

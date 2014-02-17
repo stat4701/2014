@@ -2,7 +2,7 @@
 layout: post
 title: Iteration Plan 1 - Veeps
 description: First iteration plan for project
-tags: assignments
+tags: assignments project iter1
 ---
 
 Overall Goal Objectives: Create D3 visualizations on San Francisco's housing data for my thesis

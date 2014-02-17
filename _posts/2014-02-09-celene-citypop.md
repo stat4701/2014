@@ -2,7 +2,7 @@
 layout: post
 title: Celene - City populations
 description:
-tags: blog
+tags: assignments
 ---
 <section>
 	<section>
