@@ -2,6 +2,7 @@
 layout: post
 title: Project Brainstorm - Software Forums/Communities
 description: My initial thoughts on exploring the effectiveness of forums for my EDAV project
+tags: project
 --- 
 
 ## Objective

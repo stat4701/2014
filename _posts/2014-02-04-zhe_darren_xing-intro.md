@@ -2,6 +2,7 @@
 layout: post
 title: Introducing - Darren Xing
 description: a paragraph to introduce myself to the class
+tags: intro
 ---
 
 ## A Brief Introduction

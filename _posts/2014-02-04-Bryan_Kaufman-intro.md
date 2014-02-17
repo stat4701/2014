@@ -1,7 +1,8 @@
 ---
 layout: page
 title: who am i?
-tagline: 
+description: Bryan Kaufman Intro
+tags: intro
 ---
 {% include JB/setup %}
 #[Bryan Kaufman](http://about.me/bkaufman)  

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Intro
-tags:
+tags: intro
 ---
 
 ```

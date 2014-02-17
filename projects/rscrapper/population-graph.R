@@ -50,6 +50,18 @@ head(mean1900)
 
 # plot a grid for each location to see trend (these are only location where pop > avg)
 l <- ggplot(large.pop, aes(x = Year, y = Population, color = Location)) + geom_line()
-l <- l + facet_wrap(~Location,ncol=2) + scale_y_continuous(label = comma)
+l <- l + facet_wrap(~Location,ncol=2) + scale_y_continuous(label = comma) +
+  labs(title = "Population Growth from 1900-2010\n Reduced Data")
 l
 
+# subset on datat where year > 1950
+poptable1950 <- agg1900[which(agg1900$Year >= 1950),]
+large.pop2 <- subset(poptable1950, Population>ave(poptable1950$Population, poptable1950$Year))
+mean1900[(mean1900$Year>=1950),]
+
+# plot a grid for each location to see trend (these are only location where pop > avg)
+l2 <- ggplot(large.pop2, aes(x = Year, y = Population, color = Location)) + geom_line()
+l2 <- l2 + facet_wrap(~Location,ncol=2) + scale_y_continuous(label = comma) +
+  labs(title = "Population Growth from 1900-2010\n Reduced Data - 2")
+l2
+#### this doesnt work well with the data that is not complete - look at filledPop-Graph.R

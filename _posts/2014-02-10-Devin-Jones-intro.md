@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Devin Jones Intro
-description: Introduction
+description: intro
 ---
 
 ## Background

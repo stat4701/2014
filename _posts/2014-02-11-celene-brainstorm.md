@@ -2,7 +2,7 @@
 layout: post
 title: Celene's Brainstorm
 description:
-tags: blog
+tags: project
 ---
 <section>
 <section>

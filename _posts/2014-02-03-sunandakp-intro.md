@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Introducing - sunandakp
-description: a paragraph to introduce myself to the class
+description: Introducing - sunandakp the class
+tags: intro
 ---
 
 ## A Brief Introduction

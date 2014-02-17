@@ -2,7 +2,7 @@
 layout: post
 title: Introducing - Andrew Yuan
 description: Brief introduction
-tags:  assignments
+tags: intro
 ---
 
 Originally from Sao Paulo, Brazil, I have 9.5 years of experience as a project manager and software engineering at Accenture, part of our Systems Integration practice for the financial services industry.

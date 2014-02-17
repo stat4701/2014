@@ -2,7 +2,7 @@
 layout: post
 title: Celene's Intro
 description:
-tags: blog
+tags: blog intro
 ---
 <section>
 	<section>

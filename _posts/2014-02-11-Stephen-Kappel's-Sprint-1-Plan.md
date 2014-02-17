@@ -2,6 +2,7 @@
 layout: post
 title: Sprint 1 Iteration Plan
 description: plan for first 3 weeks of forums project
+tags: project iter1
 --- 
 
 ## Sprint 1 Goals
