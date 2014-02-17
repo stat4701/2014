@@ -10,7 +10,6 @@ tags: project
 
 ![Data Scientist]({{ site.baseurl }}/assets/jsp2014/venn.png)
 
-
 **Structure:** 
 
 0. Project management - I was involved in an early stage startup last year and we used a project management tool called Kanbanery. I liked that quite a bit and will use that to manage the many pieces of this project.
