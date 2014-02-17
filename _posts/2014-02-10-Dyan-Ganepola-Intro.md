@@ -2,6 +2,7 @@
 layout: post
 title: Introducing - Dyan Ganepola
 description: A short self introduction to the class
+This is an update as given below.
 ---
 
 In my present career, I work at MTA Bridges and Tunnels in New York City in the Technology Department with responsibilities in Application Systems Development.
@@ -11,4 +12,8 @@ Data Visualization and I hope  taking Exploratory Data Analysis and Visualizatio
 As a hobby, I experiment and tweak systems in the household such as the Home Theatre and other entertainment systems. These experiments have directed me toward 
 innovative ideas in the past. My recent experiment proved to be far more reaching than the previous ones and paid high dividends to my family during the 
 Sandy disaster of 2012 when we lost electrical power for an extended period.!
+
+update:
+
+Some students wanted know what was the experiment I carried out. It was to convert my gas boiler that runs on AC to also run on DC powered by heavy duty car batteries
 
