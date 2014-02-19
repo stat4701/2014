@@ -2,12 +2,12 @@
 layout: post
 title: Celene's Intro
 description:
-tags: blog
+tags: blog intro
 ---
 <section>
 	<section>
 ### My background
-![]({{ site.baseurl }}/assets/celene.JPG)<br>
+![]({{ site.baseurl }}/assets/celene_assets/celene.JPG)<br>
 I'm a Jersey Girl, and while not particularly proud of it I'll defend my state when necessary. Growing up I had always assumed I'd be a medical doctor because it was sciencey and didn't seem to depend on writing essays or understanding the law of gravity. In college I majored in Ecology & Evolutionary Bio, fulfilled the pre-med requirements, and took the MCAT. But my senior thesis experience got me thinking that research was kind of fun, and during my gap year I applied to both medical school and graduate school. (I wasn't qualified to be competitive for combined programs, and frankly wasn't interested in spending _that_ much more time in school. HA!) After interviews for both, I decided graduate school was a better fit.
 
 Fast forward to last June, when I finished my PhD in Neuroscience and felt... lost. I didn't want to be an Academic and, despite the esteem associated with a doctorate degree, didn't have many other clear-cut options. So I moved to New York to join the husband and began exploring the Interweb.

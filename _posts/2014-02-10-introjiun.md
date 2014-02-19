@@ -2,6 +2,7 @@
 layout: post
 title: Introducing - Jiun Kim
 description: a paragraph to introduce myself to the class
+tags: intro
 ---
 
 *Hello EDV class*

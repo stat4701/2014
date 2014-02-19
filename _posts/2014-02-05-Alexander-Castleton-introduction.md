@@ -2,6 +2,7 @@
 layout: post
 title: Introducing— Alexander Castleton
 description: a little bit about myself as an introduction to the class
+tags: intro
 ---
 
 I am a student in the IDSE certificate program here at Columbia.  Besides taking Modern Analysis I and II over the summer, this program is my first year with Columbia University.
