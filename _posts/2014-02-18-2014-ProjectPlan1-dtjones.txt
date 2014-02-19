@@ -13,6 +13,8 @@ For example, say a brand is live tweeting during an event like the superbowl and
 
 There are various social listening products available on the market right now, such as [Radian6](http://www.salesforcemarketingcloud.com/) who was recently acquired by salesforce and [Neilson BuzzMetrics](http://www.nielsen-online.com/products_buzz.jsp?section=pro_buzz#1) among others. Software like this could be sold to clients at my agency, and I want to gain exposure to NLP. win win!
 
+[Here is my trello board](https://trello.com/b/US9rnRmB/dtjones-edav-project)
+
 #Plan - first 3 weeks
 
 1) Accessing API / setting up OAuth with python
