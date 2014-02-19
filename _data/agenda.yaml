@@ -96,22 +96,19 @@
     - discuss color issues for class projects
 
 - date: 2014-02-24
-  topic: Trellis/Lattice
-  before: |
-    - Yau ch.6
-    - Sarkar book (SpringerLink)
-  during: Discuss problems Lattice solves, use cases, implementations, relevance to blogposts or projects
+  topic: Data are ugly
+  before:  |
+    - [Tidy data](http://vita.had.co.nz/papers/tidy-data.pdf)
+    - [Research directions in data wrangling](http://idl.cs.washington.edu/papers/data-wrangling)
 
 - date: 2014-02-26
-  topic: ggplot2 in some depth
-  before: |
-    - gglot2 book (SpringerLink)
-    - [ggplot2 doc web site](http://ggplot2.org)
-    - [ggplot in Python](http://blog.yhathq.com/posts/ggplot-for-python.html)
+  topic: APIs and data interchange
+  before: some API doc; R and Python tools for data wrangling and interfaces
+  during: discuss I/O and modeling
 
 - date: 2014-03-03
   topic: more strategies for improving graphs
-  due: blogpost 2 due. Submit a pull request and be ready to discuss challenges you had and how you solved them.
+  due: blogpost 1 due. Submit a pull request and be ready to discuss challenges you had and how you solved them.
   before: |
     - Yau, ch. 4,5,7
 
@@ -164,15 +161,22 @@
     - discuss reproducible research, publishing replication data, versioning, &c
 
 - date: 2014-04-07
-  topic: Data are ugly
-  before:  |
-    - [Tidy data](http://vita.had.co.nz/papers/tidy-data.pdf)
-    - [Research directions in data wrangling](http://idl.cs.washington.edu/papers/data-wrangling)
+  topic: Trellis/Lattice
+  before: |
+    - Yau ch.6
+    - Sarkar book (SpringerLink)
+  during: Discuss problems Lattice solves, use cases, implementations, relevance to blogposts or projects
+
 
 - date: 2014-04-09
-  topic: discuss blogposts
-  due: blogpost #3
+  due: blogpost #2
   during: discuss blog posts, bad graphs of the day
+  topic: ggplot2 in some depth
+  before: |
+    - gglot2 book (SpringerLink)
+    - [ggplot2 doc web site](http://ggplot2.org)
+    - [ggplot in Python](http://blog.yhathq.com/posts/ggplot-for-python.html)
+
 
 - date: 2014-04-14
   topic: Histograms are totally simple, right?
@@ -183,12 +187,11 @@
     - [Histogram D3 layout](https://github.com/mbostock/d3/wiki/Histogram-Layout)
 
 - date: 2014-04-16
-  topic: APIs and data interchange
-  before: some API doc; R and Python tools for data wrangling and interfaces
-  during: discuss I/O and modeling
+  topic: color redux (see 2014-02-19)
+  during: discuss applications in projects/blogposts
 
 - date: 2014-04-21
-  topic: data structures, storage, and modeling
+  topic: data structures, storage, and modeling (note: will move to earlier date)
 
 - date: 2014-04-23
   topic: model checking, displays, and uncertainty
@@ -203,5 +206,6 @@
   topic: project reviews
 
 - date: 2014-05-05
+  due: Blogpost #3
   topic: project reviews
 
