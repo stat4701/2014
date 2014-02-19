@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Project Iteration 1: D Jones
+title: Project Iteration 1 // D Jones
 description: social listening software
 tags: Project, dtjones
 ---
