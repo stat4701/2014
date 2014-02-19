@@ -12,6 +12,7 @@ I am studying the risk of traffic crashes at intersctions in NYC relative to adj
 4. If this is successful I will try to replicate the contour plot using QGIS (or similar) to account for the geographic (water) boundaries that will are present in the area of interest.
 
 Next sprint will include:
+
 1. Finding other data sources that can be incorporated into the analysis such as number of lanes of incoming traffic, type of intersection, presence or absence of pedestrian countdown signals, land use of the area surrounding the intersection and traffic volume information.
 2. Performing cluster analysis (possibly hierarchical) on identified hotspots to categorize problem areas
 3. Create a visualization which shows the locations and types of the clusters.
