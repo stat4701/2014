@@ -1,7 +1,8 @@
 from bs4 import BeautifulSoup
 import urllib2
 import csv
-import ipdb
+import json
+import collections
 
 class PopulationTableGrabber(object):
     def __init__(self, url):
@@ -43,24 +44,49 @@ class PopulationTableGrabber(object):
         return out
 
     def reshape_city_data(self, all_tabs):
-        ''' list of lists'''
+        ''' list of lists of dicts'''
         return [self.parse_one_table(tab) for tab in all_tabs]
 
-    def write_csv(self, dicts, filename="citypop.csv"):
+    def read_tot_pop(self, url="https://docs.google.com/spreadsheet/pub?key=0AruyJI76uB8RdFBySUhzRldyalJGTXZtY1NxT0E2Z1E&output=csv"):
+        page = urllib2.urlopen(url)
+        totpop = []
+        for p in page[1:]:
+            d = collections.OrderedDict()
+            d['year'] = p[0]
+
+
+        return totpop
+
+    def write_csv(self, dicts, filename="citypop_ae.csv"):
         ''' could do without ceremony, but this preserves key order
         '''
         # print dicts
         keys = ['year', 'rank', 'city', 'pop']
         f = open(filename, 'wb')
         dict_writer = csv.DictWriter(f, keys)
+        dict_writer.writer.writerow(keys)
         for this_dict in dicts:
             dict_writer.writerows(this_dict)
-        dict_writer.writer.writerow(keys)
         f.close()
+
+    def write_json(self, dicts, filename="citypop_ae.json"):
+        totpop = self.read_tot_pop()
+
+        # f = open(filename, 'wb')
+        # print dicts[0][0].get('city')
+        for outer_list in dicts:
+            for inner_list in outer_list:
+                print inner_list
+        print json.dumps(totpop[0], indent=4)
+
+        # print json.dumps(dicts, sort_keys=True, indent=4, separators=(',', ': '))
+        # f.close()
+
         
 
 pop = PopulationTableGrabber('http://www.peakbagger.com/pbgeog/histmetropop.aspx')
-pop.write_csv(pop.reshape_city_data(pop.find_all_tabs()))
+# pop.write_csv(pop.reshape_city_data(pop.find_all_tabs()))
+pop.write_json(pop.reshape_city_data(pop.find_all_tabs()))
 
 ## I transcribed total population in millions:
 ## https://docs.google.com/spreadsheet/pub?key=0AruyJI76uB8RdFBySUhzRldyalJGTXZtY1NxT0E2Z1E&output=csv

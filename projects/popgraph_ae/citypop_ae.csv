@@ -1,3 +1,4 @@
+year,rank,city,pop
 1790,1.,Philadelphia,44.1
 1790,2.,New York,33.1
 1790,3.,Boston,18.3
@@ -458,4 +459,3 @@
 2010,18.,Baltimore,2497.0
 2010,19.,Tampa,2442.0
 2010,20.,St. Louis,2246.0
-year,rank,city,pop
