@@ -1,0 +1,69 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0" is_locked="false">
+    <option name="myName" value="Project Default" />
+    <option name="myLocal" value="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="55">
+            <item index="0" class="java.lang.String" itemvalue="gunicorn" />
+            <item index="1" class="java.lang.String" itemvalue="simplejson" />
+            <item index="2" class="java.lang.String" itemvalue="APNSWrapper" />
+            <item index="3" class="java.lang.String" itemvalue="selenium" />
+            <item index="4" class="java.lang.String" itemvalue="Pygments" />
+            <item index="5" class="java.lang.String" itemvalue="boto" />
+            <item index="6" class="java.lang.String" itemvalue="bcrypt" />
+            <item index="7" class="java.lang.String" itemvalue="gdata" />
+            <item index="8" class="java.lang.String" itemvalue="requests" />
+            <item index="9" class="java.lang.String" itemvalue="suds" />
+            <item index="10" class="java.lang.String" itemvalue="dictshield" />
+            <item index="11" class="java.lang.String" itemvalue="oauth2" />
+            <item index="12" class="java.lang.String" itemvalue="pyres" />
+            <item index="13" class="java.lang.String" itemvalue="ujson" />
+            <item index="14" class="java.lang.String" itemvalue="tweepy" />
+            <item index="15" class="java.lang.String" itemvalue="ply" />
+            <item index="16" class="java.lang.String" itemvalue="freezegun" />
+            <item index="17" class="java.lang.String" itemvalue="nosexcover" />
+            <item index="18" class="java.lang.String" itemvalue="pycurl" />
+            <item index="19" class="java.lang.String" itemvalue="google-api-python-client" />
+            <item index="20" class="java.lang.String" itemvalue="MySQL-python" />
+            <item index="21" class="java.lang.String" itemvalue="guppy" />
+            <item index="22" class="java.lang.String" itemvalue="pytz" />
+            <item index="23" class="java.lang.String" itemvalue="braintree" />
+            <item index="24" class="java.lang.String" itemvalue="pysftp" />
+            <item index="25" class="java.lang.String" itemvalue="nltk" />
+            <item index="26" class="java.lang.String" itemvalue="python-gnupg" />
+            <item index="27" class="java.lang.String" itemvalue="pycrypto" />
+            <item index="28" class="java.lang.String" itemvalue="vcrpy" />
+            <item index="29" class="java.lang.String" itemvalue="unittest2" />
+            <item index="30" class="java.lang.String" itemvalue="python-twitter" />
+            <item index="31" class="java.lang.String" itemvalue="nose-description-fixer-plugin" />
+            <item index="32" class="java.lang.String" itemvalue="Django" />
+            <item index="33" class="java.lang.String" itemvalue="pymongo" />
+            <item index="34" class="java.lang.String" itemvalue="raven" />
+            <item index="35" class="java.lang.String" itemvalue="python-memcached" />
+            <item index="36" class="java.lang.String" itemvalue="pyquery" />
+            <item index="37" class="java.lang.String" itemvalue="pylint" />
+            <item index="38" class="java.lang.String" itemvalue="googlemaps" />
+            <item index="39" class="java.lang.String" itemvalue="PIL" />
+            <item index="40" class="java.lang.String" itemvalue="redis" />
+            <item index="41" class="java.lang.String" itemvalue="envoy" />
+            <item index="42" class="java.lang.String" itemvalue="mock" />
+            <item index="43" class="java.lang.String" itemvalue="PyYAML" />
+            <item index="44" class="java.lang.String" itemvalue="tornado-stub-client" />
+            <item index="45" class="java.lang.String" itemvalue="heatmap" />
+            <item index="46" class="java.lang.String" itemvalue="coverage" />
+            <item index="47" class="java.lang.String" itemvalue="newrelic" />
+            <item index="48" class="java.lang.String" itemvalue="bpython" />
+            <item index="49" class="java.lang.String" itemvalue="pygooglechart" />
+            <item index="50" class="java.lang.String" itemvalue="cffi" />
+            <item index="51" class="java.lang.String" itemvalue="tornado" />
+            <item index="52" class="java.lang.String" itemvalue="nose" />
+            <item index="53" class="java.lang.String" itemvalue="twilio" />
+            <item index="54" class="java.lang.String" itemvalue="pagerduty" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
