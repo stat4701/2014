@@ -29,17 +29,21 @@ make watch
 
 If you haven't installed make, this just is 3 commands instead of 1. 
 
-You can ![go to the directory](http://i.imgur.com/wEagYoZ.png),
+You can go to the directory, ![go to the directory](http://i.imgur.com/wEagYoZ.png),
 
- [display the contents of the makefile](http://i.imgur.com/pWuNf5A.png)
+display the contents of the makefile,
+![display the contents of the makefile](http://i.imgur.com/pWuNf5A.png)
 
-, ignore the erroneous first command (which references an unset cache variable?), and run the ![watch or auto_test command](http://i.imgur.com/kB7eOw4.png)
+ignore the erroneous first command (which references an unset cache variable?), and run the watch (or auto_test) command
+![watch or auto_test command](http://i.imgur.com/kB7eOw4.png)
 
-You'll see ![something like this](http://i.imgur.com/nJmdKzq.png)
+You'll see something like this 
+![something like this](http://i.imgur.com/nJmdKzq.png)
 
-and if you fix something, as soon as you save the function, you should ![see something like this](http://i.imgur.com/tGFEjeq.png)
+and if you fix something, as soon as you save the function, you should see something like this
+![see something like this](http://i.imgur.com/tGFEjeq.png)
 
-How you can get it past the string mismatch issue is beyond the understanding of the present author. 
+How you can get it past the string mismatch issue is beyond the understanding of the present author.  -bht
 
 Have fun!
 
