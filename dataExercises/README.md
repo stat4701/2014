@@ -29,7 +29,23 @@ make watch
 
 If you haven't installed make, this is just 3 commands instead of 1. 
 
-You can go to the directory, ![go to the directory](http://i.imgur.com/wEagYoZ.png),
+### One successful workflow
+
+I had some success with RStudio and Terminal open simultaneously, doing the following stuff. (I did this on a mac, but I don't think I did anything mac-specific) 
+
+In RStudio,
+``` {R}
+install.packages("devtools")
+library(devtools)
+install_github('testthat')
+library(testthat)
+library("dataExercises", lib.loc="/Library/Frameworks/R.framework/Versions/3.0/Resources/library")
+```
+
+I believe I got the install working just using the RStudio GUI 
+![Imgur](http://i.imgur.com/20rpRAe.png)
+
+Now we turn to Terminal/Command Prompt/your shell of choice. You can go to the directory, ![go to the directory](http://i.imgur.com/wEagYoZ.png),
 
 display the contents of the makefile,
 ![display the contents of the makefile](http://i.imgur.com/pWuNf5A.png)
