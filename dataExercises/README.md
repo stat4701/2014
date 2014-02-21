@@ -13,7 +13,7 @@ which show the the weakness of the "csv api"
 ## How to use
 
 *Given* you have installed *testthat* , preferably using
-devtools and `install_github('testthat')`, you should
+devtools and `install_github('testthat')`, *and* that you have installed make, you should
 be able to 
 
 ```{bash}
@@ -26,6 +26,20 @@ provides a watcher, so that tests rerun when you save source.
 ```{bash}
 make watch
 ```
+
+If you haven't installed make, this just is 3 commands instead of 1. 
+
+You can [go to the directory](http://i.imgur.com/wEagYoZ.png),
+
+ [display the contents of the makefile](http://i.imgur.com/pWuNf5A.png)
+
+, ignore the erroneous first command (which references an unset cache variable?), and run the [watch or auto_test command](http://i.imgur.com/kB7eOw4.png)
+
+You'll see [something like this](http://i.imgur.com/nJmdKzq.png)
+
+and if you fix something, as soon as you save the function, you should [see something like this](http://i.imgur.com/tGFEjeq.png)
+
+How you can get it past the string mismatch issue is beyond the understanding of the present author. 
 
 Have fun!
 
