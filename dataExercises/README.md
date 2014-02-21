@@ -27,7 +27,7 @@ provides a watcher, so that tests rerun when you save source.
 make watch
 ```
 
-If you haven't installed make, this just is 3 commands instead of 1. 
+If you haven't installed make, this is just 3 commands instead of 1. 
 
 You can go to the directory, ![go to the directory](http://i.imgur.com/wEagYoZ.png),
 
@@ -40,7 +40,7 @@ ignore the erroneous first command (which references an unset cache variable?), 
 You'll see something like this 
 ![something like this](http://i.imgur.com/nJmdKzq.png)
 
-and if you fix something, as soon as you save the function, you should see something like this
+Suppose you then make Admit and Gender into factors and set their levels - as soon as you save the function, you should see something like this
 ![see something like this](http://i.imgur.com/tGFEjeq.png)
 
 How you can get it past the string mismatch issue is beyond the understanding of the present author.  -bht
