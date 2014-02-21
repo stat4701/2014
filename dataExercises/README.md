@@ -54,6 +54,7 @@ ignore the erroneous first command (which references an unset cache variable?), 
 ![watch or auto_test command](http://i.imgur.com/kB7eOw4.png)
 
 You'll see something like this 
+
 ![something like this](http://i.imgur.com/nJmdKzq.png)
 
 Suppose you then make Admit and Gender into factors and set their levels - as soon as you save the function, you should see something like this
