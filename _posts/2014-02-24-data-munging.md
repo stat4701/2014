@@ -116,7 +116,7 @@ str(df10 <- rbind.fill(df1,df2))
 ## Stack code
 
 - [Let's look at the code.](https://github.com/malecki/edav/blob/gh-pages/dataExercises/Stack/R/)
-- and the [tests]([Let's look at the code.](https://github.com/malecki/edav/blob/gh-pages/dataExercises/Stack/inst/tests/)
+- and the [tests](https://github.com/malecki/edav/tree/gh-pages/dataExercises/Stack/inst/tests)
 
 
 </section>
