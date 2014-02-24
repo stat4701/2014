@@ -29,4 +29,4 @@ Tags: project
 * Perform some statistics to better understand data and any existing relationships
 * To explore links between the lack of physical activity and obessity 
 * Develop statistics on data resulting in some reliable metric
-* First cut at visualization
+* First cut at visualization in R
