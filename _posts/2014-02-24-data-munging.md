@@ -1,12 +1,22 @@
 ---
 layout: pres
-title: Color
-description: Color.
+title: 3 Data Munging Stories
+description: 3 Data Munging Stories
 tags: slides
 ---
 <section>
 	<section>
 ## graph of the day
+</section>
+	<section>
+## “Flavor network”
+
+[![](http://www.nature.com/srep/2011/111215/srep00196/images/srep00196-f2.jpg)](http://www.nature.com/srep/2011/111215/srep00196/fig_tab/srep00196_F2.html)
+</section>
+	<section>
+### A set of (potentially!) related graphs
+
+[![](http://www.wired.com/images_blogs/design/2013/10/2111FF_foodnetwork_opener-Detail-1.jpg)](http://www.wired.com/design/2013/10/26-amazing-food-infographics/?viewall=true)
 </section>
 </section>
 
@@ -171,10 +181,17 @@ str(df10 <- rbind.fill(df1,df2))
 
 ### The python part of the recipes topic model
 
-- Seriously?! Separate files and languages‽‽
+[![](http://rforwork.files.wordpress.com/2014/02/recipe-popularity-of-top-30-ingredients-no-egg-wheat-or-butter.png?w=584&h=512)](http://rforwork.info/2014/02/17/a-delicious-analysis/)
+
+</section>
+	<section>
+
+### Replication code
+
+- [Code](http://rforwork.info/2014/02/17/a-delicious-analysis/), [data](http://yongyeol.com/data/) ([copied to our repo](https://github.com/malecki/edav/tree/gh-pages/projects/flavornetwork) in `projects/flavornetwork`)
+- Separate files and languages‽‽ Do we need that?
 - csv/tsv api
 - relational tables stored as text 
-- (projects/flavornetwork)
 
 </section>
 	<section>
