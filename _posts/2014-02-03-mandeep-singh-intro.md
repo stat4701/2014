@@ -2,6 +2,7 @@
 layout: pres
 title: Mandeep Intro Page
 description: Mandeep Singh Bio and Introduction
+tags: intro
 ---
 
 <section>

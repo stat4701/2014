@@ -2,7 +2,7 @@
 layout: post
 title: "Introducing - Candi Halbert"
 description: first post
-tags: [edav, intro]
+tags: intro
 ---
 {% include JB/setup %}
 

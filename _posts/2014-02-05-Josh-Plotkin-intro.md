@@ -2,6 +2,7 @@
 layout: post
 title: Josh Plotkin Intro
 description: Introduction
+tags: intro
 ---
 
 ## Who I Am

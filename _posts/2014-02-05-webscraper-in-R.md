@@ -2,6 +2,7 @@
 layout: post
 title: R webscraper in 2 lines of code
 description: Intro to the XML package in R
+tags: assignments
 ---
 
     require(XML) # this calls for the package in R
