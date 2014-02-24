@@ -13,6 +13,7 @@ Tags: project
 	* Leading Causes of Death
 	* Risk Factors and Access to Care
 * Working on cleaning data and subsetting data
+* Added git repository for project [here](https://github.com/Gabya06/CHSI)
 
 ### CHSI Dataset summary from website (shortened):
 > Community Health Status Indicators (CHSI) to combat obesity, heart disease, and cancer are major components of the Community Health Data Initiative. This dataset provides key health indicators for local communities and encourages dialogue about actions that can be taken to improve community health (e.g., obesity, heart disease, cancer). 
