@@ -13,7 +13,7 @@ which show the the weakness of the "csv api"
 ## How to use
 
 *Given* you have installed *testthat* , preferably using
-devtools and `install_github('testthat')`, you should
+devtools and `install_github('testthat')`, *and* that you have installed make, you should
 be able to 
 
 ```{bash}
@@ -26,6 +26,41 @@ provides a watcher, so that tests rerun when you save source.
 ```{bash}
 make watch
 ```
+
+If you haven't installed make, this is just 3 commands instead of 1. 
+
+### One successful workflow
+
+I had some success with RStudio and Terminal open simultaneously, doing the following stuff. (I did this on a mac, but I don't think I did anything mac-specific) 
+
+In RStudio my command history has these commands:
+``` {R}
+install.packages("devtools")
+library(devtools)
+install_github('testthat')
+library(testthat)
+library("dataExercises", lib.loc="/Library/Frameworks/R.framework/Versions/3.0/Resources/library")
+```
+
+I believe I got the 'dataExercises' install working just using the RStudio GUI (hence the more verbose command than the ones I wrote):
+![Imgur](http://i.imgur.com/20rpRAe.png)
+
+Now we turn to Terminal/Command Prompt/your shell of choice. You can go to the directory, ![go to the directory](http://i.imgur.com/wEagYoZ.png),
+
+display the contents of the makefile,
+![display the contents of the makefile](http://i.imgur.com/pWuNf5A.png)
+
+ignore the erroneous first command (which references an unset cache variable?), and run the watch (or auto_test) command
+![watch or auto_test command](http://i.imgur.com/kB7eOw4.png)
+
+You'll see something like this 
+
+![something like this](http://i.imgur.com/nJmdKzq.png)
+
+Suppose you then make Admit and Gender into factors and set their levels - as soon as you save the function, you should see something like this
+![see something like this](http://i.imgur.com/tGFEjeq.png)
+
+How you can get it past the string mismatch issue is beyond the understanding of the present author.  -bht
 
 Have fun!
 
