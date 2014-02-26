@@ -37,6 +37,8 @@ loadAndParseIntegerCSV <- function(file){
     ## and returns the mutated environment.
     out <- within(out, {
         Dept <- factor(LETTERS[Dept])
+        Gender <- factor(Gender, levels=1:2, labels=c("Male", "Female"), ordered=TRUE)
+        Admit <- factor(Admit, labels=c("Admitted","Rejected")) # alpha is ok
     })
     return(out)
 }

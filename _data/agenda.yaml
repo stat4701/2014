@@ -104,17 +104,22 @@
 - date: 2014-02-26
   topic: APIs and data interchange
   before: some API doc; R and Python tools for data wrangling and interfaces
-  during: discuss I/O and modeling
+  during: discuss I/O, shortcuts, and modeling
+  after: |
+    - [ggplot2 data contract](http://martinsbioblogg.wordpress.com/2014/02/20/books-and-lessons-about-ggplot2/)
+    - [optimizing R](http://www.noamross.net/blog/2013/4/25/faster-talk.html)
 
 - date: 2014-03-03
-  topic: more strategies for improving graphs
+  topic: blogposts review; R packaging
   due: blogpost 1 due. Submit a pull request and be ready to discuss challenges you had and how you solved them.
   before: |
     - Yau, ch. 4,5,7
+  during: Build an R package for a project
 
 - date: 2014-03-05
-  topic: Animation
   due: Iteration plan. What was left undone, objective and key results for next three weeks.
+  during: Do grouped/stacked plot of estimated party ID in Lattice
+  topic: Nominally Animation; more APIs and data interchange
   before: |
     - [The Joy of Stats](http://www.gapminder.org/videos/the-joy-of-stats/)
     - [Google Charts motion chart doc](https://developers.google.com/chart/interactive/docs/gallery/motionchart) and in [R](http://blog.revolutionanalytics.com/2011/01/create-motion-charts-in-r-with-the-googlevis-package.html)
@@ -154,9 +159,8 @@
 - date: 2014-04-02
   topic: Reproducibility and Replication
   before: |
-    - Knuth on literate programming
-    - knitr doc
-    - IPython notebook doc
+    - [knitr doc](http://yihui.name/knitr/)
+    - [IPython notebook doc](http://ipython.org/notebook), [intro](http://www.randalolson.com/2012/05/12/a-short-demo-on-how-to-use-ipython-notebook-as-a-research-notebook/)
   during: |
     - discuss reproducible research, publishing replication data, versioning, &c
 
@@ -164,7 +168,7 @@
   topic: Trellis/Lattice
   before: |
     - Yau ch.6
-    - Sarkar book (SpringerLink)
+    - Sarkar book ([SpringerLink](http://link.springer.com/book/10.1007/978-0-387-75969-2))
   during: Discuss problems Lattice solves, use cases, implementations, relevance to blogposts or projects
 
 
