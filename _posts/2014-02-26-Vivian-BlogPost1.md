@@ -152,4 +152,4 @@ colnames(meltMerged) <- c("Year", "Source", "Cases")
 
 
 7. I was also curious to see what the ranges for the CFR impact scale were.
-![CFR Cases Impact Scale](https://github.com/veeps/VAX/blob/master/CFRPertussisCases_ImpactScale.png)
+![CFR Cases Impact Scale](https://github.com/veeps/VAX/blob/master/CFRPertussisCases_ImpactScale.png?raw=true)
