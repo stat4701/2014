@@ -29,7 +29,7 @@ Here's a breakdown of what I did:
 <ol> 
 	<li>Scraped Whooping Cough breakout cases from the [CDC](http://www.cdc.gov/pertussis/surv-reporting/cases-by-year.html)</li>
 
-	<li>Plotted the data in R to see the trend
+	<li>Plotted the data in R to see the trend</li>
 ```{r chunkLabel}
 require(plyr)
 cases <- read.table("CDC_PertussisCases.csv", header = TRUE, stringsAsFactors= FALSE,sep="," )
@@ -41,10 +41,10 @@ require(ggplot2)
 ggplot(cases, aes(x=as.factor(Year), y=log(Cases))) +geom_point(color = "indianred1") + ggtitle("Pertussis Cases in the US")
 ```
 ![US Whooping Cough Cases](https://github.com/veeps/VAX/blob/master/CDCPertussisOutbreaksinUS.png?raw=true)
-</li>
+
 	<li>Downloaded CFR data in .csv format</li>
 
-	<li>Cleaned the data in R
+	<li>Cleaned the data in R</li>
 
 ```{r chunkLabel}
 #Exploring CFR Whooping Cough data
@@ -126,8 +126,8 @@ write.table(WhoopingCough, "WhoopingCough.csv", sep=",", col.names=TRUE, row.nam
 
 
 ```
-</li>
-	<li>Merged CFR data with CDC data
+
+	<li>Merged CFR data with CDC data</li>
 
 ``` {r chunkLabel}
 #read in CDC data
@@ -149,7 +149,7 @@ colnames(meltMerged) <- c("Year", "Source", "Cases")
 
 
 ```
-</li>
+
 	<li>[Plotted cases](https://github.com/veeps/VAX/blob/master/VAXpreventableOutbreaks.R) to see the difference in outbreak reportings between CFR and CDC
 ![CFRvCDC Cases](https://github.com/veeps/VAX/blob/master/CDCvsCFR_WCcases_nonLogscale.png?raw=true)
 </li>
