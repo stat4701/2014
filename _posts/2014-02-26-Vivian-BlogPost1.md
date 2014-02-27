@@ -15,18 +15,18 @@ One of those parents, Michael, was pulled into the article by the title and turn
 
 I agree with Michael and Adam's critiques on the [original data visualization](http://theauguriesofinnocence.blogspot.com/2014/02/frankensteins-creature-vaccinations-and.html):
 
-1. The data source is from the Council on Foreign Relations, which scrapes news articles for updated reports on disease outbreaks. While this technique offers real-time data, it's not as rigorous as data from the CDC or WHO.
-2. The bubbles overlap and crowd the map, so it's hard to see where the breakouts actually occur.
-3. The color choices are completely unflattering. 
+<ol> The data source is from the Council on Foreign Relations, which scrapes news articles for updated reports on disease outbreaks. While this technique offers real-time data, it's not as rigorous as data from the CDC or WHO.
+<ol> The bubbles overlap and crowd the map, so it's hard to see where the breakouts actually occur.
+<ol> The color choices are completely unflattering. </ol>
 
 I was particularly interested in Whooping Cough, because there is an increasing trend in pertussis cases in the U.S. I also decided to only focus on the U.S., because it's simply unfair to make any claim on "vaccine preventable outbreaks" in countries that don't have the same access to vaccines as we do. 
 
 For the scope of this blog post, I addressed the first issue of data collection. I will get to points 2 & 3 in the next blog post. 
-Here's an breakdown of what I did:
+Here's a breakdown of what I did:
 
-1. Scraped Whooping Cough breakout cases from the [CDC](http://www.cdc.gov/pertussis/surv-reporting/cases-by-year.html)
+<ol> Scraped Whooping Cough breakout cases from the [CDC](http://www.cdc.gov/pertussis/surv-reporting/cases-by-year.html)
 
-2. Plotted the data in R to see the trend
+<ol> Plotted the data in R to see the trend
 ```{r chunkLabel}
 require(plyr)
 cases <- read.table("CDC_PertussisCases.csv", header = TRUE, stringsAsFactors= FALSE,sep="," )
@@ -39,9 +39,9 @@ ggplot(cases, aes(x=as.factor(Year), y=log(Cases))) +geom_point(color = "indianr
 ```
 ![US Whooping Cough Cases](https://github.com/veeps/VAX/blob/master/CDCPertussisOutbreaksinUS.png?raw=true)
 
-3. Downloaded CFR data in .csv format
+<ol> Downloaded CFR data in .csv format
 
-4. Cleaned the data in R
+<ol> Cleaned the data in R
 
 ```{r chunkLabel}
 #Exploring CFR Whooping Cough data
@@ -124,7 +124,7 @@ write.table(WhoopingCough, "WhoopingCough.csv", sep=",", col.names=TRUE, row.nam
 
 ```
 
-5. Merged CFR data with CDC data
+<ol> Merged CFR data with CDC data
 
 ``` {r chunkLabel}
 #read in CDC data
@@ -147,9 +147,9 @@ colnames(meltMerged) <- c("Year", "Source", "Cases")
 
 ```
 
-6. [Plotted cases](https://github.com/veeps/VAX/blob/master/VAXpreventableOutbreaks.R) to see the difference in outbreak reportings between CFR and CDC
+<ol> [Plotted cases](https://github.com/veeps/VAX/blob/master/VAXpreventableOutbreaks.R) to see the difference in outbreak reportings between CFR and CDC
 ![CFRvCDC Cases](https://github.com/veeps/VAX/blob/master/CDCvsCFR_WCcases_nonLogscale.png?raw=true)
 
 
-7. I was also curious to see what the ranges for the CFR impact scale were.
+<ol> I was also curious to see what the ranges for the CFR impact scale were.
 ![CFR Cases Impact Scale](https://github.com/veeps/VAX/blob/master/CFRPertussisCases_ImpactScale.png?raw=true)
