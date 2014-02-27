@@ -2,7 +2,7 @@
 layout: post
 title: Katherine Introduction
 description:
-tags: blog
+tags: intro
 ---
 <section>
 	<section>

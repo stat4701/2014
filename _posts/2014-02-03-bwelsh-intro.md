@@ -2,7 +2,7 @@
 layout: post
 title: Introduction and first post
 description: this is my introductory post and first attempt at exploring the population data
-tags: post
+tags: intro assignments
 ---
 ## Introduction - Barbara Welsh ##
 
