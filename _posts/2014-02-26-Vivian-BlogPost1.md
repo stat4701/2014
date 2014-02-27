@@ -26,10 +26,9 @@ I was particularly interested in Whooping Cough, because there is an increasing 
 For the scope of this blog post, I addressed the first issue of data collection. I will get to points 2 & 3 in the next blog post. 
 Here's a breakdown of what I did:
 
-<ol> 
-	<li>Scraped Whooping Cough breakout cases from the [CDC](http://www.cdc.gov/pertussis/surv-reporting/cases-by-year.html)</li>
+1\. Scraped Whooping Cough breakout cases from the [CDC](http://www.cdc.gov/pertussis/surv-reporting/cases-by-year.html)
 
-	<li>Plotted the data in R to see the trend</li>
+2\. Plotted the data in R to see the trend
 ```{r chunkLabel}
 require(plyr)
 cases <- read.table("CDC_PertussisCases.csv", header = TRUE, stringsAsFactors= FALSE,sep="," )
@@ -42,9 +41,9 @@ ggplot(cases, aes(x=as.factor(Year), y=log(Cases))) +geom_point(color = "indianr
 ```
 ![US Whooping Cough Cases](https://github.com/veeps/VAX/blob/master/CDCPertussisOutbreaksinUS.png?raw=true)
 
-	<li>Downloaded CFR data in .csv format</li>
+3\.Downloaded CFR data in .csv format
 
-	<li>Cleaned the data in R</li>
+4\.Cleaned the data in R
 
 ```{r chunkLabel}
 #Exploring CFR Whooping Cough data
@@ -127,7 +126,7 @@ write.table(WhoopingCough, "WhoopingCough.csv", sep=",", col.names=TRUE, row.nam
 
 ```
 
-	<li>Merged CFR data with CDC data</li>
+5\. Merged CFR data with CDC data
 
 ``` {r chunkLabel}
 #read in CDC data
@@ -150,13 +149,12 @@ colnames(meltMerged) <- c("Year", "Source", "Cases")
 
 ```
 
-	<li>[Plotted cases](https://github.com/veeps/VAX/blob/master/VAXpreventableOutbreaks.R) to see the difference in outbreak reportings between CFR and CDC
+6\. [Plotted cases](https://github.com/veeps/VAX/blob/master/VAXpreventableOutbreaks.R) to see the difference in outbreak reportings between CFR and CDC
 ![CFRvCDC Cases](https://github.com/veeps/VAX/blob/master/CDCvsCFR_WCcases_nonLogscale.png?raw=true)
-</li>
 
-<li>I was also curious to see what the ranges for the CFR impact scale were.
+
+7\. I was also curious to see what the ranges for the CFR impact scale were.
 ![CFR Cases Impact Scale](https://github.com/veeps/VAX/blob/master/CFRPertussisCases_ImpactScale.png?raw=true)
-</li>
-</ol>
+
 
 
