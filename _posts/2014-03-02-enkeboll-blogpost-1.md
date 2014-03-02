@@ -20,10 +20,12 @@ The different scales became a big issue for me, both in coding and in chart desi
 
 I grabbed the data manually, since there were only 6 observations with 3 measures each. this is stored in a tab separated file, saved as `data.tsv`:
 
-`Metric	WhatsApp	Gap	Harley-Davidson	Campbell Soup	ConAgra Foods	Best Buy
+```
+Metric	WhatsApp	Gap	Harley-Davidson	Campbell Soup	ConAgra Foods	Best Buy
 Purchase Price (Billions $)	19	18.96	14	13.62	12.27	8.65
 Sales (Billions $)	0	16.29	5.49	8.13	17.37	48.13
-Employees	55	135000	5800	17700	26100	145000`
+Employees	55	135000	5800	17700	26100	145000
+```
 
 I then decided to use d3 to plot the graph.  I got a lot of help fom Bostock on making the chart from [this page](https://github.com/liufly/Dual-scale-D3-Bar-Chart) and help on displaying multiple Y axes from [this page](http://bl.ocks.org/mbostock/3887051)
 
@@ -31,7 +33,7 @@ I used HCL [Colorpicker](http://tristen.ca/hcl-picker/) for the colors.
 
 The code that generates this is below.  Because of the way d3 works, you can't just open the page using file:\\\ in a browser, you must run `python -m SimpleHTTPServer 8000` from a shell.  then you can access the page from your browser at `localhost:8000\blog1.html`.
 
-`
+```javascript
 <meta charset="utf-8">
 <style>
 
@@ -193,4 +195,4 @@ d3.tsv("data.tsv", function(error, data) {
 
 
 </script>
-`
+```
