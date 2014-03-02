@@ -6,8 +6,7 @@ Tags: assignment KISS minimalistic visualization not chartoons
 ---
 
 #### The Premise
-* This post is an attempt at visualizing the city population data differently and in the bargain derive soem 'points to ponder' for future visualization exercises.  Its reasonable to question the choice of the data set.  After all, its been 'revisualized' by the class many times over.  
-My choice of the data set was deliberate.  
+* This post continues from assignment0 and visualizing the city population data differently and in the bargain derive some 'points to ponder' for future visualization exercises.  Its reasonable to question the choice of the data set.  After all its been 'revisualized' by the class many times over.  My choice of the data set was deliberate.  
 * My objective in this post is not to find new insights into the data but to use it to make some salient on the use and abuse of feature rich (read code heavy and visually complex) graphs in general. 
 As this may be a little controversial, I wanted to choose data that was familiar to all us to facilitate an understanding of my point of view on visualization.
 
@@ -27,7 +26,7 @@ A come not to praise Ceaser but to burry him
 For Exploratory Data Analysis and Visualization (EDAV), Philip Guo's work on [Data Science Workflow: Overview and Challenges](http://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext) is very helpful.  
 It not only lays down the steps but also gives a preview of the potential challenges and rela world options to overcome them.  In a nutshell, the workflow is visualized as follows:
 ## Workflow
-[![](http://cacm.acm.org/system/assets/0001/3678/rp-overview.jpg](http://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext) (note the redirect!)
+[![](http://cacm.acm.org/system/assets/0001/3678/rp-overview.jpg)](http://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext) (note the redirect!)
 
 
 
