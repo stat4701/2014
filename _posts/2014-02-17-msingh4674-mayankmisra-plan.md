@@ -6,15 +6,19 @@ tags: project
 
 Team — Mayank Misra, Mandeep Singh
 
-Goal — Create analytics dashboard to make better use of publicly available healthcare information. This could help patients, physicians, pharmaceutical companies and payors.
-
-1.	Create a list of different datasources to procure healthcare claims, pharmaceutical and patient data
+Goal — Graph social and professional affiliation for prescribers (doctors). 
+Project Name: Physician Affinity Graph
+We are looking at using publicly available data sets to form a network graph of physicians. 
+ML will be used in this context for clustering based on common features/dimensions between physicians.  
+The aim is to to establish influencers/opinion leaders and physicians that have the most klout in a particular cluster. 
+ 
+1.	Create a list of different datasources to procure publicly available healthcare claims data, pharmaceutical relationship (sunshine act) data, and hospital/practice/association affiliation data sets.  
 2.	Analyze the format in which data is available from these sources and scrape the data in a repository. Eg CSV, JSON, API, Website etc
-3.	Create a database model  using these data sources to analyze the patient behavior, healthcare costs and sentiment analysis on the treatments
-4.	Munge and analyze the raw data collected above and create a dashboard with different views for patients, physicians, pharmaceutical companies and payors
-5.      We will be using a combination of Python, R, D3 and Github for coding 
+3.	Create a database model  using these data sources to analyze the physician relationships with hospitals, medical colleges, medical associations, pharmaceuticals, journals and other professional networks
+4.	Munge and analyze the raw data collected above and create a network graph  
+5.  We will be using a combination of Python, R, D3, Neo4j and Github for coding 
 
 ## Long Term
 
-1.	Develop predictive capabilities by leveraging clinical data with real-time data from sensor devices such as fidbit for preventive care
-2.	Create longitudinal studies around the data collected above 
+1.	Develop a influence score based ranking of physicians
+2.	Develop a 'Key Opinion Leader' KOL recommendation engine for payers, pharmaceutical companies, patients, research and academia
