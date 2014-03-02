@@ -33,7 +33,7 @@ I used HCL [Colorpicker](http://tristen.ca/hcl-picker/) for the colors.
 
 The code that generates this is below.  Because of the way d3 works, you can't just open the page using file:\\\ in a browser, you must run `python -m SimpleHTTPServer 8000` from a shell.  then you can access the page from your browser at `localhost:8000\blog1.html`.
 
-```javascript
+```html
 <meta charset="utf-8">
 <style>
 
