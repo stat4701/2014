@@ -1,7 +1,4 @@
-Company	Purchase Price	Sales	Employees
-WhatsApp	19	0	55
-Gap	18.96	16.29	135000
-Harley-Davidson	14	5.49	5800
-Campbell Soup	13.62	8.13	17700
-ConAgra Foods	12.27	17.37	26100
-Best Buy	8.65	48.13	145000
+Metric	WhatsApp	Gap	Harley-Davidson	Campbell Soup	ConAgra Foods	Best Buy
+Purchase Price (Billions $)	19	18.96	14	13.62	12.27	8.65
+Sales (Billions $)	0	16.29	5.49	8.13	17.37	48.13
+Employees	55	135000	5800	17700	26100	145000

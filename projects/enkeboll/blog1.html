@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<!-- Chart code based on https://github.com/liufly/Dual-scale-D3-Bar-Chart -->
+<!-- 
+Chart code based on https://github.com/liufly/Dual-scale-D3-Bar-Chart
+                and http://bl.ocks.org/mbostock/3887051
+-->
 
 <meta charset="utf-8">
 <style>
@@ -23,16 +26,8 @@ body {
   shape-rendering: crispEdges;
 }
 
-.bar1 {
-  fill: lightsteelblue;
-}
-
-.bar2 {
-  fill: darkblue;
-}
-
-.bar3 {
-  fill: orange;
+.bar {
+  fill: steelblue;
 }
 
 .x.axis path {
@@ -45,23 +40,36 @@ body {
 <script>
 
 var margin = {top: 80, right: 80, bottom: 80, left: 80},
-    width = 600 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    width = 1000 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
 
-var x = d3.scale.ordinal()
-    .rangeRoundBands([0, width], .1);
+var x0 = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1),
+    x1 = d3.scale.ordinal();
 
-var y0 = d3.scale.linear().domain([0, 20]).range([height, 0]),
-y1 = d3.scale.linear().domain([0, 150000]).range([height, 0]);
+var y0 = d3.scale.linear().domain([0, 50]).range([height, 0]),
+    y1 = d3.scale.linear().domain([0, 150000]).range([height, 0]);
+
+var color = d3.scale.ordinal()
+    .range(["#F07A8B", "#D999D3", "#86C4F9", "#18E6E2", "#7DF89F", "#F0F964"]);
 
 var xAxis = d3.svg.axis()
-    .scale(x)
+    .scale(x0)
+    .tickSize(0)
     .orient("bottom");
 
 // create left yAxis
-var yAxisLeft = d3.svg.axis().scale(y0).ticks(4).orient("left");
+var yAxisLeft = d3.svg.axis()
+    .scale(y0)
+    .ticks(10)
+    .tickFormat(d3.format("$.2s"))
+    .orient("left");
 // create right yAxis
-var yAxisRight = d3.svg.axis().scale(y1).ticks(6).orient("right");
+var yAxisRight = d3.svg.axis()
+    .scale(y1)
+    .ticks(10)
+    .tickFormat(d3.format(".2s"))
+    .orient("right");
 
 var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -70,9 +78,15 @@ var svg = d3.select("body").append("svg")
     .attr("class", "graph")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("data.tsv", type, function(error, data) {
-  x.domain(data.map(function(d) { return d.year; }));
-  y0.domain([0, d3.max(data, function(d) { return d.money; })]);
+d3.tsv("data.tsv", function(error, data) {
+  var companyNames = d3.keys(data[0]).filter(function(key) {return key !== "Metric"});
+
+  data.forEach(function(d) {
+    d.companies = companyNames.map(function(name) { return {name: name, value: +d[name], metric: d.Metric}; });
+  });
+
+  x0.domain(data.map(function(d) { return d.Metric; }));
+  x1.domain(companyNames).rangeRoundBands([0, x0.rangeBand()]);
   
   svg.append("g")
       .attr("class", "x axis")
@@ -84,9 +98,9 @@ d3.tsv("data.tsv", type, function(error, data) {
 	  .attr("transform", "translate(0,0)")
 	  .call(yAxisLeft)
 	.append("text")
+    .attr("transform", "rotate(-90)")
 	  .attr("y", 6)
-	  .attr("dy", "-2em")
-	  .style("text-anchor", "end")
+	  .attr("dy", ".71em")
 	  .style("text-anchor", "end")
 	  .text("Dollars (Billions)");
 	
@@ -95,33 +109,59 @@ d3.tsv("data.tsv", type, function(error, data) {
 	  .attr("transform", "translate(" + (width) + ",0)")
 	  .call(yAxisRight)
 	.append("text")
+    .attr("transform", "rotate(-90)")
 	  .attr("y", 6)
-	  .attr("dy", "-2em")
-	  .attr("dx", "2em")
+	  .attr("dy", "-1.2em")
 	  .style("text-anchor", "end")
-	  .text("#");
+	  .text("Employees");
 
-  bars = svg.selectAll(".bar").data(data).enter();
+  var bars = svg.selectAll(".bar")
+      .data(data)
+    .enter().append("g")
+      .attr("class", "g")
+      .attr("transform", function(d) { return "translate(" + x0(d.Metric) + ",0)"; });
 
-  bars.append("rect")
-      .attr("class", "bar1")
-      .attr("x", function(d) { return x(d.year); })
-      .attr("width", x.rangeBand()/2)
-      .attr("y", function(d) { return y0(d.money); })
-	  .attr("height", function(d,i,j) { return height - y0(d.money); }); 
+  bars.selectAll("rect")
+      .data(function(d) { return d.companies; })
+    .enter().append("rect")
+      .attr("width", x1.rangeBand())
+      .attr("x", function(d) { return x1(d.name) - 5; })
+      .attr("y", function(d) { if(d.metric === 'Employees') { return y1(d.value); } else { return y0(d.value); } }) 
+      .attr("height", function(d) { if(d.metric === 'Employees') { return height - y1(d.value); } 
+                                    else { return height - y0(d.value); } })
+      .style("fill", function(d) { return color(d.name); })
 
-  bars.append("rect")
-      .attr("class", "bar2")
-      .attr("x", function(d) { return x(d.year) + x.rangeBand()/2; })
-      .attr("width", x.rangeBand() / 2)
-      .attr("y", function(d) { return y1(d.number); })
-	  .attr("height", function(d,i,j) { return height - y1(d.number); }); 
+  bars.selectAll("text")
+      .data(function(d) { return d.companies; })
+    .enter().append("text")
+      .attr("x", function(d) { return x1(d.name) - 0; })
+      .attr("y", function(d) { if(d.metric === 'Employees') { return y1(d.value); } else { return y0(d.value); } })
+      .attr("dx", 15)
+      .attr("dy", -4)
+      .attr("text-anchor", "middle")
+      .text(function(d) { format = d3.format(".4s"); return format(d.value); })
+      .attr("fill", function(d) { if(d.metric === 'Employees') { return "orange"; } else { return "steelblue"; } });
+
+  var legend = svg.selectAll(".legend")
+      .data(companyNames.slice())
+    .enter().append("g")
+      .attr("class", "legend")
+      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+  legend.append("rect")
+      .attr("x", 180)
+      .attr("width", 18)
+      .attr("height", 18)
+      .style("fill", color);
+
+  legend.append("text")
+      .attr("x", 200)
+      .attr("y", 9)
+      .attr("dy", ".35em")
+      .style("text-anchor", "top")
+      .text(function(d) { return d; });
 
 });
 
-function type(d) {
-  d.money = +d.money;
-  return d;
-}
 
 </script>
