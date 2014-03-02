@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mandeep's Blog Post 1
-description: Analyze Trends in Distribution of Household Income
+description: Analyze Trends in Distribution of Income Between Top 1% and Bottom 20%
 tags: blogpost
 ---
 
@@ -19,9 +19,9 @@ Here is my critique on the chart show above:
 
 Here's a breakdown of what I did for this blog post:
 
-1\. I sliced the source data to highlight the concentration among the top one percent
+1\. I sliced the source data to highlight the concentration of income among the top one percent and show the stark contrast from the bottom 20%
 
-2\. Plotted the data in R to see the trend for the various sources of Income 
+2\. Plotted the data using a barplot in R. Also played around with ggplot and qplot using facet_grid()
 ```{r chunkLabel}
 require(ggplot2)
 df1 <- subset(df0, Percentile %in% c("1", "20"))
@@ -37,6 +37,13 @@ barplot(data1,beside=T,col=c("#ee7700","#3333ff")
 3\. [Source code](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/blog p1.R) to see the various sources of income across the different populations
 
 [Capital Income Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/CapitalIncome.png)
+
+[Capital Gains Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/CapitalGain.png)
+
+[Business Income Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/Business.png)
+
+[Labor Income Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/Labor.png)
+
 
 
 
