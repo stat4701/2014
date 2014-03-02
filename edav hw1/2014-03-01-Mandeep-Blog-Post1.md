@@ -36,7 +36,7 @@ barplot(data1,beside=T,col=c("#ee7700","#3333ff")
 
 3\. [Source code](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/blog p1.R) to see the various sources of income across the different populations
 
-![Capital Income Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/CapitalIncome.png?raw=true)
+[Capital Income Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/CapitalIncome.png)
 
 
 
