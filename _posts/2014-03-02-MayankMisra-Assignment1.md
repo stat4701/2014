@@ -33,9 +33,17 @@ It not only lays down the steps but also gives a preview of the potential challe
 * Prepare
 Wrangled [Data](http://public.tableausoftware.com/views/City_Population_Trend/Data?:embed=y&:display_count=no)
 
-[![](http://github.com/mayankmisra/edav/blob/gh-pages/assets/mm3557-cp-hw1-data.png)](http://public.tableausoftware.com/views/City_Population_Trend/Data?:embed=y&:display_count=no)
+[![](https://github.com/mayankmisra/edav/blob/gh-pages/assets/mm3557-cp-hw1-data.png)](http://public.tableausoftware.com/views/City_Population_Trend/Data?:embed=y&:display_count=no)
 
 * Analysis
+
+[Trend Summary - Geo Hierarchy](http://public.tableausoftware.com/views/City_Population_Trend/TrendSummary-GeoHierarchy?:embed=y&:display_count=no)
+
+[Population Migration](http://public.tableausoftware.com/views/City_Population_Trend/PopulationMigration?:embed=y&:display_count=no)
+
+[Population Size - Census Region/Division](http://public.tableausoftware.com/views/City_Population_Trend/PopulationSize-CensusRegionDivision?:embed=y&:display_count=no)
+
+
 
 * Reflection
 
