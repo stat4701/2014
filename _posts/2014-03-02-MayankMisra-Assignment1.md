@@ -6,9 +6,19 @@ Tags: assignment KISS minimalistic visualization not chartoons
 ---
 ## Reimagining City Populations Data 1790 to 2010
 
-#### Purpose of graphs and data visualization, per Tukey (1993), is to describe, compare, make an impact and report the results of data analysis.
+### Philosophy
 
+####Purpose of graphs and data visualization, per Tukey (1993), is to describe, compare, make an impact and report the results of data analysis.
 
+We should exercise care that in the interest of making insights easier to understand, we dont dumb down the data (e.g. when analyzing high dimensional data).  There is a difference between graphics and graphs.
+The reverse is also true.  We should take special care that in our attempt to surface as much information as possible, we don't end up making the visualization overtly dense and difficult to navigate.  The same can be said about overfitting the visual with sophisticated and many statistics. 
+There is already concern, in my opinion, of the coming age of high priesthood of data scientists.  
+
+I have attempted to take a slightly alternate approach with this dataset.  Instead of preparing a set of inferences and then using visuals to communicate them.  The aim is to provide the reader with enough insights to spark further questions about the subject area and the data set.  The aim is to make the reader inquisitive enough to dive deeper into the dataset.  Facilities have been provided for a user to dynamically interact with the visualizations. 
+
+Its reasonable to question the choice of the dataset as this is the same data that was used in Assignment0.  The choice is deliberate.  One of my objectives with this post is to share a less code based approach to data wrangling and visualization.  Some of the software used in this post are off the shelf public tools that obfuscate the need to generate code.  The approaches to data analytics are increasing by the day.  With native support for R, SAS and MapReduce, these tools can be powerful addition to our toolbox. Familiarity with the dataset and the related data wrangling challenges seemed important as I made the case.  
+ 
+ 
 ### Methodology
 
 Philip Guo's insightful work on [Data Science Workflow: Overview and Challenges](http://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext) is a good starting point on developing a methedology for Exploratory Data Analysis and Visualization (EDAV).  
@@ -21,13 +31,6 @@ Philip Guo's insightful work on [Data Science Workflow: Overview and Challenges]
 A [checklist for creating data products](http://www.juiceanalytics.com/writing/a-checklist-for-creating-data-products/)
 
 [![](http://www.juiceanalytics.com/wp-content/uploads/2013/10/JuiceChecklist-ProductManager.png)](http://media.juiceanalytics.com/downloads/JuiceChecklist-ProductManager.pdf)
-
->> Expand on :
-Its different from information graphics
-Strength and Weaknesses of the current trend
-A balanced approach
-High priesthood of data scientists and analysts
-I come not to praise Caesar but to burry him
 
 ### Approach
 The choice of an approach depends on the time available and the frequency of analysis.  In addition, the visualization choices will differ immensely for a business decision makers than for the general public.  
@@ -209,6 +212,14 @@ w.apply_to_file(sys.argv[1]).print_csv(sys.argv[2])
 
 #### Analysis
 
+* Once the data is ready, many facilities are available through the tool as far as statistical analysis and visualization are concerned.  
+
+* I have chosen three simple yet powerful way to visualize data.  
+
+* The aim is not to prescribe insights and inferences but to encourage the reader to be inquisitive.   
+
+* The choice of the visualization enables the reader to interact with the data.  By providing dynamic controls on sorting, filtering, folding and slicing, the user is encouraged to understand the data at a deeper level.  This increases the stickiness of the inference form the data (versus a passive, static graph that prescribes a set of inferences).  
+
 -[Trend Summary - National](http://public.tableausoftware.com/views/City_Population_Trend/TrendSummary-GeoHierarchy?:embed=y&:display_count=no)
 [![](https://pbs.twimg.com/media/Bhxs-fkIMAAEwzw.png:large)](http://public.tableausoftware.com/views/City_Population_Trend/TrendSummary-GeoHierarchy?:embed=y&:display_count=no)
 
@@ -219,18 +230,14 @@ w.apply_to_file(sys.argv[1]).print_csv(sys.argv[2])
 [![](https://pbs.twimg.com/media/BhxuMNuIEAALcAt.png:large)](http://public.tableausoftware.com/views/City_Population_Trend/PopulationSize-CensusRegionDivision?:embed=y&:display_count=no)
 
 
-#### Reflection
-
-#### Dissemination
-
 ### Thoughts
 
 Visual display of data of data is not only for communicating inferences and insights to a broader audience unfamiliar with the dataset.  The more powerful use of visualizing data is as a medium to grasp relationships in multi-dimensional and complex datasets.  
 
 Network graphs do this exceptionally well.  I have provided my Facebook and LinkedIn social network graphs. Visualizing my connections in this form, I was able to form powerful insights about the way people in my network are connected with each other and to me.   
 
-A network graph I created of [my Facebook connections](http://t.co/TNgVXpwBcy)
-[![](https://pbs.twimg.com/media/Bhw6GIeIAAAAGWd.jpg:large)](https://twitter.com/MayankMisra/status/440290740791689217/photo/1/large) is based on [Gephi](https://gephi.org/).  
+A network graph I created of [my Facebook connections](http://t.co/TNgVXpwBcy) is based on [Gephi](https://gephi.org/). 
+[![](https://pbs.twimg.com/media/Bhw6GIeIAAAAGWd.jpg:large)](https://twitter.com/MayankMisra/status/440290740791689217/photo/1/large)  
 
 Connections form [Taj Hotel, a TATA company](http://www.tata.com/company/profile/Indian-Hotels), where I worked right after college, holds the center (blue/yellow).  The top connections are connected to me through my wife while the right and bottom ones are from where I have lived in the US.  On the left are folks I know from [work](http://www.pfizer.com).  I also found some outliers... which will be pruned soon...
 
