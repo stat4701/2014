@@ -37,7 +37,7 @@ Key elements of my design include:
 
 My visualization is embedded below. Alternatively, the full-page view on JsFiddle.net can be seen [here](http://jsfiddle.net/stephenkappel/bk854/embedded/result). The JavaScript and CSS files are posted to GitHub [here](https://github.com/StephenKappel/dataology/tree/master/WhatsItWorth).
 
-<div align="left"><iframe width="1225" height="665" src="http://jsfiddle.net/stephenkappel/bk854/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe></div>
+<div align="left"><iframe src="http://jsfiddle.net/stephenkappel/bk854/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe></div>
 
 ## Observations
 
@@ -57,5 +57,6 @@ I designed the visualization using IE 11 on a 3200 x 1800 monitor. In these cond
 - Only the top left corner of the visualization appeared in FireFox. It turns out that FireFox has a small default size for svg elements and does not dynamically scale them based on their contents. While not having width and height attributes set on the svg element was find in other browser, I had to explicitly set these attributes for FireFox.
 - The bottom of the visualization was getting cut off on lower resolution monitors, prompting me to decrease the height of my design.
 - Lucida Sans, which I use for the vast majority of the text on my visualization, is not supported in iOS. In the future, I will look into something like Google Font, which will allow a single font to work on all browser. Plus, Google Fonts provides options for fonts that are more interesting than the usual "web safe" font set.
+- Vertical text (for the y-axis) label is support (or not supported) differently in every browser. In IE, I could get the text to rotate 90 degrees. In Chrome and Safari, I could get the text to be vertically oriented. In FireFox, I could not get the text to go anyway but horizontal. This is an open bug in the visualization that I have to find a better way to address.
 - Animations are choppy in iOS. Unfortunately, I think this one is just a fact of life.
 - The rendering does not appear as sharp in Chrome as is does in IE. Lesson: don't rely on high resolution in your visualization design.
