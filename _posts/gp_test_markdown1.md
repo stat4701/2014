@@ -2,27 +2,12 @@
 *Priya*
 
 ##Links
-Trying to embed a link in a sentence, visit [this page] (http://rcharts.io)
 
 For a full description of the markdown syntax, visit [this page](http://daringfireball.net/projects/markdown/syntax)
 
-##Lists
-* item1
-* item2
-* item3
+[Source](http://cait2.wri.org/wri/Country%20GHG%20Emissions?indicator=Total%20GHG%20Emissions%20Excluding%20LUCF&indicator=Total%20GHG%20Emissions%20Including%20LUCF&year=2010&chartType=bars.)
 
-ordered lists:
-
-1.hello
-
-2.world
-
-#This is H1
-
-##This is H2
-
-###This is H3
-
+<iframe src='http://cait2.wri.org/wri/embed/Country%20GHG%20Emissions?indicator=Total%20GHG%20Emissions%20Excluding%20LUCF&indicator=Total%20GHG%20Emissions%20Including%20LUCF&year=2010&chartType=bars.&embed=1' width='480' height='320'></iframe>
 
 
 
