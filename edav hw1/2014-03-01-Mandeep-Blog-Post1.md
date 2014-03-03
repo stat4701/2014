@@ -12,14 +12,16 @@ The intent behind this blog post is to compare and contrast distribution of hous
 Here is my critique on the chart show above:
 
 <ol> 
-	<li> The axes is not clear in terms of what the chart is showing</li>
+	<li> The axes is not clear in terms of what the chart is showing. </li>
 	<li> The stark contrast in the distribution of income between the top 1% and bottom 20% is not clearly shown. </li>
 	<li> It is not clear how these factors have changed over the course of last 30 years. </li> 
 </ol>
 
 Here's a breakdown of what I did for this blog post:
 
-1\. I sliced the source data to highlight the concentration of income among the top one percent and show the stark contrast from the bottom 20%
+1\. I sliced the source data to highlight the concentration of income among the top one percent and show the stark contrast from the bottom 20%.
+
+Spent a lot of time on this step as I had to go from a column orientation to a row orientation for the years. This involved using the melt function of the reshape2 package.
 
 2\. Plotted the data using a barplot in R. Also played around with ggplot and qplot using facet_grid()
 ```{r chunkLabel}
@@ -34,7 +36,7 @@ barplot(data1,beside=T,col=c("#ee7700","#3333ff")
 ```
 ![Labor Income Distribution between top 1% and Bottom 20%](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/CapitalIncome.png?raw=true)
 
-3\. [Source code](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/blog p1.R) to see the various sources of income across the different populations
+3\. [Source code in R](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/blog p1.R) to see the various sources of income across the different populations
 
 [Capital Income Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/CapitalIncome.png)
 
