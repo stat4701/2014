@@ -52,12 +52,12 @@ It not only lays down the steps but also gives a preview of the potential challe
 
 * Base dataset:
 
-The City Population data set is from the [US Census website](http://www.census.gov/population/censusdata/table-4.pdf).  [Professor Malecki](https://github.com/malecki/) eased us into the world of web scrapping and data munging by providing a csv version of the census pdf. 
+The City Population data set is from the [US Census website](http://www.census.gov).  [Professor Malecki](https://github.com/malecki/) eased us into the world of web scrapping and data munging by providing a csv dataset. 
 The uspop.csv is the starting point of this analysis.  
 
 -[Web Scrapper](https://github.com/malecki/edav/blob/uspop/projects/popgraph/get-data.py)
 
--[US Population uspop.csv](https://github.com/malecki/edav/blob/uspop/projects/popgraph/citypop.csv)
+-[US Population uspop.csv](https://github.com/malecki/edav/blob/gh-pages/projects/darrenxing/citypop.csv)
 
 The base dataset has ranked populations of US cities.  This is census data covering a period of 1790 to 2010.  Data are not available for all cities for every time the census was taken.  
 
@@ -70,21 +70,21 @@ The base dataset has ranked populations of US cities.  This is census data cover
 * Wrangled Data
 
 -[Finally the cleaned data set](http://public.tableausoftware.com/views/City_Population_Trend/Data?:embed=y&:display_count=no)
+[![](https://pbs.twimg.com/media/BhxsUWMIMAEylvj.png:large)](http://public.tableausoftware.com/views/City_Population_Trend/Data?:embed=y&:display_count=no)
 
--[A lookup for future visualizations US State to City look up]({{ site.baseurl}}/assets/mm3557-cp-city-state-lkup.csv)
+-[A reference file for future visualizations - US State to City look up]({{ site.baseurl}}/assets/mm3557-cp-city-state-lkup.csv)
 
-[![]({{ site.baseurl}}/assets/incomeladder.png)](http://www.nytimes.com/2013/07/22/business/in-climbing-income-ladder-location-matters.html?_r=0)
-
-[![]({{ site.baseurl}}/assets/mm3557-cp-hw1-data.png)](http://public.tableausoftware.com/views/City_Population_Trend/Data?:embed=y&:display_count=no)
 
 ##### Analysis
 
-[Trend Summary - Geo Hierarchy](http://public.tableausoftware.com/views/City_Population_Trend/TrendSummary-GeoHierarchy?:embed=y&:display_count=no)
+-[Trend Summary - National](http://public.tableausoftware.com/views/City_Population_Trend/TrendSummary-GeoHierarchy?:embed=y&:display_count=no)
+[![](https://pbs.twimg.com/media/Bhxs-fkIMAAEwzw.png:large)](http://public.tableausoftware.com/views/City_Population_Trend/TrendSummary-GeoHierarchy?:embed=y&:display_count=no)
 
-[Population Migration](http://public.tableausoftware.com/views/City_Population_Trend/PopulationMigration?:embed=y&:display_count=no)
+-[Population Migration](http://public.tableausoftware.com/views/City_Population_Trend/PopulationMigration?:embed=y&:display_count=no)
+[![](https://pbs.twimg.com/media/Bhxtap5IMAAM025.jpg:large)](http://public.tableausoftware.com/views/City_Population_Trend/PopulationMigration?:embed=y&:display_count=no)
 
-[Population Size - Census Region/Division](http://public.tableausoftware.com/views/City_Population_Trend/PopulationSize-CensusRegionDivision?:embed=y&:display_count=no)
-
+-[Population Size - Census Region/Division](http://public.tableausoftware.com/views/City_Population_Trend/PopulationSize-CensusRegionDivision?:embed=y&:display_count=no)
+[![](https://pbs.twimg.com/media/BhxuMNuIEAALcAt.png:large)](http://public.tableausoftware.com/views/City_Population_Trend/PopulationSize-CensusRegionDivision?:embed=y&:display_count=no)
 
 
 ##### Reflection
