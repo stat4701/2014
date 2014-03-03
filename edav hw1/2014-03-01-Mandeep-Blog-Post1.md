@@ -23,28 +23,32 @@ Here's a breakdown of what I did for this blog post:
 
 Spent a lot of time on this step as I had to go from a column orientation to a row orientation for the years. This involved using the melt function of the reshape2 package.
 
-2\. Plotted the data using a barplot in R. Also played around with ggplot and qplot using facet_grid()
+2\. Plotted the combined chart to show the variation in income concentration between the top 1% and the bottom 40% of the population. Used facet_grid() to shown the split across income types.
 ```{r chunkLabel}
-require(ggplot2)
-df1 <- subset(df0, Percentile %in% c("1", "20"))
+bp <- qplot(factor(year),data=df2,geom="bar",fill=as.factor(Percentile),
+            weight=Percentage,position="dodge",main = "Income Concentration", 
+            xlab="Year",ylab="Income (%)") + facet_grid(. ~ Type)
+```
+![Income Distribution between top 1% and Bottom 20%](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/combined.png?raw=true)
 
+3\. Used a combination of tapply and barplot function for individual barplots to highlight the stark contrast between top 1% and bottom 20%.
+```{r chunkLabel}
 data1 <- tapply(df1$Labor, list(df1$Percentile,df1$year), sum)
 barplot(data1,beside=T,col=c("#ee7700","#3333ff")
         ,main="Labor Income Concentration",xlab="Year",ylab="Labor Income (%)",
         legend.text = c("Top 1 Percentile", "Bottom 20 Percentile"),
         args.legend = list(x = "topleft"))
 ```
-![Labor Income Distribution between top 1% and Bottom 20%](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/CapitalIncome.png?raw=true)
 
-3\. [Source code in R](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/blog p1.R) to see the various sources of income across the different populations
+4\. [Source code in R](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/blog p1.R) Complete source code of the R script.
 
-[Capital Income Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/CapitalIncome.png)
+[Capital Income Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/CapitalIncome.png?raw=true)
 
-[Capital Gains Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/CapitalGain.png)
+[Capital Gains Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/CapitalGain.png?raw=true)
 
-[Business Income Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/Business.png)
+[Business Income Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/Business.png?raw=true)
 
-[Labor Income Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/Labor.png)
+[Labor Income Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/Labor.png?=true)
 
 
 
