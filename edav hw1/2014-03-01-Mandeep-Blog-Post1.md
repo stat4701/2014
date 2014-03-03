@@ -42,7 +42,7 @@ barplot(data1,beside=T,col=c("#ee7700","#3333ff")
 
 4\. [Source code in R](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/blog p1.R) Complete source code of the R script.
 
-Individual Barplots 
+# Individual Barplots 
 
 [Capital Income Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/CapitalIncome.png?raw=true)
 
