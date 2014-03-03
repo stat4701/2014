@@ -13,8 +13,13 @@ I wanted to choose data that was familiar to all us to facilitate an understandi
 #### The purpose of data visualization
 Purpose of graph and data visualization, as per Tukey (1993), is to describe, compare, make an impact and report the results of data analysis. 
 
-A network graph I created of[my Facebook connections](http://t.co/TNgVXpwBcy)
+A network graph I created of [my Facebook connections](http://t.co/TNgVXpwBcy)
+[![](http://t.co/TNgVXpwBcy)](https://twitter.com/MayankMisra/status/440290740791689217/photo/1/large)
+
+
 A similar one of [my professional connections on LinkedIn](https://pbs.twimg.com/media/Bhw7p_DIcAA9ce4.jpg:large)
+[![](https://pbs.twimg.com/media/Bhw7p_DIcAA9ce4.jpg:large)](https://twitter.com/MayankMisra/status/440292456224276480/photo/1/large)
+
 
 >> Expand on :
 Its different from information graphics
