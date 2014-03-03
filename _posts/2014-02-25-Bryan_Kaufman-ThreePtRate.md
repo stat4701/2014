@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blog Post 1: 3 Point Rate
+title: "Blog Post 1: 3 Point Rate"
 description: examining the rise in three pointers
 tags: blogpost1
 ---

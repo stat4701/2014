@@ -66,7 +66,7 @@ I picked these non-quarterly dates in order to have a 0 and 1 column for my quar
 
 I couldn't figure out how to graph the bars using only that 0 and 1 column, and following an example from RBloggers, I tried this approach instead:
 
-```R
+```r
 recessions.df <- read.table(textConnection(
 "Peak, Trough
 1969.75, 1971
@@ -84,7 +84,7 @@ The final step I was interested in was coloring the recessions bars to encode th
 
 I was able to do so by adding a column to recessions.df that contained the output of this function, applied to each row:
 
-```R
+```r
 recesDiff <- function(row) {
   sDate <- row[1]
   eDate <- row[2]
@@ -96,7 +96,7 @@ This function was sucessful because I had 'harmonized' the recession data to a q
 
 After a good bit of tinkering with ggplot, I was able to make the graph I wanted with this call:
 
-```R
+```r
 ggplot() + geom_rect(data=recessions.df, aes(xmin = Peak, xmax = Trough, ymin = 60, ymax =Inf,fill=diff),alpha=.2) 
 + theme_bw() + theme(axis.text=element_text(size=13),axis.title=element_text(size=16,face="bold"),plot.title=element_text(size=21,face="bold"),legend.title=element_text(size=14)) 
 + scale_fill_gradient2(name="Change in Homeownership \nRate During Recession") 
