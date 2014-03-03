@@ -6,12 +6,15 @@ Tags: assignment KISS minimalistic visualization not chartoons
 ---
 
 #### The Premise
-* This post continues from assignment0 and visualizing the city population data differently and in the bargain derive some 'points to ponder' for future visualization exercises.  Its reasonable to question the choice of the data set.  After all its been 'revisualized' by the class many times over.  My choice of the data set was deliberate.  
-* My objective in this post is not to find new insights into the data but to use it to make some salient on the use and abuse of feature rich (read code heavy and visually complex) graphs in general. 
-As this may be a little controversial, I wanted to choose data that was familiar to all us to facilitate an understanding of my point of view on visualization.
+* This post continues from assignment0 on visualizing the city population data differently and in the bargain derive some 'points to ponder' for future visualization exercises.  Its reasonable to question the choice of the data set.  After all its been 'revisualized' by the class many times over.  My choice of the data set was deliberate.  
+* My objective in this post is not to find new insights into the data but to use it to make some salient points on the use and abuse of feature rich (read code heavy and visually complex) graphs in general. 
+I wanted to choose data that was familiar to all us to facilitate an understanding of my point of view on visualization.
 
 #### The purpose of data visualization
 Purpose of graph and data visualization, as per Tukey (1993), is to describe, compare, make an impact and report the results of data analysis. 
+
+A network graph I created of[my Facebook connections](http://t.co/TNgVXpwBcy)
+A similar one of [my professional connections on LinkedIn](https://pbs.twimg.com/media/Bhw7p_DIcAA9ce4.jpg:large)
 
 >> Expand on :
 Its different from information graphics
@@ -27,6 +30,7 @@ It not only lays down the steps but also gives a preview of the potential challe
 #### Workflow
 [![](http://cacm.acm.org/system/assets/0001/3678/rp-overview.jpg)](http://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext) 
 (note the redirect!)
+
 
 #### Approach
 
