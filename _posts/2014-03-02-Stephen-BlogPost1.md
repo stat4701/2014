@@ -9,4 +9,4 @@ For my visualization, I decided to improve the display of the partial results of
 
 My visualization is below....
 
-<iframe width="1220" height="650" src="http://jsfiddle.net/stephenkappel/bk854/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="1235" height="665" src="http://jsfiddle.net/stephenkappel/bk854/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
