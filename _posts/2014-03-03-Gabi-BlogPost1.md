@@ -48,7 +48,7 @@ and that these names have been trending below 10,000 counts since 1990 whereas b
 * I made cleared that the trends for Maria and Mary are not declining as steep as in the original
 * The chart is no longer representing ranks, but rather name counts
 * Added clear comparison with the top 2 names showing that Maria and Mary were not that popular to begin with
-[![top2Maria](https://github.com/Gabya06/datascience/blob/master/MariaDecline/assets/top2Maria.png)](https://github.com/Gabya06/datascience/blob/master/MariaDecline/assets/top2Maria.png)
+[![top2Maria](http://github.com/Gabya06/datascience/blob/master/MariaDecline/assets/top2Maria.png)](http://github.com/Gabya06/datascience/blob/master/MariaDecline/assets/top2Maria.png)
 
 ### Next steps
 * Use entire data set and see how the trends compare
