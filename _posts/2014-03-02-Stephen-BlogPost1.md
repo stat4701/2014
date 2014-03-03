@@ -20,6 +20,15 @@ In my re-design of the data visualization, I have include all of the values incl
 
 Key elements of my design that address issues with the original design are:
 - All of the data points pertaining to a single major group can be viewed at once.
-- Un-necessary 0s are not shown on wage values.
+- Graphical display of wages and popularity along continuous scales allows for quick comparisons between wages within a major group and between major groups.
+- The colors used in the visualization are used to convey values.
+- To not overwhelm the view, all the values are not shown at once, but a mouse hover over any major group reveals the full level of detail.
+- Interactivity is used to encourage exploration and discovery.
+- Unnecessary 0s are not shown on wage values.
+- Sorting is animated rather than instant, to  allow the user to observe which major groups move the most/least when the sort criteria changes. 
 
-<div align="center"><iframe width="1225" height="650" src="http://jsfiddle.net/stephenkappel/bk854/embedded/result" allowfullscreen="allowfullscreen" frameborder="0" align="middle"></iframe></div>
+My visualization is embedded below...
+
+<div align="center"><iframe width="1225" height="640" src="http://jsfiddle.net/stephenkappel/bk854/embedded/result" allowfullscreen="allowfullscreen" frameborder="0" align="middle"></iframe></div>
+
+The 
