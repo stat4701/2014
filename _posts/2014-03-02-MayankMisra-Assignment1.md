@@ -31,10 +31,13 @@ It not only lays down the steps but also gives a preview of the potential challe
 #### Approach
 
 * Prepare
+[link to uspop source](https://github.com/malecki/edav/blob/uspop/projects/popgraph/get-data.py)
 
 Wrangled [Data](http://public.tableausoftware.com/views/City_Population_Trend/Data?:embed=y&:display_count=no)
 
-[![](https://github.com/mayankmisra/edav/blob/gh-pages/assets/mm3557-cp-hw1-data.png)]
+[![]({{ site.baseurl}}/assets/incomeladder.png)](http://www.nytimes.com/2013/07/22/business/in-climbing-income-ladder-location-matters.html?_r=0)
+
+[![]({{ site.baseurl}}/assets/mm3557-cp-hw1-data.png)](http://public.tableausoftware.com/views/City_Population_Trend/Data?:embed=y&:display_count=no)
 
 * Analysis
 
