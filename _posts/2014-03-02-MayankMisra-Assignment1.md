@@ -24,7 +24,9 @@ A similar one for [my professional connections on LinkedIn](https://pbs.twimg.co
 [![](https://pbs.twimg.com/media/Bhw7p_DIcAA9ce4.jpg:large)](https://twitter.com/MayankMisra/status/440292456224276480/photo/1/large)
 
 A [checklist for creating data products](http://www.juiceanalytics.com/writing/a-checklist-for-creating-data-products/)
+
 [![](http://www.juiceanalytics.com/writing/a-checklist-for-creating-data-products/)](http://www.juiceanalytics.com/wp-content/uploads/2013/10/JuiceChecklist-ProductManager.png)
+
 >> Expand on :
 Its different from information graphics
 Strength and Weaknesses of the current trend
