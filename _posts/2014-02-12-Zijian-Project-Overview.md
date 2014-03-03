@@ -40,8 +40,8 @@ tags: project assignments
 
 #### Milestones
 
-<li>[Sprint 1 (Feb.12~Mar.5)]({{site_url}}/2014/02/12/Zijian-Project-Sprint-1/)</li>
-<li>[Sprint 2 (Mar.5~Mar.26)(Alpha)]({{site_url}}/2014/02/12/Zijian-Project-Sprint-2/)</li>
+<li>[Sprint 1 (Feb.12~Mar.5)]({{site.baseurl}}/2014/02/12/Zijian-Project-Sprint-1/)</li>
+<li>[Sprint 2 (Mar.5~Mar.26)(Alpha)]({{site.baseurl}}/2014/02/12/Zijian-Project-Sprint-2/)</li>
 
 #### Contact Info
 

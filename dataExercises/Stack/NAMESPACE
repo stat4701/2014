@@ -1,0 +1,8 @@
+S3method(.compact,ff)
+S3method(.compact,ffdf)
+S3method(.preparedf,data.frame)
+S3method(.preparedf,list)
+export(.preparedf)
+export(Stack)
+exportMethods(ffStack)
+importFrom(stringr,str_split_fixed)

@@ -96,28 +96,30 @@
     - discuss color issues for class projects
 
 - date: 2014-02-24
-  topic: Trellis/Lattice
-  before: |
-    - Yau ch.6
-    - Sarkar book (SpringerLink)
-  during: Discuss problems Lattice solves, use cases, implementations, relevance to blogposts or projects
+  topic: Data are ugly
+  before:  |
+    - [Tidy data](http://vita.had.co.nz/papers/tidy-data.pdf)
+    - [Research directions in data wrangling](http://idl.cs.washington.edu/papers/data-wrangling)
 
 - date: 2014-02-26
-  topic: ggplot2 in some depth
-  before: |
-    - gglot2 book (SpringerLink)
-    - [ggplot2 doc web site](http://ggplot2.org)
-    - [ggplot in Python](http://blog.yhathq.com/posts/ggplot-for-python.html)
+  topic: APIs and data interchange
+  before: some API doc; R and Python tools for data wrangling and interfaces
+  during: discuss I/O, shortcuts, and modeling
+  after: |
+    - [ggplot2 data contract](http://martinsbioblogg.wordpress.com/2014/02/20/books-and-lessons-about-ggplot2/)
+    - [optimizing R](http://www.noamross.net/blog/2013/4/25/faster-talk.html)
 
 - date: 2014-03-03
-  topic: more strategies for improving graphs
-  due: blogpost 2 due. Submit a pull request and be ready to discuss challenges you had and how you solved them.
+  topic: blogposts review; R packaging
+  due: blogpost 1 due. Submit a pull request and be ready to discuss challenges you had and how you solved them.
   before: |
     - Yau, ch. 4,5,7
+  during: Build an R package for a project
 
 - date: 2014-03-05
-  topic: Animation
   due: Iteration plan. What was left undone, objective and key results for next three weeks.
+  during: Do grouped/stacked plot of estimated party ID in Lattice
+  topic: Nominally Animation; more APIs and data interchange
   before: |
     - [The Joy of Stats](http://www.gapminder.org/videos/the-joy-of-stats/)
     - [Google Charts motion chart doc](https://developers.google.com/chart/interactive/docs/gallery/motionchart) and in [R](http://blog.revolutionanalytics.com/2011/01/create-motion-charts-in-r-with-the-googlevis-package.html)
@@ -157,22 +159,28 @@
 - date: 2014-04-02
   topic: Reproducibility and Replication
   before: |
-    - Knuth on literate programming
-    - knitr doc
-    - IPython notebook doc
+    - [knitr doc](http://yihui.name/knitr/)
+    - [IPython notebook doc](http://ipython.org/notebook), [intro](http://www.randalolson.com/2012/05/12/a-short-demo-on-how-to-use-ipython-notebook-as-a-research-notebook/)
   during: |
     - discuss reproducible research, publishing replication data, versioning, &c
 
 - date: 2014-04-07
-  topic: Data are ugly
-  before:  |
-    - [Tidy data](http://vita.had.co.nz/papers/tidy-data.pdf)
-    - [Research directions in data wrangling](http://idl.cs.washington.edu/papers/data-wrangling)
+  topic: Trellis/Lattice
+  before: |
+    - Yau ch.6
+    - Sarkar book ([SpringerLink](http://link.springer.com/book/10.1007/978-0-387-75969-2))
+  during: Discuss problems Lattice solves, use cases, implementations, relevance to blogposts or projects
+
 
 - date: 2014-04-09
-  topic: discuss blogposts
-  due: blogpost #3
+  due: blogpost #2
   during: discuss blog posts, bad graphs of the day
+  topic: ggplot2 in some depth
+  before: |
+    - gglot2 book (SpringerLink)
+    - [ggplot2 doc web site](http://ggplot2.org)
+    - [ggplot in Python](http://blog.yhathq.com/posts/ggplot-for-python.html)
+
 
 - date: 2014-04-14
   topic: Histograms are totally simple, right?
@@ -183,12 +191,11 @@
     - [Histogram D3 layout](https://github.com/mbostock/d3/wiki/Histogram-Layout)
 
 - date: 2014-04-16
-  topic: APIs and data interchange
-  before: some API doc; R and Python tools for data wrangling and interfaces
-  during: discuss I/O and modeling
+  topic: color redux (see 2014-02-19)
+  during: discuss applications in projects/blogposts
 
 - date: 2014-04-21
-  topic: data structures, storage, and modeling
+  topic: data structures, storage, and modeling (NOTE will move to earlier date)
 
 - date: 2014-04-23
   topic: model checking, displays, and uncertainty
@@ -203,5 +210,6 @@
   topic: project reviews
 
 - date: 2014-05-05
+  due: Blogpost #3
   topic: project reviews
 

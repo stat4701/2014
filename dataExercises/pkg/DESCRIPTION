@@ -1,11 +1,13 @@
 Package: dataExercises
 Type: Package
 Title: Framework for exercises in common data manipulations
-Version: 0.1
-Date: 2014-02-11
+Version: 0.2
+Date: 2014-02-17
 Author: Michael malecki
 Maintainer: Michael Malecki <malecki@gmail.com>
 Description: testthat tests and a package structure for some tricks and pitfalls
 License: BSD
 Depends:
     testthat
+Imports:
+    RJSONIO

@@ -31,6 +31,11 @@
 ##' @export
 loadAndParseMixedCSV <- function(file){
     out <- read.csv(file)
-    print(str(out))
+    out <- within(out, {
+        Dept <- factor(Dept, labels=LETTERS[1:6])
+        Gender <- factor(Gender, levels=c("Male", "Female"))
+        Admit <- factor(Admit, labels=c("Admitted", "Rejected")) # alpha  is ok
+    })
     return(out)
 }
+

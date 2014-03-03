@@ -4,4 +4,4 @@ test:
 
 watch:
 	R CMD INSTALL pkg
-	R --slave -e 'library(testthat); auto_test("pkg/R/", "pkg/inst/tests/")'
+	R --slave -e 'library(testthat); auto_test("pkg/R/", "pkg/inst/tests/", reporter="summary")'
