@@ -5,6 +5,8 @@ description: Visualizing "What's It Worth" Data
 tags: blogpost
 ---
 
+For my visualization, I decided to improve the display of the partial results of Georgetown's Center for ... What's It Worth study.
+
 My visualization is below....
 
-<iframe width="1250" height="750" src="http://jsfiddle.net/stephenkappel/bk854/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="1200" height="635" src="http://jsfiddle.net/stephenkappel/bk854/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
