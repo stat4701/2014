@@ -18,6 +18,8 @@ These tables are labeled "interactive summary tables," but the extent of the int
 
 In my re-design of the data visualization, I have include all of the values included in the original three tables, with the exception of "Percent Obtaining Graduate Degree" and "Earnings Boost from Graduate Degree." These two data points are the only two which deal with graduate data, so they may be appropriately displayed in their own table or chart. In my visualization, I shrived to bring together the many values onto one surface, thus allowing for easy comparison and relationship discovery. 
 
+Key elements of my design that address issues with the original design are:
+- All of the data points pertaining to a single major group can be viewed at once.
+- Un-necessary 0s are not shown on wage values.
 
-
-<iframe width="1225" height="665" src="http://jsfiddle.net/stephenkappel/bk854/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<div align="center"><iframe width="1225" height="650" src="http://jsfiddle.net/stephenkappel/bk854/embedded/result" allowfullscreen="allowfullscreen" frameborder="0" align="middle"></iframe></div>
