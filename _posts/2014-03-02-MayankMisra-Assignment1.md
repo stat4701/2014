@@ -6,23 +6,17 @@ Tags: assignment KISS minimalistic visualization not chartoons
 ---
 ## Reimagining City Populations Data 1790 to 2010
 
-### The Premise
-* This post continues from the visualization exercise of assignment0 and in the bargain derive some 'points to ponder' for future visualization exercises.  Its reasonable to question the choice of the data set.  After all its been 'revisualized' by the class many times over.  My choice of the data set was deliberate.  
-* My objective in this post is not to find new insights from the data but to use it to investigate the process of data exploration, analysis visual communication and 
-
- the use and abuse of feature rich (read code heavy and visually complex) graphs in general. 
-I wanted to choose data that was familiar to all us to facilitate an understanding of my point of view on visualization.
-
-#### The purpose of data visualization
-Purpose of graph and data visualization, as per Tukey (1993), is to describe, compare, make an impact and report the results of data analysis. 
+#### Purpose of graphs and data visualization, per Tukey (1993), is to describe, compare, make an impact and report the results of data analysis.
 
 
-A network graph I created of [my Facebook connections](http://t.co/TNgVXpwBcy)
-[![](https://pbs.twimg.com/media/Bhw6GIeIAAAAGWd.jpg:large)](https://twitter.com/MayankMisra/status/440290740791689217/photo/1/large)
+### Methodology
 
+Philip Guo's insightful work on [Data Science Workflow: Overview and Challenges](http://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext) is a good starting point on developing a methedology for Exploratory Data Analysis and Visualization (EDAV).  
 
-A similar one for [my professional connections on LinkedIn](https://pbs.twimg.com/media/Bhw7p_DIcAA9ce4.jpg:large) created using the [LinkedIn Labs graph app](http://bit.ly/1kKpr1G) 
-[![](https://pbs.twimg.com/media/Bhw7p_DIcAA9ce4.jpg:large)](https://twitter.com/MayankMisra/status/440292456224276480/photo/1/large)
+### Workflow
+
+[![](http://cacm.acm.org/system/assets/0001/3678/rp-overview.jpg)](http://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext) 
+(note the redirect!) 
 
 A [checklist for creating data products](http://www.juiceanalytics.com/writing/a-checklist-for-creating-data-products/)
 
@@ -35,14 +29,7 @@ A balanced approach
 High priesthood of data scientists and analysts
 A come not to praise Caesar but to burry him
 
-### Methodology
 
-Philip Guo's insightful work on [Data Science Workflow: Overview and Challenges](http://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext) is a good starting point on developing a methedology for Exploratory Data Analysis and Visualization (EDAV).  
-
-### Workflow
-
-[![](http://cacm.acm.org/system/assets/0001/3678/rp-overview.jpg)](http://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext) 
-(note the redirect!)
 
 
 ### Approach
@@ -88,11 +75,14 @@ The ZIP data, though available, was not added to the base dataset as it would ha
 ##### Wrangled Data
 
 - Data Wrangler was used for basic clean up.  
+
 - The base dataset CSV was cleaned for spaces and commas.  Some cities were listed with states (Newport, RI).  
+
 - The state, where existed, was extracted to its own column.  This way we didn't loose the orignal state mapped to a city. This came in handy when states were added through other sources for the rest of the cities.  
+
 - The headings were extracted from the first row.  
 
-Here is the python code for cleaning up the csv file:
+Here is the python code derived from data wrangler for cleaning up the csv file:
 
 ```
 from wrangler import dw
@@ -209,7 +199,9 @@ w.add(dw.Drop(column=["split5"],
 w.apply_to_file(sys.argv[1]).print_csv(sys.argv[2])
 
 ```
+
 - Tableau was used to merge data sets.  
+
 - Regional and State information was added to the city using the AdWords DMA Targeting and Regional datasets.  The AdWords data is global.  It was filtered for US and then merged with the base dataset.  
 
 -[Finally the cleaned data set](http://public.tableausoftware.com/views/City_Population_Trend/Data?:embed=y&:display_count=no)
@@ -234,9 +226,22 @@ w.apply_to_file(sys.argv[1]).print_csv(sys.argv[2])
 
 #### Dissemination
 
-### Observations
+### Thoughts
 
-### Hypothesis
+Visual display of data of data is not only for communicating inferences and insights to a broader audience unfamiliar with the dataset.  The more powerful use of visualizing data is as a medium to grasp relationships in multi-dimensional and complex datasets.  
+
+Network graphs do this exceptionally well.  I have provided my Facebook and LinkedIn social network graphs. Visualizing my connections in this form, I was able to form powerful insights about the way people in my network are connected with each other and to me.   
+
+A network graph I created of [my Facebook connections](http://t.co/TNgVXpwBcy)
+[![](https://pbs.twimg.com/media/Bhw6GIeIAAAAGWd.jpg:large)](https://twitter.com/MayankMisra/status/440290740791689217/photo/1/large) is based on [Gephi](https://gephi.org/).  
+
+Connections form [Taj Hotel, a TATA company](http://www.tata.com/company/profile/Indian-Hotels), where I worked right after college, holds the center (blue/yellow).  The top connections are connected to me through my wife while the right and bottom ones are from where I have lived in the US.  On the left are folks I know from [work](http://www.pfizer.com).  I also found some outliers... which will be pruned soon...
+
+A similar one for [my professional connections on LinkedIn](https://pbs.twimg.com/media/Bhw7p_DIcAA9ce4.jpg:large) created using the [LinkedIn Labs graph app](http://bit.ly/1kKpr1G) 
+[![](https://pbs.twimg.com/media/Bhw7p_DIcAA9ce4.jpg:large)](https://twitter.com/MayankMisra/status/440292456224276480/photo/1/large)
+
+The legend reflects the various clusters in the graph.  
+
 
 
 
