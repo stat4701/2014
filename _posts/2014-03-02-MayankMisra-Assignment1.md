@@ -25,12 +25,12 @@ For Exploratory Data Analysis and Visualization (EDAV), Philip Guo's work on [Da
 It not only lays down the steps but also gives a preview of the potential challenges and rela world options to overcome them.  In a nutshell, the workflow is visualized as follows:
 
 #### Workflow
-[![](http://cacm.acm.org/system/assets/0001/3678/rp-overview.jpg)](http://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext) 
-(note the redirect!)
+[![](http://cacm.acm.org/system/assets/0001/3678/rp-overview.jpg)]
 
 #### Approach
 
 * Prepare
+
 Wrangled [Data](http://public.tableausoftware.com/views/City_Population_Trend/Data?:embed=y&:display_count=no)
 
 [![](https://github.com/mayankmisra/edav/blob/gh-pages/assets/mm3557-cp-hw1-data.png)](http://public.tableausoftware.com/views/City_Population_Trend/Data?:embed=y&:display_count=no)
