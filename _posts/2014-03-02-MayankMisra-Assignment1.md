@@ -20,17 +20,14 @@ Philip Guo's insightful work on [Data Science Workflow: Overview and Challenges]
 
 A [checklist for creating data products](http://www.juiceanalytics.com/writing/a-checklist-for-creating-data-products/)
 
-[![](http://www.juiceanalytics.com/writing/a-checklist-for-creating-data-products/)](http://juiceanalytics.com/wp-content/uploads/2013/10/JuiceChecklist-ProductManager.png)
+[![](http://www.juiceanalytics.com/wp-content/uploads/2013/10/JuiceChecklist-ProductManager.png)](http://media.juiceanalytics.com/downloads/JuiceChecklist-ProductManager.pdf)
 
 >> Expand on :
 Its different from information graphics
 Strength and Weaknesses of the current trend
 A balanced approach
 High priesthood of data scientists and analysts
-A come not to praise Caesar but to burry him
-
-
-
+I come not to praise Caesar but to burry him
 
 ### Approach
 The choice of an approach depends on the time available and the frequency of analysis.  In addition, the visualization choices will differ immensely for a business decision makers than for the general public.  
@@ -42,9 +39,9 @@ The aim was to add US regional and state metadata to this city level data.  This
 
 ##### Base dataset:
 
-The City Population data set is from the [US Census website](http://www.census.gov).  [Professor Malecki](https://github.com/malecki/) eased us into the world of web scrapping and data munging by providing a csv dataset. 
+The City Population data set is from the [US Census website](http://www.census.gov).  Professor [Malecki](https://github.com/malecki/) eased us into the world of web scrapping and data munging by providing a csv dataset. 
 The uspop.csv is the starting point of this analysis.  
-
+    
 -[Web Scrapper](https://github.com/malecki/edav/blob/uspop/projects/popgraph/get-data.py)
 
 -[US Population uspop.csv](https://github.com/malecki/edav/blob/gh-pages/projects/darrenxing/citypop.csv)
@@ -56,7 +53,7 @@ The following tools were used to support this analysis:
 
 - Version control: Github (public on-line repository)
 
-- Hosting:    Github (local copies of repository and files).  Some insights was twitted.  The images embedded in the tweets were brought back into this post to avoid issues with asset includes from pull requests.  
+- Hosting:    [Github](https://github.com/malecki/edav) (local copies of repository and files).  Some insights was twitted.  The images embedded in the [tweets](https://twitter.com/mayankmisra) were brought back into this post to avoid issues with asset includes from pull requests.  
 
 - Data Integration and enrichment: [Data Wrangler](http://vis.stanford.edu/wrangler/) and [Tableau Public](http://www.tableausoftware.com/public//)
 
