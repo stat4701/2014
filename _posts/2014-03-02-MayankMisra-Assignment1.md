@@ -36,10 +36,12 @@ High priesthood of data scientists and analysts
 A come not to praise Caesar but to burry him
 
 #### Methodology
+
 For Exploratory Data Analysis and Visualization (EDAV), Philip Guo's work on [Data Science Workflow: Overview and Challenges](http://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext) is very helpful.  
 It not only lays down the steps but also gives a preview of the potential challenges and rela world options to overcome them.  In a nutshell, the workflow is visualized as follows:
 
 #### Workflow
+
 [![](http://cacm.acm.org/system/assets/0001/3678/rp-overview.jpg)](http://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext) 
 (note the redirect!)
 
@@ -48,9 +50,16 @@ It not only lays down the steps but also gives a preview of the potential challe
 
 ##### Prepare
 
-* Main data set: 
-The 
--[US Population data source](https://github.com/malecki/edav/blob/uspop/projects/popgraph/get-data.py)
+* Base dataset:
+
+The City Population data set is from the [US Census website](http://www.census.gov/population/censusdata/table-4.pdf).  [Professor Malecki](https://github.com/malecki/) eased us into the world of web scrapping and data munging by providing a csv version of the census pdf. 
+The uspop.csv is the starting point of this analysis.  
+
+-[Web Scrapper](https://github.com/malecki/edav/blob/uspop/projects/popgraph/get-data.py)
+
+-[US Population uspop.csv](https://github.com/malecki/edav/blob/uspop/projects/popgraph/citypop.csv)
+
+The base dataset has ranked populations of US cities.  This is census data covering a period of 1790 to 2010.  Data are not available for all cities for every time the census was taken.  
 
 * Ancillary data sets: 
 
