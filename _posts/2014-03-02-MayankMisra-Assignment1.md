@@ -37,8 +37,7 @@ A come not to praise Caesar but to burry him
 
 #### Methodology
 
-For Exploratory Data Analysis and Visualization (EDAV), Philip Guo's work on [Data Science Workflow: Overview and Challenges](http://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext) is very helpful.  
-It not only lays down the steps but also gives a preview of the potential challenges and rela world options to overcome them.  In a nutshell, the workflow is visualized as follows:
+Philip Guo's insightful work on [Data Science Workflow: Overview and Challenges](http://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext) is a good starting point on developing a methedology for Exploratory Data Analysis and Visualization (EDAV).  
 
 #### Workflow
 
@@ -47,6 +46,10 @@ It not only lays down the steps but also gives a preview of the potential challe
 
 
 #### Approach
+The choice of an approach depends on the time available and the frequency of analysis.  In addition, the visualization choices will differ immensely for a business decision makers than for the general public.  
+This attempt leans towards simplicity, speed and clarity versus visually rich complex and dynamic graphs.  
+
+The aim was to add US regional and state metadata to this city level data.  This would provide an ability to assess trends at the state and compare regional population growths.  
 
 ##### Prepare
 
@@ -59,9 +62,23 @@ The uspop.csv is the starting point of this analysis.
 
 -[US Population uspop.csv](https://github.com/malecki/edav/blob/gh-pages/projects/darrenxing/citypop.csv)
 
-The base dataset has ranked populations of US cities.  This is census data covering a period of 1790 to 2010.  Data are not available for all cities for every time the census was taken.  
+The base dataset ranks (top 20) populations of US cities.  This is census data covering a period of 1790 to 2010.  Data are not available for all cities for every time the census was taken.  There are gaps in the data.  
+
+* Software and platforms
+
+- Version control: Github (public on-line repository)
+
+- Hosting:    Github (local copies of repository and files).  Some insights was twitted.  The images embedded in the tweets were brought back into this post to avoid issues with asset includes from pull requests.  
+
+- Data Integration and enrichment: [Data Wrangler](http://vis.stanford.edu/wrangler/) and [Tableau Public](http://www.tableausoftware.com/public//)
+
+- Visualization: [Tableau Public](http://www.tableausoftware.com/public//)
 
 * Ancillary data sets: 
+
+The AdWords datasets available from Google were used enrich the state and regional information.  
+
+The ZIP data, though available, was not added to the base dataset as it would have been of marginal benefit given the choice of visualization tool (Tableau).  The tool provides an easy way to map data to a geography, given that the dataset contains country, state and city information.  I assume this is done by inbuilt libraries that already have the longitude and latitude mapped for, at least, the major countries/state/cities.  
 
 -[DMA Regions and their associated cities](http://goo.gl/itBaJE)
 
@@ -69,10 +86,18 @@ The base dataset has ranked populations of US cities.  This is census data cover
 
 * Wrangled Data
 
+- Data Wrangler was used for basic clean up.  
+- The base dataset CSV was cleaned for spaces and commas.  Some cities were listed with states (Newport, RI).  
+- The state, where existed, was extracted to its own column.  This way we didn't loose the orignal state mapped to a city. This came in handy when states were added through other sources for the rest of the cities.  
+- The headings were extracted from the first row.  
+
+- Tableau was used to merge data sets.  
+- Regional and State information was added to the city using the AdWords DMA Targeting and Regional datasets.  The AdWords data is global.  It was filtered for US and then merged with the base dataset.  
+
 -[Finally the cleaned data set](http://public.tableausoftware.com/views/City_Population_Trend/Data?:embed=y&:display_count=no)
 [![](https://pbs.twimg.com/media/BhxsUWMIMAEylvj.png:large)](http://public.tableausoftware.com/views/City_Population_Trend/Data?:embed=y&:display_count=no)
 
--[A reference file for future visualizations - US State to City look up]({{ site.baseurl}}/assets/mm3557-cp-city-state-lkup.csv)
+- As a biproduct of this process, [a reference file on US State to City look up]({{ site.baseurl}}/assets/mm3557-cp-city-state-lkup.csv) was derived.  This can be helpful in future projects and is made available publicly on Github.  
 
 
 ##### Analysis
