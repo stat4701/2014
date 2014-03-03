@@ -2,6 +2,7 @@
 layout: post
 title: Introducing - Vivian Peng
 description: An intro to the class
+tags: intro
 ---
 
 Hi, I'm Vivian, a second year MPH informatics student and freelance graphic designer. I am a coffee, dance, and "serious" .gifs enthusiast. 
