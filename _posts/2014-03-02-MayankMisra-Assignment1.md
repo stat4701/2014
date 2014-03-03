@@ -45,7 +45,7 @@ It not only lays down the steps but also gives a preview of the potential challe
 
 #### Approach
 
-* Prepare
+##### Prepare
 
 Main data set: 
 
@@ -67,7 +67,7 @@ Wrangled Data
 
 [![]({{ site.baseurl}}/assets/mm3557-cp-hw1-data.png)](http://public.tableausoftware.com/views/City_Population_Trend/Data?:embed=y&:display_count=no)
 
-* Analysis
+##### Analysis
 
 [Trend Summary - Geo Hierarchy](http://public.tableausoftware.com/views/City_Population_Trend/TrendSummary-GeoHierarchy?:embed=y&:display_count=no)
 
@@ -77,9 +77,9 @@ Wrangled Data
 
 
 
-* Reflection
+##### Reflection
 
-* Dissemination
+##### Dissemination
 
 #### Observations
 
