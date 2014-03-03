@@ -232,7 +232,7 @@ w.apply_to_file(sys.argv[1]).print_csv(sys.argv[2])
 
 ### Thoughts
 
-Visual display of data of data is not only for communicating inferences and insights to a broader audience unfamiliar with the dataset.  The more powerful use of visualizing data is as a medium to grasp relationships in multi-dimensional and complex datasets.  
+Visual display of data is not only for communicating inferences and insights to an audience unfamiliar with the dataset.  The more powerful use of visualizing data is as a medium to grasp relationships in multi-dimensional and complex datasets.  
 
 Network graphs do this exceptionally well.  I have provided my Facebook and LinkedIn social network graphs. Visualizing my connections in this form, I was able to form powerful insights about the way people in my network are connected with each other and to me.   
 
