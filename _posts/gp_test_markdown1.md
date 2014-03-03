@@ -2,7 +2,7 @@
 *Priya*
 
 ##Links
-Trying to embed a link in a sentence [this page] ([http://rcharts.io/](http://rcharts.io/))
+Trying to embed a link in a sentence, visit [this page] (http://rcharts.io)
 
 For a full description of the markdown syntax, visit [this page](http://daringfireball.net/projects/markdown/syntax)
 
