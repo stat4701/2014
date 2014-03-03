@@ -111,5 +111,5 @@ Resulting in:
 
 ![My graph](https://upload.wikimedia.org/wikipedia/commons/d/de/Historic_U.S._Homeownership_Rate%2C_as_of_2014.svg)
 
-The graph is now in the Wikimedia columns and can be seen [under the 'Historical' section of the Homeownership in the United States Wikipedia article!](https://en.wikipedia.org/wiki/Homeownership_in_the_United_States#Historical)
+The graph is now in the Wikimedia commons and can be seen [under the 'Historical' section of the Homeownership in the United States Wikipedia article!](https://en.wikipedia.org/wiki/Homeownership_in_the_United_States#Historical)
 
