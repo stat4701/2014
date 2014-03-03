@@ -46,14 +46,22 @@ It not only lays down the steps but also gives a preview of the potential challe
 #### Approach
 
 * Prepare
-Main data set: [link to US Population data source](https://github.com/malecki/edav/blob/uspop/projects/popgraph/get-data.py)
+
+Main data set: 
+
+-[US Population data source](https://github.com/malecki/edav/blob/uspop/projects/popgraph/get-data.py)
+
 Ancillary data sets: 
+
 -[DMA Regions and their associated cities](http://goo.gl/itBaJE)
+
 -[DMA Geographical Targeting](http://goo.gl/zYf1gK)
 
 Wrangled Data
-[Finally the cleaned data set](http://public.tableausoftware.com/views/City_Population_Trend/Data?:embed=y&:display_count=no)
-A lookup for future visualizations [US State to City look up]({{ site.baseurl}}/assets/mm3557-cp-city-state-lkup.csv)
+
+-[Finally the cleaned data set](http://public.tableausoftware.com/views/City_Population_Trend/Data?:embed=y&:display_count=no)
+
+-[A lookup for future visualizations US State to City look up]({{ site.baseurl}}/assets/mm3557-cp-city-state-lkup.csv)
 
 [![]({{ site.baseurl}}/assets/incomeladder.png)](http://www.nytimes.com/2013/07/22/business/in-climbing-income-ladder-location-matters.html?_r=0)
 
