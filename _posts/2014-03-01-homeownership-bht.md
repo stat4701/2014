@@ -55,12 +55,14 @@ It was straightforward to then list2csv the data into a csv and read the CSV in 
 
 I read this data into a dataframe called `qrt`. I then wanted to add recession bars, so, my first attempt was this:
 
+```R
 qrt$reces[with(qrt,Date>1969.5 & Date < 1971)] <- 1
 qrt$reces[with(qrt,Date>1973.5 & Date < 1975.5)] <- 1
 qrt$reces[with(qrt,Date>1979.9 & Date < 1980.65)] <- 1
 qrt$reces[with(qrt,Date>1981.4 & Date < 1983)] <- 1
 qrt$reces[with(qrt,Date>1990.4 & Date < 1991.6)] <- 1
 qrt$reces[with(qrt,Date>2001.4 & Date < 2002)] <- 1
+```
 
 I picked these non-quarterly dates in order to have a 0 and 1 column for my quarterly data marking whether that quarter was a recession.
 
@@ -78,7 +80,7 @@ recessions.df <- read.table(textConnection(
 2007.75, 2009.75"), sep=',', header=TRUE)
 ```
 
-I then had an independent dataframe for recessions data that allowed me to construct geom_rects. 
+This left me with an independent dataframe for recessions data that allowed me to construct geom_rects. 
 
 The final step I was interested in was coloring the recessions bars to encode the change in rate during that recession.
 
