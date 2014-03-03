@@ -36,7 +36,7 @@ Key elements of my design that address issues with the original design are:
 
 My visualization is embedded below. Alternatively, the full page view on JsFiddle can be seen [here](http://jsfiddle.net/stephenkappel/bk854/embedded/result). The JavaScript on CSS files are posted to GitHub [here](https://github.com/StephenKappel/dataology/tree/master/WhatsItWorth).
 
-<div align="left"><iframe width="1225" height="640" src="http://jsfiddle.net/stephenkappel/bk854/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe></div>
+<div align="left"><iframe width="1225" height="655" src="http://jsfiddle.net/stephenkappel/bk854/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe></div>
 
 # Observations
 
