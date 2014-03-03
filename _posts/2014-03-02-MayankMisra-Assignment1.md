@@ -4,6 +4,7 @@ title: Visualizing data - A contrarian view
 description: Assignment 1 - Reimagining City Population data
 Tags: assignment KISS minimalistic visualization not chartoons
 ---
+### Reimagining City Populations Data 1790 to 2010
 
 #### The Premise
 * This post continues from the visualization exercise of assignment0 and in the bargain derive some 'points to ponder' for future visualization exercises.  Its reasonable to question the choice of the data set.  After all its been 'revisualized' by the class many times over.  My choice of the data set was deliberate.  
@@ -12,7 +13,7 @@ Tags: assignment KISS minimalistic visualization not chartoons
  the use and abuse of feature rich (read code heavy and visually complex) graphs in general. 
 I wanted to choose data that was familiar to all us to facilitate an understanding of my point of view on visualization.
 
-#### The purpose of data visualization
+##### The purpose of data visualization
 Purpose of graph and data visualization, as per Tukey (1993), is to describe, compare, make an impact and report the results of data analysis. 
 
 
@@ -47,17 +48,17 @@ It not only lays down the steps but also gives a preview of the potential challe
 
 ##### Prepare
 
-Main data set: 
-
+* Main data set: 
+The 
 -[US Population data source](https://github.com/malecki/edav/blob/uspop/projects/popgraph/get-data.py)
 
-Ancillary data sets: 
+* Ancillary data sets: 
 
 -[DMA Regions and their associated cities](http://goo.gl/itBaJE)
 
 -[DMA Geographical Targeting](http://goo.gl/zYf1gK)
 
-Wrangled Data
+* Wrangled Data
 
 -[Finally the cleaned data set](http://public.tableausoftware.com/views/City_Population_Trend/Data?:embed=y&:display_count=no)
 
