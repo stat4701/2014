@@ -25,7 +25,7 @@ A similar one for [my professional connections on LinkedIn](https://pbs.twimg.co
 
 A [checklist for creating data products](http://www.juiceanalytics.com/writing/a-checklist-for-creating-data-products/)
 
-[![](http://www.juiceanalytics.com/writing/a-checklist-for-creating-data-products/)](http://www.juiceanalytics.com/wp-content/uploads/2013/10/JuiceChecklist-ProductManager.png)
+[![](http://www.juiceanalytics.com/writing/a-checklist-for-creating-data-products/)](http://juiceanalytics.com/wp-content/uploads/2013/10/JuiceChecklist-ProductManager.png)
 
 >> Expand on :
 Its different from information graphics
