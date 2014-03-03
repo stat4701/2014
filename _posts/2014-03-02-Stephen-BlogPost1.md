@@ -37,7 +37,7 @@ Key elements of my design include:
 
 My visualization is embedded below. Alternatively, the full-page view on JsFiddle.net can be seen [here](http://jsfiddle.net/stephenkappel/bk854/embedded/result). The JavaScript and CSS files are posted to GitHub [here](https://github.com/StephenKappel/dataology/tree/master/WhatsItWorth).
 
-<div align="left"><iframe src="http://jsfiddle.net/stephenkappel/bk854/embedded/result" allowfullscreen="allowfullscreen" frameborder="0" style="overflow:hidden; display:block; height:100%; width:100%" height="100%" width="100%">></iframe></div>
+<div align="left"><iframe src="http://jsfiddle.net/stephenkappel/bk854/embedded/result" allowfullscreen="allowfullscreen" frameborder="0" style="overflow:hidden; display:block; height:100%; width:100%" width="1230" height="675" >></iframe></div>
 
 ## Observations
 
