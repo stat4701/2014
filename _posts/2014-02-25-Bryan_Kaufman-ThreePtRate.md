@@ -14,7 +14,7 @@ tags: blogpost1
 The chart that I am going to look at is the following:
 
 
-![Team Data]({{ site.url }}/assets/web.jpg)
+![Team Data]({{ site.baseurl }}/assets/web.jpg)
 
 
 It is titled "The Rise of the 3-Point Shot", and the original link for it is [here](http://www.nytimes.com/2009/10/18/sports/basketball/18threes.html?_r=0)
@@ -30,7 +30,7 @@ The biggest and most obvious problem with this chart is that it just shows the 3
 Three Point Rate is commonly used advanced statistic used to track the percentage of total shots that are three pointers.  This is a better way to visualize the true rise in three point shots.  If you look at the chart, it says that in 1999: "The season was shortened to 50 games because of a lockout".  Because I am visualizing a **rate** instead of an absolute number, it does not matter that a season was shortened.  Here is my chart:
 
 
-![Team Data]({{ site.url }}/assets/rise3pt.png)
+![Team Data]({{ site.baseurl }}/assets/rise3pt.png)
 
 
 It looks from my chart that there was actually a slight jump in the 3ptr in 1999.  This furthers my point that there are too many factors affecting "average attempts per team" to have that depict the rising trend.
@@ -45,13 +45,13 @@ Next, I wanted to visualize the rise of three point rate by team.  The main ques
 I first tried to do this with a facet wrap but the visualizations came out unclear.  I decided do a jitter plot with a red line that depicted the league average.  I came up with the following visualization:
 
 
-![Team by Team]({{ site.url }}/assets/teambyteam.png)
+![Team by Team]({{ site.baseurl }}/assets/teambyteam.png)
 
 
 As you can see, I decided to include eFG% in the visualization.  Effective Field Goal Percentage quantifies how well a team is shooting from the field.  The difference between Effective Field Goal Percentage and Field Goal Percentage is that eFG% does not penalize the three point shot.  It looked to me that a majority of the green was above the league average.  This was interesting to me and I wanted to look at it more closely with less years.  Here is the visualization that I created:
 
 
-![Closer]({{ site.url }}/assets/closer.png)
+![Closer]({{ site.baseurl }}/assets/closer.png)
 
 
 Again, much of the yellow, indicating a high rate, is above the league average. A majority of the dark black is below the league average three point.  Running a correlation between 3ptr and eFG% has a significant p value. However, correlation does not imply causation and you must assume that some teams are simply taking more threes because they have better three point shooters, and also poor shooting teams are simply just poor shooting teams.  However, I believe you could conclude, that some teams aren't achieving their maximum eFG% because they are not taking enough threes - and that's a crucial point to consider.
@@ -59,7 +59,7 @@ Again, much of the yellow, indicating a high rate, is above the league average. 
 To better look at the differences among teams, I decided to look at the standard deviation among teams in 3ptr for each year.  I created a quick plot to look at it, as shown below. I did this with the ddply function on R. I created a quick qplot to look at it, as shown below.
 
 
-![Std]({{ site.url }}/assets/stddev.png)
+![Std]({{ site.baseurl }}/assets/stddev.png)
 
 
 There was clearly an uptrend in terms of standard deviation, meaning that some teams believed strongly in taking threes while others resistant. Since 2005, however, and especially recently theres been a downtrend.  I wonder if teams are starting to realize the value of the three point shot!
