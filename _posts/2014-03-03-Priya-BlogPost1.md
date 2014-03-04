@@ -1,5 +1,3 @@
-**Priya-blogpost-1**
-
 ##Junk Chart - Green House Gas Emission by Country
 
 [Source](http://cait2.wri.org/wri/Country%20GHG%20Emissions?indicator=Total%20GHG%20Emissions%20Excluding%20LUCF&indicator=Total%20GHG%20Emissions%20Including%20LUCF&year=2010&chartType=bars.)
@@ -30,7 +28,7 @@ Few of the shortcomings that I could perceive are,
 
 ###The Finished Product
 
-[Modified Graphic](http://public.tableausoftware.com/views/CountryVsCO2Emission_GP1/Dashboard1?:embed=y&:display_count=no)
+[Modified Graphic](http://public.tableausoftware.com/views/CountryVsCO2Emission_GP1/GHGEmissionsDataperCountry?:embed=y&:display_count=no)
 
 ###Observations
 
