@@ -2,7 +2,7 @@
 layout: post
 title: Blog Post 1 -- Shiya's Good Graph in Progress
 description: Assignment 1
-tags: assignments
+tags: Assignments
 ---
 
 [_"FIFA World cup titles"_](http://yoshi2041.blogspot.com/2010/10/fifa-world-cup-titles.html) is a blog post that attempts to present the number of FIFA world cup championship titles the top 8 countries have captured. While it clearly shows the number of times that each country became the World Cup champion, the pie chart is too noisy and oversimple for the reader to match each country with its corresponding piece of the pie for more information. 
