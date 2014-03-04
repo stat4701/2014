@@ -6,24 +6,16 @@
 		<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
 	</head>
 	<h2>Common Words Across SOTU Speeches: 1980-2014</h2>
-	<h6><br>Size: Frequency of Word,</br><br></br><br> Color/Location: Distribution Across Democratic vs. Republican Presidents</br></h6>
-	<body>
+	<h6><br>Size: Frequency of Word,</br><br></br><br> Color/Location: Distribution Across Democratic vs. Republican Presidents' SOTU Speeches</br></h6>
 		<style type="text/css">
 
 			body{
 				line-height:25%;
 			}
 
-			svg {
-				background-color: white;
-				font-family:optima;
-				font-color:black;
-				font-size:10pt;
-				fill:white;
-			}
 
 		</style>
-
+		<body>
 		<script type="text/javascript">
 		
 			//
@@ -170,21 +162,28 @@
 {"word":"child","freq":"13","freqperc":"0.001436","lls":"20.58188","s":"27.32668","freqperc_sd":"0.000158","lls_sd":"7.907788","s_sd":"3.307343","freqdiff":"-164","llsdiff":"-43.07","sdiff":"-5.81","freqabs":"164","llsabs":"43.07","sabs":"5.81"},
 {"word":"job","freq":"44","freqperc":"0.001608","lls":"18.89909","s":"28.041102","freqperc_sd":"0.000776","lls_sd":"6.783402","s_sd":"3.912715","freqdiff":"-185","llsdiff":"-50.54","sdiff":"-13.13","freqabs":"185","llsabs":"50.54","sabs":"13.13"}]
 			
+			
 			var w=1500;
-			var h=500;
-			var padding= 200;
+			var h=700;
+			var padding= 150;
 
 			var xScale = d3.scale.linear()
 							.domain(
-								[d3.min(words, function(d,i) {return i;}),
-								d3.max(words,function(d,i) {return i;})])
-							.range([0, w]);
+								[d3.max(words, function(d) {return d.freqdiff/3;}),
+								d3.min(words,function(d,i) {return d.freqdiff/3;})])
+							.range([-100, w-1.5*padding]);
 
 			var yScale = d3.scale.linear()
 								 .domain([
-								 	d3.min(words, function(d) {return d.freqdiff;}), 
-								 	d3.max(words, function(d) {return d.freqdiff/3;})])
-								 .range([padding, h - padding]);
+								 	d3.min(words, function(d,i) {return i;}), 
+								 	d3.max(words, function(d,i) {return i;})])
+								 .range([padding*.25, h-padding]);
+
+			var fontScale = d3.scale.linear()
+							.domain(
+								[d3.min(words, function(d) {return d.freq;}),
+								d3.max(words,function(d,i) {return d.freq;})])
+							.range([5, 50]);
 
 			var colorScale=d3.scale.quantize()
 					.domain([d3.min(words, function(d) {return d.freqdiff;}),
@@ -194,21 +193,45 @@
 			var svg = d3.select("body")
 						.append("svg")
 						.attr("width", w)
-						.attr("height", h);
+						.attr("height",h);
 
-			svg.append("g")
-			.attr("id","rect")
-			.selectAll("rect")
-				.data(words)
-				.enter()
-				.append("rect")
-				.style("stroke",function(d) {return colorScale(d.freqdiff);})
-				.attr("height",function(d) {return d.freq/3;})
-				.attr("width", function(d) {return d.freq*1.5;})
-				.attr("x",function(d,i) {return xScale(i);})
-				.attr("y",function(d) {return yScale(d.freqdiff);})
-				.append("text")
-				.text("text", function(d) {return d.word;});
+			var bar = svg.selectAll("g")
+    					.data(words)
+  						.enter().append("g")
+    					.attr("transform", function(d, i) { return "translate(100,100)"; });
+
+
+
+			bar.append("text")
+				.attr("x", function(d) {return xScale(d.freqdiff/3);})
+				.attr("y", function(d,i) {return yScale(i);})
+				.text(function(d) {return d.word;})
+				.attr("fill", function(d) {
+					return colorScale(d.freqdiff);
+				})
+				.attr("font-size", function(d) {
+					return fontScale(d.freq);
+				});
+
+			var line = bar.append("line")
+				.attr("y1",h)
+				.attr("y2",-50)
+				.attr("x1", function(d) {
+					return xScale(0);
+				})
+				.attr("x2", function(d) {
+					return xScale(0);
+				})
+				.attr("stroke-width",.25)
+				.attr("stroke","black");
+
+			var axis = bar.append("text")
+				.attr("x", function(d) {return xScale(0)+5;})
+				.attr("y", function(d,i) {return yScale(145);})
+				.text("Even Distribution Among Presidential Parties")
+				.attr("font-size", "16pt");
+
+
 			
 		</script>
 	</body>
