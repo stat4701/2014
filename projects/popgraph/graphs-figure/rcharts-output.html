@@ -1,0 +1,3772 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href='http://nvd3.org/src/nv.d3.css'>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://timelyportfolio.github.io/rCharts_nvd3_tests/libraries/widgets/nvd3/js/nv.d3.min-new.js' type='text/javascript'></script>
+    <script src='http://nvd3.org/lib/fisheye.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body>
+    <div id='chart332f5e6daa07' class='rChart nvd3'></div>  
+    
+    <script type='text/javascript'>
+ $(document).ready(function(){
+      drawchart332f5e6daa07()
+    });
+    function drawchart332f5e6daa07(){  
+      var opts = {
+ "dom": "chart332f5e6daa07",
+"width":    800,
+"height":    400,
+"x": "year",
+"y": "share",
+"group": "city",
+"type": "lineChart",
+"id": "chart332f5e6daa07" 
+},
+        data = [
+ {
+ "year": 1790,
+"rank": 1,
+"city": "Philadelphia",
+"pop":           44.1,
+"share": 0.2214967353089,
+"totalpop":            3.9 
+},
+{
+ "year": 1790,
+"rank": 2,
+"city": "New York",
+"pop":           33.1,
+"share": 0.1662481165244,
+"totalpop":            3.9 
+},
+{
+ "year": 1790,
+"rank": 3,
+"city": "Boston",
+"pop":           18.3,
+"share": 0.09191361125063,
+"totalpop":            3.9 
+},
+{
+ "year": 1790,
+"rank": 4,
+"city": "Charleston",
+"pop":           16.4,
+"share": 0.08237066800603,
+"totalpop":            3.9 
+},
+{
+ "year": 1790,
+"rank": 5,
+"city": "Salem, MA",
+"pop":           13.6,
+"share": 0.06830738322451,
+"totalpop":            3.9 
+},
+{
+ "year": 1790,
+"rank": 6,
+"city": "Baltimore",
+"pop":           13.5,
+"share": 0.06780512305374,
+"totalpop":            3.9 
+},
+{
+ "year": 1790,
+"rank": 7,
+"city": "Newport, RI",
+"pop":            6.7,
+"share": 0.03365143144149,
+"totalpop":            3.9 
+},
+{
+ "year": 1790,
+"rank": 8,
+"city": "Providence",
+"pop":            6.4,
+"share": 0.03214465092918,
+"totalpop":            3.9 
+},
+{
+ "year": 1790,
+"rank": 9,
+"city": "Gloucester, MA",
+"pop":            5.3,
+"share": 0.02661978905073,
+"totalpop":            3.9 
+},
+{
+ "year": 1790,
+"rank": 10,
+"city": "Newburyport, MA",
+"pop":            4.8,
+"share": 0.02410848819689,
+"totalpop":            3.9 
+},
+{
+ "year": 1790,
+"rank": 11,
+"city": "Portsmouth, NH",
+"pop":            4.7,
+"share": 0.02360622802612,
+"totalpop":            3.9 
+},
+{
+ "year": 1790,
+"rank": 12,
+"city": "Nantucket",
+"pop":            4.6,
+"share": 0.02310396785535,
+"totalpop":            3.9 
+},
+{
+ "year": 1790,
+"rank": 13,
+"city": "Middleborough, MA",
+"pop":            4.5,
+"share": 0.02260170768458,
+"totalpop":            3.9 
+},
+{
+ "year": 1790,
+"rank": 14,
+"city": "New Haven",
+"pop":            4.5,
+"share": 0.02260170768458,
+"totalpop":            3.9 
+},
+{
+ "year": 1790,
+"rank": 15,
+"city": "Richmond",
+"pop":            3.8,
+"share": 0.0190858864892,
+"totalpop":            3.9 
+},
+{
+ "year": 1790,
+"rank": 16,
+"city": "Albany",
+"pop":            3.5,
+"share": 0.0175791059769,
+"totalpop":            3.9 
+},
+{
+ "year": 1790,
+"rank": 17,
+"city": "Norfolk",
+"pop":              3,
+"share": 0.01506780512305,
+"totalpop":            3.9 
+},
+{
+ "year": 1790,
+"rank": 18,
+"city": "Petersburg, VA",
+"pop":            2.8,
+"share": 0.01406328478152,
+"totalpop":            3.9 
+},
+{
+ "year": 1790,
+"rank": 19,
+"city": "Alexandria, VA",
+"pop":            2.8,
+"share": 0.01406328478152,
+"totalpop":            3.9 
+},
+{
+ "year": 1790,
+"rank": 20,
+"city": "Hartford",
+"pop":            2.7,
+"share": 0.01356102461075,
+"totalpop":            3.9 
+},
+{
+ "year": 1800,
+"rank": 1,
+"city": "Philadelphia",
+"pop":           61.6,
+"share": 0.2103825136612,
+"totalpop":            5.3 
+},
+{
+ "year": 1800,
+"rank": 2,
+"city": "New York",
+"pop":           60.5,
+"share": 0.2066256830601,
+"totalpop":            5.3 
+},
+{
+ "year": 1800,
+"rank": 3,
+"city": "Baltimore",
+"pop":           26.5,
+"share": 0.09050546448087,
+"totalpop":            5.3 
+},
+{
+ "year": 1800,
+"rank": 4,
+"city": "Boston",
+"pop":           24.9,
+"share": 0.08504098360656,
+"totalpop":            5.3 
+},
+{
+ "year": 1800,
+"rank": 5,
+"city": "Charleston",
+"pop":           18.8,
+"share": 0.06420765027322,
+"totalpop":            5.3 
+},
+{
+ "year": 1800,
+"rank": 6,
+"city": "Salem, MA",
+"pop":           14.7,
+"share": 0.05020491803279,
+"totalpop":            5.3 
+},
+{
+ "year": 1800,
+"rank": 7,
+"city": "Washington",
+"pop":           11.2,
+"share": 0.03825136612022,
+"totalpop":            5.3 
+},
+{
+ "year": 1800,
+"rank": 8,
+"city": "Providence",
+"pop":            7.6,
+"share": 0.02595628415301,
+"totalpop":            5.3 
+},
+{
+ "year": 1800,
+"rank": 9,
+"city": "Norfolk",
+"pop":            6.9,
+"share": 0.02356557377049,
+"totalpop":            5.3 
+},
+{
+ "year": 1800,
+"rank": 10,
+"city": "Newport, RI",
+"pop":            6.7,
+"share": 0.0228825136612,
+"totalpop":            5.3 
+},
+{
+ "year": 1800,
+"rank": 11,
+"city": "Newburyport, MA",
+"pop":              6,
+"share": 0.02049180327869,
+"totalpop":            5.3 
+},
+{
+ "year": 1800,
+"rank": 12,
+"city": "Richmond",
+"pop":            5.7,
+"share": 0.01946721311475,
+"totalpop":            5.3 
+},
+{
+ "year": 1800,
+"rank": 13,
+"city": "Nantucket",
+"pop":            5.6,
+"share": 0.01912568306011,
+"totalpop":            5.3 
+},
+{
+ "year": 1800,
+"rank": 14,
+"city": "Portsmouth, NH",
+"pop":            5.3,
+"share": 0.01810109289617,
+"totalpop":            5.3 
+},
+{
+ "year": 1800,
+"rank": 15,
+"city": "Gloucester, MA",
+"pop":            5.3,
+"share": 0.01810109289617,
+"totalpop":            5.3 
+},
+{
+ "year": 1800,
+"rank": 16,
+"city": "Schenectady, NY",
+"pop":            5.3,
+"share": 0.01810109289617,
+"totalpop":            5.3 
+},
+{
+ "year": 1800,
+"rank": 17,
+"city": "Albany",
+"pop":            5.3,
+"share": 0.01810109289617,
+"totalpop":            5.3 
+},
+{
+ "year": 1800,
+"rank": 18,
+"city": "New London, CT",
+"pop":            5.2,
+"share": 0.01775956284153,
+"totalpop":            5.3 
+},
+{
+ "year": 1800,
+"rank": 19,
+"city": "Savannah",
+"pop":            5.2,
+"share": 0.01775956284153,
+"totalpop":            5.3 
+},
+{
+ "year": 1800,
+"rank": 20,
+"city": "Middleborough, MA",
+"pop":            4.5,
+"share": 0.01536885245902,
+"totalpop":            5.3 
+},
+{
+ "year": 1810,
+"rank": 1,
+"city": "New York",
+"pop":            101,
+"share": 0.2230565371025,
+"totalpop":            7.2 
+},
+{
+ "year": 1810,
+"rank": 2,
+"city": "Philadelphia",
+"pop":           87.3,
+"share": 0.1928003533569,
+"totalpop":            7.2 
+},
+{
+ "year": 1810,
+"rank": 3,
+"city": "Baltimore",
+"pop":           46.6,
+"share": 0.1029151943463,
+"totalpop":            7.2 
+},
+{
+ "year": 1810,
+"rank": 4,
+"city": "Boston",
+"pop":           38.7,
+"share": 0.08546819787986,
+"totalpop":            7.2 
+},
+{
+ "year": 1810,
+"rank": 5,
+"city": "Charleston",
+"pop":           24.7,
+"share": 0.05454946996466,
+"totalpop":            7.2 
+},
+{
+ "year": 1810,
+"rank": 6,
+"city": "Salem, MA",
+"pop":           23.1,
+"share": 0.05101590106007,
+"totalpop":            7.2 
+},
+{
+ "year": 1810,
+"rank": 7,
+"city": "Washington",
+"pop":           20.4,
+"share": 0.04505300353357,
+"totalpop":            7.2 
+},
+{
+ "year": 1810,
+"rank": 8,
+"city": "New Orleans",
+"pop":           17.2,
+"share": 0.03798586572438,
+"totalpop":            7.2 
+},
+{
+ "year": 1810,
+"rank": 9,
+"city": "Albany",
+"pop":           10.8,
+"share": 0.02385159010601,
+"totalpop":            7.2 
+},
+{
+ "year": 1810,
+"rank": 10,
+"city": "Providence",
+"pop":           10.1,
+"share": 0.02230565371025,
+"totalpop":            7.2 
+},
+{
+ "year": 1810,
+"rank": 11,
+"city": "Richmond",
+"pop":            9.7,
+"share": 0.0214222614841,
+"totalpop":            7.2 
+},
+{
+ "year": 1810,
+"rank": 12,
+"city": "Norfolk",
+"pop":            9.2,
+"share": 0.02031802120141,
+"totalpop":            7.2 
+},
+{
+ "year": 1810,
+"rank": 13,
+"city": "Newport, RI",
+"pop":            7.9,
+"share": 0.01744699646643,
+"totalpop":            7.2 
+},
+{
+ "year": 1810,
+"rank": 14,
+"city": "Newburyport, MA",
+"pop":            7.6,
+"share": 0.01678445229682,
+"totalpop":            7.2 
+},
+{
+ "year": 1810,
+"rank": 15,
+"city": "Portland, ME",
+"pop":            7.2,
+"share": 0.01590106007067,
+"totalpop":            7.2 
+},
+{
+ "year": 1810,
+"rank": 16,
+"city": "Portsmouth, NH",
+"pop":            6.9,
+"share": 0.01523851590106,
+"totalpop":            7.2 
+},
+{
+ "year": 1810,
+"rank": 17,
+"city": "Nantucket",
+"pop":            6.8,
+"share": 0.01501766784452,
+"totalpop":            7.2 
+},
+{
+ "year": 1810,
+"rank": 18,
+"city": "Gloucester, MA",
+"pop":            5.9,
+"share": 0.01303003533569,
+"totalpop":            7.2 
+},
+{
+ "year": 1810,
+"rank": 19,
+"city": "Schenectady, NY",
+"pop":            5.9,
+"share": 0.01303003533569,
+"totalpop":            7.2 
+},
+{
+ "year": 1810,
+"rank": 20,
+"city": "New Haven",
+"pop":            5.8,
+"share": 0.01280918727915,
+"totalpop":            7.2 
+},
+{
+ "year": 1820,
+"rank": 1,
+"city": "New York",
+"pop":            131,
+"share": 0.2288209606987,
+"totalpop":            9.6 
+},
+{
+ "year": 1820,
+"rank": 2,
+"city": "Philadelphia",
+"pop":            109,
+"share": 0.1903930131004,
+"totalpop":            9.6 
+},
+{
+ "year": 1820,
+"rank": 3,
+"city": "Baltimore",
+"pop":           62.7,
+"share": 0.109519650655,
+"totalpop":            9.6 
+},
+{
+ "year": 1820,
+"rank": 4,
+"city": "Boston",
+"pop":             54,
+"share": 0.0943231441048,
+"totalpop":            9.6 
+},
+{
+ "year": 1820,
+"rank": 5,
+"city": "Washington",
+"pop":           28.8,
+"share": 0.0503056768559,
+"totalpop":            9.6 
+},
+{
+ "year": 1820,
+"rank": 6,
+"city": "New Orleans",
+"pop":           27.2,
+"share": 0.04751091703057,
+"totalpop":            9.6 
+},
+{
+ "year": 1820,
+"rank": 7,
+"city": "Charleston",
+"pop":           24.8,
+"share": 0.04331877729258,
+"totalpop":            9.6 
+},
+{
+ "year": 1820,
+"rank": 8,
+"city": "Salem, MA",
+"pop":           22.6,
+"share": 0.03947598253275,
+"totalpop":            9.6 
+},
+{
+ "year": 1820,
+"rank": 9,
+"city": "Albany",
+"pop":           17.9,
+"share": 0.03126637554585,
+"totalpop":            9.6 
+},
+{
+ "year": 1820,
+"rank": 10,
+"city": "Richmond",
+"pop":           12.1,
+"share": 0.02113537117904,
+"totalpop":            9.6 
+},
+{
+ "year": 1820,
+"rank": 11,
+"city": "Providence",
+"pop":           11.8,
+"share": 0.02061135371179,
+"totalpop":            9.6 
+},
+{
+ "year": 1820,
+"rank": 12,
+"city": "Cincinnati",
+"pop":            9.6,
+"share": 0.01676855895197,
+"totalpop":            9.6 
+},
+{
+ "year": 1820,
+"rank": 13,
+"city": "Portland, ME",
+"pop":            8.6,
+"share": 0.01502183406114,
+"totalpop":            9.6 
+},
+{
+ "year": 1820,
+"rank": 14,
+"city": "Norfolk",
+"pop":            8.5,
+"share": 0.01484716157205,
+"totalpop":            9.6 
+},
+{
+ "year": 1820,
+"rank": 15,
+"city": "Savannah",
+"pop":            7.5,
+"share": 0.01310043668122,
+"totalpop":            9.6 
+},
+{
+ "year": 1820,
+"rank": 16,
+"city": "Portsmouth, NH",
+"pop":            7.3,
+"share": 0.01275109170306,
+"totalpop":            9.6 
+},
+{
+ "year": 1820,
+"rank": 17,
+"city": "Newport, RI",
+"pop":            7.3,
+"share": 0.01275109170306,
+"totalpop":            9.6 
+},
+{
+ "year": 1820,
+"rank": 18,
+"city": "Nantucket",
+"pop":            7.3,
+"share": 0.01275109170306,
+"totalpop":            9.6 
+},
+{
+ "year": 1820,
+"rank": 19,
+"city": "Pittsburgh",
+"pop":            7.3,
+"share": 0.01275109170306,
+"totalpop":            9.6 
+},
+{
+ "year": 1820,
+"rank": 20,
+"city": "New Haven",
+"pop":            7.2,
+"share": 0.01257641921397,
+"totalpop":            9.6 
+},
+{
+ "year": 1830,
+"rank": 1,
+"city": "New York",
+"pop":            215,
+"share": 0.2468143726323,
+"totalpop":           12.9 
+},
+{
+ "year": 1830,
+"rank": 2,
+"city": "Philadelphia",
+"pop":            161,
+"share": 0.1848237860177,
+"totalpop":           12.9 
+},
+{
+ "year": 1830,
+"rank": 3,
+"city": "Boston",
+"pop":           85.6,
+"share": 0.09826655952244,
+"totalpop":           12.9 
+},
+{
+ "year": 1830,
+"rank": 4,
+"city": "Baltimore",
+"pop":           80.6,
+"share": 0.09252669039146,
+"totalpop":           12.9 
+},
+{
+ "year": 1830,
+"rank": 5,
+"city": "New Orleans",
+"pop":           46.1,
+"share": 0.05292159338767,
+"totalpop":           12.9 
+},
+{
+ "year": 1830,
+"rank": 6,
+"city": "Albany",
+"pop":           35.8,
+"share": 0.04109746297784,
+"totalpop":           12.9 
+},
+{
+ "year": 1830,
+"rank": 7,
+"city": "Washington",
+"pop":           35.5,
+"share": 0.04075307082999,
+"totalpop":           12.9 
+},
+{
+ "year": 1830,
+"rank": 8,
+"city": "Charleston",
+"pop":           30.3,
+"share": 0.03478360693376,
+"totalpop":           12.9 
+},
+{
+ "year": 1830,
+"rank": 9,
+"city": "Salem, MA",
+"pop":           27.3,
+"share": 0.03133968545517,
+"totalpop":           12.9 
+},
+{
+ "year": 1830,
+"rank": 10,
+"city": "Cincinnati",
+"pop":           24.8,
+"share": 0.02846975088968,
+"totalpop":           12.9 
+},
+{
+ "year": 1830,
+"rank": 11,
+"city": "Providence",
+"pop":           22.4,
+"share": 0.02571461370681,
+"totalpop":           12.9 
+},
+{
+ "year": 1830,
+"rank": 12,
+"city": "Richmond",
+"pop":           16.1,
+"share": 0.01848237860177,
+"totalpop":           12.9 
+},
+{
+ "year": 1830,
+"rank": 13,
+"city": "Pittsburgh",
+"pop":           15.4,
+"share": 0.01767879692343,
+"totalpop":           12.9 
+},
+{
+ "year": 1830,
+"rank": 14,
+"city": "Newark",
+"pop":           14.4,
+"share": 0.01653082309723,
+"totalpop":           12.9 
+},
+{
+ "year": 1830,
+"rank": 15,
+"city": "Portland, ME",
+"pop":           12.6,
+"share": 0.01446447021008,
+"totalpop":           12.9 
+},
+{
+ "year": 1830,
+"rank": 16,
+"city": "Louisville",
+"pop":           10.3,
+"share": 0.01182413040983,
+"totalpop":           12.9 
+},
+{
+ "year": 1830,
+"rank": 17,
+"city": "New Haven",
+"pop":           10.2,
+"share": 0.01170933302721,
+"totalpop":           12.9 
+},
+{
+ "year": 1830,
+"rank": 18,
+"city": "Norfolk",
+"pop":            9.8,
+"share": 0.01125014349673,
+"totalpop":           12.9 
+},
+{
+ "year": 1830,
+"rank": 19,
+"city": "Rochester",
+"pop":            9.2,
+"share": 0.01056135920101,
+"totalpop":           12.9 
+},
+{
+ "year": 1830,
+"rank": 20,
+"city": "Buffalo",
+"pop":            8.7,
+"share": 0.009987372287912,
+"totalpop":           12.9 
+},
+{
+ "year": 1840,
+"rank": 1,
+"city": "New York",
+"pop":            374,
+"share": 0.2360962060476,
+"totalpop":             17 
+},
+{
+ "year": 1840,
+"rank": 2,
+"city": "Philadelphia",
+"pop":            259,
+"share": 0.1634997790544,
+"totalpop":             17 
+},
+{
+ "year": 1840,
+"rank": 3,
+"city": "Boston",
+"pop":            183,
+"share": 0.115523009911,
+"totalpop":             17 
+},
+{
+ "year": 1840,
+"rank": 4,
+"city": "Baltimore",
+"pop":            110,
+"share": 0.06944006060223,
+"totalpop":             17 
+},
+{
+ "year": 1840,
+"rank": 5,
+"city": "New Orleans",
+"pop":            105,
+"share": 0.06628369421122,
+"totalpop":             17 
+},
+{
+ "year": 1840,
+"rank": 6,
+"city": "Albany",
+"pop":             72,
+"share": 0.04545167603055,
+"totalpop":             17 
+},
+{
+ "year": 1840,
+"rank": 7,
+"city": "Cincinnati",
+"pop":           54.8,
+"share": 0.03459377564548,
+"totalpop":             17 
+},
+{
+ "year": 1840,
+"rank": 8,
+"city": "Washington",
+"pop":           50.2,
+"share": 0.03168991856575,
+"totalpop":             17 
+},
+{
+ "year": 1840,
+"rank": 9,
+"city": "Pittsburgh",
+"pop":           43.7,
+"share": 0.02758664225743,
+"totalpop":             17 
+},
+{
+ "year": 1840,
+"rank": 10,
+"city": "Charleston",
+"pop":           42.6,
+"share": 0.02689224165141,
+"totalpop":             17 
+},
+{
+ "year": 1840,
+"rank": 11,
+"city": "Providence",
+"pop":           40.9,
+"share": 0.02581907707847,
+"totalpop":             17 
+},
+{
+ "year": 1840,
+"rank": 12,
+"city": "Louisville",
+"pop":           34.2,
+"share": 0.02158954611451,
+"totalpop":             17 
+},
+{
+ "year": 1840,
+"rank": 13,
+"city": "Rochester",
+"pop":           31.4,
+"share": 0.01982198093555,
+"totalpop":             17 
+},
+{
+ "year": 1840,
+"rank": 14,
+"city": "Newark",
+"pop":           29.8,
+"share": 0.01881194369042,
+"totalpop":             17 
+},
+{
+ "year": 1840,
+"rank": 15,
+"city": "Buffalo",
+"pop":           29.3,
+"share": 0.01849630705132,
+"totalpop":             17 
+},
+{
+ "year": 1840,
+"rank": 16,
+"city": "Portland, ME",
+"pop":           28.6,
+"share": 0.01805441575658,
+"totalpop":             17 
+},
+{
+ "year": 1840,
+"rank": 17,
+"city": "St. Louis",
+"pop":           28.4,
+"share": 0.01792816110094,
+"totalpop":             17 
+},
+{
+ "year": 1840,
+"rank": 18,
+"city": "New Bedford",
+"pop":           24.1,
+"share": 0.01521368600467,
+"totalpop":             17 
+},
+{
+ "year": 1840,
+"rank": 19,
+"city": "New Haven",
+"pop":           21.9,
+"share": 0.01382488479263,
+"totalpop":             17 
+},
+{
+ "year": 1840,
+"rank": 20,
+"city": "Detroit",
+"pop":           21.2,
+"share": 0.01338299349789,
+"totalpop":             17 
+},
+{
+ "year": 1850,
+"rank": 1,
+"city": "New York",
+"pop":            650,
+"share": 0.2437195350581,
+"totalpop":           23.1 
+},
+{
+ "year": 1850,
+"rank": 2,
+"city": "Philadelphia",
+"pop":            405,
+"share": 0.1518560179978,
+"totalpop":           23.1 
+},
+{
+ "year": 1850,
+"rank": 3,
+"city": "Boston",
+"pop":            308,
+"share": 0.1154855643045,
+"totalpop":           23.1 
+},
+{
+ "year": 1850,
+"rank": 4,
+"city": "Baltimore",
+"pop":            179,
+"share": 0.0671166104237,
+"totalpop":           23.1 
+},
+{
+ "year": 1850,
+"rank": 5,
+"city": "Cincinnati",
+"pop":            133,
+"share": 0.0498687664042,
+"totalpop":           23.1 
+},
+{
+ "year": 1850,
+"rank": 6,
+"city": "New Orleans",
+"pop":            123,
+"share": 0.04611923509561,
+"totalpop":           23.1 
+},
+{
+ "year": 1850,
+"rank": 7,
+"city": "Albany",
+"pop":            107,
+"share": 0.04011998500187,
+"totalpop":           23.1 
+},
+{
+ "year": 1850,
+"rank": 8,
+"city": "St. Louis",
+"pop":             95,
+"share": 0.03562054743157,
+"totalpop":           23.1 
+},
+{
+ "year": 1850,
+"rank": 9,
+"city": "Pittsburgh",
+"pop":             86,
+"share": 0.03224596925384,
+"totalpop":           23.1 
+},
+{
+ "year": 1850,
+"rank": 10,
+"city": "Buffalo",
+"pop":             80,
+"share": 0.02999625046869,
+"totalpop":           23.1 
+},
+{
+ "year": 1850,
+"rank": 11,
+"city": "Washington",
+"pop":             67,
+"share": 0.02512185976753,
+"totalpop":           23.1 
+},
+{
+ "year": 1850,
+"rank": 12,
+"city": "Providence",
+"pop":             65,
+"share": 0.02437195350581,
+"totalpop":           23.1 
+},
+{
+ "year": 1850,
+"rank": 13,
+"city": "Louisville",
+"pop":             61,
+"share": 0.02287214098238,
+"totalpop":           23.1 
+},
+{
+ "year": 1850,
+"rank": 14,
+"city": "Newark",
+"pop":             57,
+"share": 0.02137232845894,
+"totalpop":           23.1 
+},
+{
+ "year": 1850,
+"rank": 15,
+"city": "Charleston",
+"pop":             50,
+"share": 0.01874765654293,
+"totalpop":           23.1 
+},
+{
+ "year": 1850,
+"rank": 16,
+"city": "Rochester",
+"pop":             49,
+"share": 0.01837270341207,
+"totalpop":           23.1 
+},
+{
+ "year": 1850,
+"rank": 17,
+"city": "Chicago",
+"pop":             40,
+"share": 0.01499812523435,
+"totalpop":           23.1 
+},
+{
+ "year": 1850,
+"rank": 18,
+"city": "Syracuse",
+"pop":             38,
+"share": 0.01424821897263,
+"totalpop":           23.1 
+},
+{
+ "year": 1850,
+"rank": 19,
+"city": "Detroit",
+"pop":             38,
+"share": 0.01424821897263,
+"totalpop":           23.1 
+},
+{
+ "year": 1850,
+"rank": 20,
+"city": "Portland, ME",
+"pop":             36,
+"share": 0.01349831271091,
+"totalpop":           23.1 
+},
+{
+ "year": 1860,
+"rank": 1,
+"city": "New York",
+"pop":           1143,
+"share":  0.29180495277,
+"totalpop":           31.4 
+},
+{
+ "year": 1860,
+"rank": 2,
+"city": "Philadelphia",
+"pop":            608,
+"share": 0.1552208322696,
+"totalpop":           31.4 
+},
+{
+ "year": 1860,
+"rank": 3,
+"city": "Boston",
+"pop":            374,
+"share": 0.09548123563952,
+"totalpop":           31.4 
+},
+{
+ "year": 1860,
+"rank": 4,
+"city": "Baltimore",
+"pop":            221,
+"share": 0.05642073015063,
+"totalpop":           31.4 
+},
+{
+ "year": 1860,
+"rank": 5,
+"city": "Cincinnati",
+"pop":            192,
+"share": 0.04901710492724,
+"totalpop":           31.4 
+},
+{
+ "year": 1860,
+"rank": 6,
+"city": "St. Louis",
+"pop":            176,
+"share": 0.0449323461833,
+"totalpop":           31.4 
+},
+{
+ "year": 1860,
+"rank": 7,
+"city": "New Orleans",
+"pop":            172,
+"share": 0.04391115649732,
+"totalpop":           31.4 
+},
+{
+ "year": 1860,
+"rank": 8,
+"city": "Chicago",
+"pop":            123,
+"share": 0.03140158284401,
+"totalpop":           31.4 
+},
+{
+ "year": 1860,
+"rank": 9,
+"city": "Albany",
+"pop":            116,
+"share": 0.02961450089354,
+"totalpop":           31.4 
+},
+{
+ "year": 1860,
+"rank": 10,
+"city": "Newark",
+"pop":            103,
+"share": 0.02629563441409,
+"totalpop":           31.4 
+},
+{
+ "year": 1860,
+"rank": 11,
+"city": "Pittsburgh",
+"pop":             93,
+"share": 0.02374266019913,
+"totalpop":           31.4 
+},
+{
+ "year": 1860,
+"rank": 12,
+"city": "Buffalo",
+"pop":             90,
+"share": 0.02297676793464,
+"totalpop":           31.4 
+},
+{
+ "year": 1860,
+"rank": 13,
+"city": "Louisville",
+"pop":             88,
+"share": 0.02246617309165,
+"totalpop":           31.4 
+},
+{
+ "year": 1860,
+"rank": 14,
+"city": "Washington",
+"pop":             80,
+"share": 0.02042379371968,
+"totalpop":           31.4 
+},
+{
+ "year": 1860,
+"rank": 15,
+"city": "Providence",
+"pop":             69,
+"share": 0.01761552208323,
+"totalpop":           31.4 
+},
+{
+ "year": 1860,
+"rank": 16,
+"city": "Detroit",
+"pop":             59,
+"share": 0.01506254786827,
+"totalpop":           31.4 
+},
+{
+ "year": 1860,
+"rank": 17,
+"city": "San Francisco",
+"pop":             57,
+"share": 0.01455195302527,
+"totalpop":           31.4 
+},
+{
+ "year": 1860,
+"rank": 18,
+"city": "Rochester",
+"pop":             56,
+"share": 0.01429665560378,
+"totalpop":           31.4 
+},
+{
+ "year": 1860,
+"rank": 19,
+"city": "Cleveland",
+"pop":             49,
+"share": 0.01250957365331,
+"totalpop":           31.4 
+},
+{
+ "year": 1860,
+"rank": 20,
+"city": "Milwaukee",
+"pop":             48,
+"share": 0.01225427623181,
+"totalpop":           31.4 
+},
+{
+ "year": 1870,
+"rank": 1,
+"city": "New York",
+"pop":           1687,
+"share": 0.2949816401469,
+"totalpop":           38.6 
+},
+{
+ "year": 1870,
+"rank": 2,
+"city": "Philadelphia",
+"pop":            747,
+"share": 0.1306172407764,
+"totalpop":           38.6 
+},
+{
+ "year": 1870,
+"rank": 3,
+"city": "Boston",
+"pop":            501,
+"share": 0.08760272774961,
+"totalpop":           38.6 
+},
+{
+ "year": 1870,
+"rank": 4,
+"city": "St. Louis",
+"pop":            345,
+"share": 0.06032523168386,
+"totalpop":           38.6 
+},
+{
+ "year": 1870,
+"rank": 5,
+"city": "Chicago",
+"pop":            324,
+"share": 0.05665326105963,
+"totalpop":           38.6 
+},
+{
+ "year": 1870,
+"rank": 6,
+"city": "Baltimore",
+"pop":            283,
+"share": 0.04948417555517,
+"totalpop":           38.6 
+},
+{
+ "year": 1870,
+"rank": 7,
+"city": "Cincinnati",
+"pop":            257,
+"share": 0.04493792621088,
+"totalpop":           38.6 
+},
+{
+ "year": 1870,
+"rank": 8,
+"city": "New Orleans",
+"pop":            196,
+"share": 0.03427172582619,
+"totalpop":           38.6 
+},
+{
+ "year": 1870,
+"rank": 9,
+"city": "Pittsburgh",
+"pop":            170,
+"share": 0.0297254764819,
+"totalpop":           38.6 
+},
+{
+ "year": 1870,
+"rank": 10,
+"city": "Albany",
+"pop":            157,
+"share": 0.02745235180976,
+"totalpop":           38.6 
+},
+{
+ "year": 1870,
+"rank": 11,
+"city": "San Francisco",
+"pop":            151,
+"share": 0.02640321734569,
+"totalpop":           38.6 
+},
+{
+ "year": 1870,
+"rank": 12,
+"city": "Buffalo",
+"pop":            133,
+"share": 0.02325581395349,
+"totalpop":           38.6 
+},
+{
+ "year": 1870,
+"rank": 13,
+"city": "Louisville",
+"pop":            129,
+"share": 0.02255639097744,
+"totalpop":           38.6 
+},
+{
+ "year": 1870,
+"rank": 14,
+"city": "Washington",
+"pop":            123,
+"share": 0.02150725651338,
+"totalpop":           38.6 
+},
+{
+ "year": 1870,
+"rank": 15,
+"city": "Providence",
+"pop":            101,
+"share": 0.01766043014513,
+"totalpop":           38.6 
+},
+{
+ "year": 1870,
+"rank": 16,
+"city": "Detroit",
+"pop":            101,
+"share": 0.01766043014513,
+"totalpop":           38.6 
+},
+{
+ "year": 1870,
+"rank": 17,
+"city": "Cleveland",
+"pop":            101,
+"share": 0.01766043014513,
+"totalpop":           38.6 
+},
+{
+ "year": 1870,
+"rank": 18,
+"city": "Milwaukee",
+"pop":             75,
+"share": 0.01311418080084,
+"totalpop":           38.6 
+},
+{
+ "year": 1870,
+"rank": 19,
+"city": "Rochester",
+"pop":             73,
+"share": 0.01276446931282,
+"totalpop":           38.6 
+},
+{
+ "year": 1870,
+"rank": 20,
+"city": "New Haven",
+"pop":             65,
+"share": 0.01136562336073,
+"totalpop":           38.6 
+},
+{
+ "year": 1880,
+"rank": 1,
+"city": "New York",
+"pop":           2234,
+"share": 0.2951902748414,
+"totalpop":           50.2 
+},
+{
+ "year": 1880,
+"rank": 2,
+"city": "Philadelphia",
+"pop":            949,
+"share": 0.1253964059197,
+"totalpop":           50.2 
+},
+{
+ "year": 1880,
+"rank": 3,
+"city": "Boston",
+"pop":            658,
+"share": 0.08694503171247,
+"totalpop":           50.2 
+},
+{
+ "year": 1880,
+"rank": 4,
+"city": "Chicago",
+"pop":            543,
+"share": 0.07174947145877,
+"totalpop":           50.2 
+},
+{
+ "year": 1880,
+"rank": 5,
+"city": "St. Louis",
+"pop":            386,
+"share": 0.05100422832981,
+"totalpop":           50.2 
+},
+{
+ "year": 1880,
+"rank": 6,
+"city": "Baltimore",
+"pop":            353,
+"share": 0.04664376321353,
+"totalpop":           50.2 
+},
+{
+ "year": 1880,
+"rank": 7,
+"city": "Cincinnati",
+"pop":            307,
+"share": 0.04056553911205,
+"totalpop":           50.2 
+},
+{
+ "year": 1880,
+"rank": 8,
+"city": "Pittsburgh",
+"pop":            265,
+"share": 0.03501585623679,
+"totalpop":           50.2 
+},
+{
+ "year": 1880,
+"rank": 9,
+"city": "San Francisco",
+"pop":            236,
+"share": 0.03118393234672,
+"totalpop":           50.2 
+},
+{
+ "year": 1880,
+"rank": 10,
+"city": "New Orleans",
+"pop":            219,
+"share": 0.02893763213531,
+"totalpop":           50.2 
+},
+{
+ "year": 1880,
+"rank": 11,
+"city": "Albany",
+"pop":            178,
+"share": 0.0235200845666,
+"totalpop":           50.2 
+},
+{
+ "year": 1880,
+"rank": 12,
+"city": "Buffalo",
+"pop":            171,
+"share": 0.02259513742072,
+"totalpop":           50.2 
+},
+{
+ "year": 1880,
+"rank": 13,
+"city": "Cleveland",
+"pop":            169,
+"share": 0.02233086680761,
+"totalpop":           50.2 
+},
+{
+ "year": 1880,
+"rank": 14,
+"city": "Washington",
+"pop":            164,
+"share": 0.02167019027484,
+"totalpop":           50.2 
+},
+{
+ "year": 1880,
+"rank": 15,
+"city": "Detroit",
+"pop":            147,
+"share": 0.01942389006342,
+"totalpop":           50.2 
+},
+{
+ "year": 1880,
+"rank": 16,
+"city": "Louisville",
+"pop":            143,
+"share": 0.01889534883721,
+"totalpop":           50.2 
+},
+{
+ "year": 1880,
+"rank": 17,
+"city": "Providence",
+"pop":            128,
+"share": 0.0169133192389,
+"totalpop":           50.2 
+},
+{
+ "year": 1880,
+"rank": 18,
+"city": "Milwaukee",
+"pop":            121,
+"share": 0.01598837209302,
+"totalpop":           50.2 
+},
+{
+ "year": 1880,
+"rank": 19,
+"city": "Rochester",
+"pop":            103,
+"share": 0.01360993657505,
+"totalpop":           50.2 
+},
+{
+ "year": 1880,
+"rank": 20,
+"city": "Minneapolis",
+"pop":             94,
+"share": 0.01242071881607,
+"totalpop":           50.2 
+},
+{
+ "year": 1890,
+"rank": 1,
+"city": "New York",
+"pop":           2977,
+"share": 0.2808755542976,
+"totalpop":             63 
+},
+{
+ "year": 1890,
+"rank": 2,
+"city": "Philadelphia",
+"pop":           1180,
+"share": 0.1113312576658,
+"totalpop":             63 
+},
+{
+ "year": 1890,
+"rank": 3,
+"city": "Chicago",
+"pop":           1141,
+"share": 0.1076516652514,
+"totalpop":             63 
+},
+{
+ "year": 1890,
+"rank": 4,
+"city": "Boston",
+"pop":            818,
+"share": 0.07717709217851,
+"totalpop":             63 
+},
+{
+ "year": 1890,
+"rank": 5,
+"city": "St. Louis",
+"pop":            490,
+"share": 0.04623077648835,
+"totalpop":             63 
+},
+{
+ "year": 1890,
+"rank": 6,
+"city": "Baltimore",
+"pop":            453,
+"share": 0.04273988112086,
+"totalpop":             63 
+},
+{
+ "year": 1890,
+"rank": 7,
+"city": "Pittsburgh",
+"pop":            396,
+"share": 0.03736201528446,
+"totalpop":             63 
+},
+{
+ "year": 1890,
+"rank": 8,
+"city": "Cincinnati",
+"pop":            344,
+"share": 0.03245589206529,
+"totalpop":             63 
+},
+{
+ "year": 1890,
+"rank": 9,
+"city": "Minneapolis",
+"pop":            305,
+"share": 0.02877629965091,
+"totalpop":             63 
+},
+{
+ "year": 1890,
+"rank": 10,
+"city": "San Francisco",
+"pop":            302,
+"share": 0.02849325408057,
+"totalpop":             63 
+},
+{
+ "year": 1890,
+"rank": 11,
+"city": "Cleveland",
+"pop":            274,
+"share": 0.0258514954241,
+"totalpop":             63 
+},
+{
+ "year": 1890,
+"rank": 12,
+"city": "Buffalo",
+"pop":            272,
+"share": 0.02566279837721,
+"totalpop":             63 
+},
+{
+ "year": 1890,
+"rank": 13,
+"city": "Washington",
+"pop":            253,
+"share": 0.02387017643174,
+"totalpop":             63 
+},
+{
+ "year": 1890,
+"rank": 14,
+"city": "New Orleans",
+"pop":            245,
+"share": 0.02311538824417,
+"totalpop":             63 
+},
+{
+ "year": 1890,
+"rank": 15,
+"city": "Detroit",
+"pop":            237,
+"share": 0.02236060005661,
+"totalpop":             63 
+},
+{
+ "year": 1890,
+"rank": 16,
+"city": "Milwaukee",
+"pop":            212,
+"share": 0.02000188697047,
+"totalpop":             63 
+},
+{
+ "year": 1890,
+"rank": 17,
+"city": "Albany",
+"pop":            189,
+"share": 0.01783187093122,
+"totalpop":             63 
+},
+{
+ "year": 1890,
+"rank": 18,
+"city": "Louisville",
+"pop":            183,
+"share": 0.01726577979055,
+"totalpop":             63 
+},
+{
+ "year": 1890,
+"rank": 19,
+"city": "Kansas City",
+"pop":            165,
+"share": 0.01556750636853,
+"totalpop":             63 
+},
+{
+ "year": 1890,
+"rank": 20,
+"city": "Providence",
+"pop":            163,
+"share": 0.01537880932163,
+"totalpop":             63 
+},
+{
+ "year": 1900,
+"rank": 1,
+"city": "New York",
+"pop":           4266,
+"share": 0.3007402185407,
+"totalpop":           76.2 
+},
+{
+ "year": 1900,
+"rank": 2,
+"city": "Chicago",
+"pop":           1759,
+"share": 0.1240042298202,
+"totalpop":           76.2 
+},
+{
+ "year": 1900,
+"rank": 3,
+"city": "Philadelphia",
+"pop":           1454,
+"share": 0.1025026436376,
+"totalpop":           76.2 
+},
+{
+ "year": 1900,
+"rank": 4,
+"city": "Boston",
+"pop":           1009,
+"share": 0.07113147691223,
+"totalpop":           76.2 
+},
+{
+ "year": 1900,
+"rank": 5,
+"city": "St. Louis",
+"pop":            626,
+"share": 0.04413112442721,
+"totalpop":           76.2 
+},
+{
+ "year": 1900,
+"rank": 6,
+"city": "Pittsburgh",
+"pop":            532,
+"share": 0.03750440606274,
+"totalpop":           76.2 
+},
+{
+ "year": 1900,
+"rank": 7,
+"city": "Baltimore",
+"pop":            532,
+"share": 0.03750440606274,
+"totalpop":           76.2 
+},
+{
+ "year": 1900,
+"rank": 8,
+"city": "Cleveland",
+"pop":            396,
+"share": 0.02791681353542,
+"totalpop":           76.2 
+},
+{
+ "year": 1900,
+"rank": 9,
+"city": "Cincinnati",
+"pop":            379,
+"share": 0.02671836446951,
+"totalpop":           76.2 
+},
+{
+ "year": 1900,
+"rank": 10,
+"city": "San Francisco",
+"pop":            375,
+"share": 0.026436376454,
+"totalpop":           76.2 
+},
+{
+ "year": 1900,
+"rank": 11,
+"city": "Minneapolis",
+"pop":            374,
+"share": 0.02636587945012,
+"totalpop":           76.2 
+},
+{
+ "year": 1900,
+"rank": 12,
+"city": "Buffalo",
+"pop":            373,
+"share": 0.02629538244625,
+"totalpop":           76.2 
+},
+{
+ "year": 1900,
+"rank": 13,
+"city": "Detroit",
+"pop":            321,
+"share": 0.02262953824462,
+"totalpop":           76.2 
+},
+{
+ "year": 1900,
+"rank": 14,
+"city": "Washington",
+"pop":            302,
+"share": 0.02129009517096,
+"totalpop":           76.2 
+},
+{
+ "year": 1900,
+"rank": 15,
+"city": "Milwaukee",
+"pop":            296,
+"share": 0.02086711314769,
+"totalpop":           76.2 
+},
+{
+ "year": 1900,
+"rank": 16,
+"city": "New Orleans",
+"pop":            291,
+"share": 0.0205146281283,
+"totalpop":           76.2 
+},
+{
+ "year": 1900,
+"rank": 17,
+"city": "Providence",
+"pop":            243,
+"share": 0.01713077194219,
+"totalpop":           76.2 
+},
+{
+ "year": 1900,
+"rank": 18,
+"city": "Kansas City",
+"pop":            242,
+"share": 0.01706027493832,
+"totalpop":           76.2 
+},
+{
+ "year": 1900,
+"rank": 19,
+"city": "Louisville",
+"pop":            227,
+"share": 0.01600281988016,
+"totalpop":           76.2 
+},
+{
+ "year": 1900,
+"rank": 20,
+"city": "Albany",
+"pop":            188,
+"share": 0.01325343672894,
+"totalpop":           76.2 
+},
+{
+ "year": 1910,
+"rank": 1,
+"city": "New York",
+"pop":           6021,
+"share": 0.3219269635887,
+"totalpop":           92.2 
+},
+{
+ "year": 1910,
+"rank": 2,
+"city": "Chicago",
+"pop":           2283,
+"share":  0.12206597872,
+"totalpop":           92.2 
+},
+{
+ "year": 1910,
+"rank": 3,
+"city": "Philadelphia",
+"pop":           1746,
+"share": 0.0933540073785,
+"totalpop":           92.2 
+},
+{
+ "year": 1910,
+"rank": 4,
+"city": "Boston",
+"pop":           1213,
+"share": 0.06485590546971,
+"totalpop":           92.2 
+},
+{
+ "year": 1910,
+"rank": 5,
+"city": "St. Louis",
+"pop":            760,
+"share": 0.04063519221515,
+"totalpop":           92.2 
+},
+{
+ "year": 1910,
+"rank": 6,
+"city": "Pittsburgh",
+"pop":            655,
+"share": 0.03502111960648,
+"totalpop":           92.2 
+},
+{
+ "year": 1910,
+"rank": 7,
+"city": "San Francisco",
+"pop":            604,
+"share": 0.03229428433941,
+"totalpop":           92.2 
+},
+{
+ "year": 1910,
+"rank": 8,
+"city": "Baltimore",
+"pop":            589,
+"share": 0.03149227396674,
+"totalpop":           92.2 
+},
+{
+ "year": 1910,
+"rank": 9,
+"city": "Cleveland",
+"pop":            580,
+"share": 0.03101106774314,
+"totalpop":           92.2 
+},
+{
+ "year": 1910,
+"rank": 10,
+"city": "Minneapolis",
+"pop":            526,
+"share": 0.02812383040154,
+"totalpop":           92.2 
+},
+{
+ "year": 1910,
+"rank": 11,
+"city": "Detroit",
+"pop":            503,
+"share": 0.02689408116345,
+"totalpop":           92.2 
+},
+{
+ "year": 1910,
+"rank": 12,
+"city": "Cincinnati",
+"pop":            425,
+"share": 0.02272362722558,
+"totalpop":           92.2 
+},
+{
+ "year": 1910,
+"rank": 13,
+"city": "Buffalo",
+"pop":            420,
+"share": 0.02245629043469,
+"totalpop":           92.2 
+},
+{
+ "year": 1910,
+"rank": 14,
+"city": "Milwaukee",
+"pop":            389,
+"share": 0.02079880233118,
+"totalpop":           92.2 
+},
+{
+ "year": 1910,
+"rank": 15,
+"city": "Los Angeles",
+"pop":            374,
+"share": 0.01999679195851,
+"totalpop":           92.2 
+},
+{
+ "year": 1910,
+"rank": 16,
+"city": "Kansas City",
+"pop":            357,
+"share": 0.01908784686949,
+"totalpop":           92.2 
+},
+{
+ "year": 1910,
+"rank": 17,
+"city": "Washington",
+"pop":            357,
+"share": 0.01908784686949,
+"totalpop":           92.2 
+},
+{
+ "year": 1910,
+"rank": 18,
+"city": "New Orleans",
+"pop":            344,
+"share": 0.01839277121317,
+"totalpop":           92.2 
+},
+{
+ "year": 1910,
+"rank": 19,
+"city": "Albany",
+"pop":            283,
+"share": 0.01513126236433,
+"totalpop":           92.2 
+},
+{
+ "year": 1910,
+"rank": 20,
+"city": "Providence",
+"pop":            274,
+"share": 0.01465005614073,
+"totalpop":           92.2 
+},
+{
+ "year": 1920,
+"rank": 1,
+"city": "New York",
+"pop":           7041,
+"share": 0.3039105662983,
+"totalpop":            106 
+},
+{
+ "year": 1920,
+"rank": 2,
+"city": "Chicago",
+"pop":           2859,
+"share": 0.1234029696133,
+"totalpop":            106 
+},
+{
+ "year": 1920,
+"rank": 3,
+"city": "Philadelphia",
+"pop":           2072,
+"share": 0.08943370165746,
+"totalpop":            106 
+},
+{
+ "year": 1920,
+"rank": 4,
+"city": "Boston",
+"pop":           1366,
+"share": 0.05896063535912,
+"totalpop":            106 
+},
+{
+ "year": 1920,
+"rank": 5,
+"city": "Detroit",
+"pop":           1071,
+"share": 0.04622755524862,
+"totalpop":            106 
+},
+{
+ "year": 1920,
+"rank": 6,
+"city": "St. Louis",
+"pop":            859,
+"share": 0.03707700276243,
+"totalpop":            106 
+},
+{
+ "year": 1920,
+"rank": 7,
+"city": "Cleveland",
+"pop":            834,
+"share": 0.0359979281768,
+"totalpop":            106 
+},
+{
+ "year": 1920,
+"rank": 8,
+"city": "Pittsburgh",
+"pop":            775,
+"share": 0.0334513121547,
+"totalpop":            106 
+},
+{
+ "year": 1920,
+"rank": 9,
+"city": "San Francisco",
+"pop":            771,
+"share": 0.03327866022099,
+"totalpop":            106 
+},
+{
+ "year": 1920,
+"rank": 10,
+"city": "Baltimore",
+"pop":            753,
+"share": 0.03250172651934,
+"totalpop":            106 
+},
+{
+ "year": 1920,
+"rank": 11,
+"city": "Los Angeles",
+"pop":            682,
+"share": 0.02943715469613,
+"totalpop":            106 
+},
+{
+ "year": 1920,
+"rank": 12,
+"city": "Minneapolis",
+"pop":            626,
+"share": 0.02702002762431,
+"totalpop":            106 
+},
+{
+ "year": 1920,
+"rank": 13,
+"city": "Buffalo",
+"pop":            539,
+"share": 0.0232648480663,
+"totalpop":            106 
+},
+{
+ "year": 1920,
+"rank": 14,
+"city": "Milwaukee",
+"pop":            478,
+"share": 0.02063190607735,
+"totalpop":            106 
+},
+{
+ "year": 1920,
+"rank": 15,
+"city": "Cincinnati",
+"pop":            470,
+"share": 0.02028660220994,
+"totalpop":            106 
+},
+{
+ "year": 1920,
+"rank": 16,
+"city": "Washington",
+"pop":            467,
+"share": 0.02015711325967,
+"totalpop":            106 
+},
+{
+ "year": 1920,
+"rank": 17,
+"city": "Kansas City",
+"pop":            455,
+"share": 0.01963915745856,
+"totalpop":            106 
+},
+{
+ "year": 1920,
+"rank": 18,
+"city": "New Orleans",
+"pop":            393,
+"share": 0.01696305248619,
+"totalpop":            106 
+},
+{
+ "year": 1920,
+"rank": 19,
+"city": "Seattle",
+"pop":            334,
+"share": 0.01441643646409,
+"totalpop":            106 
+},
+{
+ "year": 1920,
+"rank": 20,
+"city": "Indianapolis",
+"pop":            323,
+"share": 0.01394164364641,
+"totalpop":            106 
+},
+{
+ "year": 1930,
+"rank": 1,
+"city": "New York",
+"pop":           8667,
+"share": 0.2980603892978,
+"totalpop":          103.2 
+},
+{
+ "year": 1930,
+"rank": 2,
+"city": "Chicago",
+"pop":           3718,
+"share": 0.1278629892015,
+"totalpop":          103.2 
+},
+{
+ "year": 1930,
+"rank": 3,
+"city": "Philadelphia",
+"pop":           2264,
+"share": 0.07785955017539,
+"totalpop":          103.2 
+},
+{
+ "year": 1930,
+"rank": 4,
+"city": "Detroit",
+"pop":           1721,
+"share": 0.05918563862714,
+"totalpop":          103.2 
+},
+{
+ "year": 1930,
+"rank": 5,
+"city": "Los Angeles",
+"pop":           1617,
+"share": 0.05560905151661,
+"totalpop":          103.2 
+},
+{
+ "year": 1930,
+"rank": 6,
+"city": "Boston",
+"pop":           1479,
+"share": 0.05086319554302,
+"totalpop":          103.2 
+},
+{
+ "year": 1930,
+"rank": 7,
+"city": "San Francisco",
+"pop":            996,
+"share": 0.03425269963546,
+"totalpop":          103.2 
+},
+{
+ "year": 1930,
+"rank": 8,
+"city": "Cleveland",
+"pop":            976,
+"share": 0.0335648944219,
+"totalpop":          103.2 
+},
+{
+ "year": 1930,
+"rank": 9,
+"city": "Pittsburgh",
+"pop":            960,
+"share": 0.03301465025105,
+"totalpop":          103.2 
+},
+{
+ "year": 1930,
+"rank": 10,
+"city": "St. Louis",
+"pop":            950,
+"share": 0.03267074764427,
+"totalpop":          103.2 
+},
+{
+ "year": 1930,
+"rank": 11,
+"city": "Baltimore",
+"pop":            836,
+"share": 0.02875025792696,
+"totalpop":          103.2 
+},
+{
+ "year": 1930,
+"rank": 12,
+"city": "Minneapolis",
+"pop":            753,
+"share": 0.02589586629067,
+"totalpop":          103.2 
+},
+{
+ "year": 1930,
+"rank": 13,
+"city": "Buffalo",
+"pop":            620,
+"share": 0.02132196162047,
+"totalpop":          103.2 
+},
+{
+ "year": 1930,
+"rank": 14,
+"city": "Milwaukee",
+"pop":            615,
+"share": 0.02115001031708,
+"totalpop":          103.2 
+},
+{
+ "year": 1930,
+"rank": 15,
+"city": "Cincinnati",
+"pop":            580,
+"share": 0.01994635119334,
+"totalpop":          103.2 
+},
+{
+ "year": 1930,
+"rank": 16,
+"city": "Kansas City",
+"pop":            561,
+"share": 0.01929293624046,
+"totalpop":          103.2 
+},
+{
+ "year": 1930,
+"rank": 17,
+"city": "Washington",
+"pop":            527,
+"share": 0.0181236673774,
+"totalpop":          103.2 
+},
+{
+ "year": 1930,
+"rank": 18,
+"city": "New Orleans",
+"pop":            469,
+"share": 0.01612903225806,
+"totalpop":          103.2 
+},
+{
+ "year": 1930,
+"rank": 19,
+"city": "Seattle",
+"pop":            390,
+"share": 0.01341220166449,
+"totalpop":          103.2 
+},
+{
+ "year": 1930,
+"rank": 20,
+"city": "Indianapolis",
+"pop":            379,
+"share": 0.01303390879703,
+"totalpop":          103.2 
+},
+{
+ "year": 1940,
+"rank": 1,
+"city": "New York",
+"pop":          10135,
+"share": 0.2966052092479,
+"totalpop":          132.1 
+},
+{
+ "year": 1940,
+"rank": 2,
+"city": "Chicago",
+"pop":           4210,
+"share": 0.123207491952,
+"totalpop":          132.1 
+},
+{
+ "year": 1940,
+"rank": 3,
+"city": "Philadelphia",
+"pop":           2538,
+"share": 0.07427568042142,
+"totalpop":          132.1 
+},
+{
+ "year": 1940,
+"rank": 4,
+"city": "Los Angeles",
+"pop":           2268,
+"share": 0.06637401229148,
+"totalpop":          132.1 
+},
+{
+ "year": 1940,
+"rank": 5,
+"city": "Detroit",
+"pop":           2041,
+"share": 0.05973075797483,
+"totalpop":          132.1 
+},
+{
+ "year": 1940,
+"rank": 6,
+"city": "Boston",
+"pop":           1746,
+"share": 0.05109745390694,
+"totalpop":          132.1 
+},
+{
+ "year": 1940,
+"rank": 7,
+"city": "San Francisco",
+"pop":           1156,
+"share": 0.03383084577114,
+"totalpop":          132.1 
+},
+{
+ "year": 1940,
+"rank": 8,
+"city": "Pittsburgh",
+"pop":           1134,
+"share": 0.03318700614574,
+"totalpop":          132.1 
+},
+{
+ "year": 1940,
+"rank": 9,
+"city": "St. Louis",
+"pop":           1102,
+"share": 0.03225051214516,
+"totalpop":          132.1 
+},
+{
+ "year": 1940,
+"rank": 10,
+"city": "Cleveland",
+"pop":           1079,
+"share": 0.03157740708224,
+"totalpop":          132.1 
+},
+{
+ "year": 1940,
+"rank": 11,
+"city": "Baltimore",
+"pop":            992,
+"share": 0.02903131401814,
+"totalpop":          132.1 
+},
+{
+ "year": 1940,
+"rank": 12,
+"city": "Minneapolis",
+"pop":            886,
+"share": 0.02592917764121,
+"totalpop":          132.1 
+},
+{
+ "year": 1940,
+"rank": 13,
+"city": "Washington",
+"pop":            800,
+"share": 0.02341235001463,
+"totalpop":          132.1 
+},
+{
+ "year": 1940,
+"rank": 14,
+"city": "Buffalo",
+"pop":            708,
+"share": 0.02071992976295,
+"totalpop":          132.1 
+},
+{
+ "year": 1940,
+"rank": 15,
+"city": "Milwaukee",
+"pop":            705,
+"share": 0.0206321334504,
+"totalpop":          132.1 
+},
+{
+ "year": 1940,
+"rank": 16,
+"city": "Kansas City",
+"pop":            632,
+"share": 0.01849575651156,
+"totalpop":          132.1 
+},
+{
+ "year": 1940,
+"rank": 17,
+"city": "Cincinnati",
+"pop":            559,
+"share": 0.01635937957272,
+"totalpop":          132.1 
+},
+{
+ "year": 1940,
+"rank": 18,
+"city": "New Orleans",
+"pop":            557,
+"share": 0.01630084869769,
+"totalpop":          132.1 
+},
+{
+ "year": 1940,
+"rank": 19,
+"city": "Houston",
+"pop":            471,
+"share": 0.01378402107112,
+"totalpop":          132.1 
+},
+{
+ "year": 1940,
+"rank": 20,
+"city": "Seattle",
+"pop":            451,
+"share": 0.01319871232075,
+"totalpop":          132.1 
+},
+{
+ "year": 1950,
+"rank": 1,
+"city": "New York",
+"pop":          12604,
+"share": 0.2744295418917,
+"totalpop":          151.3 
+},
+{
+ "year": 1950,
+"rank": 2,
+"city": "Chicago",
+"pop":           5208,
+"share": 0.113394878941,
+"totalpop":          151.3 
+},
+{
+ "year": 1950,
+"rank": 3,
+"city": "Los Angeles",
+"pop":           4250,
+"share": 0.092536143529,
+"totalpop":          151.3 
+},
+{
+ "year": 1950,
+"rank": 4,
+"city": "Philadelphia",
+"pop":           3297,
+"share": 0.07178627416826,
+"totalpop":          151.3 
+},
+{
+ "year": 1950,
+"rank": 5,
+"city": "Detroit",
+"pop":           2884,
+"share": 0.06279393833827,
+"totalpop":          151.3 
+},
+{
+ "year": 1950,
+"rank": 6,
+"city": "Boston",
+"pop":           2301,
+"share": 0.05010015676711,
+"totalpop":          151.3 
+},
+{
+ "year": 1950,
+"rank": 7,
+"city": "San Francisco",
+"pop":           2131,
+"share": 0.04639871102595,
+"totalpop":          151.3 
+},
+{
+ "year": 1950,
+"rank": 8,
+"city": "St. Louis",
+"pop":           1541,
+"share": 0.0335525169831,
+"totalpop":          151.3 
+},
+{
+ "year": 1950,
+"rank": 9,
+"city": "Cleveland",
+"pop":           1425,
+"share": 0.03102682459502,
+"totalpop":          151.3 
+},
+{
+ "year": 1950,
+"rank": 10,
+"city": "Pittsburgh",
+"pop":           1400,
+"share": 0.03048249433897,
+"totalpop":          151.3 
+},
+{
+ "year": 1950,
+"rank": 11,
+"city": "Washington",
+"pop":           1287,
+"share": 0.02802212158161,
+"totalpop":          151.3 
+},
+{
+ "year": 1950,
+"rank": 12,
+"city": "Baltimore",
+"pop":           1162,
+"share": 0.02530047030134,
+"totalpop":          151.3 
+},
+{
+ "year": 1950,
+"rank": 13,
+"city": "Minneapolis",
+"pop":            987,
+"share": 0.02149015850897,
+"totalpop":          151.3 
+},
+{
+ "year": 1950,
+"rank": 14,
+"city": "Buffalo",
+"pop":            895,
+"share": 0.0194870231667,
+"totalpop":          151.3 
+},
+{
+ "year": 1950,
+"rank": 15,
+"city": "Dallas",
+"pop":            855,
+"share": 0.01861609475701,
+"totalpop":          151.3 
+},
+{
+ "year": 1950,
+"rank": 16,
+"city": "Milwaukee",
+"pop":            829,
+"share": 0.01804999129072,
+"totalpop":          151.3 
+},
+{
+ "year": 1950,
+"rank": 17,
+"city": "Cincinnati",
+"pop":            813,
+"share": 0.01770161992684,
+"totalpop":          151.3 
+},
+{
+ "year": 1950,
+"rank": 18,
+"city": "Houston",
+"pop":            701,
+"share": 0.01526302037972,
+"totalpop":          151.3 
+},
+{
+ "year": 1950,
+"rank": 19,
+"city": "Kansas City",
+"pop":            698,
+"share": 0.015197700749,
+"totalpop":          151.3 
+},
+{
+ "year": 1950,
+"rank": 20,
+"city": "New Orleans",
+"pop":            660,
+"share": 0.0143703187598,
+"totalpop":          151.3 
+},
+{
+ "year": 1960,
+"rank": 1,
+"city": "New York",
+"pop":          14437,
+"share": 0.2455773287065,
+"totalpop":          179.3 
+},
+{
+ "year": 1960,
+"rank": 2,
+"city": "Los Angeles",
+"pop":           6805,
+"share": 0.1157549159692,
+"totalpop":          179.3 
+},
+{
+ "year": 1960,
+"rank": 3,
+"city": "Chicago",
+"pop":           6377,
+"share": 0.1084745186092,
+"totalpop":          179.3 
+},
+{
+ "year": 1960,
+"rank": 4,
+"city": "Philadelphia",
+"pop":           3989,
+"share": 0.06785398380622,
+"totalpop":          179.3 
+},
+{
+ "year": 1960,
+"rank": 5,
+"city": "Detroit",
+"pop":           3750,
+"share": 0.06378852827108,
+"totalpop":          179.3 
+},
+{
+ "year": 1960,
+"rank": 6,
+"city": "San Francisco",
+"pop":           2607,
+"share": 0.04434578485405,
+"totalpop":          179.3 
+},
+{
+ "year": 1960,
+"rank": 7,
+"city": "Boston",
+"pop":           2501,
+"share": 0.04254269578826,
+"totalpop":          179.3 
+},
+{
+ "year": 1960,
+"rank": 8,
+"city": "Pittsburgh",
+"pop":           2105,
+"share": 0.03580662720283,
+"totalpop":          179.3 
+},
+{
+ "year": 1960,
+"rank": 9,
+"city": "Washington",
+"pop":           1905,
+"share": 0.03240457236171,
+"totalpop":          179.3 
+},
+{
+ "year": 1960,
+"rank": 10,
+"city": "St. Louis",
+"pop":           1864,
+"share": 0.03170715111928,
+"totalpop":          179.3 
+},
+{
+ "year": 1960,
+"rank": 11,
+"city": "Cleveland",
+"pop":           1785,
+"share": 0.03036333945703,
+"totalpop":          179.3 
+},
+{
+ "year": 1960,
+"rank": 12,
+"city": "Dallas",
+"pop":           1435,
+"share": 0.02440974348506,
+"totalpop":          179.3 
+},
+{
+ "year": 1960,
+"rank": 13,
+"city": "Baltimore",
+"pop":           1419,
+"share": 0.02413757909778,
+"totalpop":          179.3 
+},
+{
+ "year": 1960,
+"rank": 14,
+"city": "Minneapolis",
+"pop":           1377,
+"share": 0.02342314758114,
+"totalpop":          179.3 
+},
+{
+ "year": 1960,
+"rank": 15,
+"city": "Miami",
+"pop":           1173,
+"share": 0.01995305164319,
+"totalpop":          179.3 
+},
+{
+ "year": 1960,
+"rank": 16,
+"city": "Milwaukee",
+"pop":           1150,
+"share": 0.01956181533646,
+"totalpop":          179.3 
+},
+{
+ "year": 1960,
+"rank": 17,
+"city": "Houston",
+"pop":           1140,
+"share": 0.01939171259441,
+"totalpop":          179.3 
+},
+{
+ "year": 1960,
+"rank": 18,
+"city": "Buffalo",
+"pop":           1054,
+"share": 0.01792882901272,
+"totalpop":          179.3 
+},
+{
+ "year": 1960,
+"rank": 19,
+"city": "Cincinnati",
+"pop":            994,
+"share": 0.01690821256039,
+"totalpop":          179.3 
+},
+{
+ "year": 1960,
+"rank": 20,
+"city": "Kansas City",
+"pop":            921,
+"share": 0.01566646254338,
+"totalpop":          179.3 
+},
+{
+ "year": 1970,
+"rank": 1,
+"city": "New York",
+"pop":          16193,
+"share": 0.2376291382954,
+"totalpop":          203.3 
+},
+{
+ "year": 1970,
+"rank": 2,
+"city": "Los Angeles",
+"pop":           7984,
+"share": 0.1171636534398,
+"totalpop":          203.3 
+},
+{
+ "year": 1970,
+"rank": 3,
+"city": "Chicago",
+"pop":           7164,
+"share": 0.1051303122799,
+"totalpop":          203.3 
+},
+{
+ "year": 1970,
+"rank": 4,
+"city": "Philadelphia",
+"pop":           4419,
+"share": 0.06484796900681,
+"totalpop":          203.3 
+},
+{
+ "year": 1970,
+"rank": 5,
+"city": "Detroit",
+"pop":           4085,
+"share": 0.0599465837051,
+"totalpop":          203.3 
+},
+{
+ "year": 1970,
+"rank": 6,
+"city": "San Francisco",
+"pop":           3049,
+"share": 0.04474348438601,
+"totalpop":          203.3 
+},
+{
+ "year": 1970,
+"rank": 7,
+"city": "Boston",
+"pop":           2703,
+"share": 0.03966600140878,
+"totalpop":          203.3 
+},
+{
+ "year": 1970,
+"rank": 8,
+"city": "Washington",
+"pop":           2671,
+"share": 0.03919640760742,
+"totalpop":          203.3 
+},
+{
+ "year": 1970,
+"rank": 9,
+"city": "Pittsburgh",
+"pop":           2124,
+"share": 0.03116928856539,
+"totalpop":          203.3 
+},
+{
+ "year": 1970,
+"rank": 10,
+"city": "St. Louis",
+"pop":           2123,
+"share": 0.0311546137591,
+"totalpop":          203.3 
+},
+{
+ "year": 1970,
+"rank": 11,
+"city": "Dallas",
+"pop":           2016,
+"share": 0.02958440948579,
+"totalpop":          203.3 
+},
+{
+ "year": 1970,
+"rank": 12,
+"city": "Cleveland",
+"pop":           1960,
+"share": 0.02876262033341,
+"totalpop":          203.3 
+},
+{
+ "year": 1970,
+"rank": 13,
+"city": "Miami",
+"pop":           1834,
+"share": 0.02691359474055,
+"totalpop":          203.3 
+},
+{
+ "year": 1970,
+"rank": 14,
+"city": "Minneapolis",
+"pop":           1701,
+"share": 0.02496184550364,
+"totalpop":          203.3 
+},
+{
+ "year": 1970,
+"rank": 15,
+"city": "Houston",
+"pop":           1678,
+"share": 0.02462432495891,
+"totalpop":          203.3 
+},
+{
+ "year": 1970,
+"rank": 16,
+"city": "Baltimore",
+"pop":           1580,
+"share": 0.02318619394224,
+"totalpop":          203.3 
+},
+{
+ "year": 1970,
+"rank": 17,
+"city": "Milwaukee",
+"pop":           1252,
+"share": 0.01837285747828,
+"totalpop":          203.3 
+},
+{
+ "year": 1970,
+"rank": 18,
+"city": "Seattle",
+"pop":           1238,
+"share": 0.01816741019019,
+"totalpop":          203.3 
+},
+{
+ "year": 1970,
+"rank": 19,
+"city": "San Diego",
+"pop":           1198,
+"share": 0.01758041793848,
+"totalpop":          203.3 
+},
+{
+ "year": 1970,
+"rank": 20,
+"city": "Atlanta",
+"pop":           1172,
+"share": 0.01719887297488,
+"totalpop":          203.3 
+},
+{
+ "year": 1980,
+"rank": 1,
+"city": "New York",
+"pop":          16500,
+"share": 0.2142050396604,
+"totalpop":          226.5 
+},
+{
+ "year": 1980,
+"rank": 2,
+"city": "Los Angeles",
+"pop":          10841,
+"share": 0.1407392021187,
+"totalpop":          226.5 
+},
+{
+ "year": 1980,
+"rank": 3,
+"city": "Chicago",
+"pop":           7325,
+"share": 0.0950940554856,
+"totalpop":          226.5 
+},
+{
+ "year": 1980,
+"rank": 4,
+"city": "Philadelphia",
+"pop":           4830,
+"share": 0.06270365706422,
+"totalpop":          226.5 
+},
+{
+ "year": 1980,
+"rank": 5,
+"city": "Detroit",
+"pop":           4214,
+"share": 0.0547066689169,
+"totalpop":          226.5 
+},
+{
+ "year": 1980,
+"rank": 6,
+"city": "San Francisco",
+"pop":           4185,
+"share": 0.05433018733204,
+"totalpop":          226.5 
+},
+{
+ "year": 1980,
+"rank": 7,
+"city": "Boston",
+"pop":           3064,
+"share": 0.03977722675875,
+"totalpop":          226.5 
+},
+{
+ "year": 1980,
+"rank": 8,
+"city": "Washington",
+"pop":           2912,
+"share": 0.03780394396915,
+"totalpop":          226.5 
+},
+{
+ "year": 1980,
+"rank": 9,
+"city": "Houston",
+"pop":           2757,
+"share": 0.03579171480871,
+"totalpop":          226.5 
+},
+{
+ "year": 1980,
+"rank": 10,
+"city": "Dallas",
+"pop":           2713,
+"share": 0.03522050136961,
+"totalpop":          226.5 
+},
+{
+ "year": 1980,
+"rank": 11,
+"city": "Miami",
+"pop":           2616,
+"share": 0.03396123537888,
+"totalpop":          226.5 
+},
+{
+ "year": 1980,
+"rank": 12,
+"city": "St. Louis",
+"pop":           1849,
+"share": 0.02400394656558,
+"totalpop":          226.5 
+},
+{
+ "year": 1980,
+"rank": 13,
+"city": "Pittsburgh",
+"pop":           1810,
+"share": 0.02349764374456,
+"totalpop":          226.5 
+},
+{
+ "year": 1980,
+"rank": 14,
+"city": "Minneapolis",
+"pop":           1788,
+"share": 0.02321203702502,
+"totalpop":          226.5 
+},
+{
+ "year": 1980,
+"rank": 15,
+"city": "Baltimore",
+"pop":           1755,
+"share": 0.0227836269457,
+"totalpop":          226.5 
+},
+{
+ "year": 1980,
+"rank": 16,
+"city": "Cleveland",
+"pop":           1752,
+"share": 0.02274468057485,
+"totalpop":          226.5 
+},
+{
+ "year": 1980,
+"rank": 17,
+"city": "San Diego",
+"pop":           1704,
+"share": 0.02212153864129,
+"totalpop":          226.5 
+},
+{
+ "year": 1980,
+"rank": 18,
+"city": "Atlanta",
+"pop":           1613,
+"share": 0.02094016539225,
+"totalpop":          226.5 
+},
+{
+ "year": 1980,
+"rank": 19,
+"city": "Phoenix",
+"pop":           1409,
+"share": 0.01829181217464,
+"totalpop":          226.5 
+},
+{
+ "year": 1980,
+"rank": 20,
+"city": "Seattle",
+"pop":           1392,
+"share": 0.01807111607317,
+"totalpop":          226.5 
+},
+{
+ "year": 1990,
+"rank": 1,
+"city": "New York",
+"pop":          16754,
+"share": 0.1926677246487,
+"totalpop":          248.7 
+},
+{
+ "year": 1990,
+"rank": 2,
+"city": "Los Angeles",
+"pop":          13522,
+"share": 0.1555003564939,
+"totalpop":          248.7 
+},
+{
+ "year": 1990,
+"rank": 3,
+"city": "Chicago",
+"pop":           7373,
+"share": 0.084788058603,
+"totalpop":          248.7 
+},
+{
+ "year": 1990,
+"rank": 4,
+"city": "San Francisco",
+"pop":           5386,
+"share": 0.0619379470549,
+"totalpop":          248.7 
+},
+{
+ "year": 1990,
+"rank": 5,
+"city": "Philadelphia",
+"pop":           4970,
+"share": 0.05715402838152,
+"totalpop":          248.7 
+},
+{
+ "year": 1990,
+"rank": 6,
+"city": "Miami",
+"pop":           3948,
+"share": 0.04540122817912,
+"totalpop":          248.7 
+},
+{
+ "year": 1990,
+"rank": 7,
+"city": "Detroit",
+"pop":           3698,
+"share": 0.04252627705329,
+"totalpop":          248.7 
+},
+{
+ "year": 1990,
+"rank": 8,
+"city": "Washington",
+"pop":           3363,
+"share": 0.03867384254468,
+"totalpop":          248.7 
+},
+{
+ "year": 1990,
+"rank": 9,
+"city": "Boston",
+"pop":           3355,
+"share": 0.03858184410865,
+"totalpop":          248.7 
+},
+{
+ "year": 1990,
+"rank": 10,
+"city": "Dallas",
+"pop":           3265,
+"share": 0.03754686170335,
+"totalpop":          248.7 
+},
+{
+ "year": 1990,
+"rank": 11,
+"city": "Houston",
+"pop":           3088,
+"share": 0.03551139630626,
+"totalpop":          248.7 
+},
+{
+ "year": 1990,
+"rank": 12,
+"city": "Seattle",
+"pop":           2354,
+"share": 0.02707053980082,
+"totalpop":          248.7 
+},
+{
+ "year": 1990,
+"rank": 13,
+"city": "San Diego",
+"pop":           2348,
+"share": 0.0270015409738,
+"totalpop":          248.7 
+},
+{
+ "year": 1990,
+"rank": 14,
+"city": "Atlanta",
+"pop":           2158,
+"share": 0.02481657811817,
+"totalpop":          248.7 
+},
+{
+ "year": 1990,
+"rank": 15,
+"city": "Minneapolis",
+"pop":           2080,
+"share": 0.02391959336691,
+"totalpop":          248.7 
+},
+{
+ "year": 1990,
+"rank": 16,
+"city": "Phoenix",
+"pop":           2006,
+"share": 0.02306860783367,
+"totalpop":          248.7 
+},
+{
+ "year": 1990,
+"rank": 17,
+"city": "St. Louis",
+"pop":           1947,
+"share": 0.02239011936797,
+"totalpop":          248.7 
+},
+{
+ "year": 1990,
+"rank": 18,
+"city": "Baltimore",
+"pop":           1890,
+"share": 0.02173463051128,
+"totalpop":          248.7 
+},
+{
+ "year": 1990,
+"rank": 19,
+"city": "Pittsburgh",
+"pop":           1744,
+"share": 0.0200556590538,
+"totalpop":          248.7 
+},
+{
+ "year": 1990,
+"rank": 20,
+"city": "Tampa",
+"pop":           1709,
+"share": 0.01965316589618,
+"totalpop":          248.7 
+},
+{
+ "year": 2000,
+"rank": 1,
+"city": "New York",
+"pop":          18689,
+"share": 0.1838853139697,
+"totalpop":          281.4 
+},
+{
+ "year": 2000,
+"rank": 2,
+"city": "Los Angeles",
+"pop":          14661,
+"share": 0.1442529074916,
+"totalpop":          281.4 
+},
+{
+ "year": 2000,
+"rank": 3,
+"city": "Chicago",
+"pop":           8419,
+"share": 0.0828364523683,
+"totalpop":          281.4 
+},
+{
+ "year": 2000,
+"rank": 4,
+"city": "San Francisco",
+"pop":           5973,
+"share": 0.05876970305213,
+"totalpop":          281.4 
+},
+{
+ "year": 2000,
+"rank": 5,
+"city": "Philadelphia",
+"pop":           5418,
+"share": 0.0533089320503,
+"totalpop":          281.4 
+},
+{
+ "year": 2000,
+"rank": 6,
+"city": "Miami",
+"pop":           4919,
+"share": 0.04839915776217,
+"totalpop":          281.4 
+},
+{
+ "year": 2000,
+"rank": 7,
+"city": "Dallas",
+"pop":           4445,
+"share": 0.04373536414979,
+"totalpop":          281.4 
+},
+{
+ "year": 2000,
+"rank": 8,
+"city": "Houston",
+"pop":           4063,
+"share": 0.03997677942421,
+"totalpop":          281.4 
+},
+{
+ "year": 2000,
+"rank": 9,
+"city": "Boston",
+"pop":           4032,
+"share": 0.03967176338627,
+"totalpop":          281.4 
+},
+{
+ "year": 2000,
+"rank": 10,
+"city": "Washington",
+"pop":           3934,
+"share": 0.0387075191373,
+"totalpop":          281.4 
+},
+{
+ "year": 2000,
+"rank": 11,
+"city": "Detroit",
+"pop":           3903,
+"share": 0.03840250309936,
+"totalpop":          281.4 
+},
+{
+ "year": 2000,
+"rank": 12,
+"city": "Atlanta",
+"pop":           3500,
+"share": 0.03443729460614,
+"totalpop":          281.4 
+},
+{
+ "year": 2000,
+"rank": 13,
+"city": "Seattle",
+"pop":           3018,
+"share": 0.02969478717752,
+"totalpop":          281.4 
+},
+{
+ "year": 2000,
+"rank": 14,
+"city": "Phoenix",
+"pop":           2975,
+"share": 0.02927170041522,
+"totalpop":          281.4 
+},
+{
+ "year": 2000,
+"rank": 15,
+"city": "San Diego",
+"pop":           2674,
+"share": 0.02631009307909,
+"totalpop":          281.4 
+},
+{
+ "year": 2000,
+"rank": 16,
+"city": "Minneapolis",
+"pop":           2389,
+"share": 0.02350591337545,
+"totalpop":          281.4 
+},
+{
+ "year": 2000,
+"rank": 17,
+"city": "Baltimore",
+"pop":           2251,
+"share": 0.02214810004526,
+"totalpop":          281.4 
+},
+{
+ "year": 2000,
+"rank": 18,
+"city": "Denver",
+"pop":           2231,
+"share": 0.02195131550465,
+"totalpop":          281.4 
+},
+{
+ "year": 2000,
+"rank": 19,
+"city": "St. Louis",
+"pop":           2078,
+"share": 0.02044591376901,
+"totalpop":          281.4 
+},
+{
+ "year": 2000,
+"rank": 20,
+"city": "Tampa",
+"pop":           2062,
+"share": 0.02028848613653,
+"totalpop":          281.4 
+},
+{
+ "year": 2010,
+"rank": 1,
+"city": "New York",
+"pop":          20009,
+"share": 0.1739217356536,
+"totalpop":          308.7 
+},
+{
+ "year": 2010,
+"rank": 2,
+"city": "Los Angeles",
+"pop":          15750,
+"share": 0.1369017610347,
+"totalpop":          308.7 
+},
+{
+ "year": 2010,
+"rank": 3,
+"city": "Chicago",
+"pop":           9023,
+"share": 0.07842949776611,
+"totalpop":          308.7 
+},
+{
+ "year": 2010,
+"rank": 4,
+"city": "San Francisco",
+"pop":           6828,
+"share": 0.05935017297429,
+"totalpop":          308.7 
+},
+{
+ "year": 2010,
+"rank": 5,
+"city": "Philadelphia",
+"pop":           6003,
+"share": 0.05217912834866,
+"totalpop":          308.7 
+},
+{
+ "year": 2010,
+"rank": 6,
+"city": "Dallas",
+"pop":           5685,
+"share": 0.04941501660205,
+"totalpop":          308.7 
+},
+{
+ "year": 2010,
+"rank": 7,
+"city": "Miami",
+"pop":           5513,
+"share": 0.0479199624498,
+"totalpop":          308.7 
+},
+{
+ "year": 2010,
+"rank": 8,
+"city": "Houston",
+"pop":           5382,
+"share": 0.04678128748501,
+"totalpop":          308.7 
+},
+{
+ "year": 2010,
+"rank": 9,
+"city": "Atlanta",
+"pop":           4743,
+"share": 0.04122698746588,
+"totalpop":          308.7 
+},
+{
+ "year": 2010,
+"rank": 10,
+"city": "Washington",
+"pop":           4697,
+"share": 0.04082714740191,
+"totalpop":          308.7 
+},
+{
+ "year": 2010,
+"rank": 11,
+"city": "Boston",
+"pop":           4407,
+"share": 0.03830641656381,
+"totalpop":          308.7 
+},
+{
+ "year": 2010,
+"rank": 12,
+"city": "Detroit",
+"pop":           4160,
+"share": 0.03615944926377,
+"totalpop":          308.7 
+},
+{
+ "year": 2010,
+"rank": 13,
+"city": "Phoenix",
+"pop":           3863,
+"share": 0.03357787319855,
+"totalpop":          308.7 
+},
+{
+ "year": 2010,
+"rank": 14,
+"city": "Seattle",
+"pop":           3446,
+"share": 0.02995323609687,
+"totalpop":          308.7 
+},
+{
+ "year": 2010,
+"rank": 15,
+"city": "San Diego",
+"pop":           2985,
+"share": 0.02594614328182,
+"totalpop":          308.7 
+},
+{
+ "year": 2010,
+"rank": 16,
+"city": "Denver",
+"pop":           2716,
+"share": 0.0236079481251,
+"totalpop":          308.7 
+},
+{
+ "year": 2010,
+"rank": 17,
+"city": "Minneapolis",
+"pop":           2651,
+"share": 0.02304295673035,
+"totalpop":          308.7 
+},
+{
+ "year": 2010,
+"rank": 18,
+"city": "Baltimore",
+"pop":           2497,
+"share": 0.02170436173357,
+"totalpop":          308.7 
+},
+{
+ "year": 2010,
+"rank": 19,
+"city": "Tampa",
+"pop":           2442,
+"share": 0.02122629209186,
+"totalpop":          308.7 
+},
+{
+ "year": 2010,
+"rank": 20,
+"city": "St. Louis",
+"pop":           2246,
+"share": 0.01952262573232,
+"totalpop":          308.7 
+} 
+]
+  
+      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus")) {
+        var data = d3.nest()
+          .key(function(d){
+            //return opts.group === undefined ? 'main' : d[opts.group]
+            //instead of main would think a better default is opts.x
+            return opts.group === undefined ? opts.y : d[opts.group];
+          })
+          .entries(data);
+      }
+      
+      if (opts.disabled != undefined){
+        data.map(function(d, i){
+          d.disabled = opts.disabled[i]
+        })
+      }
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .x(function(d) { return d[opts.x] })
+          .y(function(d) { return d[opts.y] })
+          .width(opts.width)
+          .height(opts.height)
+         
+        chart
+  .tooltipContent( function(key, x, y, e){
+  return '<b>City:</b> ' + e.point.city + '<br/>' +
+    '<b>Year: </b>' + e.point.year
+} )
+          
+        
+
+        
+        
+        
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+    
+  </body>
+</html>

@@ -67,4 +67,10 @@ pop.write_csv(pop.reshape_city_data(pop.find_all_tabs()))
 ## I transcribed total population in millions:
 ## https://docs.google.com/spreadsheet/pub?key=0AruyJI76uB8RdFBySUhzRldyalJGTXZtY1NxT0E2Z1E&output=csv
 ## source: http://www.census.gov/population/censusdata/table-4.pdf
+<<<<<<< HEAD
 ## and census factfinder2 tables for 2000, 2010.
+=======
+## and census factfinder2 tables for 2000, 2010.
+
+## Change this file.
+>>>>>>> 40bc82977fb051fed7b2704b416bbab6fb448933
