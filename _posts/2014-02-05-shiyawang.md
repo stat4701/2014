@@ -9,4 +9,3 @@ hi, i'm shiya. i discovered the magic of data analysis when i interned at lincol
 
 when i'm not doing anything data-related, i love going for runs in the morning, reading on the subway, and taking walks in the city. i graduated from harvard with a bachelors degree in english, and i'm excited to return as a masters student in statistics in the fall. 
 
-
