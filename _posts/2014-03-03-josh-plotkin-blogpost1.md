@@ -99,7 +99,7 @@ Let's drill deeper into the payroll vs. wins relationship. Which teams are best 
 
 Let's introduce another dimension as well. Let's break teams down by the size of their metropolitan area, and pick out the best and worst WPND for each group. 
 
-[![09](https://github.com/joshplotkin/edav/blob/gh-pages/assets/jsp2014/09.png?raw=true)](https://github.com/joshplotkin/edav/blob/gh-pages/assets/jsp2014/09.jpeg?raw=true)
+[![09](https://github.com/joshplotkin/edav/blob/gh-pages/assets/jsp2014/09.jpeg?raw=true)](https://github.com/joshplotkin/edav/blob/gh-pages/assets/jsp2014/09.jpeg?raw=true)
 
 Once again, the Rays and A's dominate the good part of the graph, which is the high end of the graph and the big dots that correspond to WPND. Of the big market teams, the White Sox had a couple of seasons getting a good bang for their buck, but tanked in 2013. The Cubs are just sad, as we'll see soon.
 
