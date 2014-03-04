@@ -12,6 +12,9 @@
 			body{
 				line-height:25%;
 			}
+			p {
+				line-height:100%;
+			}
 
 
 		</style>
@@ -163,7 +166,7 @@
 {"word":"job","freq":"44","freqperc":"0.001608","lls":"18.89909","s":"28.041102","freqperc_sd":"0.000776","lls_sd":"6.783402","s_sd":"3.912715","freqdiff":"-185","llsdiff":"-50.54","sdiff":"-13.13","freqabs":"185","llsabs":"50.54","sabs":"13.13"}]
 			
 			
-			var w=1500;
+			var w=1125;
 			var h=700;
 			var padding= 150;
 
@@ -229,10 +232,18 @@
 				.attr("x", function(d) {return xScale(0)+5;})
 				.attr("y", function(d,i) {return yScale(145);})
 				.text("Even Distribution Among Presidential Parties")
-				.attr("font-size", "16pt");
+				.attr("font-size", "14pt");
 
 
 			
 		</script>
+		<h4>Background:</h4>
+		<p>The Washington Post created an article around words used in various SOTU's. (See post <a href="http://www.washingtonpost.com/wp-srv/special/politics/2014-state-of-the-union/language-of-sotu/">here</a>.)  While the graphic works in many ways, it is hard to compare across words and party in many cases.  
+		</p>
+		<p> This blog post is an attempt to show party discrepancies across word choices.  The most apparent result (and something the Washington Post missed by lumping together) is America (R) vs. Americans (D).  There are also a few anomolies -- help sits on the Republican side while economy rests with Democratic presidents.    
+		</p>
+		<h4> Next Steps: </h4>
+		<p> In the next iteration, I want to change the text size and add a frequency tooltip when the user scrolls over the words since it is quite hard to read at this point.  In addition, I want to create better axes and expand the data to include all presidential SOTUs.  
+		</p>
 	</body>
 </html>
