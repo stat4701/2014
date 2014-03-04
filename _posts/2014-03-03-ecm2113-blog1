@@ -238,9 +238,9 @@
 			
 		</script>
 		<h4>Background:</h4>
-		<p>The Washington Post created an article around words used in various SOTU's. (See post <a href="http://www.washingtonpost.com/wp-srv/special/politics/2014-state-of-the-union/language-of-sotu/">here</a>.)  While the graphic works in many ways, it is hard to compare across words and party in many cases.  
+		<p>The Washington Post created an article around words used in various SOTUs. (See post <a href="http://www.washingtonpost.com/wp-srv/special/politics/2014-state-of-the-union/language-of-sotu/">here</a>.)  While the graphic works in many ways, it is hard to compare the frequency across words and party in many cases.  
 		</p>
-		<p> This blog post is an attempt to show party discrepancies across word choices.  The most apparent result (and something the Washington Post missed by lumping together) is America (R) vs. Americans (D).  There are also a few anomolies -- help sits on the Republican side while economy rests with Democratic presidents.    
+		<p> This blog post is an attempt to show party discrepancies across word choices.  The most apparent result (something the Washington Post missed by lumping together) is "America" (R) vs. "Americans" (D).  There are also a few anomolies -- "help" sits on the Republican side while "economy" rests with Democratic presidents.  In addition, Republicans tend to repeat a lot of the same words while Democrats have a larger vocabulary incorporated into their speeches.  
 		</p>
 		<h4> Next Steps: </h4>
 		<p> In the next iteration, I want to change the text size and add a frequency tooltip when the user scrolls over the words since it is quite hard to read at this point.  In addition, I want to create better axes and expand the data to include all presidential SOTUs.  
