@@ -28,7 +28,7 @@ Few of the shortcomings that I could perceive are,
 
 ###The Finished Product
 
-[Modified Graphic](http://public.tableausoftware.com/views/CountryVsCO2Emission_GP1/GHGEmissionsDataperCountry?:embed=y&:display_count=no)
+[Modified Graphic](http://public.tableausoftware.com/views/CountryVsCO2Emission_GP1/Dashboard1?:embed=y&:display_count=no)
 
 ###Observations
 
