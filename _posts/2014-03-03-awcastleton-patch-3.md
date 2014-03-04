@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MTG Draft Format Analysis
-description: A breakdown of winning cards in the current Magic: the Gathering limited draft format
+description: "A breakdown of winning cards in the current Magic: the Gathering limited draft format"
 tags: blog
 ---
 ## MTG Draft Format Analysis
