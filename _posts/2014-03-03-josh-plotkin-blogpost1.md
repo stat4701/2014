@@ -64,7 +64,7 @@ This is a good time to see which teams are in the most favorable situations, ind
 It's no surprise that the Yankees tower above the rest. Its bars are reminiscent of the NY skyline. The Dodgers stand out among the NL teams. The Mets have a tall bar, thanks to the NYC metropolitan population. They've had a rocky several years but that bar is hope on a screen. If the team can re-build the brand and put a good team on the field, the potential is there to be in the Red Sox and Angels territory. How about the divisions as a whole? We can use these same metrics, plus average wins over the last 5 years to get a sense for which divisions have the greatest resources.
 
 
-[![13](https://github.com/joshplotkin/edav/blob/gh-pages/assets/jsp2014/13.png?raw=true)](https://github.com/joshplotkin/edav/blob/gh-pages/assets/jsp2014/13.jpeg?raw=true)
+[![13](https://github.com/joshplotkin/edav/blob/gh-pages/assets/jsp2014/13.jpeg?raw=true)](https://github.com/joshplotkin/edav/blob/gh-pages/assets/jsp2014/13.jpeg?raw=true)
 
 Thanks to the Yankees and Red Sox, the AL East stands significantly above the rest. This makes it even more incredible that the Rays have been so competitive recently (more on that later). Speaking of divisions, let's see which divisions are the strongest and weakest in recent years.
 
