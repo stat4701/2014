@@ -26,7 +26,7 @@ There are many junk sports charts on the Internet. I chose this one about tennis
 
 ### Thoughts, roadblocks
 * Since this was a pretty simple graph, I was able to 'scrape' the data manually and use Illustrator to make the graph as I wanted it.<br>
-* I also found a tennis-related junk chart from WIRED magazine to improve on that would require a more sophisticated way of obtaining data. I am excited about improving this in several ways and will work on this if we have another 'junk chart' assignment (or if I have time this week).
+* I also found a tennis-related junk chart from WIRED magazine to improve on that would require a more sophisticated way of obtaining data. I am excited about improving this in several ways and will work on this if we have another 'junk chart' assignment (or if I have time this week).<br><br>
 ![]({{ site.baseurl }}/assets/celene_assets/2014-03-serve_speeds.jpg)<br>
 
 
