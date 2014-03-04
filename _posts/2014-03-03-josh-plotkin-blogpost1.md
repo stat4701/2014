@@ -115,7 +115,7 @@ The big market Yankees and Red Sox have won an extra 5 games per season and made
 
 [![11](https://github.com/joshplotkin/edav/blob/gh-pages/assets/jsp2014/11.jpeg?raw=true)](https://github.com/joshplotkin/edav/blob/gh-pages/assets/jsp2014/11.jpeg?raw=true)
 
-Let's recap what we've seen so far. One of the most clear takeaways is that while money doesn't always buy many wins, it significantly minimizes the chances of a terrible season. This makes sense, as baseball is a game with a high degree of uncertainty. Nothing is guaranteed. On a larger scale, a team's best player can get hurt. On a smaller scale, a ball can clear the fence for a homerun by inches to make the difference between a win or a loss. Here is a video I saw recently that has the many purposes of (1) illustrate this very point, (2) the incredible direction MLB is going in terms of data collection, and (3) show a heartbreaking Mets loss.
+Let's recap what we've seen so far. One of the most clear takeaways is that while money doesn't always buy many wins, it significantly minimizes the chances of a terrible season. This makes sense, as baseball is a game with a high degree of uncertainty. Nothing is guaranteed. On a larger scale, a team's best player can get hurt. On a smaller scale, a ball can clear the fence for a homerun by inches to make the difference between a win or a loss. Here is a video I saw recently that has the many purposes of (1) illustrating this very point, (2) showing an example of the incredible direction MLB is going in terms of data collection, and (3) dwelling on a heartbreaking Mets loss.
 
 http://m.mlb.com/video/topic/6479266/v31405521
 
