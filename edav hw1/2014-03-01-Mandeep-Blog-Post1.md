@@ -29,7 +29,7 @@ bp <- qplot(factor(year),data=df2,geom="bar",fill=as.factor(Percentile),
             weight=Percentage,position="dodge",main = "Income Concentration", 
             xlab="Year",ylab="Income (%)") + facet_grid(. ~ Type)
 ```
-![Income Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/combined.png?raw=true)
+![]({{ site.baseurl }}/assets/msingh4674-1/combined.png)
 
 3\. Used a combination of tapply and barplot function for individual barplots to highlight the stark contrast between top 1% and bottom 20%.
 ```{r chunkLabel}
