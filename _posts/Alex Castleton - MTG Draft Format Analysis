@@ -4,7 +4,8 @@ title: MTG Draft Format Analysis
 description: A breakdown of winning cards in the current Magic: the Gathering limited draft format
 tags: blog
 ---
-
+<section>
+<section>
 ### Data
 
 The card data I used for this came from www.mtggoldfish.com [here](http://www.mtggoldfish.com/limited/cards/draft/bng_ths_ths).  Mtggoldfish's information comes from the massively popular Magic: the Gathering Online game, which generates tons of data on a daily basis.  However the table at the linked page I found do be less than useful for a few reasons:
@@ -43,3 +44,6 @@ Needless-to-say this taught me a lot about visualizing in d3, but I still need t
 ### Onward and upward
 
 While the above boxplot is simple and sweet, I do believe that it requires a few finishing touches.  There is still plenty more about working with d3.js for me to learn, however next time I would also like to focus on learning how to build an R scraper that can pull data from multiple different webpages automatically and find a way to apply that.  Looking forward to it!
+
+</section>
+</section>
