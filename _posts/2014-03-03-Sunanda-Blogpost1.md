@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Blog Post 1 - Barbara
-description: this is my first blogpost exploring jobs data from the Bureau of Labor Statistics
+title: Sunanda- Blogpost1
+description: My first blog post visualizing sentiment analysis done on Twitter data
 tags: blogs, assignments
 ---
 <section>
@@ -26,6 +26,6 @@ tags: blogs, assignments
     
     ### My graphs
 
-    * Tweet frequency as a time series [here] https://github.com/sunandakp/assets/Sunanda_assets/wm_tweet_map.png
-    * [Tweets on a map] https://github.com/sunandakp/assets/Sunanda_assets/2012_wm_tweets_map.pdf
+    * Tweet frequency as a time series [here] (https://github.com/sunandakp/assets/Sunanda_assets/wm_tweet_map.png)
+    * [Tweets on a map] (https://github.com/sunandakp/assets/Sunanda_assets/2012_wm_tweets_map.pdf)
 
