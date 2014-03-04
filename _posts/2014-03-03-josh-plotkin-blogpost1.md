@@ -1,10 +1,4 @@
-## Welcome to MarkdownPad 2 ##
-
-**MarkdownPad** is a full-featured Markdown editor for Windows.
-
-### Built exclusively for Markdown ###
-
-Enjoy first-class Markdown support with easy access to  Markdown syntax and convenient keyboard shortcuts.
+#
 ---
 layout: post
 title: Blog Post 1 - Josh (jsp2014)
