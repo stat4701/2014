@@ -15,7 +15,7 @@ tags: blogpost
 
 ##EDAVing Baseball Financial Data##
 
-Last week, when doing my periodic perusing of fangraphs.com, I came across an article that was wildly different than what I'm used to reading on the site. Most posts on fangraphs drill into the advanced metrics that exist and try to accurately project and evaluate players. This article (which can be found [here](http://www.fangraphs.com/blogs/2014-payroll-allocation-by-position/)) focused more on team finances. The numbers intrigued me, but the only visuals on the page were the same unimaginative bar charts. The author acknowledged that she didn't even make them.
+Last week, while doing my periodic perusing of fangraphs.com, I came across an article that was wildly different than what I'm used to reading on the site. Most posts on fangraphs drill into the advanced metrics that exist and try to accurately project and evaluate players. This article (which can be found [here](http://www.fangraphs.com/blogs/2014-payroll-allocation-by-position/)) focused more on team finances. The numbers intrigued me, but the only visuals on the page were the same unimaginative bar charts. The author acknowledged that she didn't even make them.
 
 [![Wendy_graph](http://cdn.fangraphs.com/blogs/wp-content/uploads/2014/02/highestpaid2.png)](http://cdn.fangraphs.com/blogs/wp-content/uploads/2014/02/highestpaid2.png)
 
@@ -30,6 +30,8 @@ I aggregated the raw data from the following sources:
 * Team revenue, value, and operating profit (http://www.forbes.com/mlb-valuations/list/)
 * Payroll by year (http://www.baseballprospectus.com/compensation/cots/)
 * Player salaries by team by year (http://www.baseballprospectus.com/compensation/cots/)
+* [R code for ggplot2](https://github.com/joshplotkin/edav/blob/gh-pages/assets/jsp2014/blogpost1.R). (code used is all code above line 500)
+* [rar file with all csv files I created](https://github.com/joshplotkin/edav/blob/gh-pages/assets/jsp2014/baseballdata.rar).
 
 Upon looking at and thinking about the data, I decided I would start with the bigger picture of aggregate team metrics, and then drill into player compensation, positions, and the type of analysis Wendy did in the original article. Due to the large amount of data I collected, and trying to explore the data as much as possible, I will save that analysis for my next blog post.
 
