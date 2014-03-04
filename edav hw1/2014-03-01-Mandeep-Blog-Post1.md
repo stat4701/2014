@@ -44,13 +44,13 @@ barplot(data1,beside=T,col=c("#ee7700","#3333ff")
 
 # Individual Barplots 
 
-[Capital Income Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/CapitalIncome.png?raw=true)
+[Capital Income Distribution]({{ site.baseurl }}/assets/msingh4674-1/CapitalIncome.png)
 
-[Capital Gains Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/CapitalGain.png?raw=true)
+[Capital Gains Distribution]({{ site.baseurl }}/assets/msingh4674-1/CapitalGain.png)
 
-[Business Income Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/Business.png?raw=true)
+[Business Income Distribution]({{ site.baseurl }}/assets/msingh4674-1/Business.png)
 
-[Labor Income Distribution](https://github.com/msingh4674/edav/tree/gh-pages/edav%20hw1/Labor.png?=true)
+[Labor Income Distribution]({{ site.baseurl }}/assets/msingh4674-1/Labor.png)
 
 
 
