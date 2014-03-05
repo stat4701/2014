@@ -36,7 +36,7 @@ data.
 
 3.Learn python to scrap some data from these websites but still working on completing the scraping part.
 
-## Future what I want to do here ##
+## Future what I want to do ##
 
 1.Complete steps 3 to 7.
 
@@ -47,4 +47,11 @@ data.
 
 [Number of gallons sold in United states per year](http://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=pet&s=a103600001&f=m)
 
+[Electric vehicle sales data]
+(http://en.wikibooks.org/wiki/Transportation_Deployment_Casebook/Hybrid_Electric_Vehicles)
+
+[Some additional sources I might use]
+(http://en.wikibooks.org/wiki/Transportation_Deployment_Casebook/Hybrid_Electric_Vehicles)
+
+More sources might come as I start analysis part.
 
