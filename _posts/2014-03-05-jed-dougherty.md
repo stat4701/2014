@@ -44,16 +44,67 @@ My data set contains the following information.
 * Pro Team
 * College Conference
 
+To start, I did some simple Exploratory analysis. I plotted weight versus height
+for all players, and colored the points based on each player's position.
+An interesting trend quickly emerged. For some reason no players want to list themselves
+as six-foot. I am not sure why this would be, but there are only 5 players since 2010 who
+have listed themselves as six feet tall. A very strange gap is clearly visible on the below graph.
+Also visible are the clusterings of the various positions. Offensive linemen are massive and in the upper
+right, while defensive backs are light and shorter, down in the bottom left. Quarterbacks are skinny,
+but tall (because they have to see over their offensive linemen!). Linebackers consistently clustered
+tighter together than other groups, no matter the metric. 
+
 ![Is there some kind of weird six-foot-tall stigma?](http://i.imgur.com/tr7vY5m.png)
+
+After looking at the data of all the players together, I knew that they were so different that it only
+made sense to look at correlations at specific positions, or at least skill strengths. To start, I split
+the really fast guys off into their own group which i defined as "Speedsters".
+Speedsters were defined as:
+
+* Wide Recievers
+* Running Backs
+* Corner Backs
+* Free Safety
+* Strong Safety
+
+We can see how much more important speed is to these dudes than to the rest of the players based on this
+density plot:
+
 ![Sprint speed is only important for a subpopulation](http://i.imgur.com/plTPkhc.png)
+
+The next group I broke out was offensive linemen. These lumbering beasts are almost comically worse than
+their sportier brethren at jumping and [running](http://prod.images.chargers.clubs.nflcdn.com/image-web/NFL/CDA/data/deployed/prod/CHARGERS/assets/images/imported/SD/photos/clubimages/2014/02-February/tempOL2014_06Swanson--nfl_mezz_1280_1024.jpg?width=960&height=720).
+For example, as the graph below shows, their broad jump density function looks completely different from the rest of
+the members of the combine. These big boys just can't jump.
+
 ![Fat Boys Can't Jump](http://i.imgur.com/cxJQj81.png)
+
+While poking fun of the big folks on the offensive line is lots of fun, sometimes it is more interesting to
+step back and take a larger view. All of these athletes had to finish a minimum of 2 years at a university
+before they could become eligible for the NFL draft. These universities are broken into conferences, which
+compete against eachother. One conference over the past decade, the Southeastern Conference, has held
+a reputation as being especially dominant. I wanted to see if that dominance extended to getting players
+drafted into the NFL. It really really did. As you can see below, the SEC completely outclasses other
+conferences at getting players drafted into the NFL. It has more first rounders drafted over the past
+4 years than most other conferences have total. Perhaps unsurprisingly, SEC teams won the college
+national championship in each of the four years that I collected my data.
 ![The SEC is Really Good](http://i.imgur.com/9EuDUgJ.png)
+
+Exploratory analysis only goes so far. I wanted to get back to the point the Sports Illustrated
+article was trying to make. Do Forty yard dash times correlate with a higher draft value? The answer:
+
+Not really
+
+Forty yard dash times only strongly correlate with a higher draft rank when we isolate by round. Even
+then they only appear signifigant in the final round, and when we include only those players who we earlier
+showed had the greatest need for speed. In the seventh round, among players hanging on the periphery of
+entering the NFL or returning to empty lives watching the NFL like the rest of us, 40 times matter greatly.
+Indeed, every tenth of a second decrease in 40 time correlated with jumping 5 ranks in the draft. This makes
+logical sense. The combine comes at the end of many years of playing football for all the players there. Most
+have been reviewed thoroughly enough by scouts and coaches that a single day of goofy excersizes will make no
+difference. But those on the edge have only the one chance to make a splah. We can see
+in the chart below that the only signifigant increase happens in the last round:
+
 ![Only the 7th Round had a significant correlation](http://i.imgur.com/7JzlUFv.png)
 
-Another is a machine learning algorithm that would predict short stayers in foster care from a cohort
-of children entering the foster care program.
-
-Finally, I would be interested in extending ggplot in some way to be better at showing visualizations of
-data that has both categorical input and output.
-
-+ [Jed's Trello](https://trello.com/b/6QtAObI6/edav-project)
+I leave those who made it this far with an awesome video of Marshawn Lynch explaining Beast Mode: [Beast Mode](http://www.nfl.com/videos/nfl-films-presents/09000d5d82217331/NFL-Films-Presents-Beast-mode)
