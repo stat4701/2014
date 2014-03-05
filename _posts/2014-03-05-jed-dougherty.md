@@ -23,8 +23,9 @@ I needed a list of all the players who were drafted. [Wikipedia](http://en.wikip
 came through in the clutch with embedded lists of every draft pick going back decades.
 
 After some schlepping around with beautiful soup and removing a lot of asterisks and crosses
-from the wikipedia data, I finally ended up with a workable data set of 788 players who had been drafted.
-My data set contains the following information.
+from the wikipedia data, I finally ended up with a workable data set of 788 players who had been drafted
+and participated in the NFL Combine between 2010 and 2013.
+My data set contains the following information:
 
 * Name
 * Year
@@ -52,7 +53,7 @@ have listed themselves as six feet tall. A very strange gap is clearly visible o
 Also visible are the clusterings of the various positions. Offensive linemen are massive and in the upper
 right, while defensive backs are light and shorter, down in the bottom left. Quarterbacks are skinny,
 but tall (because they have to see over their offensive linemen!). Linebackers consistently clustered
-tighter together than other groups, no matter the metric. 
+tighter together than other groups, no matter the metric.
 
 ![Is there some kind of weird six-foot-tall stigma?](http://i.imgur.com/tr7vY5m.png)
 
@@ -82,12 +83,13 @@ the members of the combine. These big boys just can't jump.
 While poking fun of the big folks on the offensive line is lots of fun, sometimes it is more interesting to
 step back and take a larger view. All of these athletes had to finish a minimum of 2 years at a university
 before they could become eligible for the NFL draft. These universities are broken into conferences, which
-compete against eachother. One conference over the past decade, the Southeastern Conference, has held
-a reputation as being especially dominant. I wanted to see if that dominance extended to getting players
-drafted into the NFL. It really really did. As you can see below, the SEC completely outclasses other
+compete against eachother. One conference over the past decade, the Southeastern Conference, has maintained
+and especially dominant reputation over the last decade. I wanted to see if that dominance extended to getting players
+drafted into the NFL. It really did. As you can see below, the SEC completely outclasses other
 conferences at getting players drafted into the NFL. It has more first rounders drafted over the past
 4 years than most other conferences have total. Perhaps unsurprisingly, SEC teams won the college
 national championship in each of the four years that I collected my data.
+
 ![The SEC is Really Good](http://i.imgur.com/9EuDUgJ.png)
 
 Exploratory analysis only goes so far. I wanted to get back to the point the Sports Illustrated
@@ -102,7 +104,7 @@ entering the NFL or returning to empty lives watching the NFL like the rest of u
 Indeed, every tenth of a second decrease in 40 time correlated with jumping 5 ranks in the draft. This makes
 logical sense. The combine comes at the end of many years of playing football for all the players there. Most
 have been reviewed thoroughly enough by scouts and coaches that a single day of goofy excersizes will make no
-difference. But those on the edge have only the one chance to make a splah. We can see
+difference. But those on the edge have only the one chance to make a splash. We can see
 in the chart below that the only signifigant increase happens in the last round:
 
 ![Only the 7th Round had a significant correlation](http://i.imgur.com/7JzlUFv.png)
