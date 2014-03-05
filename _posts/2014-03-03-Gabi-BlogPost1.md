@@ -31,13 +31,13 @@ easy to do, but I am still not sure how to do this recursively (assuming there i
 
 Once I set out to work with a smaller dataset, I was able to add years to each file and start looking at some of the trends in
 names. I looked for different variations of spellings in Mary and Maria and did not find that these add much value to the total
-count of occurrences in the names Mary and Maria [here](https://raw.github.com/Gabya06/datascience/blob/master/MariaDecline/assets/otherMarianames.png). 
+count of occurrences in the names Mary and Maria [here](https://github.com/Gabya06/datascience/blob/master/MariaDecline/assets/otherMarianames.png). 
 I also looked at boys with names like Maria in case these were just incorrectly labelled as boys instead of girls but 
-these also did not increase the count by much [here](https://raw.github.com/Gabya06/datascience/blob/master/MariaDecline/assets/otherMariaboys.png). 
-Side by side, Maria and Mary both seemed to have steep declines in popularity, matching the original charts[here](https://raw.github.com/Gabya06/datascience/blob/master/MariaDecline/assets/sidebysideMaryMaria.png).
+these also did not increase the count by much [here](https://github.com/Gabya06/datascience/blob/master/MariaDecline/assets/otherMariaboys.png). 
+Side by side, Maria and Mary both seemed to have steep declines in popularity, matching the original charts[here](https://github.com/Gabya06/datascience/blob/master/MariaDecline/assets/sidebysideMaryMaria.png).
 
 I found that the girl names with the most counts between 1990 and 2012 are Emily and Ashley. 
-Plotting them [here](https://rawgithub.com/Gabya06/datascience/blob/master/MariaDecline/assets/top2names.png) shows that these names have been 
+Plotting them [here](https://github.com/Gabya06/datascience/blob/master/MariaDecline/assets/top2names.png) shows that these names have been 
 more popular for some time and are not increasing but rather decreasing. My next step was to compare the trends
 for Emily and Ashley with those of Mary and Maria to see if the decline of Maria is really as steep as the original makes it seem.
 
