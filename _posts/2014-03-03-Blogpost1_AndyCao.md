@@ -17,7 +17,7 @@ I didn’t like the way that BusinessWeek grouped all the companies together in 
 * Each company’s market cap fluctuated greatly over the years, with all the tech companies highlighted black, it’s hard to observe clearly the path of each of these companies.
 * The black lines overlay on top of all the grey lines that represent the non tech companies, which makes the graph even more clutter and hard to read. 
 
-[[](http://daylifeimages.newscred.com/imageserve/eee3899422df0397c7578b392bb1d155/630x418.jpg)](http://images.businessweek.com/slideshows/2014-01-29/facebook-growing-up#slide9)
+[![](http://daylifeimages.newscred.com/imageserve/eee3899422df0397c7578b392bb1d155/630x418.jpg)](http://images.businessweek.com/slideshows/2014-01-29/facebook-growing-up#slide9)
 
 Although the web version of the table solved some of the problem with d3, I believe there is a better representation out there. 
 
