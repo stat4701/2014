@@ -25,7 +25,7 @@ Another way to possibly discern difficulty of use is by rarity.  Each magic card
 
 The data was easily copied and pasted from the mtggoldfish website into a spreadsheet and then manipulated and saved into csv format once I had an idea what to create.  My first thought was to do a simple bar graph, splitting up the win percentage averages by CMC and rarity.  I was quickly able to output the following chart in excel:
 
-![Win Percentage of Cards played by CMC and rarity](https://drive.google.com/file/d/0B3TAlfBGXsAdTE9vemlmcmhhUGs/edit?usp=sharing)
+![Win Percentage of Cards played by CMC and rarity](http://s27.postimg.org/5k2lqod2r/CMCanalysis.png)
 
 However I realized afterward that this was not at all what I was interested in showing, because this treats all cards of a given rarity and CMC as the same and any good magic player knows that that simply is not the case.  A representation of the given distribution among each class was necessary.
 
@@ -37,7 +37,7 @@ I will admit to being stonewalled for a long time by the finer points of coding 
 
 This is clearly still a work-in-progress, but here are the distributions of Win Percentage by CMC from 1 to 8 going from left to right:
 
-![Draft cards win percent distribution by CMC](https://drive.google.com/file/d/0B3TAlfBGXsAdbkZPSXRURnVld2c/edit?usp=sharing)
+![Draft cards win percent distribution by CMC](http://s9.postimg.org/amy8ffp31/draft_Card_Dist_By_CMC.png)
 
 Needless-to-say this taught me a lot about visualizing in d3, but I still need to figure a few things out.  I do not believe that adding axes to this chart would make much of a difference, but I would like to figure out how to create just a single gridline to go across at 50% for instance.  I would also like to implement some interactivity into this, even if all it does is highlight whatever the mouse hovers over.
 
