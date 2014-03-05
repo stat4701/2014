@@ -6,7 +6,7 @@ tags: slides
 ---
 
 <section>
-# Administrative stuff
+### Administrative stuff
 
 - blogposts were due monday;
 - second iteration plans are due today/this week;
