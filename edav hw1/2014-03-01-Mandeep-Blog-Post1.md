@@ -29,7 +29,7 @@ bp <- qplot(factor(year),data=df2,geom="bar",fill=as.factor(Percentile),
             weight=Percentage,position="dodge",main = "Income Concentration", 
             xlab="Year",ylab="Income (%)") + facet_grid(. ~ Type)
 ```
-![]({{ site.baseurl }}/assets/msingh4674-1/combined.png)
+![](https://www.dropbox.com/s/1iunkz3wx4kw326/combined.png)
 
 3\. Used a combination of tapply and barplot function for individual barplots to highlight the stark contrast between top 1% and bottom 20%.
 ```{r chunkLabel}
@@ -44,13 +44,13 @@ barplot(data1,beside=T,col=c("#ee7700","#3333ff")
 
 # Individual Barplots 
 
-[Capital Income Distribution]({{ site.baseurl }}/assets/msingh4674-1/CapitalIncome.png)
+[Capital Income Distribution](https://www.dropbox.com/s/llvdbdrrb94qisb/CapitalIncome.png)
 
-[Capital Gains Distribution]({{ site.baseurl }}/assets/msingh4674-1/CapitalGain.png)
+[Capital Gains Distribution](https://www.dropbox.com/s/hh94pne5l4iufkq/CapitalGain.png)
 
-[Business Income Distribution]({{ site.baseurl }}/assets/msingh4674-1/Business.png)
+[Business Income Distribution](https://www.dropbox.com/s/ewv2i4kreawjj6l/Business.png)
 
-[Labor Income Distribution]({{ site.baseurl }}/assets/msingh4674-1/Labor.png)
+[Labor Income Distribution](https://www.dropbox.com/s/97aod2juflby55y/Labor.png)
 
 
 
