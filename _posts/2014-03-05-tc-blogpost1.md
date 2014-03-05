@@ -22,7 +22,9 @@ For this blog post work, I am going to try to deliver monthly sales figure using
 
 [![sample data table] (http://tc2680.github.io/edav/assets/tc-blogpost-1/bp1_sample_long_data_table.png)](http://tc2680.github.io/edav/assets/tc-blogpost-1/bp1_sample_long_data_table.png)
 
-After the sample set was generated, I chose D3 for data visualization design. Ideally I would like to see interactive bar chart display, such as detailed sales figure thru tooltips, for each year and console. The work is still in progress...
+After the sample set was generated, I chose D3 for data visualization design. Ideally I would like to see interactive bar chart display, such as detailed sales figure thru tooltips, for each year and console. The work is in 
+[progress...](http://tc2680.github.io/edav/assets/tc-blogpost-1/bp1.html)
+
 
 <script src="http://tc2680.github.io/edav/assets/tc-blogpost-1/d3.min.js"></script>
 <svg></svg>
