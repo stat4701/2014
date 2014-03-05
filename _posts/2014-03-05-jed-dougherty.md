@@ -101,8 +101,8 @@ Forty yard dash times only strongly correlate with a higher draft rank when we i
 then they only appear signifigant in the final round, and when we include only those players who we earlier
 showed had the greatest need for speed. In the seventh round, among players hanging on the periphery of
 entering the NFL or returning to empty lives watching the NFL like the rest of us, 40 times matter greatly.
-Indeed, every tenth of a second decrease in 40 time correlated with jumping 5 ranks in the draft. This makes
-logical sense. The combine comes at the end of many years of playing football for all the players there. Most
+Indeed, every tenth of a second decrease in 40 time correlated with jumping 5 ranks in the draft for speedsters
+in the seventh round. This makes logical sense. The combine comes at the end of many years of playing football for all the players there. Most
 have been reviewed thoroughly enough by scouts and coaches that a single day of goofy excersizes will make no
 difference. But those on the edge have only the one chance to make a splash. We can see
 in the chart below that the only signifigant increase happens in the last round:
