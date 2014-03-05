@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Mandeep's Blog Post 1
 description: Analyze Trends in Distribution of Income Between Top 1% and Bottom 20%
 tags: blogpost
