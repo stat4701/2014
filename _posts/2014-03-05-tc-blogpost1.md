@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Video Game Console Sales
+title: Video Game Console Sales 
 description: improvement for blog post 1
 tags: blog post
 ---
@@ -8,7 +8,7 @@ tags: blog post
 <body>
 
 ## Video Game Console Sales
-Posted on 3/5/2014
+Posted on 3/5/2014 by Tommie Chen
 
 Found in 1967, [NPD Group] (https://www.npd.com/wps/portal/npd/us/solutions/consumer-tracking/) (formerly National Purchase Diary) is a leading global market research company. NPD provides consumer and retail information to manufacturers and retailers. They cover industries from automotive to video games.
 
