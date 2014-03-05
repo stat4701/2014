@@ -83,8 +83,8 @@ the members of the combine. These big boys just can't jump.
 While poking fun of the big folks on the offensive line is lots of fun, sometimes it is more interesting to
 step back and take a larger view. All of these athletes had to finish a minimum of 2 years at a university
 before they could become eligible for the NFL draft. These universities are broken into conferences, which
-compete against eachother. One conference over the past decade, the Southeastern Conference, has maintained
-and especially dominant reputation over the last decade. I wanted to see if that dominance extended to getting players
+compete against eachother. Over the last decade the Southeastern Conference has maintained
+and especially dominant reputation. I wanted to see if that dominance extended to getting players
 drafted into the NFL. It really did. As you can see below, the SEC completely outclasses other
 conferences at getting players drafted into the NFL. It has more first rounders drafted over the past
 4 years than most other conferences have total. Perhaps unsurprisingly, SEC teams won the college
