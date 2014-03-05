@@ -25,7 +25,7 @@ For this blog post work, I am going to try to deliver monthly sales figure using
 After the sample set was generated, I chose D3 for data visualization design. Ideally I would like to see interactive bar chart display, such as detailed sales figure thru tooltips, for each year and console. The work is still in progress...
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
-
+<svg></svg>
 <div id="viz"></div>
 
 <script>
