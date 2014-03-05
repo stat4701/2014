@@ -103,6 +103,7 @@ package_skeleton("pkg") # convention?
 # edit, add, etc
 devtools::document()
 ```
+… [et voilà](https://github.com/malecki/edav/tree/gh-pages/projects/various-data-sources/pizza)
 
 </section>
 	<section>
@@ -123,8 +124,8 @@ NULL
 	<section>
 ## *Now* start playing
 
-- make a vignette
+- make a [vignette](http://malecki.github.io/edav/projects/various-data-sources/pizza/pkg/inst/doc/pizzasizes.html) ([source](https://github.com/malecki/edav/blob/gh-pages/projects/various-data-sources/pizza/pkg/vignettes/pizzasizes.Rmd))
 - `build_vignettes()`
-- promote (copy) code from vignette to examples
+- promote (copy) code from vignette to [examples](https://github.com/malecki/mrp/blob/master/mrp/R/mrp.R#L78)
 - `example()`
 </section>
