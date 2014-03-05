@@ -5,6 +5,8 @@ description: improvement for blog post 1
 tags: blog post
 ---
 
+<body>
+
 ## Video Game Console Sales
 Posted on 3/5/2014
 
@@ -22,11 +24,11 @@ For this blog post work, I am going to try to deliver monthly sales figure using
 
 After the sample set was generated, I chose D3 for data visualization design. Ideally I would like to see interactive bar chart display, such as detailed sales figure thru tooltips, for each year and console. The work is still in progress...
 
-<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
 
 <div id="viz"></div>
 
-<script type="text/javascript">
+<script>
         var w = 800,
         h = 400,
         p = [20, 60, 50, 20], // vspace-top, hspace-right , vspace-bottom, hspace-left
@@ -106,5 +108,6 @@ After the sample set was generated, I chose D3 for data visualization design. Id
               .text(d3.format(",d"));
     });
 
-    </script>
+</script>
+</body>
 
