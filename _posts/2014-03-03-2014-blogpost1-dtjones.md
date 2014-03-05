@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Blog post #1: GDP with Political Influence"
-description: 
+description: "dtjones Blog post #1: GDP with Political Influence"
 tags: blogpost1, dtjones
 ---
 
