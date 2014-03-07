@@ -7,4 +7,5 @@ _site
 # OS weirdness
 *.DS_Store
 
-.Rhistory
+.Rhistory.idea/ .idea/
+.gitignore .gitignore
