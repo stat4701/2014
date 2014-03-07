@@ -31,15 +31,17 @@ easy to do, but I am still not sure how to do this recursively (assuming there i
 
 Once I set out to work with a smaller dataset, I was able to add years to each file and start looking at some of the trends in
 names. I looked for different variations of spellings in Mary and Maria and did not find that these add much value to the total
-count of occurrences in the names Mary and Maria [![otherMarianames](http://Gabya06.github.io/edav/assets/gaby_assets/otherMariaNames.png)](http://Gabya06.github.io/edav/assets/gaby_assets/otherMarianames.png)
+count of occurrences in the names Mary and Maria 
+[![otherMarianames](http://Gabya06.github.io/edav/assets/gaby_assets/otherMarianames.png)](http://Gabya06.github.io/edav/assets/gaby_assets/otherMarianames.png)
 >I also looked at boys with names like Maria in case these were just incorrectly labelled as boys instead of girls but 
 these also did not increase the count by much [![otherMariaboys](http://Gabya06.github.io/edav/assets/gaby_assets/otherMariaboys.png)](http://Gabya06.github.io/edav/assets/gaby_assets/otherMariaboys.png)
+
 >Side by side, Maria and Mary both seemed to have steep declines in popularity, matching the original charts [![sidebysideMaryMaria](http://Gabya06.github.io/edav/assets/gaby_assets/sidebysideMaryMaria.png)](http://Gabya06.github.io/edav/assets/gaby_assets/sidebysideMaryMaria.png).
 
 
 I found that the girl names with the most counts between 1990 and 2012 are Emily and Ashley. 
-Plotting them [![top2names](http://Gabya06.github.io/edav/assets/gaby_assets/top2names.png)](http://Gabya06.github.io/edav/assets/gaby_assets/top2names.png)
-shows that these names have been more popular for some time and are not increasing but rather decreasing. My next step was to compare the trends
+[![top2names](http://Gabya06.github.io/edav/assets/gaby_assets/top2names.png)](http://Gabya06.github.io/edav/assets/gaby_assets/top2names.png)
+Plotting them shows that these names have been more popular for some time and are not increasing but rather decreasing. My next step was to compare the trends
 for Emily and Ashley with those of Mary and Maria to see if the decline of Maria is really as steep as the original makes it seem.
 
 Looking at the graphs side by side shows that the decline of the names Mary or Maria is not as steep as it looks in the original
@@ -59,11 +61,14 @@ and that these names have been trending below 10,000 counts since 1990 whereas b
 > I was able to spend more time learning some of the functions in R and use all of the SSA files and have been able to better understand the visualization I was trying to improve. 
 > By being able to look at all of the data, I saw that the other variations in spelling of the name Mary (Marri, Marry, Marrie, etc.) don't make 
 a big impact on the number of times Mary occurs throughout time, but that the count is a lot larger than I previously thought using the smaller dataset (years 1990-2012). [![marynames](http://Gabya06.github.io/edav/assets/gaby_assets/marynames.png)](http://Gabya06.github.io/edav/assets/gaby_assets/marynames.png)
-> Using the larger dataset I plotted the name counts throughout time and really understood the article about the decline of Mary. The name used to be very popular from 1920 to about 1960 and then rapidly started declinging. 
+
+>Using the larger dataset I plotted the name counts throughout time and really understood the article about the decline of Mary. The name used to be very popular from 1920 to about 1960 and then rapidly started declinging. 
 [![maryInTime](http://Gabya06.github.io/edav/assets/gaby_assets/maryInTime.png)](http://Gabya06.github.io/edav/assets/gaby_assets/maryInTime.png)
-> Next I plotted the percent of the population that was named Mary from 1880 to 2012 (I only included girl names, excluding all boys) and the peak was 8% in 1880 which is also when the total population was at its lowest. 
+
+>Next I plotted the percent of the population that was named Mary from 1880 to 2012 (I only included girl names, excluding all boys) and the peak was 8% in 1880 which is also when the total population was at its lowest. 
 [![maryPercent](http://Gabya06.github.io/edav/assets/gaby_assets/maryPercent.png)](http://Gabya06.github.io/edav/assets/gaby_assets/maryPercent.png)
-> Lastly, I found that the names that were the most popular throughout time were not Emily and Ashley as I thought before. However, I noticed that Mary was consistently on top above 3.5% of the total female population, while only 2 other names were above 3.5% for a very short period of time: Linda had a bried moment in 1950 and Jennifer started trending once Mary's popularity started falling.
+
+>Lastly, I found that the names that were the most popular throughout time were not Emily and Ashley as I thought before. However, I noticed that Mary was consistently on top above 3.5% of the total female population, while only 2 other names were above 3.5% for a very short period of time: Linda had a bried moment in 1950 and Jennifer started trending once Mary's popularity started falling.
 [![maryJenLinda](http://Gabya06.github.io/edav/assets/gaby_assets/maryJenLinda.png)](http://Gabya06.github.io/edav/assets/gaby_assets/maryJenLinda.png)
 [![maryJenLinda_H](http://Gabya06.github.io/edav/assets/gaby_assets/maryJenLinda_H.png)](http://Gabya06.github.io/edav/assets/gaby_assets/maryJenLinda_H.png)
 
