@@ -21,12 +21,11 @@ tags: blog
 
 ### Preliminary exploratory analyses
 
-<script>
+```python
 >>> df_emails.columns
 Index([u'active_at', u'assigned_group', u'assigned_user', u'attachments', u'blurb', u'created_at', u'customer', u'external_id', u'first_opened_at', u'first_resolved_at', u'history', u'id', u'labels', u'language', u'message', u'notes', u'opened_at', u'priority', u'received_at', u'replies', u'resolved_at', u'self', u'status', u'subject', u'type', u'updated_at'], dtype='object')
 </script>
 
-<script>
 >>> df_emails = df[df['type']=='email']
 >>> df_emails.groupby('assigned_user').type.count()
 assigned_user
@@ -46,9 +45,7 @@ assigned_user
 /api/v2/users/21743396       1
 /api/v2/users/21806616       8
 
-</script>
 
-<script>
 >>> df_emails.describe()
        attachments           id        notes     priority      replies
 count  7262.000000  7262.000000  7262.000000  7262.000000  7262.000000
@@ -60,9 +57,7 @@ min       0.000000   101.000000     0.000000     1.000000     0.000000
 75%       0.000000  6477.500000     0.000000     4.000000     3.000000
 max      28.000000  8743.000000     8.000000     9.000000    32.000000
 
-</script>
 
-<script>
 >>> df_emails.groupby('assigned_user').sum()
                         attachments        id  notes  priority  replies
 assigned_user
@@ -83,7 +78,6 @@ assigned_user
 /api/v2/users/21806616            1     69541      3        32        8
 </script>
 
-<script>
 
 >>> df_emails.groupby(['customer', 'id']).sum()
                                   attachments  notes  priority  replies
@@ -152,7 +146,7 @@ customer                    id
 
 [7262 rows x 4 columns]
 
-</script>
+```
 
 <br><br>
 
