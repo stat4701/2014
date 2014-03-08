@@ -8,7 +8,7 @@ tags: blog
 	<section>
 ### Project update
 * Set up package structure<br>
-* Wrote python script (DeskCases.py) to pull all cases from Desk API<br>
+* Wrote python script to pull all cases from Desk API<br>
 * Grabbed the cases<br>
 -> required pulling 'next' URL field from each page until that field was `None`<br>
 * Converted it to pandas DataFrame<br>
@@ -19,12 +19,135 @@ tags: blog
 -> resulted in a lot of practice with the notation for lists of dicts
 <br><br>
 
+Note: ```python def __init__(self)``` not included because it contains auth keys<br><br>
+
+
+```python
+
+from requests_oauthlib import OAuth1 as oauth
+import requests
+import logging
+
+import simplejson as json
+
+log = logging.getLogger('desk')
+
+
+class DeskCases(object):
+
+	[...]
+
+    def get_request(self, url):
+        resp = requests.get(url, auth=self.auth)
+        if resp.ok != True:
+            log.error('Error in retrieval')
+        return resp
+
+    def get_all_cases(self):
+        # retrieve first page
+        url = "{0}/api/v2/cases?page=1&per_page=100".format(self.api_url)
+        resp = self.get_request(url)
+        resp_dict = resp.json()
+
+        parsed_dict = {}
+        # separate _links for each entry in first page; *note that there is still an aggregated _links key in the result*
+        for entry in resp_dict["_embedded"]["entries"]:
+
+            links_dict = {
+                u'customer': entry["_links"]["customer"]["href"], u'attachments': entry["_links"]["attachments"]["count"], \
+                u'self': entry["_links"]["self"]["href"], u'notes': entry["_links"]["notes"]["count"], \
+                u'replies': entry["_links"]["replies"]["count"], u'message': entry["_links"]["message"]["href"], \
+                u'history': entry["_links"]["history"]["href"]
+                }
+
+            if entry["_links"]["assigned_user"] is not None:
+               links_dict[u'assigned_user'] = entry["_links"]["assigned_user"]["href"]
+            else:
+                links_dict[u'assigned_user'] = None
+
+            if entry["_links"]["assigned_group"] is not None:
+                links_dict[u'assigned_group'] = entry["_links"]["assigned_group"]["href"]
+            else:
+                links_dict[u'assigned_group'] = None
+
+            #links_dict = {
+            #    'customer': entry["_links"]["customer"]["href"], 'attachments': entry["_links"]["attachments"]["count"], \
+            #    'self': entry["_links"]["self"]["href"], 'notes': entry["_links"]["notes"]["count"], \
+            #    'replies': entry["_links"]["replies"]["count"], 'assigned_group': entry["_links"]["assigned_group"]["href"], \
+            #    'assigned_user': entry["_links"]["assigned_user"]["href"], 'message': entry["_links"]["message"]["href"], \
+            #    'history': entry["_links"]["history"]["href"]
+            #    }
+            #if len(parsed_dict) == 0:
+            #    parsed_dict = dict(entry.items() + links_dict.items())
+            #else:
+            #parsed_dict.items()
+
+        #parsed_dict = dict(entry.items() + links_dict.items())
+        del entry["_links"]
+        del entry["custom_fields"]
+        del entry["locked_until"]
+        del entry["description"]
+
+
+        parsed_dict = dict(entry.items() + links_dict.items())
+        parsed_dict = { 'entries': [ parsed_dict ] }
+
+        #modified_entry = {entry + links_dict}
+        #parsed_dict = {'entries': entry + links_dict}
+
+        next_link = resp_dict["_links"]["next"]["href"]
+
+        #cases_dict = {'entries': parsed_dict}
+
+        # loop through subsequent pages
+        while next_link is not None: # or null?
+            url = "{0}{1}".format(self.api_url, next_link)
+            resp = self.get_request(url)
+            resp_dict = resp.json()
+
+            # loop through every entry on the page to parse _links
+            for entry in resp_dict["_embedded"]["entries"]:
+                links_dict = {
+                        u'customer': entry["_links"]["customer"]["href"], u'attachments': entry["_links"]["attachments"]["count"], \
+                        u'self': entry["_links"]["self"]["href"], u'notes': entry["_links"]["notes"]["count"], \
+                        u'replies': entry["_links"]["replies"]["count"], u'message': entry["_links"]["message"]["href"], \
+                        u'history': entry["_links"]["history"]["href"]
+                        }
+
+                if entry["_links"]["assigned_user"] is not None:
+                   links_dict[u'assigned_user'] = entry["_links"]["assigned_user"]["href"]
+                else:
+                    links_dict[u'assigned_user'] = None
+
+                if entry["_links"]["assigned_group"] is not None:
+                    links_dict[u'assigned_group'] = entry["_links"]["assigned_group"]["href"]
+                else:
+                    links_dict[u'assigned_group'] = None
+
+                del entry["_links"]
+                del entry["custom_fields"]
+                del entry["locked_until"]
+                del entry["description"]
+
+                modified_entry = dict(entry.items() + links_dict.items())
+
+                parsed_dict["entries"].append(modified_entry)
+
+
+            if resp_dict["_links"]["next"]:
+                next_link = resp_dict["_links"]["next"]["href"]
+            else:
+                break
+
+        return parsed_dict
+
+ ```
+
 ### Preliminary exploratory analyses
 
 ```python
 >>> df_emails.columns
 Index([u'active_at', u'assigned_group', u'assigned_user', u'attachments', u'blurb', u'created_at', u'customer', u'external_id', u'first_opened_at', u'first_resolved_at', u'history', u'id', u'labels', u'language', u'message', u'notes', u'opened_at', u'priority', u'received_at', u'replies', u'resolved_at', u'self', u'status', u'subject', u'type', u'updated_at'], dtype='object')
-</script>
 
 >>> df_emails = df[df['type']=='email']
 >>> df_emails.groupby('assigned_user').type.count()
@@ -76,7 +199,6 @@ assigned_user
 /api/v2/users/21564094            5    113735     26        66       80
 /api/v2/users/21743396            0      8119      0         4        5
 /api/v2/users/21806616            1     69541      3        32        8
-</script>
 
 
 >>> df_emails.groupby(['customer', 'id']).sum()
@@ -157,8 +279,6 @@ customer                    id
 -> Splice by user ID field, so that I can do some comparisons between support case entries and account info (such as length of time as customer, # hosts, amount paying, etc.)
 -> Would be neat to get a measure of `importance` for our customers, assuming that the ones that write in the most with requests and bugs are the ones that depend on us most<br>
 2. Explore and learn how to use Bokeh and D3<br>
-
-![]({{ site.baseurl }}/assets/celene_assets/2014-03-serve_speeds.jpg)<br>
 
 
 
