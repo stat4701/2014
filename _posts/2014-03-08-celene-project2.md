@@ -19,7 +19,8 @@ tags: blog
 -> resulted in a lot of practice with the notation for lists of dicts
 <br><br>
 
-Note: ```python def __init__(self)``` not included because it contains auth keys<br><br>
+Note 1: ``` def __init__(self)``` not included because it contains auth keys.<br>
+Note 2: the quote marks I used to include the script below has led to some funny spacing...<br><br>
 
 
 ```python
@@ -27,10 +28,7 @@ Note: ```python def __init__(self)``` not included because it contains auth keys
 from requests_oauthlib import OAuth1 as oauth
 import requests
 import logging
-
 import simplejson as json
-
-log = logging.getLogger('desk')
 
 
 class DeskCases(object):
@@ -70,19 +68,6 @@ class DeskCases(object):
             else:
                 links_dict[u'assigned_group'] = None
 
-            #links_dict = {
-            #    'customer': entry["_links"]["customer"]["href"], 'attachments': entry["_links"]["attachments"]["count"], \
-            #    'self': entry["_links"]["self"]["href"], 'notes': entry["_links"]["notes"]["count"], \
-            #    'replies': entry["_links"]["replies"]["count"], 'assigned_group': entry["_links"]["assigned_group"]["href"], \
-            #    'assigned_user': entry["_links"]["assigned_user"]["href"], 'message': entry["_links"]["message"]["href"], \
-            #    'history': entry["_links"]["history"]["href"]
-            #    }
-            #if len(parsed_dict) == 0:
-            #    parsed_dict = dict(entry.items() + links_dict.items())
-            #else:
-            #parsed_dict.items()
-
-        #parsed_dict = dict(entry.items() + links_dict.items())
         del entry["_links"]
         del entry["custom_fields"]
         del entry["locked_until"]
@@ -92,12 +77,7 @@ class DeskCases(object):
         parsed_dict = dict(entry.items() + links_dict.items())
         parsed_dict = { 'entries': [ parsed_dict ] }
 
-        #modified_entry = {entry + links_dict}
-        #parsed_dict = {'entries': entry + links_dict}
-
         next_link = resp_dict["_links"]["next"]["href"]
-
-        #cases_dict = {'entries': parsed_dict}
 
         # loop through subsequent pages
         while next_link is not None: # or null?
@@ -140,10 +120,10 @@ class DeskCases(object):
                 break
 
         return parsed_dict
-
  ```
 
-### Preliminary exploratory analyses
+
+### Preliminary exploratory analyses (playing with DataFrames)
 
 ```python
 >>> df_emails.columns
@@ -276,7 +256,7 @@ customer                    id
 1. More exploratory analyses<br>
 -> Filter out the non-email type cases<br>
 -> Figure out how to work with the dates in a meaningful way (just discovered `pandas.to_datetime()` function which works here)<br>
--> Splice by user ID field, so that I can do some comparisons between support case entries and account info (such as length of time as customer, # hosts, amount paying, etc.)
+-> Splice by user ID field, so that I can do some comparisons between support case entries and account info (such as length of time as customer, # hosts, amount paying, etc.)<br>
 -> Would be neat to get a measure of `importance` for our customers, assuming that the ones that write in the most with requests and bugs are the ones that depend on us most<br>
 2. Explore and learn how to use Bokeh and D3<br>
 
