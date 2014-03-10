@@ -13,15 +13,15 @@ tags: assignments
 My progress on [this assignment](http://malecki.github.io/edav/2014/01/28/play-with-data/)
 
 ####1. Fix the buggy `projects/popgraph/get-data.py` (on the uspop branch) to retrieve `citydata.csv` for yourself
- - I fixed the problems with get-data.py.  There was some improper array indexing, and errors when looking for bs4 elements that weren't there.  These were cleaned up and the data pulled appropriately.
+ - I fixed the problems with `get-data.py`.  There was some improper array indexing, and errors when looking for bs4 elements that weren't there.  These were cleaned up and the data pulled appropriately.
  - the complete, fixed code (and its output) are in /projects/enkeboll/popgraph_ae
-    - get-data.py
-    - citypop_ae.csv
+    - `get-data.py`
+    - `citypop_ae.csv`
 
 ####2. Rewrite the citydata scraper differently.
  - I rewrote the citydata scraper in R.  I also wrote a method to stored the original get-data.py information in json form. (a part of the same `get-data.py` file
 
-```r
+```{r}
 if (!require(XML)) install.packages('XML')
 library(XML)
 
@@ -29,7 +29,8 @@ library(XML)
 uspop <- "http://www.peakbagger.com/pbgeog/histmetropop.aspx"
 # which picks the important tables, suppressWarnings prevents warning on
 # 'NA' values from coersion, which will be dropped later
-uspop.tables <- suppressWarnings(readHTMLTable(uspop, which = 5:33, colClasses = c("integer","character","numeric")))
+uspop.tables <- suppressWarnings(readHTMLTable(uspop, which = 5:33,
+                colClasses = c("integer","character","numeric")))
 
 nms <- c("Rank","Area","Population","Year")
 # create empty master table to append smaller tables to
@@ -55,7 +56,8 @@ names(uspop.table) <- nms
 # resets row numbers to incremental
 row.names(uspop.table)<- NULL
 ```
- - `file at projects/enkeboll/popgraph_ae/get-data.R`
+
+ - file at `projects/enkeboll/popgraph_ae/get-data.R`
 
 
 ####3. Plot the data using matplotlib, or in R using base graphics, Lattice, ggplot2, ggvis, and shiny.
