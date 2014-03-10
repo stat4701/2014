@@ -10,17 +10,18 @@ tags: assignments
 
 # Assignment 0: US Population Graphing
 
-My progress on this [assignment](http://malecki.github.io/edav/2014/01/28/play-with-data/)
+My progress on [this assignment](http://malecki.github.io/edav/2014/01/28/play-with-data/)
 
-##1. Fix the buggy `projects/popgraph/get-data.py` (on the uspop branch) to retrieve `citydata.csv` for yourself
+####1. Fix the buggy `projects/popgraph/get-data.py` (on the uspop branch) to retrieve `citydata.csv` for yourself
  - I fixed the problems with get-data.py.  There was some improper array indexing, and errors when looking for bs4 elements that weren't there.  These were cleaned up and the data pulled appropriately.
  - the complete, fixed code (and its output) are in /projects/enkeboll/popgraph_ae
     - get-data.py
     - citypop_ae.csv
 
-##2. Rewrite the citydata scraper differently.
+####2. Rewrite the citydata scraper differently.
  - I rewrote the citydata scraper in R.  I also wrote a method to stored the original get-data.py information in json form. (a part of the same `get-data.py` file
- ```r
+
+```r
 if (!require(XML)) install.packages('XML')
 library(XML)
 
@@ -57,14 +58,14 @@ row.names(uspop.table)<- NULL
  - `file at projects/enkeboll/popgraph_ae/get-data.R`
 
 
-##3. Plot the data using matplotlib, or in R using base graphics, Lattice, ggplot2, ggvis, and shiny.
+####3. Plot the data using matplotlib, or in R using base graphics, Lattice, ggplot2, ggvis, and shiny.
  - progress
 
-##4. Do some of the explorations we've talked about: highlighting the most-changed max and min ranking; focusing on the middle or lower ranks; looking at length of time of declines.
+####4. Do some of the explorations we've talked about: highlighting the most-changed max and min ranking; focusing on the middle or lower ranks; looking at length of time of declines.
  - progress
 
-##5. Plot the data using D3. Github pages (or Jekyll serving locally) should make it easy enough to read in the csv; though it is small enough you could parse it from a csv or json string within a script. Append a tooltip on mouseover of each line with the city name, year, and rank. Do an update with a transition, changing the y scale among various measures of interest.
+####5. Plot the data using D3. Github pages (or Jekyll serving locally) should make it easy enough to read in the csv; though it is small enough you could parse it from a csv or json string within a script. Append a tooltip on mouseover of each line with the city name, year, and rank. Do an update with a transition, changing the y scale among various measures of interest.
  - progress
 
-##6. Find geocoördinates for the place names and plot them on a map programmatically using google maps, leaflet, or cartodb.
+####6. Find geocoördinates for the place names and plot them on a map programmatically using google maps, leaflet, or cartodb.
  - progress
