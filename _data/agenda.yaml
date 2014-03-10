@@ -130,6 +130,7 @@
   during: |
     - Lightning talks
     - Refactor old exploratory and analysis code to R-package pattern; bugfix using testthat.
+    - after: [Data science workflow](http://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext)
 
 - date: 2014-03-12
   topic: Getting there from here
