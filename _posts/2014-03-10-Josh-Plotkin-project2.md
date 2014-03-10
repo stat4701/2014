@@ -13,9 +13,9 @@ tags: project iter1
 
 **Structure:** 
 
-0. Project management - I ended up going with Asana.com, which I like due to its simplicity. 
+* Project management - I ended up going with Asana.com, which I like due to its simplicity. 	
 
-1. Data gathering
+* Data gathering
 
 	* Database of hands moved from HoldemManager2 to Pokertracker4, as PT4's database schema is open, whereas HEM2's is not.
 
@@ -27,7 +27,7 @@ tags: project iter1
 
 	* Goal: Try to tie in the models from each of the 3 sources (database and 2 simulation programs)
 
-2. Data munging/wrangling
+* Data munging/wrangling
 
 	* Python is still my tool of choice. I have improved my competency significantly since the last update (I had minimal exposure to it prior to this class)
 
@@ -35,13 +35,13 @@ tags: project iter1
 
 	* Goal: for my favorite 1-2 findings, plot them interactively with d3 or possibly something less complex (Bokeh?).
 
-4. Statistical analysis
+* Statistical analysis
 
 	* Regression and clustering will be the most useful approaches for this.
 
 	* Build prediction models. I have left out 20% of the data for validation. I don't anticipate going too far down this rabbit hole, given time restriction though I hope to get some experience in doing this (I have a bad habit of getting over-excited and biting off more than I can chew).
 
-3. Exploratory data analysis and basic plots
+* Exploratory data analysis and basic plots
 
 	* Since my last update, I have thought about how I want to approach this, and decided a good idea is to break the game down into dimensions:
 		* Street
@@ -92,18 +92,16 @@ tags: project iter1
 			- plot board texture against range vs. range using Odds Oracle data
 
 
-5. Presentation
+* Presentation
 	* It is going to be a challenge to describe the data without spending much time on the game and the rules. 
 	* Per Mike's suggestion, I think a good approach to this is explaining the biggest challenge: the bias caused by hidden information and this post hoc analysis. How will I choose my groups so that the data are meaningful.
 
 
+* Blockers: the SQL queries have been exceedingly slow (the database is 39.7 GB). Fortunately, I have some other things I can work on if this falls through, however I will be disappointed if I can't take this approach.
 
 
-Blockers: the SQL queries have been exceedingly slow (the database is 39.7 GB). Fortunately, I have some other things I can work on if this falls through, however I will be disappointed if I can't take this approach.
-
-
-Review of TODO Iteration 1:
-
+* Review of TODO Iteration 1:
+	
 	* Extract data using Holdemmanager2. Figure out of SQL is necessary and extract some data this way if it is.
 		* I have moved the data to PT4 and determined that for most things, SQL will be necessary.
 
@@ -113,10 +111,12 @@ Review of TODO Iteration 1:
 	* Keep a running list of ideas for data analysis
 		* These have been included within this post.
 
-TODO Iteration 2:
+* TODO Iteration 2:
 
 	* Run the necessary queries and simulations and generate the data so I can start the fun parts.
+	
 	* Continue to develop ideas.
+	
 	* Do a better job of keeping up with the project management.
 
 
