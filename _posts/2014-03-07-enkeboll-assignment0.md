@@ -73,13 +73,13 @@ p <- p + xlim(c(unique(uspop.table$Year),2020,2030,2040))
 
 direct.label(p, "angled.endpoints")
 ```
-<img src="https://doc-0k-bs-docs.googleusercontent.com/docs/securesc/7r7dvi7k2uqjgbu5hcmjnqghfdq20m4n/vk25ur5n9qmarq9r0m6o7c40ttfbp5k4/1394438400000/18364855306414212204/18364855306414212204/0B7TmgZlNQzeSS2o0MDZEaHRwMWM?h=16653014193614665626&e=view" alt="R recreated population graph" width="900" />
+<img src="http://i.imgur.com/AJ8Fasa.png" alt="R recreated population graph" width="900" />
 
 ####4. Do some of the explorations we've talked about: highlighting the most-changed max and min ranking; focusing on the middle or lower ranks; looking at length of time of declines.
- - I have not yet attempted this part
+ - I have not yet attempted this part, but will finish this week
 
 ####5. Plot the data using D3. Github pages (or Jekyll serving locally) should make it easy enough to read in the csv; though it is small enough you could parse it from a csv or json string within a script. Append a tooltip on mouseover of each line with the city name, year, and rank. Do an update with a transition, changing the y scale among various measures of interest.
- - I have not yet attempted this part
+ - I have not yet attempted this part, but will finish this week
 
 ####6. Find geocoördinates for the place names and plot them on a map programmatically using google maps, leaflet, or cartodb.
- - I have not yet attempted this part
+ - I have not yet attempted this part, but will finish this week
