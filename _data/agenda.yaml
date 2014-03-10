@@ -171,7 +171,7 @@
 
 
 - date: 2014-04-09
-  due: blogpost #2
+  due: blogpost \#2
   during: |
     - [Birds of the Same Feather Tweet Together](https://files.nyu.edu/pba220/public/barbera_twitter_ideal_points.pdf)
     - [Is There Anybody Out There? The Effects of Legislators’ Communication with their Constituents](https://files.nyu.edu/pba220/public/barbera_twitter_responsiveness.pdf)
@@ -208,6 +208,6 @@
   topic: project reviews
 
 - date: 2014-05-05
-  due: Blogpost #3
+  due: Blogpost \#3
   topic: project reviews
 
