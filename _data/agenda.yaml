@@ -126,10 +126,10 @@
     - [Heer et al, animated transitions](http://idl.cs.washington.edu/papers/animated-transitions/)
 
 - date: 2014-03-10
-  topic: Gentle introduction to D3
-  before: |
-    - [Murray, Interative data Visualization for the Web](http://proquest.safaribooksonline.com.ezproxy.cul.columbia.edu/book/web-design-and-development/9781449340223) (O'Reilly Safari)
-  during: js, json, svg; tips and tricks
+  topic: Two refactoring stories
+  during: |
+    - Lightning talks
+    - Refactor old exploratory and analysis code to R-package pattern; bugfix using testthat.
 
 - date: 2014-03-12
   topic: Getting there from here
@@ -141,20 +141,18 @@
     - Rec: [Dynamic Visualizations with D3 and AngularJS](http://www.youtube.com/watch?v=BvAeabvZ61o)
 
 - date: 2014-03-24
-  topic: Maps
+  topic: Gentle introduction to D3
+  before: |
+    - [Murray, Interative data Visualization for the Web](http://proquest.safaribooksonline.com.ezproxy.cul.columbia.edu/book/web-design-and-development/9781449340223) (O'Reilly Safari)
+  during: js, json, svg; tips and tricks
+
+- date: 2014-03-26
+  topic: Maps OR Rmeetup-fMRI stuff
+  during: ¿[http://www.meetup.com/nyhackr/events/169828902/]?
   before: |
     - Yau, ch. 8
     - Gelman&Hill, ch. TBD
     - Recommended: [Wayfinding](http://www.slate.com/articles/life/signs/2010/03/the_secret_language_of_signs.html)
-
-- date: 2014-03-26
-  topic: project check-in
-  before: Something Agile
-  due: Iteration plan.
-  during: |
-    - Discuss status of projects: 
-      - what's done, what looks on track or not; 
-      - strategies to complete, updates to specifications and plans.
 
 - date: 2014-04-02
   topic: Reproducibility and Replication
@@ -174,13 +172,10 @@
 
 - date: 2014-04-09
   due: blogpost #2
-  during: discuss blog posts, bad graphs of the day
-  topic: ggplot2 in some depth
-  before: |
-    - gglot2 book (SpringerLink)
-    - [ggplot2 doc web site](http://ggplot2.org)
-    - [ggplot in Python](http://blog.yhathq.com/posts/ggplot-for-python.html)
-
+  during: |
+    - [Birds of the Same Feather Tweet Together](https://files.nyu.edu/pba220/public/barbera_twitter_ideal_points.pdf)
+    - [Is There Anybody Out There? The Effects of Legislators’ Communication with their Constituents](https://files.nyu.edu/pba220/public/barbera_twitter_responsiveness.pdf)
+  topic: Pablo Barberá, working paper
 
 - date: 2014-04-14
   topic: Histograms are totally simple, right?
@@ -191,8 +186,11 @@
     - [Histogram D3 layout](https://github.com/mbostock/d3/wiki/Histogram-Layout)
 
 - date: 2014-04-16
-  topic: color redux (see 2014-02-19)
-  during: discuss applications in projects/blogposts
+  topic: ggplot2 in some depth
+  before: |
+    - gglot2 book (SpringerLink)
+    - [ggplot2 doc web site](http://ggplot2.org)
+    - [ggplot in Python](http://blog.yhathq.com/posts/ggplot-for-python.html)
 
 - date: 2014-04-21
   topic: data structures, storage, and modeling (NOTE will move to earlier date)
