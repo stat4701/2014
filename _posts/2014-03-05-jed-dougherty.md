@@ -63,6 +63,7 @@ the really fast guys off into their own group which i defined as "Speedsters".
 Speedsters were defined as:
 
 * Wide Recievers
+* Tight Ends (I wavered about this group, but the new batch of hybrid gnarly TEs entering the league in the last few years pushed me into including them)
 * Running Backs
 * Corner Backs
 * Free Safety
@@ -92,20 +93,15 @@ national championship in each of the four years that I collected my data.
 
 ![The SEC is Really Good](http://i.imgur.com/9EuDUgJ.png)
 
-Exploratory analysis only goes so far. I wanted to get back to the point the Sports Illustrated
-article was trying to make. Do Forty yard dash times correlate with a higher draft value? The answer:
+Exploratory analysis only goes so far. The Sports Illustrated column already showed that faster 40 yard dash times positively correlate with a higher probability of being drafted - especially for positions where speed is very important. I wanted to explore whether forty yard dash times correlate with a higher draft value, given that a player was drafted.
 
-Not really
+To analyse this effect I broke down players into their position types and then grouped the position types by their average skill in the forty. I then specifically focused on the fastest group of players: my earlier mentioned "Speedster" group.
 
-Forty yard dash times only strongly correlate with a higher draft rank when we isolate by round. Even
-then they only appear signifigant in the final round, and when we include only those players who we earlier
-showed had the greatest need for speed. In the seventh round, among players hanging on the periphery of
-entering the NFL or returning to empty lives watching the NFL like the rest of us, 40 times matter greatly.
+For this group, forty yard dash times only strongly correlate with a higher draft rank when we isolate by round and position. Even then they only appear signifigant in the final round. In the seventh round, among players hanging on the periphery of entering the NFL or returning to lives watching the NFL like the rest of us, 40 times matter greatly.
 Indeed, every tenth of a second decrease in 40 time correlated with jumping 5 ranks in the draft for speedsters
-in the seventh round. This makes logical sense. The combine comes at the end of many years of playing football for all the players there. Most
-have been reviewed thoroughly enough by scouts and coaches that a single day of goofy excersizes will make no
-difference. But those on the edge have only the one chance to make a splash. We can see
-in the chart below that the only signifigant increase happens in the last round:
+in the seventh round. This makes logical sense. The combine comes at the end of many years of playing football for all the players there. Most have been reviewed thoroughly enough by scouts and coaches that a single day of goofy excersizes will make no difference. But those on the edge have only the one chance to make a splash.
+
+Here we can see the by-round breakdown of forty times v draft position for wide recievers, running backs, tight ends, cornerbacks and safties who were drafted between 2010 and 2013:
 
 ![Only the 7th Round had a significant correlation](http://i.imgur.com/7JzlUFv.png)
 
