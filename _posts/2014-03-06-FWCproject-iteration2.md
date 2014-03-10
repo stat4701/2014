@@ -18,8 +18,8 @@ Our project is divided into 4 sprints. The dates, duration, and responsibilities
 
 
 ###Sprint 1
-* Scrapped 41.444 Fifa official matches scores from 408 pages of data from the fifa.com since 1930.
-* Scrapped 46.842 Fifa ranking positions for 215 different countries since 1993 (ranking is updated on a monthly basis roughly).
+* Scraped 41.444 Fifa official matches scores from 408 pages of data from the fifa.com since 1930.
+* Scraped 46.842 Fifa ranking positions for 215 different countries since 1993 (ranking is updated on a monthly basis roughly).
 
 ###Sprint 2
 * Analyze correlation between the data (wins/losses, opponent ranking position, game location, etc)
