@@ -55,7 +55,7 @@ right, while defensive backs are light and shorter, down in the bottom left. Qua
 but tall (because they have to see over their offensive linemen!). Linebackers consistently clustered
 tighter together than other groups, no matter the metric.
 
-![Is there some kind of weird six-foot-tall stigma?](http://i.imgur.com/tr7vY5m.png)
+![Is there some kind of weird six-foot-tall stigma?](http://i.imgur.com/98FxPBh.png)
 
 After looking at the data of all the players together, I knew that they were so different that it only
 made sense to look at correlations at specific positions, or at least skill strengths. To start, I split
