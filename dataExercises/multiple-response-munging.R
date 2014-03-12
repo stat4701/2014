@@ -19,12 +19,6 @@ oldFunction <- function(inputData){
     }
     return(out)
 }
-newFunction <- function(inputData){
-    indicatorMatrix1 <- model.matrix(~ 0+ V1, data=inputData)
-    indicatorMatrix2  <- model.matrix(~ 0+ V2, data=inputData)
-    out <- indicatorMatrix1 | indicatorMatrix2
-    return(as.data.frame(out))
-}
 
 system.time(oldResult <- oldFunction(inputData))
 system.time(newResult <- newFunction(inputData))
