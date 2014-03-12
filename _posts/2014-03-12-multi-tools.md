@@ -103,16 +103,4 @@ oldFunction <- function(inputData){
 
 Let's use RMarkdown.
 </section>
-	<section>
-## Refactor
-
-```
-newFunction <- function(inputData){
-    indicatorMatrix1 <- model.matrix(~ 0+ V1, data=inputData)
-    indicatorMatrix2  <- model.matrix(~ 0+ V2, data=inputData)
-    out <- indicatorMatrix1 | indicatorMatrix2
-    return(as.data.frame(out))
-}
-```
-</section>
 </section>
