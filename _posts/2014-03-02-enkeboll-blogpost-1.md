@@ -11,12 +11,12 @@ tags: blogpost1
 
 I disliked this chart because it reports three measures on each of the company, but only shows one (presumably Purchase Price) even though it is trying to make a statment out of the small number of employees it has.
 
-<img src="http://si.wsj.net/public/resources/images/MK-CK222_WHATSA_G_20140220152404.jpg" width="620" alt="Original Chart"/>
+![Original Image](http://si.wsj.net/public/resources/images/MK-CK222_WHATSA_G_20140220152404.jpg "Original Image")
 
 I decided to turn it into a bar chart, comparing each of the three measures between the six companies listed.  I initially wanted to display the information as a spider/radar map, but the different scales threw everything off.
 The different scales became a big issue for me, both in coding and in chart design (whcich I'm not sure if I made any clearer). The fact that the number of employees is on a very different scale than the purchase price and sales of each of the companies makes the graph slightly difficult to read.  I tried to make this clear by using colored labels and providing textual context.
 
-<img src="https://dl.dropbox.com/s/z6ta2mdej4awsf8/whatsapp.png" width="620" alt="My Redesign"/>
+![My redesign](https://dl.dropbox.com/s/z6ta2mdej4awsf8/whatsapp.png "My redesign")
 
 I grabbed the data manually, since there were only 6 observations with 3 measures each. this is stored in a tab separated file, saved as `data.tsv`:
 

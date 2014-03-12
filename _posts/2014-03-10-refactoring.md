@@ -10,6 +10,8 @@ tags: slides
 - move opinionated d3 to after break
 - ¿[fMRI downtown at NYU on the 26](http://www.meetup.com/nyhackr/events/169828902)?
 - After: [data science workflow](http://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext). Discuss Wednesday?
+- Sat/Sun? Office hours by appointment but a couple hours on weekends are good for me
+- Move class? Not settled!
 </section>
 <section>
 	<section>
@@ -38,6 +40,11 @@ tags: slides
 	<section>
 ## Bikes 1
 [![](http://2.bp.blogspot.com/-E5oCQJpGZAs/UxrUCRpcRPI/AAAAAAAAAyg/xqRNPgiG9yc/s1600/viz1_popularity_4096_thumb.png)](http://vartree.blogspot.com/2014/03/london-maps-and-bike-rental-communities.html)
+</section>
+	<section>
+## Internet cable map
+
+[![](http://www.telegeography.com/page_attachments/products/website/telecom-resources/submarine-cable-map/0003/4671/interactive-cable-map.png)](http://submarine-cable-map-2014.telegeography.com)
 </section>
 	<section>
 ## Bikes 2
