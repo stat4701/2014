@@ -8,10 +8,11 @@ tags: slides
 ## administrivia
 
 - move opinionated d3 to after break
-- ¿[fMRI downtown at NYU on the 26](http://www.meetup.com/nyhackr/events/169828902)?
+- ¿[fMRI at R Meetup downtown at NYU next wednesday!](http://www.meetup.com/nyhackr/events/169828902)?
 - After: [data science workflow](http://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext). Discuss Wednesday?
 - Sat/Sun? Office hours by appointment but a couple hours on weekends are good for me
 - Move class? Not settled!
+- [link to spreadsheet](https://docs.google.com/forms/d/1shzqyaeM-HfzIU7QSNX2dp4J_1lsyBM4hcSJ73zCWeQ/viewform)
 </section>
 <section>
 	<section>
