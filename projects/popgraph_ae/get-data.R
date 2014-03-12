@@ -7,15 +7,14 @@ uspop <- "http://www.peakbagger.com/pbgeog/histmetropop.aspx"
 # 'NA' values from coersion, which will be dropped later
 uspop.tables <- suppressWarnings(readHTMLTable(uspop, which = 5:33, colClasses = c("integer","character","numeric")))
 
-nms <- c("Rank","Area","Population","Year")
+names <- c("Rank","Area","Population","Year")
 # create empty master table to append smaller tables to
 uspop.table <- data.frame()
 
 # loop through each of the 29 tables and add them to master
 for (t in uspop.tables) {
   # year is always in the first row, first column
-  year <- as.vector(apply(t[1, ], 2, paste, collapse=''))
-  year <- year[1]
+  year <- t[1, 1]
   
   # remove rows 1 and 2 as they have header info
   t <- t[-(1:2), ]
@@ -27,6 +26,6 @@ for (t in uspop.tables) {
 }
 
 # add columns to the master table
-names(uspop.table) <- nms
+names(uspop.table) <- names
 # resets row numbers to incremental
 row.names(uspop.table)<- NULL
