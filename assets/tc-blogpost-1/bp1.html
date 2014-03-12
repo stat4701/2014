@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<html>
+
+<head>
+    <!--<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>-->
+    <script type="text/javascript" src="d3.min.js"></script>
+    <style type="text/css">
+        svg {
+          width: 800px;
+          height: 400px;
+          border: solid 1px #ccc;
+          font: 10px sans-serif;
+          shape-rendering: crispEdges;
+        }
+    </style>
+    <script type="text/javascript">
+        function today() {
+            var now;
+            now = new Date();
+            return now.toDateString();
+        }
+    </script>
+</head>
+
+<body>
+    <table width="880" border=0 align="center">
+        <tr><td align="center" colspan="2"><h3>Video Game Console Sales</h3><hr width="250"/>Posted on 
+                <!--<script type="text/javascript">document.write(today())</script>-->
+                3/5/2014
+        </td></tr>
+        
+        <tr><td colspan="2"><br/>
+        Found in 1967, <a href="https://www.npd.com/wps/portal/npd/us/solutions/consumer-tracking/" style="text-decoration: none; color:Blue" target="_blank">NPD Group</a>
+        (formerly National Purchase Diary) is a leading global market research company. 
+        NPD provides consumer and retail information to manufacturers and retailers. They cover industries from automotive to video games.
+        </td></tr>
+        <tr><td width="400" valign="top">
+        <br/>For this post I am interested in the monthly video game sales data which is only available for US market.
+        The graph on the right displays the game console sales figure for well-known brands.
+        An interesting thing about this chart is that the study period covers time before and after 2008 finaicial crisis
+        (with the sales peak in December 2008 when the Labor Department reported more than half million jobs lost in prior month and
+        the arrest of Bernard Madoff in December for the largest financial fraud in U.S. history)
+        <br/><br/>
+        Ok, back to business. I think the original simple line chart should do the job. But there are few places can be improved for better.
+        First, I will lose the data labels to gain more clarity. Then, the grid lines seem to introduce more confusion. 
+        People who viewing this chart are probably interested to grasp a bigger picture rather than to try to match vertical and horzontal
+        axises for all detailed sales number.
+        <br/><br/>
+        </td>
+        <td align="center" valign="top"><br/>
+            <a href="./bp1_npd_09_2007_to_01_2009_console_sales_trend.png" target="_blank">
+            <img width="350px" alt="console_sales_trend" src="bp1_npd_09_2007_to_01_2009_console_sales_trend.png"/></a>
+        </td>
+        </tr>
+        
+        <tr>
+            <td align="left" valign="top" colspan=2>
+            For my blog post work, I am going to try to deliver monthly sales figure using a stacked bar chart.
+            Finding data source is the first step. 
+            Since the <a href="http://vgsales.wikia.com/wiki/NPD_Seventh_generation" style="text-decoration: none; color:Blue" target="_blank">raw data table</a> 
+            is clean and simple, I can use Excel to quickly generate the data set I need. 
+            Next time I want to use Python to do data scraping. 
+            In addition, note that data for PS3 and Wii were not available prior to October 2006. 
+            I exclude this information to match the time frame on the original line chart. 
+            Therefore top three game console players - XBox, PS3 and Wii are compared here.
+            <br/><br/><a href="./bp1_sample_long_data_table.png" target="_blank"><img width="250px" alt="sample data" src="bp1_sample_data_table.png"/></a>
+        </td></tr>
+        
+
+    <tr><td colspan="2">
+    <br/>After the sample set was generated, I chose D3 for data visualization design. Ideally I would like to see 
+    interactive bar chart display, such as detailed sales figure thru tooltips, for each year and console. The work is still in progress...<br/>
+    <br />
+    <div id="viz"></div>
+    </td></tr>
+    </table>
+    
+    <script type="text/javascript">
+        var w = 800,
+        h = 400,
+        p = [20, 60, 50, 20], // vspace-top, hspace-right , vspace-bottom, hspace-left
+        x = d3.scale.ordinal().rangeRoundBands([0, w - p[1] - p[3]]),
+        y = d3.scale.linear().range([0, h - p[0] - p[2]]),
+        z = d3.scale.ordinal().range(["#FF5757", "#64E986", "#57FEFF"]), // similar to (red ,green, aqua) for (ps3, xbox, wii)
+        parse = d3.time.format("%m/%Y").parse,
+        xlabel_format = d3.time.format("%b");
+
+        var barPadding = 2;
+
+        var svg = d3.select("#viz").append("svg:svg")
+            .attr("width", w)
+            .attr("height", h)
+            .append("svg:g")
+            .attr("transform", "translate(" + p[3] + "," + (h - p[2]) + ")");
+
+        d3.csv("bp1_us_console_sales_train.csv", function(consoleSale) {
+            // Transpose the data into layers by cause.
+        var causes = d3.layout.stack()(["ps3", "xbox", "wii"].map(function(cause) {
+                return consoleSale.map(function(d) {
+                    return { x: parse(d.date), y: +d[cause] };
+                });
+            }));
+
+        // Compute the x-domain (by date) and y-domain (by top).
+        x.domain(causes[0].map(function(d) { return d.x; }));
+        y.domain([0, d3.max(causes[causes.length - 1], function(d) { return d.y0 + d.y; })]);
+
+        // Add a group for each cause.
+        var cause = svg.selectAll("g.cause")
+            .data(causes)
+            .enter().append("svg:g")
+            .attr("class", "cause")
+            .style("fill", function(d, i) { return z(i); })
+            .style("stroke", function(d, i) { return d3.rgb(z(i)).darker(); })
+            .attr("data-legend", function(d) { return "test"})
+            ;
+
+        // Add a rect for each date.
+        var rect = cause.selectAll("rect")
+            .data(Object)
+            .enter().append("svg:rect")
+            .attr("x", function(d) { return x(d.x); })
+            .attr("y", function(d) { return -y(d.y0) - y(d.y); })
+            .attr("height", function(d) { return y(d.y); })
+            .attr("width", x.rangeBand() - barPadding);
+            
+        
+
+        // Add a label per date.
+        var label = svg.selectAll("text")
+            //.data(x.domain())
+            .data( function(d){ return (1);} )
+            .enter().append("svg:text")
+            .attr("x", function(d) { return x(d) + x.rangeBand() / 2; })
+            .attr("y", 6)
+            .attr("text-anchor", "middle")
+            .attr("dy", ".71em")
+            .text(xlabel_format);
+
+        // Add y-axis rules.
+        var rule = svg.selectAll("g.rule")
+            .data(y.ticks(5))
+            .enter().append("svg:g")
+            .attr("class", "rule")
+            .attr("transform", function(d) { return "translate(0," + -y(d) + ")"; });
+
+            rule.append("svg:line")
+              .attr("x2", w - p[1] - p[3])
+              .style("stroke", function(d) { return d ? "#fff" : "#000"; })
+              .style("stroke-opacity", function(d) { return d ? .7 : null; });
+
+            rule.append("svg:text")
+              .attr("x", w - p[1] - p[3] + 6)
+              .attr("dy", ".35em")
+              .text(d3.format(",d"));
+    });
+
+    </script>
+
+
+
+</body>
+</html>

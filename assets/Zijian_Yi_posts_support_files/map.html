@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <!-- socket.io settings -->
+    <script src='http://prod-bidx.rundsp.com:8080/socket.io/socket.io.js'></script>
+    <script>
+      var socket = io.connect('prod-bidx.rundsp.com:8080');
+    </script>
+
+    <!-- map settings -->
+    <script src='http://d3js.org/d3.v3.min.js'></script>
+    <script src='http://d3js.org/topojson.v1.min.js'></script>
+
+    <style>
+
+    .subunit.USB { fill: #d3d3d3; }
+    .subunit.USH { fill: #d3d3d3; }
+    .subunit.USK { fill: #d3d3d3; }
+
+    .subunit-label {
+      fill: #777;
+      fill-opacity: .5;
+      font-size: 20px;
+      font-weight: 300;
+      text-anchor: middle;
+    }
+
+    .county-boundary {
+      fill: none;
+      stroke: #fff;
+      stroke-width: .5px;
+    }
+
+    .state-boundary {
+      fill: none;
+      stroke: #fff;
+    }
+
+    .place,
+    .place-main-label {
+      fill: #444;
+      font-size: 14px;
+    }
+    .place-side-label {
+      fill: #888;
+      font-size: 14px;
+    }
+
+    text {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      pointer-events: none;
+    }
+
+    </style>
+
+  </head>
+  <body>
+    <script>
+
+        var width = 900,
+            height = 550;
+
+        var projection = d3.geo.albersUsa()
+            .scale(1000)
+            .translate([width / 2, height / 2]);
+
+        var path = d3.geo.path()
+            .projection(projection);
+
+        var svg = d3.select('body').append('svg')
+            .attr('width', width)
+            .attr('height', height);
+
+        d3.json('us.json', function(error, map) {
+
+            var subunits = topojson.feature(map, map.objects.subunits),
+                places = topojson.feature(map, map.objects.places);
+
+            svg .selectAll('.subunit')
+                .data(subunits.features)
+                .enter().append('path')
+                .attr('class', function(d) { return 'subunit ' + d.id; })
+                .attr('d', path);
+
+            svg .selectAll('.subunit-label')
+                .data(subunits.features)
+                .enter().append('text')
+                .attr('class', function(d) { return 'subunit-label ' + d.id; })
+                .attr('transform', function(d) { return 'translate(' + path.centroid(d) + ')'; })
+                .attr('dy', '.35em')
+                .text(function(d) {
+                  if ( d.properties.name == 'U.S.A.' ) {
+                    return d.properties.name;
+                  } else {
+                    return '';
+                  }
+                });
+
+            //
+            // Update city with WebSocket
+            //
+            socket.on('city', function( data ) {
+              redraw( places, data.city );
+            });
+            socket.on('error', function() { console.error(arguments) });
+        });
+
+
+        function redraw( places, city ) {
+
+            var labels = svg.selectAll('.place-label')
+                .data(places.features);
+
+            labels.enter().insert('text')
+                .attr('class', 'place-main-label')
+                .attr('transform', function(d) { return 'translate(' + projection(d.geometry.coordinates) + ')'; })
+                .attr('x', function(d) { return d.geometry.coordinates[0] > -1 ? 6 : -6; })
+                .attr('dy', '.35em')
+                .style('text-anchor', function(d) { return d.geometry.coordinates[0] > -1 ? 'start' : 'end'; })
+                .transition()
+                  .duration(1000)
+                  .text(function(d) { return d.properties.name == city ? d.properties.name : ''; });
+
+            labels.transition()
+                .duration(1000)
+                .text(function(d) { return d.properties.name == city ? d.properties.name : ''; });
+
+            labels.exit().transition()
+                .duration(1000)
+                .text(function(d) { return d.properties.name == city ? d.properties.name : ''; })
+                .remove();
+
+        };
+
+    </script>
+    <ul id='messages'></ul>
+  </body>
+</html>

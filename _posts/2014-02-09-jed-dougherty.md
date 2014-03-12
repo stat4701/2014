@@ -2,7 +2,7 @@
 layout: post
 title: Jed's US Population Map in d3
 description: Update on US Population Data
-tags: emails assignment0 introduction uspop
+tags: assignments intro uspop
 ---
 
 I used Assignment 0 as an opportunity to brush off all those

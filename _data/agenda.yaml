@@ -96,38 +96,41 @@
     - discuss color issues for class projects
 
 - date: 2014-02-24
-  topic: Trellis/Lattice
-  before: |
-    - Yau ch.6
-    - Sarkar book (SpringerLink)
-  during: Discuss problems Lattice solves, use cases, implementations, relevance to blogposts or projects
+  topic: Data are ugly
+  before:  |
+    - [Tidy data](http://vita.had.co.nz/papers/tidy-data.pdf)
+    - [Research directions in data wrangling](http://idl.cs.washington.edu/papers/data-wrangling)
 
 - date: 2014-02-26
-  topic: ggplot2 in some depth
-  before: |
-    - gglot2 book (SpringerLink)
-    - [ggplot2 doc web site](http://ggplot2.org)
-    - [ggplot in Python](http://blog.yhathq.com/posts/ggplot-for-python.html)
+  topic: APIs and data interchange
+  before: some API doc; R and Python tools for data wrangling and interfaces
+  during: discuss I/O, shortcuts, and modeling
+  after: |
+    - [ggplot2 data contract](http://martinsbioblogg.wordpress.com/2014/02/20/books-and-lessons-about-ggplot2/)
+    - [optimizing R](http://www.noamross.net/blog/2013/4/25/faster-talk.html)
 
 - date: 2014-03-03
-  topic: more strategies for improving graphs
-  due: blogpost 2 due. Submit a pull request and be ready to discuss challenges you had and how you solved them.
+  topic: blogposts review; R packaging
+  due: blogpost 1 due. Submit a pull request and be ready to discuss challenges you had and how you solved them.
   before: |
     - Yau, ch. 4,5,7
+  during: Build an R package for a project
 
 - date: 2014-03-05
-  topic: Animation
   due: Iteration plan. What was left undone, objective and key results for next three weeks.
+  during: Do grouped/stacked plot of estimated party ID in Lattice
+  topic: Nominally Animation; more APIs and data interchange
   before: |
     - [The Joy of Stats](http://www.gapminder.org/videos/the-joy-of-stats/)
     - [Google Charts motion chart doc](https://developers.google.com/chart/interactive/docs/gallery/motionchart) and in [R](http://blog.revolutionanalytics.com/2011/01/create-motion-charts-in-r-with-the-googlevis-package.html)
     - [Heer et al, animated transitions](http://idl.cs.washington.edu/papers/animated-transitions/)
 
 - date: 2014-03-10
-  topic: Gentle introduction to D3
-  before: |
-    - [Murray, Interative data Visualization for the Web](http://proquest.safaribooksonline.com.ezproxy.cul.columbia.edu/book/web-design-and-development/9781449340223) (O'Reilly Safari)
-  during: js, json, svg; tips and tricks
+  topic: Two refactoring stories
+  during: |
+    - Lightning talks
+    - Refactor old exploratory and analysis code to R-package pattern; bugfix using testthat.
+    - after: [Data science workflow](http://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext)
 
 - date: 2014-03-12
   topic: Getting there from here
@@ -138,41 +141,47 @@
     - [Paul Murrell's page](https://www.stat.auckland.ac.nz/~paul/)
     - Rec: [Dynamic Visualizations with D3 and AngularJS](http://www.youtube.com/watch?v=BvAeabvZ61o)
 
+- date: 2014-03-18
+  topic: (spring break)
+  during: | 
+    - [NYhackR meetup](http://www.meetup.com/nyhackr/events/169828902/)
+
 - date: 2014-03-24
-  topic: Maps
+  topic: Gentle introduction to D3
+  before: |
+    - [Murray, Interative data Visualization for the Web](http://proquest.safaribooksonline.com.ezproxy.cul.columbia.edu/book/web-design-and-development/9781449340223) (O'Reilly Safari)
+  during: js, json, svg; tips and tricks
+
+
+- date: 2014-03-26
+  topic: maps
   before: |
     - Yau, ch. 8
     - Gelman&Hill, ch. TBD
     - Recommended: [Wayfinding](http://www.slate.com/articles/life/signs/2010/03/the_secret_language_of_signs.html)
 
-- date: 2014-03-26
-  topic: project check-in
-  before: Something Agile
-  due: Iteration plan.
-  during: |
-    - Discuss status of projects: 
-      - what's done, what looks on track or not; 
-      - strategies to complete, updates to specifications and plans.
-
 - date: 2014-04-02
   topic: Reproducibility and Replication
   before: |
-    - Knuth on literate programming
-    - knitr doc
-    - IPython notebook doc
+    - [knitr doc](http://yihui.name/knitr/)
+    - [IPython notebook doc](http://ipython.org/notebook), [intro](http://www.randalolson.com/2012/05/12/a-short-demo-on-how-to-use-ipython-notebook-as-a-research-notebook/)
   during: |
     - discuss reproducible research, publishing replication data, versioning, &c
 
 - date: 2014-04-07
-  topic: Data are ugly
-  before:  |
-    - [Tidy data](http://vita.had.co.nz/papers/tidy-data.pdf)
-    - [Research directions in data wrangling](http://idl.cs.washington.edu/papers/data-wrangling)
+  topic: Trellis/Lattice
+  before: |
+    - Yau ch.6
+    - Sarkar book ([SpringerLink](http://link.springer.com/book/10.1007/978-0-387-75969-2))
+  during: Discuss problems Lattice solves, use cases, implementations, relevance to blogposts or projects
+
 
 - date: 2014-04-09
-  topic: discuss blogposts
-  due: blogpost #3
-  during: discuss blog posts, bad graphs of the day
+  due: blogpost \#2
+  during: |
+    - [Birds of the Same Feather Tweet Together](https://files.nyu.edu/pba220/public/barbera_twitter_ideal_points.pdf)
+    - [Is There Anybody Out There? The Effects of Legislators’ Communication with their Constituents](https://files.nyu.edu/pba220/public/barbera_twitter_responsiveness.pdf)
+  topic: Pablo Barberá, working paper
 
 - date: 2014-04-14
   topic: Histograms are totally simple, right?
@@ -181,14 +190,17 @@
     - [Basics of Histograms](http://rforpublichealth.blogspot.com/2012/12/basics-of-histograms.html)
     - [Histogram package paper](http://cran.r-project.org/web/packages/histogram/histogram.pdf)
     - [Histogram D3 layout](https://github.com/mbostock/d3/wiki/Histogram-Layout)
+    - [Henry Deng and Hadley Wickham, Density Estimation in R](http://vita.had.co.nz/papers/density-estimation.pdf)
 
 - date: 2014-04-16
-  topic: APIs and data interchange
-  before: some API doc; R and Python tools for data wrangling and interfaces
-  during: discuss I/O and modeling
+  topic: ggplot2 in some depth
+  before: |
+    - gglot2 book (SpringerLink)
+    - [ggplot2 doc web site](http://ggplot2.org)
+    - [ggplot in Python](http://blog.yhathq.com/posts/ggplot-for-python.html)
 
 - date: 2014-04-21
-  topic: data structures, storage, and modeling
+  topic: data structures, storage, and modeling (NOTE will move to earlier date)
 
 - date: 2014-04-23
   topic: model checking, displays, and uncertainty
@@ -203,5 +215,6 @@
   topic: project reviews
 
 - date: 2014-05-05
+  due: Blogpost \#3
   topic: project reviews
 

@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Josh Plotkin Intro
+title: Josh Plotkin hw0 population graphs
 description: Introduction
+tags: assignments
 ---
 
 ## What I've Done

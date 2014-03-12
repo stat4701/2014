@@ -2,7 +2,7 @@
 layout: post
 title: Michael's Introduction
 description:
-tags: blog
+tags: intro
 ---
 <section>
 <section>

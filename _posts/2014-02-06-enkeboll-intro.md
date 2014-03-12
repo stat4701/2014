@@ -2,7 +2,7 @@
 layout: post
 title: Andy Enkeboll Introduction
 description: Assignment 0- Introducing Myself 
-tags: introduction
+tags: intro
 ---
 
 <!-- use tags blogpost1 blogpost2 blogpost3 for easy grouping -->
@@ -23,8 +23,8 @@ Previously
 ----------
 
 Prior to moving to New York, I lived in Nashville, TN.  While there, I:
- - Graduated with a degree in Computer Engineering from Vanderbilt University
- - Taught high school math and statistics through the Teach for America program
- - Worked as a financial consulting analyst for a small collections consulting firm
+ + Graduated with a degree in Computer Engineering from Vanderbilt University
+ + Taught high school math and statistics through the Teach for America program
+ + Worked as a financial consulting analyst for a small collections consulting firm
 
 I am originally from Auburn, AL where my father and brother are both connected to Auburn University.
