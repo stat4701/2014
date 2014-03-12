@@ -48,17 +48,6 @@ tags: slides
 </section>
 <section>
 	<section>
-# Lightning talks/reviews
-</section>
-	<section>
-## Zijian Yi
-</section>
-	<section>
-## Andy Cao
-</section>
-</section>
-<section>
-	<section>
 ## some refactoring
 
 [![](http://www.phdcomics.com/comics/archive/phd031014s.gif)](http://www.phdcomics.com/comics.php?f=1688)
@@ -102,5 +91,16 @@ oldFunction <- function(inputData){
 ## Live coding time
 
 Let's use RMarkdown.
+</section>
+</section>
+<section>
+  <section>
+# Lightning talks/reviews
+</section>
+  <section>
+## Zijian Yi
+</section>
+  <section>
+## Andy Cao
 </section>
 </section>
