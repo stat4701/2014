@@ -12,42 +12,32 @@ description: blog post
 
 ## The Question:
 
-This blog aims to explain "Why Facebook Dropped $19B On 
-WhatsApp"? Based on the data from Onavo and Jana Mobile, the 
-author concludes that the main reason is WhatsApp's reach into 
-Europe and Emerging markets.
-
-
-http://techcrunch.com/2014/02/19/facebook-whatsapp/?ncid=twittersocialshare
-
-http://techcrunch.com/2012/12/04/global-messaging-market/
+< a href = "http://techcrunch.com/2014/02/19/facebook-whatsapp/?ncid=twittersocialshare">This blog</a> aims to explain "Why Facebook Dropped $19B On WhatsApp"? Based on the data from Onavo and Jana Mobile, the author concludes that the main reason is WhatsApp's reach into Europe and Emerging markets.
 
 ## The Charts:
 
-Since the focus of the blog, is WhatsApp's market share vs 
-Facebook, I would represent this with a sharp faceted bar plot. 
+Since the focus of the blog, is WhatsApp's market share vs Facebook, I would represent this with a sharp faceted bar plot. 
 
-Alternatively, I would visualize market leadership as a 
-choropleth map. In this instance, I used a 5-class sequential, 
-ColorBrewer Blue-Green hue and jenks classification. Light blue 
-represents fb messenger prevalence while the green scaling 
-intensity showcases WhatsApp dominance. 
+Alternatively, I would visualize market leadership as a choropleth map. In this instance, I used a 5-class sequential, ColorBrewer Blue Green hue and jenks classification. Light blue represents fb messenger prevalence while the green scaling intensity showcases WhatsApp dominance. 
+
+Current viz:
+<Graphics file: /Users/Aarti/blogpost1/messaging-international.jpg>
 
 The current world map chart is kitsch and ineffective owing to:
 
 1) display of auxiliary messaging apps market share
 
-2) colors of fb messenger and WhatsApp bar plots are 
-undiscernable
+2) colors of fb messenger and WhatsApp bar plots are indiscernible
 
 3) the zoom frames are plain kitsch!
 
+My rendition
 Chart 1: WhatsApp vs Facebook market share: grouped bar plot
 
 Source: Onavo
 Source: JANA mobile
 
-*fb messenger leads in the Phillipines
+*fb messenger leads in the Philipines
 
 <Graphics file: /Users/Aarti/blogpost1/WhatsApp MarketShare.png>
 
@@ -64,13 +54,13 @@ Source: JANA mobile
 
 The data for the chart "WhatsApp Extraordinary Growth in Users" seems to offer an inappropriate comparison. 
 
-http://techcrunch.com/2014/02/19/facebook-whatsapp/?ncid=twittersocialshare
+Current viz:
+<Graphics file: /Users/Aarti/blogpost1/messenger growth.png>
 
-In my opinion, WhatsApp user growth should be compared to rival 
-messaging apps and not social media networks. Chart 3 reveals the 
-growth rate of WeChat in China, the largest smart phone market. 
-Did facebook acquire WhatsApp to become a hegemon for WeChat?
+In my opinion, WhatsApp user growth should be compared to rival messaging apps and not social media networks. Chart 3 reveals the 
+growth rate of WeChat in China, the largest smart phone market. Did facebook acquire WhatsApp to become a hegemon for WeChat?
 
+My rendition
 Chart 3: WhatsApp Extraordinary Growth in Users: the hegemon to WeChat?
 
 Source: Business Insider
