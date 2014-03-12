@@ -142,8 +142,9 @@
     - Rec: [Dynamic Visualizations with D3 and AngularJS](http://www.youtube.com/watch?v=BvAeabvZ61o)
 
 - date: 2014-03-18
-  topic: [NYhackR meetup](http://www.meetup.com/nyhackr/events/169828902/)
-  during: it's spring break but go if you want!
+  topic: (spring break)
+  during: | 
+    - [NYhackR meetup](http://www.meetup.com/nyhackr/events/169828902/)
 
 - date: 2014-03-24
   topic: Gentle introduction to D3
