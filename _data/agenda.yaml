@@ -141,15 +141,19 @@
     - [Paul Murrell's page](https://www.stat.auckland.ac.nz/~paul/)
     - Rec: [Dynamic Visualizations with D3 and AngularJS](http://www.youtube.com/watch?v=BvAeabvZ61o)
 
+- date: 2014-03-18
+  topic: [NYhackR meetup](http://www.meetup.com/nyhackr/events/169828902/)
+  during: it's spring break but go if you want!
+
 - date: 2014-03-24
   topic: Gentle introduction to D3
   before: |
     - [Murray, Interative data Visualization for the Web](http://proquest.safaribooksonline.com.ezproxy.cul.columbia.edu/book/web-design-and-development/9781449340223) (O'Reilly Safari)
   during: js, json, svg; tips and tricks
 
+
 - date: 2014-03-26
-  topic: Maps OR Rmeetup-fMRI stuff
-  during: ¿[http://www.meetup.com/nyhackr/events/169828902/]?
+  topic: maps
   before: |
     - Yau, ch. 8
     - Gelman&Hill, ch. TBD
@@ -185,6 +189,7 @@
     - [Basics of Histograms](http://rforpublichealth.blogspot.com/2012/12/basics-of-histograms.html)
     - [Histogram package paper](http://cran.r-project.org/web/packages/histogram/histogram.pdf)
     - [Histogram D3 layout](https://github.com/mbostock/d3/wiki/Histogram-Layout)
+    - [Henry Deng and Hadley Wickham, Density Estimation in R](http://vita.had.co.nz/papers/density-estimation.pdf)
 
 - date: 2014-04-16
   topic: ggplot2 in some depth
