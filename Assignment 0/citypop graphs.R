@@ -4,8 +4,7 @@ names(df) <- c("Year","Rank","City","Population")
 #df[which(df$rank == 1),c("year","city","pop")]
 
 library(plyr)
-p1 <- ddply(df, .(Year), transform, avgPop = mean(Population))
-ddply(df, .(City), summarise, mean = mean(Population), sd = sd(Population))
+p2 <- ddply(df, .(Year), summarise, min = min(Population), max = max(Population), mean = mean(Population))
 
 ### SQLDF ###
 library(sqldf)
