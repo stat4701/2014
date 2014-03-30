@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Priya
+tags: intro
 ---
 
 Hi All, this is Priya (official name is Gnanapriya Venkatasubramaniam, I know too long :) ) I am student of the graduate certificate program in Data Sciences, an undergrad in Instrumention Engineering, an IT consultant with 6 years of experience for JPMorgan Chase and a proud mother of a 2 yr old busy toddler :)

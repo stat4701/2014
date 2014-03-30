@@ -2,7 +2,7 @@
 layout: post
 title: Maggie Zhang
 description: Introduction Post
-tags: assignments introduction
+tags: intro
 ---
 Past
 Before Columbia, I got a Bachelor’s degree in mathematics and applied mathematics in Beijing Forestry University. 
