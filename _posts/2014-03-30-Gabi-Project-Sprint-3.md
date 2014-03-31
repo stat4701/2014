@@ -17,12 +17,13 @@ Tags: project
 
 ### Correlations - Heat Maps, Clustering graphs and Histograms
 > I found a function called 'ggpairs' which shows the correlation values and some clusters, thought it was an interesting start to exploring correlations:
-![risk_dat_relationships](http://Gabya06.github.io/edav/assets/gaby_assets/risk_dat_relationships.png)
+[![risk_dat_relationships](https://Gabya06.github.io/edav/assets/gaby_assets/risk_dat_relationships.png?raw=true)](https://Gabya06.github.io/edav/assets/gaby_assets/risk_dat_relationships.png?raw=true)
+
 
 > Plotted a few heat maps using various colors which all showed the highest correlation between obesity and no exercise as well as high blood pressure and diabetes. 
-[![risk_heat_bl](http://Gabya06.github.io/edav/assets/gaby_assets/risk_heat_bl.png)](http://Gabya06.github.io/edav/assets/gaby_assets/risk_heat_bl.png)
+[![risk_heat_bl](http://Gabya06.github.io/edav/assets/gaby_assets/risk_heat_bl.png?raw=true)](http://Gabya06.github.io/edav/assets/gaby_assets/risk_heat_bl.png?raw=true)
 
-[![risk_heat_org](http://Gabya06.github.io/edav/assets/gaby_assets/risk_heat_org.png)](http://Gabya06.github.io/edav/assets/gaby_assets/risk_heat_org.png)
+[![risk_heat_org](http://Gabya06.github.io/edav/assets/gaby_assets/risk_heat_org.png?raw=true)](http://Gabya06.github.io/edav/assets/gaby_assets/risk_heat_org.png?raw=true)
 
 
 > I then subsetted risk data to explore correlations for which the percentages of obesity was greater than 20%. After removing the less than 20 % obesity data, I found that the top 3 correlations between risk factors are:
