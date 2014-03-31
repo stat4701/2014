@@ -1,0 +1,32 @@
+<!--
+%\VignetteEngine{knitr::knitr}
+%\VignetteIndexEntry{Replication}
+-->
+
+
+```{r}
+library(pizzasizes)
+library(ggplot2)
+data(pizzasizes)
+p <- ggplot(pizzasizes, aes(x=size, y=px_inc))
+```
+
+```{r plot0}
+p+geom_point(color="#17807e", alpha=.1, size=3)+geom_smooth()
+```
+
+```{r plot1}
+p+geom_point(color="#17807e", position='jitter', alpha=.1, size=3)+geom_smooth(se=FALSE)
+```
+
+```{r plot2}
+p+geom_point(color="#17807e", position='jitter', alpha=.1, size=3)+geom_smooth(method='loess')
+```
+
+```{r plot3}
+p+geom_point(color="#17807e", position='jitter', alpha=.1, size=3)+geom_smooth(method='loess', se=FALSE)
+```
+
+```{r plot4}
+p+geom_point(color="#17807e", position='jitter', alpha=.1, size=3)+geom_smooth(method='glm',formula=y ~ x+ log(x), se=FALSE)
+```

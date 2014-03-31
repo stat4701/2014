@@ -12,7 +12,7 @@ body {
 }
 
 .y.axisRight text {
-    fill: orange;
+    fill: red;
 }
 
 .y.axisLeft text {
@@ -139,24 +139,30 @@ d3.tsv("data.tsv", function(error, data) {
       .attr("dx", 15)
       .attr("dy", -4)
       .attr("text-anchor", "middle")
-      .text(function(d) { format = d3.format(".4s"); return format(d.value); })
-      .attr("fill", function(d) { if(d.metric === 'Employees') { return "orange"; } else { return "steelblue"; } });
+      .text(function(d) 
+          { 
+            format1 = d3.format(".2s"); 
+            format2 = d3.format("$.s");
+            if(d.metric === 'Employees') { return format1(d.value); }
+            else {return format2(d.value); }
+          })
+      .attr("fill", function(d) { if(d.metric === 'Employees') { return "red"; } else { return "steelblue"; } });
 
   var legend = svg.selectAll(".legend")
       .data(companyNames.slice())
     .enter().append("g")
       .attr("class", "legend")
-      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+      .attr("transform", function(d, i) { return "translate(0," + i * 35 + ")"; });
 
   legend.append("rect")
       .attr("x", 180)
-      .attr("width", 18)
-      .attr("height", 18)
+      .attr("width", 30)
+      .attr("height", 30)
       .style("fill", color);
 
   legend.append("text")
-      .attr("x", 200)
-      .attr("y", 9)
+      .attr("x", 220)
+      .attr("y", 15)
       .attr("dy", ".35em")
       .style("text-anchor", "top")
       .text(function(d) { return d; });

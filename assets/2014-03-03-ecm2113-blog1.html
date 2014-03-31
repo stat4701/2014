@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>SOTU</title>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+	</head>
+	<h2>Common Words Across SOTU Speeches: 1980-2014</h2>
+	<h6><br>Size: Frequency of Word,</br><br></br><br> Color/Location: Distribution Across Democratic vs. Republican Presidents' SOTU Speeches</br></h6>
+		<style type="text/css">
+
+			body{
+				line-height:25%;
+			}
+			p {
+				line-height:100%;
+			}
+
+
+		</style>
+		<body>
+		<script type="text/javascript">
+		
+			//
+			//	Using a simple array of numeric values
+			//
+
+			var words=[
+{"word":"America","freq":"366","freqperc":"0.004077","lls":"42.772856","s":"29.302714","freqperc_sd":"0.002202","lls_sd":"23.246946","s_sd":"2.406399","freqdiff":"103","llsdiff":"-8.1","sdiff":"-0.36","freqabs":"103","llsabs":"8.1","sabs":"0.36"},
+{"word":"world","freq":"78","freqperc":"0.006184","lls":"39.782011","s":"27.177313","freqperc_sd":"0.00116","lls_sd":"9.841028","s_sd":"1.686773","freqdiff":"53","llsdiff":"-5.42","sdiff":"-1.05","freqabs":"53","llsabs":"5.42","sabs":"1.05"},
+{"word":"spend","freq":"73","freqperc":"0.001659","lls":"29.415894","s":"30.742022","freqperc_sd":"0.000748","lls_sd":"15.560743","s_sd":"5.158748","freqdiff":"44","llsdiff":"-1.48","sdiff":"0.29","freqabs":"44","llsabs":"1.48","sabs":"0.29"},
+{"word":"budget","freq":"99","freqperc":"0.002515","lls":"32.985855","s":"30.91745","freqperc_sd":"0.001718","lls_sd":"28.05875","s_sd":"7.503242","freqdiff":"40","llsdiff":"3.49","sdiff":"1.13","freqabs":"40","llsabs":"3.49","sabs":"1.13"},
+{"word":"drug","freq":"43","freqperc":"0.001236","lls":"31.602606","s":"33.295291","freqperc_sd":"0.000521","lls_sd":"16.170056","s_sd":"6.63358","freqdiff":"36","llsdiff":"4.24","sdiff":"2.89","freqabs":"36","llsabs":"4.24","sabs":"2.89"},
+{"word":"Qaeda","freq":"36","freqperc":"0.001219","lls":"43.220814","s":"42.010311","freqperc_sd":"0.000532","lls_sd":"21.41852","s_sd":"12.121565","freqdiff":"32","llsdiff":"23.39","sdiff":"13.34","freqabs":"32","llsabs":"23.39","sabs":"13.34"},
+{"word":"help","freq":"142","freqperc":"0.002838","lls":"27.619857","s":"30.454802","freqperc_sd":"0.000535","lls_sd":"10.350268","s_sd":"3.789633","freqdiff":"31","llsdiff":"-19.35","sdiff":"-4.09","freqabs":"31","llsabs":"19.35","sabs":"4.09"},
+{"word":"weapons","freq":"39","freqperc":"0.004084","lls":"96.060479","s":"46.949293","freqperc_sd":"0.001343","lls_sd":"62.317676","s_sd":"9.73919","freqdiff":"29","llsdiff":"68.08","sdiff":"17.43","freqabs":"29","llsabs":"68.08","sabs":"17.43"},
+{"word":"lead","freq":"37","freqperc":"0.001501","lls":"29.332824","s":"29.614896","freqperc_sd":"0.000521","lls_sd":"3.653791","s_sd":"2.984599","freqdiff":"28","llsdiff":"1.06","sdiff":"1.85","freqabs":"28","llsabs":"1.06","sabs":"1.85"},
+{"word":"tax","freq":"67","freqperc":"0.003654","lls":"41.256653","s":"27.135835","freqperc_sd":"0.001012","lls_sd":"17.488933","s_sd":"2.874446","freqdiff":"22","llsdiff":"-8.5","sdiff":"-1.78","freqabs":"22","llsabs":"8.5","sabs":"1.78"},
+{"word":"security","freq":"48","freqperc":"0.005351","lls":"62.984598","s":"30.390383","freqperc_sd":"0.000549","lls_sd":"22.623502","s_sd":"2.660457","freqdiff":"18","llsdiff":"0.12","sdiff":"-0.22","freqabs":"18","llsabs":"0.12","sabs":"0.22"},
+{"word":"democracy","freq":"25","freqperc":"0.001338","lls":"22.461598","s":"28.47045","freqperc_sd":"0.000398","lls_sd":"2.860228","s_sd":"0.952695","freqdiff":"16","llsdiff":"-4.52","sdiff":"-0.65","freqabs":"16","llsabs":"4.52","sabs":"0.65"},
+{"word":"I've","freq":"20","freqperc":"0.001591","lls":"34.148302","s":"35.344141","freqperc_sd":"0.000474","lls_sd":"15.745692","s_sd":"6.700527","freqdiff":"16","llsdiff":"16.24","sdiff":"6.54","freqabs":"16","llsabs":"16.24","sabs":"6.54"},
+{"word":"there's","freq":"22","freqperc":"0.001005","lls":"20.878411","s":"29.038343","freqperc_sd":"0.000478","lls_sd":"11.355598","s_sd":"6.452588","freqdiff":"16","llsdiff":"-5.1","sdiff":"-1.09","freqabs":"16","llsabs":"5.1","sabs":"1.09"},
+{"word":"aids","freq":"18","freqperc":"0.001682","lls":"48.971642","s":"37.540136","freqperc_sd":"0.000785","lls_sd":"30.200373","s_sd":"9.174773","freqdiff":"13","llsdiff":"29.93","sdiff":"11.3","freqabs":"13","llsabs":"29.93","sabs":"11.3"},
+{"word":"account","freq":"14","freqperc":"0.000902","lls":"24.043824","s":"28.83712","freqperc_sd":"0.000427","lls_sd":"7.630783","s_sd":"3.458144","freqdiff":"10","llsdiff":"2.37","sdiff":"0.74","freqabs":"10","llsabs":"2.37","sabs":"0.74"},
+{"word":"dream","freq":"25","freqperc":"0.00128","lls":"26.605615","s":"32.219199","freqperc_sd":"0.000502","lls_sd":"11.772403","s_sd":"6.559682","freqdiff":"10","llsdiff":"-10.52","sdiff":"-1.51","freqabs":"10","llsabs":"10.52","sabs":"1.51"},
+{"word":"math","freq":"13","freqperc":"0.000865","lls":"22.82742","s":"29.837315","freqperc_sd":"0.000154","lls_sd":"7.265428","s_sd":"3.73904","freqdiff":"9","llsdiff":"4.82","sdiff":"3.54","freqabs":"9","llsabs":"4.82","sabs":"3.54"},
+{"word":"social","freq":"33","freqperc":"0.003499","lls":"52.33063","s":"29.250655","freqperc_sd":"0.00009","lls_sd":"7.442893","s_sd":"1.031216","freqdiff":"7","llsdiff":"-29.3","sdiff":"-3.26","freqabs":"7","llsabs":"29.3","sabs":"3.26"},
+{"word":"tell","freq":"23","freqperc":"0.00183","lls":"36.604789","s":"34.090943","freqperc_sd":"0.000514","lls_sd":"18.330916","s_sd":"5.889878","freqdiff":"7","llsdiff":"8.73","sdiff":"5.09","freqabs":"7","llsabs":"8.73","sabs":"5.09"},
+{"word":"Afghan","freq":"30","freqperc":"0.001171","lls":"24.228563","s":"31.568847","freqperc_sd":"0.000836","lls_sd":"17.238412","s_sd":"9.593966","freqdiff":"6","llsdiff":"-7.49","sdiff":"-3","freqabs":"6","llsabs":"7.49","sabs":"3"},
+{"word":"confront","freq":"8","freqperc":"0.000724","lls":"21.734917","s":"28.377678","freqperc_sd":"0.00004","lls_sd":"3.646543","s_sd":"1.899845","freqdiff":"6","llsdiff":"8.49","sdiff":"2.9","freqabs":"6","llsabs":"8.49","sabs":"2.9"},
+{"word":"empower","freq":"11","freqperc":"0.001913","lls":"82.55947","s":"51.18432","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"6","llsdiff":"56.37","sdiff":"21.56","freqabs":"6","llsabs":"56.37","sabs":"21.56"},
+{"word":"earmark","freq":"8","freqperc":"0.000705","lls":"29.230896","s":"34.069876","freqperc_sd":"0.000014","lls_sd":"0.15187","s_sd":"0.209094","freqdiff":"5","llsdiff":"8.27","sdiff":"6.24","freqabs":"5","llsabs":"8.27","sabs":"6.24"},
+{"word":"gulf","freq":"9","freqperc":"0.002375","lls":"46.94669","s":"38.850582","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"5","llsdiff":"31.36","sdiff":"13.07","freqabs":"5","llsabs":"31.36","sabs":"13.07"},
+{"word":"prescription","freq":"9","freqperc":"0.000924","lls":"28.694048","s":"32.936402","freqperc_sd":"0.000335","lls_sd":"16.135586","s_sd":"7.319259","freqdiff":"5","llsdiff":"7.7","sdiff":"5.19","freqabs":"5","llsabs":"7.7","sabs":"5.19"},
+{"word":"coverage","freq":"13","freqperc":"0.001346","lls":"29.327051","s":"31.642252","freqperc_sd":"0.000285","lls_sd":"11.959606","s_sd":"4.424061","freqdiff":"4","llsdiff":"-8.89","sdiff":"-1.52","freqabs":"4","llsabs":"8.89","sabs":"1.52"},
+{"word":"name","freq":"37","freqperc":"0.000753","lls":"27.04604","s":"33.41189","freqperc_sd":"0.00024","lls_sd":"14.184793","s_sd":"8.104644","freqdiff":"4","llsdiff":"-13.41","sdiff":"-4.28","freqabs":"4","llsabs":"13.41","sabs":"4.28"},
+{"word":"threat","freq":"10","freqperc":"0.001864","lls":"42.254597","s":"34.182255","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"4","llsdiff":"17.46","sdiff":"4.19","freqabs":"4","llsabs":"17.46","sabs":"4.19"},
+{"word":"build","freq":"25","freqperc":"0.001585","lls":"23.092872","s":"26.87838","freqperc_sd":"0.00002","lls_sd":"1.42786","s_sd":"0.396412","freqdiff":"3","llsdiff":"-7.22","sdiff":"-1.8","freqabs":"3","llsabs":"7.22","sabs":"1.8"},
+{"word":"ensure","freq":"9","freqperc":"0.000789","lls":"21.041551","s":"28.369842","freqperc_sd":"0.00036","lls_sd":"3.763827","s_sd":"1.593546","freqdiff":"2","llsdiff":"-8.25","sdiff":"-3.43","freqabs":"2","llsabs":"8.25","sabs":"3.43"},
+{"word":"idea","freq":"15","freqperc":"0.001835","lls":"37.624049","s":"32.957251","freqperc_sd":"0.001151","lls_sd":"23.44779","s_sd":"8.102028","freqdiff":"2","llsdiff":"14.59","sdiff":"6.2","freqabs":"2","llsabs":"14.59","sabs":"6.2"},
+{"word":"peace","freq":"24","freqperc":"0.004814","lls":"34.854782","s":"26.362568","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"2","llsdiff":"-7.37","sdiff":"-1.38","freqabs":"2","llsabs":"7.37","sabs":"1.38"},
+{"word":"teaching","freq":"7","freqperc":"0.00091","lls":"20.581238","s":"28.946188","freqperc_sd":"0.000333","lls_sd":"8.712603","s_sd":"2.793684","freqdiff":"2","llsdiff":"-1.92","sdiff":"1.54","freqabs":"2","llsabs":"1.92","sabs":"1.54"},
+{"word":"we're","freq":"67","freqperc":"0.001743","lls":"31.561859","s":"36.457052","freqperc_sd":"0.000524","lls_sd":"13.326709","s_sd":"6.538062","freqdiff":"2","llsdiff":"-19.24","sdiff":"-3.99","freqabs":"2","llsabs":"19.24","sabs":"3.99"},
+{"word":"we've","freq":"57","freqperc":"0.001668","lls":"26.467404","s":"33.4083","freqperc_sd":"0.000634","lls_sd":"20.589379","s_sd":"7.872648","freqdiff":"1","llsdiff":"-14.13","sdiff":"-3.45","freqabs":"1","llsabs":"14.13","sabs":"3.45"},
+{"word":"he's","freq":"5","freqperc":"0.000932","lls":"33.97788","s":"35.94351","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"0","llsdiff":"2.3","sdiff":"2.53","freqabs":"0","llsabs":"2.3","sabs":"2.53"},
+{"word":"Persian","freq":"4","freqperc":"0.001055","lls":"25.685661","s":"35.241764","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"0","llsdiff":"-0.8","sdiff":"-1.41","freqabs":"0","llsabs":"0.8","sabs":"1.41"},
+{"word":"resolve","freq":"4","freqperc":"0.001045","lls":"18.451786","s":"27.14349","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"0","llsdiff":"-0.87","sdiff":"-0.95","freqabs":"0","llsabs":"0.87","sabs":"0.95"},
+{"word":"sun","freq":"4","freqperc":"0.001044","lls":"27.873154","s":"35.32626","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"0","llsdiff":"5.21","sdiff":"6.58","freqabs":"0","llsabs":"5.21","sabs":"6.58"},
+{"word":"announcing","freq":"3","freqperc":"0.000794","lls":"19.725122","s":"29.401054","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-1","llsdiff":"-4.48","sdiff":"0.08","freqabs":"1","llsabs":"4.48","sabs":"0.08"},
+{"word":"hostages","freq":"2","freqperc":"0.00053","lls":"12.857396","s":"25.41718","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-1","llsdiff":"-9.21","sdiff":"-7.72","freqabs":"1","llsabs":"9.21","sabs":"7.72"},
+{"word":"lady","freq":"3","freqperc":"0.000536","lls":"20.04138","s":"27.862288","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-1","llsdiff":"-0.9","sdiff":"0.69","freqabs":"1","llsabs":"0.9","sabs":"0.69"},
+{"word":"laughter","freq":"2","freqperc":"0.000522","lls":"13.756256","s":"25.79622","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-1","llsdiff":"-5.47","sdiff":"-1.26","freqabs":"1","llsabs":"5.47","sabs":"1.26"},
+{"word":"long-term","freq":"5","freqperc":"0.00106","lls":"22.23013","s":"29.135904","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-1","llsdiff":"-3.9","sdiff":"-0.9","freqabs":"1","llsabs":"3.9","sabs":"0.9"},
+{"word":"Medicaid","freq":"3","freqperc":"0.000576","lls":"15.598741","s":"25.465212","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-1","llsdiff":"-5.82","sdiff":"-2.7","freqabs":"1","llsabs":"5.82","sabs":"2.7"},
+{"word":"network","freq":"2","freqperc":"0.000674","lls":"13.536365","s":"25.954216","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-1","llsdiff":"-5.87","sdiff":"-1.08","freqabs":"1","llsabs":"5.87","sabs":"1.08"},
+{"word":"root","freq":"3","freqperc":"0.000576","lls":"19.18278","s":"27.45759","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-1","llsdiff":"-2.57","sdiff":"-0.21","freqabs":"1","llsabs":"2.57","sabs":"0.21"},
+{"word":"scientists","freq":"4","freqperc":"0.000746","lls":"21.441603","s":"29.41057","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-1","llsdiff":"-4.39","sdiff":"-0.78","freqabs":"1","llsabs":"4.39","sabs":"0.78"},
+{"word":"son","freq":"3","freqperc":"0.000625","lls":"17.469769","s":"27.04659","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-1","llsdiff":"-5.21","sdiff":"-1.52","freqabs":"1","llsabs":"5.21","sabs":"1.52"},
+{"word":"stronger","freq":"7","freqperc":"0.001641","lls":"28.726236","s":"30.648415","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-1","llsdiff":"0.08","sdiff":"1.38","freqabs":"1","llsabs":"0.08","sabs":"1.38"},
+{"word":"watching","freq":"3","freqperc":"0.000783","lls":"17.823975","s":"28.279297","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-1","llsdiff":"-3.01","sdiff":"0.91","freqabs":"1","llsabs":"3.01","sabs":"0.91"},
+{"word":"diplomacy","freq":"4","freqperc":"0.000715","lls":"16.99055","s":"25.656364","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-2","llsdiff":"-10.77","sdiff":"-4.5","freqabs":"2","llsabs":"10.77","sabs":"4.5"},
+{"word":"insurance","freq":"14","freqperc":"0.002502","lls":"54.90224","s":"38.27438","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-2","llsdiff":"-3.25","sdiff":"0.78","freqabs":"2","llsabs":"3.25","sabs":"0.78"},
+{"word":"Iran","freq":"14","freqperc":"0.000838","lls":"20.932766","s":"28.473111","freqperc_sd":"0.000076","lls_sd":"3.309391","s_sd":"1.690811","freqdiff":"-2","llsdiff":"-2.36","sdiff":"-1.88","freqabs":"2","llsabs":"2.36","sabs":"1.88"},
+{"word":"join","freq":"7","freqperc":"0.001828","lls":"27.71523","s":"28.7103","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-2","llsdiff":"-1.19","sdiff":"1","freqabs":"2","llsabs":"1.19","sabs":"1"},
+{"word":"trillion","freq":"4","freqperc":"0.000916","lls":"24.028728","s":"31.87241","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-2","llsdiff":"-10.75","sdiff":"-2.04","freqabs":"2","llsabs":"10.75","sabs":"2.04"},
+{"word":"win","freq":"6","freqperc":"0.001703","lls":"31.658808","s":"34.290783","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-2","llsdiff":"-4.46","sdiff":"1.8","freqabs":"2","llsabs":"4.46","sabs":"1.8"},
+{"word":"I'll","freq":"3","freqperc":"0.000852","lls":"17.891146","s":"29.226786","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-3","llsdiff":"-14.22","sdiff":"-2.37","freqabs":"3","llsabs":"14.22","sabs":"2.37"},
+{"word":"Medicare","freq":"24","freqperc":"0.001666","lls":"38.816383","s":"37.239666","freqperc_sd":"0.0008","lls_sd":"21.322192","s_sd":"9.457747","freqdiff":"-3","llsdiff":"-0.04","sdiff":"2.92","freqabs":"3","llsabs":"0.04","sabs":"2.92"},
+{"word":"recovery","freq":"16","freqperc":"0.00146","lls":"30.693707","s":"30.737192","freqperc_sd":"0.000708","lls_sd":"22.596219","s_sd":"8.865742","freqdiff":"-3","llsdiff":"-5.03","sdiff":"-2.05","freqabs":"3","llsabs":"5.03","sabs":"2.05"},
+{"word":"together","freq":"15","freqperc":"0.002878","lls":"32.855827","s":"25.940075","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-3","llsdiff":"-6.26","sdiff":"-1.25","freqabs":"3","llsabs":"6.26","sabs":"1.25"},
+{"word":"big","freq":"6","freqperc":"0.001272","lls":"24.245338","s":"30.21362","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-4","llsdiff":"4.02","sdiff":"3.3","freqabs":"4","llsabs":"4.02","sabs":"3.3"},
+{"word":"historic","freq":"5","freqperc":"0.001304","lls":"19.919384","s":"26.898977","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-4","llsdiff":"-14.29","sdiff":"-3.48","freqabs":"4","llsabs":"14.29","sabs":"3.48"},
+{"word":"I'd","freq":"3","freqperc":"0.000625","lls":"16.29152","s":"26.5611","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-4","llsdiff":"-26.3","sdiff":"-9.57","freqabs":"4","llsabs":"26.3","sabs":"9.57"},
+{"word":"initiative","freq":"16","freqperc":"0.001095","lls":"19.83544","s":"27.14159","freqperc_sd":"0.000217","lls_sd":"2.367686","s_sd":"1.969849","freqdiff":"-4","llsdiff":"-50.97","sdiff":"-8.45","freqabs":"4","llsabs":"50.97","sabs":"8.45"},
+{"word":"poverty","freq":"6","freqperc":"0.001225","lls":"23.429592","s":"28.8747","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-4","llsdiff":"-17.09","sdiff":"-4.43","freqabs":"4","llsabs":"17.09","sabs":"4.43"},
+{"word":"police","freq":"4","freqperc":"0.001045","lls":"14.873841","s":"24.91372","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-5","llsdiff":"-5.9","sdiff":"-2.44","freqabs":"5","llsabs":"5.9","sabs":"2.44"},
+{"word":"proud","freq":"2","freqperc":"0.000469","lls":"14.125643","s":"25.113277","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-5","llsdiff":"-7.3","sdiff":"-1.1","freqabs":"5","llsabs":"7.3","sabs":"1.1"},
+{"word":"read","freq":"6","freqperc":"0.001374","lls":"42.549442","s":"39.768406","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-5","llsdiff":"13.63","sdiff":"9.46","freqabs":"5","llsabs":"13.63","sabs":"9.46"},
+{"word":"values","freq":"7","freqperc":"0.001404","lls":"23.663038","s":"28.455929","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-5","llsdiff":"-20.86","sdiff":"-5.53","freqabs":"5","llsabs":"20.86","sabs":"5.53"},
+{"word":"Democrat","freq":"2","freqperc":"0.000458","lls":"15.033953","s":"25.915443","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-6","llsdiff":"-27.56","sdiff":"-9.91","freqabs":"6","llsabs":"27.56","sabs":"9.91"},
+{"word":"recession","freq":"6","freqperc":"0.000576","lls":"14.90471","s":"25.014011","freqperc_sd":"0.000271","lls_sd":"0.807003","s_sd":"0.446485","freqdiff":"-6","llsdiff":"-10.34","sdiff":"-4.75","freqabs":"6","llsabs":"10.34","sabs":"4.75"},
+{"word":"research","freq":"7","freqperc":"0.001316","lls":"21.597797","s":"27.50564","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-6","llsdiff":"-6.89","sdiff":"-3.33","freqabs":"6","llsabs":"6.89","sabs":"3.33"},
+{"word":"didn't","freq":"3","freqperc":"0.000625","lls":"14.801846","s":"25.778425","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-7","llsdiff":"-9.67","sdiff":"-3.59","freqabs":"7","llsabs":"9.67","sabs":"3.59"},
+{"word":"environment","freq":"6","freqperc":"0.00071","lls":"15.025977","s":"26.747371","freqperc_sd":"0.00012","lls_sd":"0.982599","s_sd":"1.516711","freqdiff":"-7","llsdiff":"-10.23","sdiff":"-2.88","freqabs":"7","llsabs":"10.23","sabs":"2.88"},
+{"word":"everyone","freq":"4","freqperc":"0.001059","lls":"16.466558","s":"25.681816","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-7","llsdiff":"-12.84","sdiff":"-4.77","freqabs":"7","llsabs":"12.84","sabs":"4.77"},
+{"word":"middle","freq":"18","freqperc":"0.001129","lls":"19.126258","s":"26.006966","freqperc_sd":"0.000058","lls_sd":"0.560967","s_sd":"0.403928","freqdiff":"-7","llsdiff":"-10.21","sdiff":"-4.16","freqabs":"7","llsabs":"10.21","sabs":"4.16"},
+{"word":"back","freq":"8","freqperc":"0.002271","lls":"23.913414","s":"23.681217","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-8","llsdiff":"-24.04","sdiff":"-4.98","freqabs":"8","llsabs":"24.04","sabs":"4.98"},
+{"word":"talk","freq":"4","freqperc":"0.000817","lls":"18.701187","s":"26.947609","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-8","llsdiff":"-7.98","sdiff":"-1.9","freqabs":"8","llsabs":"7.98","sabs":"1.9"},
+{"word":"years","freq":"24","freqperc":"0.005626","lls":"33.6926","s":"26.11989","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-8","llsdiff":"-2.82","sdiff":"-0.57","freqabs":"8","llsabs":"2.82","sabs":"0.57"},
+{"word":"something","freq":"13","freqperc":"0.001589","lls":"26.163961","s":"29.270738","freqperc_sd":"0.000749","lls_sd":"14.135726","s_sd":"6.606176","freqdiff":"-9","llsdiff":"-14.01","sdiff":"-2.66","freqabs":"9","llsabs":"14.01","sabs":"2.66"},
+{"word":"right","freq":"16","freqperc":"0.003392","lls":"27.328245","s":"24.627264","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-10","llsdiff":"-21.12","sdiff":"-4.1","freqabs":"10","llsabs":"21.12","sabs":"4.1"},
+{"word":"worker","freq":"26","freqperc":"0.001781","lls":"32.709336","s":"32.238358","freqperc_sd":"0.000858","lls_sd":"19.026857","s_sd":"6.757055","freqdiff":"-10","llsdiff":"1.2","sdiff":"0.54","freqabs":"10","llsabs":"1.2","sabs":"0.54"},
+{"word":"global","freq":"5","freqperc":"0.001021","lls":"18.59074","s":"27.660362","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-11","llsdiff":"-5.87","sdiff":"-2.02","freqabs":"11","llsabs":"5.87","sabs":"2.02"},
+{"word":"kids","freq":"9","freqperc":"0.002383","lls":"58.873974","s":"50.427597","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-12","llsdiff":"23.97","sdiff":"16.16","freqabs":"12","llsabs":"23.97","sabs":"16.16"},
+{"word":"every","freq":"25","freqperc":"0.006621","lls":"42.235466","s":"27.741165","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-13","llsdiff":"-11.89","sdiff":"-1.79","freqabs":"13","llsabs":"11.89","sabs":"1.79"},
+{"word":"start","freq":"3","freqperc":"0.000576","lls":"15.015498","s":"24.593004","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-14","llsdiff":"-14.23","sdiff":"-4.76","freqabs":"14","llsabs":"14.23","sabs":"4.76"},
+{"word":"strategic","freq":"15","freqperc":"0.00105","lls":"20.313751","s":"27.833678","freqperc_sd":"0.000026","lls_sd":"6.426839","s_sd":"2.546521","freqdiff":"-14","llsdiff":"-25.3","sdiff":"-4.85","freqabs":"14","llsabs":"25.3","sabs":"4.85"},
+{"word":"bipartisan","freq":"14","freqperc":"0.001326","lls":"29.971288","s":"32.750475","freqperc_sd":"0.00011","lls_sd":"1.112989","s_sd":"0.886853","freqdiff":"-16","llsdiff":"0.66","sdiff":"1.71","freqabs":"16","llsabs":"0.66","sabs":"1.71"},
+{"word":"innovation","freq":"2","freqperc":"0.000357","lls":"13.513061","s":"24.232985","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-16","llsdiff":"-20.71","sdiff":"-8.66","freqabs":"16","llsabs":"20.71","sabs":"8.66"},
+{"word":"priority","freq":"3","freqperc":"0.000783","lls":"13.215507","s":"24.670097","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-16","llsdiff":"-54.56","sdiff":"-10.18","freqabs":"16","llsabs":"54.56","sabs":"10.18"},
+{"word":"reform","freq":"22","freqperc":"0.001582","lls":"18.66421","s":"25.7435","freqperc_sd":"0.000545","lls_sd":"3.217274","s_sd":"1.71537","freqdiff":"-16","llsdiff":"-10.72","sdiff":"-3.2","freqabs":"16","llsabs":"10.72","sabs":"3.2"},
+{"word":"today","freq":"12","freqperc":"0.003178","lls":"37.084156","s":"33.730858","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-16","llsdiff":"5.85","sdiff":"3.9","freqabs":"16","llsabs":"5.85","sabs":"3.9"},
+{"word":"decade","freq":"7","freqperc":"0.000675","lls":"18.769982","s":"27.082619","freqperc_sd":"0.000164","lls_sd":"4.468507","s_sd":"3.369142","freqdiff":"-17","llsdiff":"-4.67","sdiff":"-0.98","freqabs":"17","llsabs":"4.67","sabs":"0.98"},
+{"word":"hard","freq":"6","freqperc":"0.001583","lls":"20.035208","s":"25.884233","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-17","llsdiff":"-5.14","sdiff":"-1.55","freqabs":"17","llsabs":"5.14","sabs":"1.55"},
+{"word":"propose","freq":"17","freqperc":"0.001704","lls":"25.760209","s":"27.904079","freqperc_sd":"0.000052","lls_sd":"2.594246","s_sd":"0.82825","freqdiff":"-17","llsdiff":"-7.02","sdiff":"-0.96","freqabs":"17","llsabs":"7.02","sabs":"0.96"},
+{"word":"tonight","freq":"174","freqperc":"0.002466","lls":"28.482174","s":"34.584818","freqperc_sd":"0.001024","lls_sd":"17.456439","s_sd":"8.368071","freqdiff":"-17","llsdiff":"-5.27","sdiff":"-0.18","freqabs":"17","llsabs":"5.27","sabs":"0.18"},
+{"word":"commitment","freq":"13","freqperc":"0.001027","lls":"13.499505","s":"24.163645","freqperc_sd":"0.000124","lls_sd":"0.829919","s_sd":"0.337299","freqdiff":"-18","llsdiff":"-73.62","sdiff":"-12.84","freqabs":"18","llsabs":"73.62","sabs":"12.84"},
+{"word":"clean","freq":"8","freqperc":"0.00086","lls":"19.291502","s":"27.640589","freqperc_sd":"0.000553","lls_sd":"7.305628","s_sd":"3.574158","freqdiff":"-19","llsdiff":"-18.88","sdiff":"-5.66","freqabs":"19","llsabs":"18.88","sabs":"5.66"},
+{"word":"schools","freq":"8","freqperc":"0.001832","lls":"21.979761","s":"27.077503","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-19","llsdiff":"-14.78","sdiff":"-3.49","freqabs":"19","llsabs":"14.78","sabs":"3.49"},
+{"word":"technology","freq":"5","freqperc":"0.000891","lls":"14.527061","s":"24.083319","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-19","llsdiff":"-16.71","sdiff":"-6.89","freqabs":"19","llsabs":"16.71","sabs":"6.89"},
+{"word":"women","freq":"21","freqperc":"0.001376","lls":"21.861849","s":"26.327539","freqperc_sd":"0.000745","lls_sd":"12.245324","s_sd":"4.335423","freqdiff":"-19","llsdiff":"-63","sdiff":"-9.06","freqabs":"19","llsabs":"63","sabs":"9.06"},
+{"word":"I'm","freq":"32","freqperc":"0.001338","lls":"26.010294","s":"32.537713","freqperc_sd":"0.000353","lls_sd":"10.798992","s_sd":"5.221078","freqdiff":"-21","llsdiff":"-10.65","sdiff":"-2.86","freqabs":"21","llsabs":"10.65","sabs":"2.86"},
+{"word":"they're","freq":"7","freqperc":"0.000873","lls":"15.32381","s":"26.719856","freqperc_sd":"0.000241","lls_sd":"4.889508","s_sd":"3.981703","freqdiff":"-22","llsdiff":"-17.67","sdiff":"-5.47","freqabs":"22","llsabs":"17.67","sabs":"5.47"},
+{"word":"thank","freq":"15","freqperc":"0.001352","lls":"20.488346","s":"29.13161","freqperc_sd":"0.000581","lls_sd":"7.768735","s_sd":"5.412595","freqdiff":"-23","llsdiff":"-18.42","sdiff":"-4.8","freqabs":"23","llsabs":"18.42","sabs":"4.8"},
+{"word":"plan","freq":"23","freqperc":"0.004876","lls":"77.969376","s":"32.177788","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-24","llsdiff":"10.8","sdiff":"1.13","freqabs":"24","llsabs":"10.8","sabs":"1.13"},
+{"word":"teacher","freq":"3","freqperc":"0.000783","lls":"17.003239","s":"27.788017","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-25","llsdiff":"-11.43","sdiff":"-1.8","freqabs":"25","llsabs":"11.43","sabs":"1.8"},
+{"word":"ask","freq":"35","freqperc":"0.001854","lls":"27.945494","s":"26.781294","freqperc_sd":"0.000679","lls_sd":"8.74594","s_sd":"1.393762","freqdiff":"-26","llsdiff":"-32.82","sdiff":"-3.46","freqabs":"26","llsabs":"32.82","sabs":"3.46"},
+{"word":"we'll","freq":"15","freqperc":"0.001078","lls":"20.754905","s":"30.01182","freqperc_sd":"0.000097","lls_sd":"4.805848","s_sd":"2.17914","freqdiff":"-29","llsdiff":"-9.65","sdiff":"-2.17","freqabs":"29","llsabs":"9.65","sabs":"2.17"},
+{"word":"percent","freq":"34","freqperc":"0.001705","lls":"21.326037","s":"28.420679","freqperc_sd":"0.000436","lls_sd":"7.760214","s_sd":"4.051493","freqdiff":"-30","llsdiff":"-24.46","sdiff":"-5.07","freqabs":"30","llsabs":"24.46","sabs":"5.07"},
+{"word":"nuclear","freq":"19","freqperc":"0.001833","lls":"31.561732","s":"33.115984","freqperc_sd":"0.000571","lls_sd":"16.785982","s_sd":"6.46928","freqdiff":"-32","llsdiff":"-36.11","sdiff":"-2.22","freqabs":"32","llsabs":"36.11","sabs":"2.22"},
+{"word":"go","freq":"6","freqperc":"0.001272","lls":"18.974228","s":"24.82521","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-35","llsdiff":"-9.19","sdiff":"-5.06","freqabs":"35","llsabs":"9.19","sabs":"5.06"},
+{"word":"health","freq":"48","freqperc":"0.003161","lls":"38.609734","s":"26.999004","freqperc_sd":"0.000163","lls_sd":"7.544609","s_sd":"1.495202","freqdiff":"-35","llsdiff":"-42.38","sdiff":"-4.48","freqabs":"35","llsabs":"42.38","sabs":"4.48"},
+{"word":"let","freq":"60","freqperc":"0.002672","lls":"45.084103","s":"35.80566","freqperc_sd":"0.000798","lls_sd":"27.122273","s_sd":"11.462733","freqdiff":"-41","llsdiff":"-3.95","sdiff":"-2.11","freqabs":"41","llsabs":"3.95","sabs":"2.11"},
+{"word":"school","freq":"11","freqperc":"0.002128","lls":"33.11768","s":"30.633373","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-41","llsdiff":"-6.13","sdiff":"-0.51","freqabs":"41","llsabs":"6.13","sabs":"0.51"},
+{"word":"deficit","freq":"25","freqperc":"0.001196","lls":"30.079149","s":"31.513382","freqperc_sd":"0.000343","lls_sd":"12.903991","s_sd":"5.243948","freqdiff":"-43","llsdiff":"-4.4","sdiff":"0.24","freqabs":"43","llsabs":"4.4","sabs":"0.24"},
+{"word":"invest","freq":"12","freqperc":"0.001428","lls":"18.21823","s":"24.865693","freqperc_sd":"0.00022","lls_sd":"1.690754","s_sd":"1.128091","freqdiff":"-43","llsdiff":"-12.59","sdiff":"-4.99","freqabs":"43","llsabs":"12.59","sabs":"4.99"},
+{"word":"can't","freq":"7","freqperc":"0.001826","lls":"34.68576","s":"37.498096","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-44","llsdiff":"-11.29","sdiff":"1.29","freqabs":"44","llsabs":"11.29","sabs":"1.29"},
+{"word":"it's","freq":"74","freqperc":"0.002186","lls":"34.640558","s":"37.741768","freqperc_sd":"0.001392","lls_sd":"31.38817","s_sd":"13.747844","freqdiff":"-49","llsdiff":"-20.34","sdiff":"-3.97","freqabs":"49","llsabs":"20.34","sabs":"3.97"},
+{"word":"oil","freq":"9","freqperc":"0.001609","lls":"33.373962","s":"35.111473","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-52","llsdiff":"-36.82","sdiff":"-6.33","freqabs":"52","llsabs":"36.82","sabs":"6.33"},
+{"word":"million","freq":"12","freqperc":"0.002237","lls":"24.818602","s":"28.818247","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-54","llsdiff":"-24.77","sdiff":"-2.81","freqabs":"54","llsabs":"24.77","sabs":"2.81"},
+{"word":"parents","freq":"6","freqperc":"0.001251","lls":"21.591396","s":"29.288263","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-57","llsdiff":"-19.77","sdiff":"-5.46","freqabs":"57","llsabs":"19.77","sabs":"5.46"},
+{"word":"Soviet","freq":"30","freqperc":"0.001432","lls":"19.20039","s":"27.901956","freqperc_sd":"0.00086","lls_sd":"13.368377","s_sd":"6.991762","freqdiff":"-58","llsdiff":"-154.97","sdiff":"-33.55","freqabs":"58","llsabs":"154.97","sabs":"33.55"},
+{"word":"economy","freq":"48","freqperc":"0.003166","lls":"31.747758","s":"25.682961","freqperc_sd":"0.000142","lls_sd":"2.300212","s_sd":"0.514799","freqdiff":"-61","llsdiff":"-32.45","sdiff":"-4.8","freqabs":"61","llsabs":"32.45","sabs":"4.8"},
+{"word":"know","freq":"39","freqperc":"0.004575","lls":"60.256245","s":"30.238056","freqperc_sd":"0.000126","lls_sd":"11.809864","s_sd":"1.42881","freqdiff":"-64","llsdiff":"14.16","sdiff":"2.11","freqabs":"64","llsabs":"14.16","sabs":"2.11"},
+{"word":"family","freq":"42","freqperc":"0.002511","lls":"36.153365","s":"27.620581","freqperc_sd":"0.000802","lls_sd":"21.946168","s_sd":"2.307753","freqdiff":"-65","llsdiff":"-6.67","sdiff":"-4.56","freqabs":"65","llsabs":"6.67","sabs":"4.56"},
+{"word":"don't","freq":"9","freqperc":"0.001001","lls":"14.451145","s":"26.264104","freqperc_sd":"0.00006","lls_sd":"1.765621","s_sd":"0.479075","freqdiff":"-79","llsdiff":"-17.55","sdiff":"-6.73","freqabs":"79","llsabs":"17.55","sabs":"6.73"},
+{"word":"federal","freq":"23","freqperc":"0.004413","lls":"39.946293","s":"27.340515","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-85","llsdiff":"-90.76","sdiff":"-8.6","freqabs":"85","llsabs":"90.76","sabs":"8.6"},
+{"word":"get","freq":"12","freqperc":"0.002544","lls":"39.31016","s":"32.76794","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-98","llsdiff":"-12.17","sdiff":"-0.94","freqabs":"98","llsabs":"12.17","sabs":"0.94"},
+{"word":"that's","freq":"24","freqperc":"0.001407","lls":"19.805823","s":"30.477726","freqperc_sd":"0.000482","lls_sd":"8.867944","s_sd":"5.89921","freqdiff":"-98","llsdiff":"-44.16","sdiff":"-12.27","freqabs":"98","llsabs":"44.16","sabs":"12.27"},
+{"word":"century","freq":"15","freqperc":"0.001967","lls":"22.276944","s":"27.430313","freqperc_sd":"0.00017","lls_sd":"3.257822","s_sd":"1.404186","freqdiff":"-127","llsdiff":"-55.92","sdiff":"-12.32","freqabs":"127","llsabs":"55.92","sabs":"12.32"},
+{"word":"energy","freq":"13","freqperc":"0.002977","lls":"37.079987","s":"26.806026","freqperc_sd":"","lls_sd":"","s_sd":"","freqdiff":"-132","llsdiff":"-58.6","sdiff":"-4.82","freqabs":"132","llsabs":"58.6","sabs":"4.82"},
+{"word":"program","freq":"51","freqperc":"0.003221","lls":"51.000981","s":"36.905092","freqperc_sd":"0.001812","lls_sd":"47.605017","s_sd":"13.548815","freqdiff":"-133","llsdiff":"-76.32","sdiff":"-1.89","freqabs":"133","llsabs":"76.32","sabs":"1.89"},
+{"word":"Americans","freq":"132","freqperc":"0.00255","lls":"24.067955","s":"29.477635","freqperc_sd":"0.000988","lls_sd":"8.383449","s_sd":"3.695116","freqdiff":"-142","llsdiff":"-20.14","sdiff":"-4.34","freqabs":"142","llsabs":"20.14","sabs":"4.34"},
+{"word":"year","freq":"38","freqperc":"0.000676","lls":"23.751502","s":"31.241966","freqperc_sd":"0.00027","lls_sd":"8.291579","s_sd":"4.716597","freqdiff":"-150","llsdiff":"-61.64","sdiff":"-7.92","freqabs":"150","llsabs":"61.64","sabs":"7.92"},
+{"word":"child","freq":"13","freqperc":"0.001436","lls":"20.58188","s":"27.32668","freqperc_sd":"0.000158","lls_sd":"7.907788","s_sd":"3.307343","freqdiff":"-164","llsdiff":"-43.07","sdiff":"-5.81","freqabs":"164","llsabs":"43.07","sabs":"5.81"},
+{"word":"job","freq":"44","freqperc":"0.001608","lls":"18.89909","s":"28.041102","freqperc_sd":"0.000776","lls_sd":"6.783402","s_sd":"3.912715","freqdiff":"-185","llsdiff":"-50.54","sdiff":"-13.13","freqabs":"185","llsabs":"50.54","sabs":"13.13"}]
+			
+			
+			var w=1125;
+			var h=700;
+			var padding= 150;
+
+			var xScale = d3.scale.linear()
+							.domain(
+								[d3.max(words, function(d) {return d.freqdiff/3;}),
+								d3.min(words,function(d,i) {return d.freqdiff/3;})])
+							.range([-100, w-1.5*padding]);
+
+			var yScale = d3.scale.linear()
+								 .domain([
+								 	d3.min(words, function(d,i) {return i;}), 
+								 	d3.max(words, function(d,i) {return i;})])
+								 .range([padding*.25, h-padding]);
+
+			var fontScale = d3.scale.linear()
+							.domain(
+								[d3.min(words, function(d) {return d.freq;}),
+								d3.max(words,function(d,i) {return d.freq;})])
+							.range([5, 50]);
+
+			var colorScale=d3.scale.quantize()
+					.domain([d3.min(words, function(d) {return d.freqdiff;}),
+						d3.max(words, function(d) {return d.freqdiff})])
+					.range(["#5D6F8F","#707194","#847197","#987198","#AA7196","#BB7192","#CB728D","#D87585","#E2787C","#EA7E73"]);	
+
+			var svg = d3.select("body")
+						.append("svg")
+						.attr("width", w)
+						.attr("height",h);
+
+			var bar = svg.selectAll("g")
+    					.data(words)
+  						.enter().append("g")
+    					.attr("transform", function(d, i) { return "translate(100,100)"; });
+
+
+
+			bar.append("text")
+				.attr("x", function(d) {return xScale(d.freqdiff/3);})
+				.attr("y", function(d,i) {return yScale(i);})
+				.text(function(d) {return d.word;})
+				.attr("fill", function(d) {
+					return colorScale(d.freqdiff);
+				})
+				.attr("font-size", function(d) {
+					return fontScale(d.freq);
+				});
+
+			var line = bar.append("line")
+				.attr("y1",h)
+				.attr("y2",-50)
+				.attr("x1", function(d) {
+					return xScale(0);
+				})
+				.attr("x2", function(d) {
+					return xScale(0);
+				})
+				.attr("stroke-width",.25)
+				.attr("stroke","black");
+
+			var axis = bar.append("text")
+				.attr("x", function(d) {return xScale(0)+5;})
+				.attr("y", function(d,i) {return yScale(145);})
+				.text("Even Distribution Among Presidential Parties")
+				.attr("font-size", "14pt");
+
+
+			
+		</script>
+		<h4>Background:</h4>
+		<p>The Washington Post created an article around words used in various SOTUs. (See post <a href="http://www.washingtonpost.com/wp-srv/special/politics/2014-state-of-the-union/language-of-sotu/">here</a>.)  While the graphic works in many ways, it is hard to compare the frequency across words and party in many cases.  
+		</p>
+		<p> This blog post is an attempt to show party discrepancies across word choices.  The most apparent result (something the Washington Post missed by lumping together) is "America" (R) vs. "Americans" (D).  There are also a few anomolies -- "help" sits on the Republican side while "economy" rests with Democratic presidents.  In addition, Republicans tend to repeat a lot of the same words while Democrats have a larger vocabulary incorporated into their speeches.  
+		</p>
+		<h4> Next Steps: </h4>
+		<p> In the next iteration, I want to change the text size and add a frequency tooltip when the user scrolls over the words since it is quite hard to read at this point.  In addition, I want to create better axes and expand the data to include all presidential SOTUs.  
+		</p>
+	</body>
+</html>
