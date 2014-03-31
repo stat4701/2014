@@ -9,7 +9,7 @@ Tags: project
 > I wanted to continue working on cleaning the datasets and I worked on better clearing the data of missing information. Many row values are set to -1111 due to missing data and I initially set these to zero. Once I started making maps of the data I realized these zero values were skewing the data since they weren't real and that I should completely eliminate these. This helped me understand the maps better and the correlation heat maps. 
 > I spent a lot of time exploring the Risk Factors data and still need to continue exploring the Demographics and Leading Causes of Death datasets.
 > I still would like to figure out how to make interactive data visualizations 
-
+[![otherMarianames](http://Gabya06.github.io/edav/assets/gaby_assets/otherMarianames.png)](http://Gabya06.github.io/edav/assets/gaby_assets/otherMarianames.png)
 [![risk_heat_bl](http://Gabya06.github.io/edav/assets/gaby_assets/risk_heat_bl.png)](http://Gabya06.github.io/edav/assets/gaby_assets/risk_heat_bl.png)
 
 [![risk_dat_relationships](http://Gabya06.raw.github.io/edav/assets/gaby_assets/risk_dat_relationships.png)](http://Gabya06.raw.github.io/edav/assets/gaby_assets/risk_dat_relationships.png)
