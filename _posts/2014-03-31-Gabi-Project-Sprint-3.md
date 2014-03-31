@@ -10,7 +10,7 @@ Tags: project
 > I spent a lot of time exploring the Risk Factors data and still need to continue exploring the Demographics and Leading Causes of Death datasets.
 > I still would like to figure out how to make interactive data visualizations 
 [![](http://Gabya06.github.io/edav/assets/gaby_assets/risk_dat_relationships.png)](http://Gabya06.github.io/edav/assets/gaby_assets/risk_dat_relationships.png)
-[![]({{ site.baseurl }}/assets/gaby_assets/risk_dat_relationships.png)](https://github.com/Gabya06/edav/assets/gaby_assets/risk_dat_relationships.png#L102)
+[![]({{ site.baseurl }}/assets/gaby_assets/risk_dat_relationships.png)](https://Gabya06.github.io/edav/assets/gaby_assets/risk_dat_relationships.png)
 
 [![risk_dat_relationships](http://Gabya06.github.io/edav/assets/gaby_assets/risk_dat_relationships.png)](http://Gabya06.github.io/edav/assets/gaby_assets/risk_dat_relationships.png)
 
