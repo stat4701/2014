@@ -1,0 +1,461 @@
+year,rank,city,state,nation,population
+1790,1,Philadelphia,PA,US,44.1
+1790,2,New York,NY,US,33.1
+1790,3,Boston,MA,US,18.3
+1790,4,Charleston,SC,US,16.4
+1790,5,Salem,MA,US,13.6
+1790,6,Baltimore,DE,US,13.5
+1790,7,Newport,RI,US,6.7
+1790,8,Providence,RI,US,6.4
+1790,9,Gloucester,MA,US,5.3
+1790,10,Newburyport,MA,US,4.8
+1790,11,Portsmouth,NH,US,4.7
+1790,12,Nantucket,RI,US,4.6
+1790,13,Middleborough,MA,US,4.5
+1790,14,New Haven,CT,US,4.5
+1790,15,Richmond,VA,US,3.8
+1790,16,Albany,NY,US,3.5
+1790,17,Norfolk,VA,US,3
+1790,18,Petersburg,VA,US,2.8
+1790,19,Alexandria,VA,US,2.8
+1790,20,Hartford,CT,US,2.7
+1800,1,Philadelphia,PA,US,61.6
+1800,2,New York,NY,US,60.5
+1800,3,Baltimore,DE,US,26.5
+1800,4,Boston,MA,US,24.9
+1800,17,Albany,NY,US,5.3
+1800,6,Salem,MA,US,14.7
+1810,9,Albany,NY,US,10.8
+1820,9,Albany,NY,US,17.9
+1830,6,Albany,NY,US,35.8
+1800,10,Newport,RI,US,6.7
+1800,11,Newburyport,MA,US,6
+1840,6,Albany,NY,US,72
+1850,7,Albany,NY,US,107
+1800,14,Portsmouth,NH,US,5.3
+1800,15,Gloucester,MA,US,5.3
+1800,16,Schenectady,NY,US,5.3
+1860,9,Albany,NY,US,116
+1800,18,New Haven,CT,US,5.2
+1870,10,Albany,NY,US,157
+1800,20,Middleborough,MA,US,4.5
+1880,11,Albany,NY,US,178
+1890,17,Albany,NY,US,189
+1900,20,Albany,NY,US,188
+1910,19,Albany,NY,US,283
+1970,20,Atlanta,GA,US,1172
+1810,6,Salem,MA,US,23.1
+1980,18,Atlanta,GA,US,1613
+1990,14,Atlanta,GA,US,2158
+2000,12,Atlanta,GA,US,3500
+2010,9,Atlanta,GA,US,4743
+1810,3,Baltimore,DE,US,46.6
+1820,3,Baltimore,DE,US,62.7
+1810,13,Newport,RI,US,7.9
+1810,14,Newburyport,MA,US,7.6
+1810,15,Portland,ME,US,7.2
+1810,16,Portsmouth,NH,US,6.9
+1830,4,Baltimore,DE,US,80.6
+1810,18,Gloucester,MA,US,5.9
+1810,19,Schenectady,NY,US,5.9
+1840,4,Baltimore,DE,US,110
+1850,4,Baltimore,DE,US,179
+1860,4,Baltimore,DE,US,221
+1870,6,Baltimore,DE,US,283
+1880,6,Baltimore,DE,US,353
+1890,6,Baltimore,DE,US,453
+1900,7,Baltimore,DE,US,532
+1910,8,Baltimore,DE,US,589
+1820,8,Salem,MA,US,22.6
+1920,10,Baltimore,DE,US,753
+1930,11,Baltimore,DE,US,836
+1940,11,Baltimore,DE,US,992
+1950,12,Baltimore,DE,US,1162
+1820,13,Portland,ME,US,8.6
+1960,13,Baltimore,DE,US,1419
+1970,16,Baltimore,DE,US,1580
+1820,16,Portsmouth,NH,US,7.3
+1820,17,Newport,RI,US,7.3
+1980,15,Baltimore,DE,US,1755
+1990,18,Baltimore,DE,US,1890
+2000,17,Baltimore,DE,US,2251
+2010,18,Baltimore,DE,US,2497
+1810,4,Boston,MA,US,38.7
+1820,4,Boston,MA,US,54
+1830,3,Boston,MA,US,85.6
+1840,3,Boston,MA,US,183
+1850,3,Boston,MA,US,308
+1860,3,Boston,MA,US,374
+1870,3,Boston,MA,US,501
+1830,9,Salem,MA,US,27.3
+1880,3,Boston,MA,US,658
+1890,4,Boston,MA,US,818
+1900,4,Boston,MA,US,1009
+1910,4,Boston,MA,US,1213
+1920,4,Boston,MA,US,1366
+1830,15,Portland,ME,US,12.6
+1930,6,Boston,MA,US,1479
+1940,6,Boston,MA,US,1746
+1950,6,Boston,MA,US,2301
+1960,7,Boston,MA,US,2501
+1970,7,Boston,MA,US,2703
+1980,7,Boston,MA,US,3064
+1990,9,Boston,MA,US,3355
+2000,9,Boston,MA,US,4032
+2010,11,Boston,MA,US,4407
+1830,20,Buffalo,NY,US,8.7
+1840,15,Buffalo,NY,US,29.3
+1850,10,Buffalo,NY,US,80
+1860,12,Buffalo,NY,US,90
+1870,12,Buffalo,NY,US,133
+1880,12,Buffalo,NY,US,171
+1890,12,Buffalo,NY,US,272
+1900,12,Buffalo,NY,US,373
+1910,13,Buffalo,NY,US,420
+1920,13,Buffalo,NY,US,539
+1930,13,Buffalo,NY,US,620
+1840,16,Portland,ME,US,28.6
+1940,14,Buffalo,NY,US,708
+1950,14,Buffalo,NY,US,895
+1960,18,Buffalo,NY,US,1054
+1800,5,Charleston,SC,US,18.8
+1810,5,Charleston,SC,US,24.7
+1820,7,Charleston,SC,US,24.8
+1830,8,Charleston,SC,US,30.3
+1840,10,Charleston,SC,US,42.6
+1850,15,Charleston,SC,US,50
+1850,17,Chicago,IL,US,40
+1860,8,Chicago,IL,US,123
+1870,5,Chicago,IL,US,324
+1880,4,Chicago,IL,US,543
+1890,3,Chicago,IL,US,1141
+1900,2,Chicago,IL,US,1759
+1910,2,Chicago,IL,US,2283
+1920,2,Chicago,IL,US,2859
+1930,2,Chicago,IL,US,3718
+1940,2,Chicago,IL,US,4210
+1950,2,Chicago,IL,US,5208
+1960,3,Chicago,IL,US,6377
+1970,3,Chicago,IL,US,7164
+1980,3,Chicago,IL,US,7325
+1850,20,Portland,ME,US,36
+1990,3,Chicago,IL,US,7373
+2000,3,Chicago,IL,US,8419
+2010,3,Chicago,IL,US,9023
+1820,12,Cincinnati,OH,US,9.6
+1830,10,Cincinnati,OH,US,24.8
+1840,7,Cincinnati,OH,US,54.8
+1850,5,Cincinnati,OH,US,133
+1860,5,Cincinnati,OH,US,192
+1870,7,Cincinnati,OH,US,257
+1880,7,Cincinnati,OH,US,307
+1890,8,Cincinnati,OH,US,344
+1900,9,Cincinnati,OH,US,379
+1910,12,Cincinnati,OH,US,425
+1920,15,Cincinnati,OH,US,470
+1930,15,Cincinnati,OH,US,580
+1940,17,Cincinnati,OH,US,559
+1950,17,Cincinnati,OH,US,813
+1960,19,Cincinnati,OH,US,994
+1860,19,Cleveland,OH,US,49
+1870,17,Cleveland,OH,US,101
+1880,13,Cleveland,OH,US,169
+1890,11,Cleveland,OH,US,274
+1900,8,Cleveland,OH,US,396
+1910,9,Cleveland,OH,US,580
+1920,7,Cleveland,OH,US,834
+1930,8,Cleveland,OH,US,976
+1940,10,Cleveland,OH,US,1079
+1950,9,Cleveland,OH,US,1425
+1960,11,Cleveland,OH,US,1785
+1970,12,Cleveland,OH,US,1960
+1980,16,Cleveland,OH,US,1752
+1950,15,Dallas,TX,US,855
+1960,12,Dallas,TX,US,1435
+1970,11,Dallas,TX,US,2016
+1980,10,Dallas,TX,US,2713
+1990,10,Dallas,TX,US,3265
+2000,7,Dallas,TX,US,4445
+2010,6,Dallas,TX,US,5685
+2000,18,Denver,CO,US,2231
+2010,16,Denver,CO,US,2716
+1840,20,Detroit,MI,US,21.2
+1850,19,Detroit,MI,US,38
+1860,16,Detroit,MI,US,59
+1870,16,Detroit,MI,US,101
+1880,15,Detroit,MI,US,147
+1890,15,Detroit,MI,US,237
+1900,13,Detroit,MI,US,321
+1910,11,Detroit,MI,US,503
+1920,5,Detroit,MI,US,1071
+1930,4,Detroit,MI,US,1721
+1940,5,Detroit,MI,US,2041
+1950,5,Detroit,MI,US,2884
+1960,5,Detroit,MI,US,3750
+1970,5,Detroit,MI,US,4085
+1980,5,Detroit,MI,US,4214
+1990,7,Detroit,MI,US,3698
+2000,11,Detroit,MI,US,3903
+2010,12,Detroit,MI,US,4160
+1940,19,Houston,TX,US,471
+1950,18,Houston,TX,US,701
+1960,17,Houston,TX,US,1140
+1970,15,Houston,TX,US,1678
+1980,9,Houston,TX,US,2757
+1990,11,Houston,TX,US,3088
+2000,8,Houston,TX,US,4063
+2010,8,Houston,TX,US,5382
+1920,20,Indianapolis,IN,US,323
+1930,20,Indianapolis,IN,US,379
+1890,19,Kansas City,MO,US,165
+1900,18,Kansas City,MO,US,242
+1910,16,Kansas City,MO,US,357
+1920,17,Kansas City,MO,US,455
+1930,16,Kansas City,MO,US,561
+1940,16,Kansas City,MO,US,632
+1950,19,Kansas City,MO,US,698
+1960,20,Kansas City,MO,US,921
+1910,15,Los Angeles,CA,US,374
+1920,11,Los Angeles,CA,US,682
+1930,5,Los Angeles,CA,US,1617
+1940,4,Los Angeles,CA,US,2268
+1950,3,Los Angeles,CA,US,4250
+1960,2,Los Angeles,CA,US,6805
+1970,2,Los Angeles,CA,US,7984
+1980,2,Los Angeles,CA,US,10841
+1990,2,Los Angeles,CA,US,13522
+2000,2,Los Angeles,CA,US,14661
+2010,2,Los Angeles,CA,US,15750
+1830,16,Louisville,KY,US,10.3
+1840,12,Louisville,KY,US,34.2
+1850,13,Louisville,KY,US,61
+1860,13,Louisville,KY,US,88
+1870,13,Louisville,KY,US,129
+1880,16,Louisville,KY,US,143
+1890,18,Louisville,KY,US,183
+1900,19,Louisville,KY,US,227
+1960,15,Miami,FL,US,1173
+1970,13,Miami,FL,US,1834
+1980,11,Miami,FL,US,2616
+1990,6,Miami,FL,US,3948
+2000,6,Miami,FL,US,4919
+2010,7,Miami,FL,US,5513
+1860,20,Milwaukee,WI,US,48
+1870,18,Milwaukee,WI,US,75
+1880,18,Milwaukee,WI,US,121
+1890,16,Milwaukee,WI,US,212
+1900,15,Milwaukee,WI,US,296
+1910,14,Milwaukee,WI,US,389
+1920,14,Milwaukee,WI,US,478
+1930,14,Milwaukee,WI,US,615
+1940,15,Milwaukee,WI,US,705
+1950,16,Milwaukee,WI,US,829
+1960,16,Milwaukee,WI,US,1150
+1970,17,Milwaukee,WI,US,1252
+1880,20,Minneapolis,MN,US,94
+1890,9,Minneapolis,MN,US,305
+1900,11,Minneapolis,MN,US,374
+1910,10,Minneapolis,MN,US,526
+1920,12,Minneapolis,MN,US,626
+1930,12,Minneapolis,MN,US,753
+1940,12,Minneapolis,MN,US,886
+1950,13,Minneapolis,MN,US,987
+1960,14,Minneapolis,MN,US,1377
+1970,14,Minneapolis,MN,US,1701
+1980,14,Minneapolis,MN,US,1788
+1990,15,Minneapolis,MN,US,2080
+2000,16,Minneapolis,MN,US,2389
+2010,17,Minneapolis,MN,US,2651
+1800,13,Nantucket,MA,US,5.6
+1810,17,Nantucket,MA,US,6.8
+1820,18,Nantucket,MA,US,7.3
+1840,18,New Bedford,MA,US,24.1
+1810,20,New Haven,CT,US,5.8
+1820,20,New Haven,CT,US,7.2
+1830,17,New Haven,CT,US,10.2
+1840,19,New Haven,CT,US,21.9
+1870,20,New Haven,CT,US,65
+1810,8,New Orleans,LA,US,17.2
+1820,6,New Orleans,LA,US,27.2
+1830,5,New Orleans,LA,US,46.1
+1840,5,New Orleans,LA,US,105
+1850,6,New Orleans,LA,US,123
+1860,7,New Orleans,LA,US,172
+1870,8,New Orleans,LA,US,196
+1880,10,New Orleans,LA,US,219
+1890,14,New Orleans,LA,US,245
+1900,16,New Orleans,LA,US,291
+1910,18,New Orleans,LA,US,344
+1920,18,New Orleans,LA,US,393
+1930,18,New Orleans,LA,US,469
+1940,18,New Orleans,LA,US,557
+1950,20,New Orleans,LA,US,660
+1810,1,New York,NY,US,101
+1820,1,New York,NY,US,131
+1830,1,New York,NY,US,215
+1840,1,New York,NY,US,374
+1850,1,New York,NY,US,650
+1860,1,New York,NY,US,1143
+1870,1,New York,NY,US,1687
+1880,1,New York,NY,US,2234
+1890,1,New York,NY,US,2977
+1900,1,New York,NY,US,4266
+1910,1,New York,NY,US,6021
+1920,1,New York,NY,US,7041
+1930,1,New York,NY,US,8667
+1940,1,New York,NY,US,10135
+1950,1,New York,NY,US,12604
+1960,1,New York,NY,US,14437
+1970,1,New York,NY,US,16193
+1980,1,New York,NY,US,16500
+1990,1,New York,NY,US,16754
+2000,1,New York,NY,US,18689
+2010,1,New York,NY,US,20009
+1830,14,Newark,NJ,US,14.4
+1840,14,Newark,NJ,US,29.8
+1850,14,Newark,NJ,US,57
+1860,10,Newark,NJ,US,103
+1800,9,Norfolk,VA,US,6.9
+1810,12,Norfolk,VA,US,9.2
+1820,14,Norfolk,VA,US,8.5
+1830,18,Norfolk,VA,US,9.8
+1810,2,Philadelphia,PA,US,87.3
+1820,2,Philadelphia,PA,US,109
+1830,2,Philadelphia,PA,US,161
+1840,2,Philadelphia,PA,US,259
+1850,2,Philadelphia,PA,US,405
+1860,2,Philadelphia,PA,US,608
+1870,2,Philadelphia,PA,US,747
+1880,2,Philadelphia,PA,US,949
+1890,2,Philadelphia,PA,US,1180
+1900,3,Philadelphia,PA,US,1454
+1910,3,Philadelphia,PA,US,1746
+1920,3,Philadelphia,PA,US,2072
+1930,3,Philadelphia,PA,US,2264
+1940,3,Philadelphia,PA,US,2538
+1950,4,Philadelphia,PA,US,3297
+1960,4,Philadelphia,PA,US,3989
+1970,4,Philadelphia,PA,US,4419
+1980,4,Philadelphia,PA,US,4830
+1990,5,Philadelphia,PA,US,4970
+2000,5,Philadelphia,PA,US,5418
+2010,5,Philadelphia,PA,US,6003
+1980,19,Phoenix,AZ,US,1409
+1990,16,Phoenix,AZ,US,2006
+2000,14,Phoenix,AZ,US,2975
+2010,13,Phoenix,AZ,US,3863
+1820,19,Pittsburgh,PA,US,7.3
+1830,13,Pittsburgh,PA,US,15.4
+1840,9,Pittsburgh,PA,US,43.7
+1850,9,Pittsburgh,PA,US,86
+1860,11,Pittsburgh,PA,US,93
+1870,9,Pittsburgh,PA,US,170
+1880,8,Pittsburgh,PA,US,265
+1890,7,Pittsburgh,PA,US,396
+1900,6,Pittsburgh,PA,US,532
+1910,6,Pittsburgh,PA,US,655
+1920,8,Pittsburgh,PA,US,775
+1930,9,Pittsburgh,PA,US,960
+1940,8,Pittsburgh,PA,US,1134
+1950,10,Pittsburgh,PA,US,1400
+1960,8,Pittsburgh,PA,US,2105
+1970,9,Pittsburgh,PA,US,2124
+1980,13,Pittsburgh,PA,US,1810
+1990,19,Pittsburgh,PA,US,1744
+1800,8,Providence,RI,US,7.6
+1810,10,Providence,RI,US,10.1
+1820,11,Providence,RI,US,11.8
+1830,11,Providence,RI,US,22.4
+1840,11,Providence,RI,US,40.9
+1850,12,Providence,RI,US,65
+1860,15,Providence,RI,US,69
+1870,15,Providence,RI,US,101
+1880,17,Providence,RI,US,128
+1890,20,Providence,RI,US,163
+1900,17,Providence,RI,US,243
+1910,20,Providence,RI,US,274
+1800,12,Richmond,VA,US,5.7
+1810,11,Richmond,VA,US,9.7
+1820,10,Richmond,VA,US,12.1
+1830,12,Richmond,VA,US,16.1
+1830,19,Rochester,NY,US,9.2
+1840,13,Rochester,NY,US,31.4
+1850,16,Rochester,NY,US,49
+1860,18,Rochester,NY,US,56
+1870,19,Rochester,NY,US,73
+1880,19,Rochester,NY,US,103
+1970,19,San Diego,CA,US,1198
+1980,17,San Diego,CA,US,1704
+1990,13,San Diego,CA,US,2348
+2000,15,San Diego,CA,US,2674
+2010,15,San Diego,CA,US,2985
+1860,17,San Francisco,CA,US,57
+1870,11,San Francisco,CA,US,151
+1880,9,San Francisco,CA,US,236
+1890,10,San Francisco,CA,US,302
+1900,10,San Francisco,CA,US,375
+1910,7,San Francisco,CA,US,604
+1920,9,San Francisco,CA,US,771
+1930,7,San Francisco,CA,US,996
+1940,7,San Francisco,CA,US,1156
+1950,7,San Francisco,CA,US,2131
+1960,6,San Francisco,CA,US,2607
+1970,6,San Francisco,CA,US,3049
+1980,6,San Francisco,CA,US,4185
+1990,4,San Francisco,CA,US,5386
+2000,4,San Francisco,CA,US,5973
+2010,4,San Francisco,CA,US,6828
+1800,19,Savannah,GA,US,5.2
+1820,15,Savannah,GA,US,7.5
+1920,19,Seattle,WA,US,334
+1930,19,Seattle,WA,US,390
+1940,20,Seattle,WA,US,451
+1970,18,Seattle,WA,US,1238
+1980,20,Seattle,WA,US,1392
+1990,12,Seattle,WA,US,2354
+2000,13,Seattle,WA,US,3018
+2010,14,Seattle,WA,US,3446
+1840,17,St. Louis,MO,US,28.4
+1850,8,St. Louis,MO,US,95
+1860,6,St. Louis,MO,US,176
+1870,4,St. Louis,MO,US,345
+1880,5,St. Louis,MO,US,386
+1890,5,St. Louis,MO,US,490
+1900,5,St. Louis,MO,US,626
+1910,5,St. Louis,MO,US,760
+1920,6,St. Louis,MO,US,859
+1930,10,St. Louis,MO,US,950
+1940,9,St. Louis,MO,US,1102
+1950,8,St. Louis,MO,US,1541
+1960,10,St. Louis,MO,US,1864
+1970,10,St. Louis,MO,US,2123
+1980,12,St. Louis,MO,US,1849
+1990,17,St. Louis,MO,US,1947
+2000,19,St. Louis,MO,US,2078
+2010,20,St. Louis,MO,US,2246
+1850,18,Syracuse,NY,US,38
+1990,20,Tampa,FL,US,1709
+2000,20,Tampa,FL,US,2062
+2010,19,Tampa,FL,US,2442
+1800,7,Washington,DC,US,11.2
+1810,7,Washington,DC,US,20.4
+1820,5,Washington,DC,US,28.8
+1830,7,Washington,DC,US,35.5
+1840,8,Washington,DC,US,50.2
+1850,11,Washington,DC,US,67
+1860,14,Washington,DC,US,80
+1870,14,Washington,DC,US,123
+1880,14,Washington,DC,US,164
+1890,13,Washington,DC,US,253
+1900,14,Washington,DC,US,302
+1910,17,Washington,DC,US,357
+1920,16,Washington,DC,US,467
+1930,17,Washington,DC,US,527
+1940,13,Washington,DC,US,800
+1950,11,Washington,DC,US,1287
+1960,9,Washington,DC,US,1905
+1970,8,Washington,DC,US,2671
+1980,8,Washington,DC,US,2912
+1990,8,Washington,DC,US,3363
+2000,10,Washington,DC,US,3934
+2010,10,Washington,DC,US,4697

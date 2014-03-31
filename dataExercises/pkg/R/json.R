@@ -8,7 +8,6 @@
 readJSONFile <- function(file) {
     out <- RJSONIO::fromJSON(file)
     ## result is a list of lists
-    print(str(out, max=1))
-    print(str(out[[1]]))
+    out <- do.call("rbind", out)
     return(as.data.frame(out))
 }
