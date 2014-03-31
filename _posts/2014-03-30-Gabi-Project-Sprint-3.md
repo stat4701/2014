@@ -17,7 +17,7 @@ Tags: project
 
 ### Correlations - Heat Maps, Clustering graphs and Histograms
 > I found a function called 'ggpairs' which shows the correlation values and some clusters, thought it was an interesting start to exploring correlations:
-[![risk_dat_relationships](http://Gabya06.github.io/edav/assets/gaby_assets/risk_dat_relationships.png)](http://Gabya06.github.io/edav/assets/gaby_assets/risk_dat_relationships.png)
+[![risk_dat_relationships](http://Gabya06.github.io/edav/assets/gaby_assets/risk_dat_relationships.png?raw=true)](http://Gabya06.github.io/edav/assets/gaby_assets/risk_dat_relationships.pngraw=true)
 
 
 > Plotted a few heat maps using various colors which all showed the highest correlation between obesity and no exercise as well as high blood pressure and diabetes. 
