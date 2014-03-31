@@ -9,7 +9,8 @@ Tags: project
 > I wanted to continue working on cleaning the datasets and I worked on better clearing the data of missing information. Many row values are set to -1111 due to missing data and I initially set these to zero. Once I started making maps of the data I realized these zero values were skewing the data since they weren't real and that I should completely eliminate these. This helped me understand the maps better and the correlation heat maps. 
 > I spent a lot of time exploring the Risk Factors data and still need to continue exploring the Demographics and Leading Causes of Death datasets.
 > I still would like to figure out how to make interactive data visualizations 
-[![fewFruitNoExercise_byState](http://Gabya06.github.io/edav/assets/gaby_assets/fewFruitNoExercise_byState.png)](http://Gabya06.github.io/edav/assets/gaby_assets/fewFruitNoExercise_byState.png)
+
+[![risk_dat_relationships](http://Gabya06.github.io/edav/assets/gaby_assets/risk_dat_relationships.png)](http://Gabya06.github.io/edav/assets/gaby_assets/risk_dat_relationships.png)
 
 
 ### Progress Made:
@@ -18,10 +19,11 @@ Tags: project
 
 ### Correlations - Heat Maps, Clustering graphs and Histograms
 > I found a function called 'ggpairs' which shows the correlation values and some clusters, thought it was an interesting start to exploring correlations:
-[![risk_dat_relationships](https://Gabya06.github.io/edav/assets/gaby_assets/risk_dat_relationships.png?raw=true)](https://Gabya06.github.io/edav/assets/gaby_assets/risk_dat_relationships.png?raw=true)
 
+[![risk_dat_relationships](http://Gabya06.github.io/edav/assets/gaby_assets/risk_dat_relationships.png)](http://Gabya06.github.io/edav/assets/gaby_assets/risk_dat_relationships.png)
 
 > Plotted a few heat maps using various colors which all showed the highest correlation between obesity and no exercise as well as high blood pressure and diabetes. 
+
 [![risk_heat_bl](http://Gabya06.github.io/edav/assets/gaby_assets/risk_heat_bl.png?raw=true)](http://Gabya06.github.io/edav/assets/gaby_assets/risk_heat_bl.png?raw=true)
 
 [![risk_heat_org](http://Gabya06.github.io/edav/assets/gaby_assets/risk_heat_org.png?raw=true)](http://Gabya06.github.io/edav/assets/gaby_assets/risk_heat_org.png?raw=true)
@@ -33,10 +35,8 @@ Tags: project
 3) Percent of people who reported not exercising and the percent of people who with high blood pressure
 
 [![risk_heat_obesity20](http://Gabya06.github.io/edav/assets/gaby_assets/risk_heat_obesity20.png)](http://Gabya06.github.io/edav/assets/gaby_assets/risk_heat_obesity20.png)
-
 > I explored scatter plots for obesity and other variables to visualize the clustering between variables
 [![risk_obesityNoEx_scatter](http://Gabya06.github.io/edav/assets/gaby_assets/risk_obesityNoEx_scatter.png)](http://Gabya06.github.io/edav/assets/gaby_assets/risk_obesityNoEx_scatter.png)
-
 > I looked at histogram of obesity percentage, where I found that the bulk of the obesity percentages are between 20 and 30%.
 [![obesity_hist](http://Gabya06.github.io/edav/assets/gaby_assets/obesity_hist.png)](http://Gabya06.github.io/edav/assets/gaby_assets/obesity_hist.png)
 
