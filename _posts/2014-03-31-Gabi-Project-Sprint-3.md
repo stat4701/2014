@@ -73,6 +73,7 @@ I used the Paired palette from colorbewer which shows different colors paired, a
 
 [![obesity_map_counties_Purd](http://Gabya06.github.io/edav/assets/gaby_assets/obesity_map_counties_Purd.png)](http://Gabya06.github.io/edav/assets/gaby_assets/obesity_map_counties_Purd.png)
 
+
 > To be consistent, I also created maps to show obesity greater than 10% and 20%:
 [![obesity10_map_counties_org](http://Gabya06.github.io/edav/assets/gaby_assets/obesity10_map_counties_org.png)](http://Gabya06.github.io/edav/assets/gaby_assets/obesity10_map_counties_org.png)
 
