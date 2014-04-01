@@ -30,7 +30,7 @@ Tags: project
 > I then subsetted risk data to explore correlations for which the percentages of obesity was greater than 20%. After removing the less than 20 % obesity data, I found that the top 3 correlations between risk factors are:
 > 1) Percent of people with diabetes and percent of people with high blood pressure
 > 2) Percent of people who reported not exercising and the percent of people who are obese
-> 3) Percent of people who reported not exercising and the percent of people who with high blood pressure
+> 3) Percent of people who reported not exercising and the percent of people who reported having high blood pressure
 
 [![risk_heat_obesity20](http://Gabya06.github.io/edav/assets/gaby_assets/risk_heat_obesity20.png)](http://Gabya06.github.io/edav/assets/gaby_assets/risk_heat_obesity20.png)
 
@@ -38,6 +38,7 @@ Tags: project
 [![risk_obesityNoEx_scatter](http://Gabya06.github.io/edav/assets/gaby_assets/risk_obesityNoEx_scatter.png)](http://Gabya06.github.io/edav/assets/gaby_assets/risk_obesityNoEx_scatter.png)
 
 > I looked at histogram of obesity percentage, where I found that the bulk of the obesity percentages are between 20% and 30%.
+
 [![obesity_hist](http://Gabya06.github.io/edav/assets/gaby_assets/obesity_hist.png)](http://Gabya06.github.io/edav/assets/gaby_assets/obesity_hist.png)
 
 ### Progress I made using ggplot for Maps - State Level:
