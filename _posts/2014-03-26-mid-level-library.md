@@ -198,3 +198,35 @@ d[p.a] // should also work
 - Brush
 </section>
 </section>
+
+
+<section>
+	<section>
+## Graphs
+</section>
+	<section>
+## heartbeat
+
+[![](http://infosthetics.com/archives/one_heartbeat.jpg)](http://infosthetics.com/archives/2014/03/bouncing_graphic_replays_human_heartbeat_dynamics_of_yesterday.html)
+
+</section>
+	<section>
+## Maps 1
+
+[![](http://weburbanist.com/wp-content/uploads/2014/03/walking-468x289.png)](http://weburbanist.com/2014/03/29/city-vs-suburb-comparing-one-mile-in-streets-culs-de-sac/)
+</section>
+	<section>
+## Maps 2
+
+[![](http://24.media.tumblr.com/a056c6999479d9e58ef33f0376a274fa/tumblr_n2w9fnTOrC1s3dn7vo1_500.png)](http://vizual-statistix.tumblr.com/post/80468941142/unlike-like-emperor-kuzco-i-was-actually-born)
+</section>
+</section>
+<section>
+	<section>
+## Migrations
+
+[![](http://qzprod.files.wordpress.com/2014/03/vid_global_migration_datasheet_web-gimp3.png?w=1024&h=964)](http://www.global-migration.info/)
+</section>
+</section>
+
+
