@@ -152,20 +152,7 @@ Just to show a final example, of the 5 matches played at the opponents home wher
 * (21)USA 1 x 0 Barbados(121) - 06/22/2008 - Bridgetown
 * (66)Cameroon 1 x 0 Guinea-Bissau(166) - 02/29/2012 - Bissau
 * (35)Algeria 1 x 0 Rwanda(135) - 06/16/2013 - Kigali
-```html
-<div class="buttonContainer" align="center">
-<a class="button" target="_blank" rel="nofollow" id="aggregated" style="opacity:1"><span class="a-btn-text">Aggregated</span></a>   
-<a class="button" target="_blank" rel="nofollow" id="perLocation" style="opacity:0.4"><span class="a-btn-text">Detail Home/Away</span></a>    
-<a class="button" target="_blank" rel="nofollow" id="perGame" style="opacity:0.4"><span class="a-btn-text">Detail Matches</span></a>
-</div>
-<svg></svg>
-<div id="tooltip" class="hidden" align="center">
-<p class="title"><b><span id="matchScore"></span></p></b>
-<p align="left"><b>Date: </b><span id="matchDate"></span>
-<br><b>Location: </b><span id="matchLocation"></span>
-<br><b>Tournament: </b><span id="matchTournament"></span></p>
-</div>
-```
+
 
 ###The Process
 
