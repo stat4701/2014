@@ -7,6 +7,7 @@ tags: blog
 
 <meta charset="utf-8">
 
+<script src="http://d3js.org/d3.v3.min.js"></script>
 <style type="text/css">
       /* padding-bottom and top for image */
       .mfp-no-margins img.mfp-img {
@@ -47,7 +48,8 @@ tags: blog
         font-size: 12px;
         line-height: 20px;
       }
-blog      #tooltip .title
+
+      #tooltip .title
       {
         display: block;
         margin-bottom: 1em;
@@ -86,13 +88,9 @@ blog      #tooltip .title
         -moz-border-radius:12px;
         border-radius:12px;  
         overflow:hidden;
-        -webkit-transition:all 0.3s line
-
-
+        -webkit-transition:all 0.3s linear;
         -moz-transition:all 0.3s linear;
-        
-
-        transition:all 0.3s linear;
+        -o-transition:all 0.3s linear;
         transition:all 0.3s linear;
     }
 
@@ -137,42 +135,35 @@ blog      #tooltip .title
 ### Modeling the Probability of a Soccer Match Outcome ###
 
 Analyzing the outcomes of 13.337 Fifa official matches since 1994 involving the 2014 Fifa World Cup contenders, a very clear trend can be observed from the matches data.
-
 Based on scraped data from Fifa.com, a strong correlation could be observed between the games locations (home or away), the teams positions in the Fifa Ranking (more precisely, the distance between their positions) and the proportion of matches won or lost.
 For instance, of the 48 matches played at home where a team challenged an opponent 10 positions below in the ranking table:
-
 * 27 (56.25%) were won by the home team
 * 12 (25%) ended up with a draw
 * 9 (18.75%) were lost
 * Considering half of the draws as positive results and half as negative, it sums up to **68.75% of positive results**
-
 For the exact same ranking distance, of the 44 matches played at the opponents home where the opponent was 10 positions below in the ranking table: 
-
 * 9 (20.45%) were won by the home team
 * 22 (50%) ended up with a draw
 * 13 (29.55%) were lost.
 * Considering half of the draws as positive results and half as negative, it sums up to **45.45% of positive results**.
-
 Just to show a final example, of the 5 matches played at the opponents home where the opponent was 100 positions below in the ranking table, 100% of them were won by the away team. The matches for this case were:
-
 * (1)Brazil 3 x 0 Wales(101) - 05/23/2000 – Cardiff
 * (7)Spain 2 x 0 Latvia(107) - 06/02/2007 - Riga
 * (21)USA 1 x 0 Barbados(121) - 06/22/2008 - Bridgetown
 * (66)Cameroon 1 x 0 Guinea-Bissau(166) - 02/29/2012 - Bissau
 * (35)Algeria 1 x 0 Rwanda(135) - 06/16/2013 - Kigali
-
 ```html
 <div class="buttonContainer" align="center">
-      <a class="button" target="_blank" rel="nofollow" id="aggregated" style="opacity:1"><span class="a-btn-text">Aggregated</span></a>   
-      <a class="button" target="_blank" rel="nofollow" id="perLocation" style="opacity:0.4"><span class="a-btn-text">Detail Home/Away</span></a>    
-      <a class="button" target="_blank" rel="nofollow" id="perGame" style="opacity:0.4"><span class="a-btn-text">Detail Matches</span></a>
+<a class="button" target="_blank" rel="nofollow" id="aggregated" style="opacity:1"><span class="a-btn-text">Aggregated</span></a>   
+<a class="button" target="_blank" rel="nofollow" id="perLocation" style="opacity:0.4"><span class="a-btn-text">Detail Home/Away</span></a>    
+<a class="button" target="_blank" rel="nofollow" id="perGame" style="opacity:0.4"><span class="a-btn-text">Detail Matches</span></a>
 </div>
 <svg></svg>
 <div id="tooltip" class="hidden" align="center">
-    <p class="title"><b><span id="matchScore"></span></p></b>
-    <p align="left"><b>Date: </b><span id="matchDate"></span>
-    <br><b>Location: </b><span id="matchLocation"></span>
-    <br><b>Tournament: </b><span id="matchTournament"></span></p>
+<p class="title"><b><span id="matchScore"></span></p></b>
+<p align="left"><b>Date: </b><span id="matchDate"></span>
+<br><b>Location: </b><span id="matchLocation"></span>
+<br><b>Tournament: </b><span id="matchTournament"></span></p>
 </div>
 ```
 
@@ -204,7 +195,6 @@ The graph was coded using javascript, D3.js and Sublime Text 3.
 The ranking table is updated on a monthly basis, based on points earned from official matches results. The points earned depend on the opposing team ranking position, the importance of the match (whether it is a friendly match, a qualifying, confederations cup or world cup match) and the confederation of the opposing team. More information can be found [here](http://www.fifa.com/worldranking/procedureandschedule/menprocedure/index.html).
 
 
-<script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 //==========================================================================================================//
 //= Data Load                                                                                              =//
