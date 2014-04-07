@@ -209,6 +209,7 @@ The graph was coded using javascript, D3.js and Sublime Text 3.
 The ranking table is updated on a monthly basis, based on points earned from official matches results. The points earned depend on the opposing team ranking position, the importance of the match (whether it is a friendly match, a qualifying, confederations cup or world cup match) and the confederation of the opposing team. More information can be found [here](http://www.fifa.com/worldranking/procedureandschedule/menprocedure/index.html).
 
 
+<script src="http://d3js.org/d3.v3.min.js"></script>
 
 <script>
 //==========================================================================================================//
