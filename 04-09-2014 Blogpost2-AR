@@ -1,0 +1,18 @@
+London Olympics 2012 Continuation..
+
+Blog Objective:
+This blog focus on visualizing interactions between variables of medal counts, country GDP, Olympic team sizes and country population. The blog will capture details on how these variables were analyzed using Tableau software and highlight inferences from the visually compelling depictions of the data. Focus is more on insightful conclusions as opposed to the mechanics of how the data was manipulated in Tableau.
+
+Scope:
+We selected 2 key variables with any countries ability to win more medals – GDP and team sizes against the backdrop of country population. The rationale for selecting these variables was to confirm our hypotheses that winning medals is not by happenstance but needs clear and focused efforts, adequate funding and strong support by any country. Typically this is achieved by countries whose economies are doing well which is a reflection of their GDP. Another key variable considered was team size to understand if a large contingent can indeed enable a country to win more medals.
+
+Analysis:
+
+
+http://public.tableausoftware.com/views/Blog2post/Dashboard1?:embed=y&:toolbar=no&:display_count=no
+
+Tableau software was used to visually depict the above variables in 3 dimensions – 1) cross comparison between medal count vs. GDP, Team size and population. Users can select the country of interest to see its ranking of medals, GDP, team size, and population. This provided a comparative view on country of choice. 2) comparative view specifically of medal count and GDP and 3) comparative view of specifically gold medal count vs. team size.
+
+It was clear from the visual analysis that there is a strong correlation on country GDP and its ability to win medals. For ex. US with the highest GDP was able to win the maximum medals. It was interesting to note that US also had one of the largest contingent representing the Olympics. It highlighted that countries with good economies have the means to focus on a large number of Olympic events and provide the needed funding to compete rigorously had a better chance of winning medals. China is a great example of understanding this critical correlation and successfully executing on this principle to win the second largest tally of medal counts. There seems to be a stronger correlation between GDP and medal count vs. team size and medal count. For ex. Russia’s team size was greater than China but won fewer medals. US had the largest team size but lower medal count than China.
+
+Population correlation was found to be weaker since large population in a country does not necessarily indicate strong medal counts. India was an excellent example of this conclusion. However, a certain population threshold was found to be critical to maximize the probability of winning medals since it gives an opportunity to focus on multiple events for success.
