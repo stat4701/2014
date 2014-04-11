@@ -51,5 +51,11 @@ ggplot(data=all.scores) + # ggplot works on data.frames, always
 
 ![Plot](https://github.com/msingh4674/edav/tree/gh-pages/assets/msingh4674-1/sentiment comparison.png)
 
+Future Improvements
+
+I really enjoyed the talk by Pablo Barbera and that give me a lot of new ideas for improving this sentiment analysis. 
+Some of the new packages and the functionality he showed such as applying logisitc regression and filtering out the noise 
+from the tweets will help me to improve the code. 
+
 
 
