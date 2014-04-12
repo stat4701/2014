@@ -431,7 +431,7 @@ for i in [1,2,3]:
 
 
 
-[!image](https://pbs.twimg.com/media/BlAW2LTCUAEeKEg.png:large)
+[![](https://pbs.twimg.com/media/BlAW2LTCUAEeKEg.png:large)]
 
 
 # Next Predictive Modeling, Communicating Results ...
