@@ -4,8 +4,14 @@ makeResponse<- function(){
            levels=1:26, labels=indicators)
 }
 inputData <- data.frame(V1 = makeResponse(),
+<<<<<<< HEAD
                         
                         V2 = makeResponse())
+=======
+                        V2 = makeResponse())
+
+
+>>>>>>> FETCH_HEAD
 oldFunction <- function(inputData){
     out <- as.data.frame(matrix(0, nrow(inputData),
                                 length(unique(indicators))))
@@ -19,12 +25,15 @@ oldFunction <- function(inputData){
     return(out)
 }
 
+<<<<<<< HEAD
 newFunction <- function(inputData){
     Ind1 <- model.matrix(~V1 -1 ,data=inputData)
     Ind2 <- model.matrix(~V2 -1 ,data=inputData)
     as.data.frame(Ind1 | Ind2)
 }
 
+=======
+>>>>>>> FETCH_HEAD
 system.time(oldResult <- oldFunction(inputData))
 system.time(newResult <- newFunction(inputData))
 dim(oldResult)
