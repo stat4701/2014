@@ -110,7 +110,7 @@ In[82]:
 
 ```
 #set data source path
-path = '/Users/mayank/Google Drive/DataSets/DetectingMedicareClaimAnomalies/DataSet/Extracted/Medicare_Provider_Charge_Outpatient_APC30_CY2011_v2.csv'
+path = '/Users/DataSets/DetectingMedicareClaimAnomalies/DataSet/Extracted/Medicare_Provider_Charge_Outpatient_APC30_CY2011_v2.csv'
 
 header_row = ['APC', 'HCP_Id', 'HCP_Name', 'HCP_St_Add', 'HCP_Add_City', 'HCP_Add_State', 'HCP_Add_Zip_Code', 'Hosp_Ref_Region_Desc', 'OPT_Srvc', 'Avg_Est_Submitted_Charges', 'Avg_Tot_Payments']
 
@@ -217,7 +217,7 @@ APC_counts[:10].plot(kind='barh')
 
 
 
-[!image](https://pbs.twimg.com/media/BlAWicyCQAAsQh_.png:large)
+[![](https://pbs.twimg.com/media/BlAWicyCQAAsQh_.png:large)]
 
 
 In[86]:
@@ -259,7 +259,7 @@ State_counts[:10].plot(kind='bar')
 
 
 
-[!image](https://pbs.twimg.com/media/BlAXbGVCAAA5A-G.png:large)
+[![](https://pbs.twimg.com/media/BlAXbGVCAAA5A-G.png:large)]
 
 
 ### Describe Data
@@ -382,7 +382,7 @@ pd.scatter_matrix(getData, alpha=0.2, figsize=(8, 8), diagonal='kde')
 
 
 
-[!image](https://pbs.twimg.com/media/BlAXESBCYAEhyh8.png:large)
+[![](https://pbs.twimg.com/media/BlAXESBCYAEhyh8.png:large)]
 
 
 As is clear from the graphs that infact there is a seperation in the claims.
@@ -415,7 +415,7 @@ getData.groupby('APC').Avg_Est_Submitted_Charges.sum().plot(kind='barh', color='
 
 
 
-[!image](https://pbs.twimg.com/media/BlAWaLTCEAEHEDK.png:large)
+[![](https://pbs.twimg.com/media/BlAWaLTCEAEHEDK.png:large)]
 
 
 In[91]:
