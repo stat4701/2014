@@ -78,7 +78,12 @@ var aus_open = [
 
 and could have a lot more meaningful information incorporated into my data points! Clearly, this latter structure is a large improvement and I started to really appreciate d3's data-binding feature upon discovering this.<br>
 
-The final code and visualization can be viewed here: [Grand Slam visualization](http://bl.ocks.org/celenechang/10517119). In general I'm pleased with how it turned out. The trends are interesting; here are a few:<br><br>
+The final code and visualization can be viewed here: [Grand Slam visualization](http://bl.ocks.org/celenechang/10517119). Here's a screenshot:<br>
+
+![]({{ site.baseurl }}/assets/celene_assets/2014-04-tennisd3-screenshot.png)<br>
+
+
+In general I'm pleased with how it turned out. The trends are interesting; here are a few:<br>
 
 * Federer's decline in the US Open - after winning in 2008, he's exited 1 round earlier than the previous year almost consistently<br>
 * Nadal's near-total dominance of the French Open is underscored<br>
@@ -86,7 +91,9 @@ The final code and visualization can be viewed here: [Grand Slam visualization](
 
 The addition of the scorelines as well as opponent names (in the mouseover) make the visualization richer.<br><br>
 
-A blocker I encountered was how to handle overlapping data points. The colors of the datapoints are transparent, so one can pretty easily tell if there is an overlap. However, the mouseover data only displays for one of the points - that is, the most recently written one. I haven't spent the time to think of a good way around this, and if anyone has tips they would be greatly appreciated!<br><br>
+Most importantly, I think I was able to develop a good understanding of how d3.js works. I'm excited to take advantage of its features more for my project visualizations.<br><br>
+
+A blocker I encountered was how to handle overlapping data points. The colors of the datapoints are transparent, so one can pretty easily tell if there is an overlap. However, the mouseover data only displays for one of the points - that is, the most recently written one. I worked around this for the final round by adding a 'C' (for Champion) column, which I think works well enough. Otherwise I haven't spent the time to think of a good way around this, and if anyone has tips they would be greatly appreciated!<br><br>
 
 
 
