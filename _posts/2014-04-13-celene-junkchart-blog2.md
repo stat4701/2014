@@ -22,7 +22,7 @@ My first pass at improving the image is here:
 ![]({{ site.baseurl }}/assets/celene_assets/2014-03-top_players_grand_slams.png)<br><br>
 
 
-This time, my goal was to re-make my visualization using d3.js, and add mouseovers that contain meaningful details. I'm a fan of mouseovers because it allows exploration without adding clutter.<br><br>
+This time around, my goal was to re-make my visualization using d3.js, and add mouseovers that contain meaningful details. I'm a fan of mouseovers because it allows exploration without adding clutter.<br><br>
 
 I was able to make the gridlines and circle images thanks to the tutorial on [alignedleft](http://alignedleft.com/tutorials/d3). When it came to plotting the data, at first I thought I would need to make a separate array for each player and tournament. I started with 8 x 7 matrices (years by rounds) of 0s and 1s, where each row would have a single 1.<br><br>
 
@@ -50,7 +50,7 @@ I was able to make the gridlines and circle images thanks to the tutorial on [al
 ```
 
 Then, I across examples of d3.js visualizations on Mike Bostock's bl.ocks page. Particularly inspiring was his map image of airports in the US: [http://bl.ocks.org/mbostock/4408297](http://bl.ocks.org/mbostock/4408297)<br>
-From this, I realized that JSON-formatted variables can easily be referenced in d3 - including subvariables of a list. Therefore, I changed my datasets to look like this:<br>
+From this, I realized that JSON-formatted variables can easily be referenced in d3 - including subvariables of a JSON list. Therefore, I changed my datasets to look like this:<br>
 
 ```javascript
 
@@ -76,7 +76,7 @@ var aus_open = [
      ]
 ```
 
-and could have a lot more meaningful information incorporated into my data points! Clearly, this latter structure is a large improvement and I started to really appreciate d3's data-binding feature upon discovering this.<br>
+These datasets allow a LOT more meaningful information to be incorporated into my data points! Clearly, this latter structure is a large improvement. I started to really appreciate d3's data-binding feature upon discovering this.<br>
 
 The final code and visualization can be viewed here: [Grand Slam visualization](http://bl.ocks.org/celenechang/10517119). Here's a screenshot:<br>
 
@@ -91,7 +91,7 @@ In general I'm pleased with how it turned out. The trends are interesting; here 
 
 The addition of the scorelines as well as opponent names (in the mouseover) make the visualization richer.<br><br>
 
-Most importantly, I think I was able to develop a good understanding of how d3.js works. I'm excited to take advantage of its features more for my project visualizations.<br><br>
+Most importantly, I think I was able to develop a good understanding of how d3.js works. I'm excited to take further advantage of its features for my project visualizations.<br><br>
 
 A blocker I encountered was how to handle overlapping data points. The colors of the datapoints are transparent, so one can pretty easily tell if there is an overlap. However, the mouseover data only displays for one of the points - that is, the most recently written one. I worked around this for the final round by adding a 'C' (for Champion) column, which I think works well enough. Otherwise I haven't spent the time to think of a good way around this, and if anyone has tips they would be greatly appreciated!<br><br>
 
