@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Celene - Junk chart take 2
+title: Celene - Junk chart, take 2
 description:
 tags: blog
 ---
@@ -22,7 +22,7 @@ My first pass at improving the image is here:
 ![]({{ site.baseurl }}/assets/celene_assets/2014-03-top_players_grand_slams.png)<br><br>
 
 
-This time around, my goal was to re-make my visualization using d3.js, and add mouseovers that contain meaningful details. I'm a fan of mouseovers because it allows exploration without adding clutter.<br><br>
+I had conceptualized the visualization and constructed it using Adobe Illustrator. This time around, my goal was to re-make the visualization using d3.js, and add mouseovers that contain meaningful details. I'm a fan of mouseovers because it allows exploration without adding clutter.<br><br>
 
 I was able to make the gridlines and circle images thanks to the tutorial on [alignedleft](http://alignedleft.com/tutorials/d3). When it came to plotting the data, at first I thought I would need to make a separate array for each player and tournament. I started with 8 x 7 matrices (years by rounds) of 0s and 1s, where each row would have a single 1.<br><br>
 
