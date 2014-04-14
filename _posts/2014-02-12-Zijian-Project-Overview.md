@@ -6,7 +6,7 @@ tags: project assignments
 ---
 <section>
 
-### Ad User Data Stream Mining & Visualization
+### Ads User Data Stream Mining & Visualization
 
 -------------------------------------------------------------------------------
 
@@ -18,10 +18,9 @@ tags: project assignments
 
 #### Objectives
 
+<li>To design an in-stream data analysis and visualization engine</li>
 <li>To design or refactor cluster algorithms to fit stream environment</li>
-<li>To cluster user in stream</li>
-<li>To visualize real-time user cluster information on website</li>
-<li>To predict ad user's behavior in real-time</li>
+<li>To predict ad user's behavior in real-time</li>   
 
 #### Data
 
@@ -40,8 +39,10 @@ tags: project assignments
 
 #### Milestones
 
-<li>[Sprint 1 (Feb.12~Mar.5)]({{site.baseurl}}/2014/02/12/Zijian-Project-Sprint-1/)</li>
-<li>[Sprint 2 (Mar.5~Mar.26)(Alpha)]({{site.baseurl}}/2014/02/12/Zijian-Project-Sprint-2/)</li>
+<li>[Sprint 1 (Feb.12~Mar.5)]({{site.baseurl}}/2014/03/05/Zijian-Project-Sprint-1/)</li>
+<li>[Blog Post 1 -- Data Engine v1 (Mar.3)]({{site.baseurl}}/2014/03/03/Zijian-Data-Engine-v1/)</li>
+<li>[Sprint 2 (Mar.5~Mar.26)]({{site.baseurl}}/2014/03/26/Zijian-Project-Sprint-2/)</li>
+<li>[Blog Post 2 -- Data Engine v2 (April.9)]({{site.baseurl}}/2014/04/09/Zijian-Data-Engine-v2/)</li>
 
 #### Contact Info
 
