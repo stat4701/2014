@@ -1,4 +1,9 @@
-
+---
+layout: post
+title: Detecting Medicare Claim Anomalies
+description: Mayank Misra Blog Post 2
+tags: blogpost
+---
 # Detecting Medicare Claim Anomalies
 
 # Part 1 - Data Acquisition and Exploration
