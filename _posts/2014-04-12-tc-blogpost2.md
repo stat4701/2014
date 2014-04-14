@@ -19,6 +19,7 @@ After picking up a topic, the next step is to find out what data I want to prese
 [link-demo]: http://tc2680.github.io/assignment_0/blogpost2_rev1.html
 
 Recently I received a request to research and compare usage of open source database engines. I did not have much experience in this area except few toy practices in MySQL database. So I decided to look at MySQL first. After some initial studies, I came across a presentation about [Maria DB][link-01]. One of the slides from the presentation was trying to discuss future usage of MySQL. 
+
 <img src="http://tc2680.github.io/assignment_0/predicted_mysql_usage.jpg" width ="600">
 
 According to Nathan Yau, the author of [Visualize This][link-02], pie or donut chart should be simple, data needs to be organized, and don’t put too many wedges in one chart. Before looking for the data source, there are few things about the donut chart which are not clear to me:
@@ -31,4 +32,4 @@ Here is my revised version using the motion library from Google Charts. Because 
 <img src="http://tc2680.github.io/assignment_0/mysql_comparison.png" width ="600">
 
 ### Future Improvement
-I am interested in not only one but multiple types of database models in the market. I found a database ranking information from [here][link-03]. The website have various types of comparison matrix calculated from these parameters: number of mentions of the system on websites, general interest in the system, frequency of technical discussions about the system, number of job offers in which the system is mentioned, number of profiles in professional networks in which the system is mentioned, and relevance in social networks. For visualization, this [example][link-04] from Junkcharts provides a good direction for my future work.
+I am interested in not only one but multiple types of database models in the market. I found a database ranking information from [here][link-03]. The website have various types of comparison matrix calculated from these parameters: number of mentions of the system on websites, general interest in the system, frequency of technical discussions about the system, number of job offers in which the system is mentioned, number of profiles in professional networks in which the system is mentioned, and relevance in social networks. For visualization, this [example][link-04] from Junkcharts provides a good direction for future work.
