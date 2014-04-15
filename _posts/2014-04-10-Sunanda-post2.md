@@ -39,7 +39,7 @@ The varying scales for the non-smokers and smokers make it harder to read off ht
 I wanted to create a d3 plot where I could interactively change the scale for the smokers and non-smokers. 
 
 Here's a screenshot of the grouped bar chart I created:
-<img src = "https://github.com/sunandakp/edav/blob/gh-pages/assets/Sunanda_assets/Lungcancer.png" width = "100%">
+<img src = "https://raw.githubusercontent.com/sunandakp/edav/gh-pages/assets/Sunanda_assets/Lungcancer.png" width = "100%">
 
 #### Critique of the d3 plot ####
 
