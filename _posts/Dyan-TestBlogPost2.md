@@ -21,3 +21,13 @@ The Maps I have are:
 [North America](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/NorthAmerica-179.5+10.7-49.9+87.9.jpg).
 
 [South America](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/southamerica-87.3-54.5-31.55+14.jpg).
+
+The Datasets I have with Geo Codes are:
+
+[Asia](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Asia-City,Country-English.txt).
+
+[Europe](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Europe-City,Country-English.txt).
+
+[North America](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/NA-City,ST-English.txt).
+
+[South America](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/SA-City,Country-English.txt).
