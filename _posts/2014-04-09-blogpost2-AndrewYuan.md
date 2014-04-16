@@ -185,18 +185,27 @@ The data presented in the graph was scraped from www.fifa.com through two python
 * **Data Munging:** 
 The data scraped from fifa.com only contained the cities where the matches took place, without reference to the country or any other additional geographical information. To discover if the matches took place at the home of one of the contenders, the data was complemented with geographical location data from the Google Maps API. Geographical data from 1400 cities were requested to the Google API through a Python script and exported to CSV and JSON files.
 
+<!-- could you make your city lookups available? --> 
+
 
 * **Data Exploration/Graph Design:**
+
+<!-- mm: seems reasonable. It would probably take me at least 3 times as long to do it in excel than in R or python. Did you consider just keeping the tables in python? -->
+
 Since the volume of data isn't large (13.337 matches), the data was imported to an Microsoft Excel spreadsheet, where the data was munged and analyzed through pivot tables and formulas such as vlookups and countifs, used to calculate Ts ranking distance, proportion of wins/losses/draws and complement game location with country name. Then, MS Excel scatter plots were created to identify the features with better correlation to the proportion of wins. Then, the graphs designs were also developed in MS Excel until I found an exciting version to code.
+
+<!-- Both of the aggregated ones (share of matches) have a friendly and familiar shape. Next I would fit a model and try to detect any teams that fell far from it -- those that seemed better away than average, or worse at home than you'd predict. Then you could go further and classify awayness by distance; by country; etc.. and complement with some way to gauge strength of rivalry?  --> 
 
 
 * **Data export:**
 The data required to draw the graph was then exported to a JSON format through excel text formatting formulas.
 
+<!-- could you include those somewhere, either here, or add to the edav wiki? Other users who would reach first for excel would find those useful snippets to have -->
 
 * **Graph coding:** 
 The graph was coded using javascript, D3.js and Sublime Text 3.
 
+<!-- -->
 
 
 ###The Fifa Ranking
@@ -3133,6 +3142,7 @@ var gamesData = [
 ];
 
 
+<!-- yeah, sorry that data loading is a pain with hosting. Thanks for just dropping it in there. -->
 
 //==========================================================================================================//
 //= Setup                                                                                                  =//
@@ -3283,7 +3293,7 @@ var gamesData = [
                 .orient("bottom")
                 .ticks(20);
 
-      var formatPercent = d3.format(".0%");
+      var formatPercent = d3.format(".0%"); // d3 formats are great.
       //Define Y axis
       var yAxis = d3.svg.axis()
                 .scale(yScale)
@@ -3515,7 +3525,7 @@ var gamesData = [
           svg.selectAll("circle")
             .transition()
             .delay(function(d, i) { return ((d.rankDiff-minRankDiff)*20);})
-            .duration(1000)
+            .duration(1000) // seems really slow, but kinda fun to watch ;)
             .attr("cy", function(d) { return yScale(d.classAvrg); })
             .style("stroke", function(d, i) {return d.color})
             .style("fill", function(d, i) {return d.color});
