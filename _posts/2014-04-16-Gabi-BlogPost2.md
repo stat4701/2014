@@ -59,8 +59,7 @@ n1 <- nPlot(
   data =top10_v2, 
   type ="multiBarChart")
 n1$print("chart10", include_assets = TRUE)
-n1$publish(’chart10’, host = ’gist’)
-
+n1$save('n1.html',cdn=T) n1$publish('n1',host='gist')
 ```
 
 
@@ -78,12 +77,6 @@ nplt$set(width = 600)
 nplt$show('iframe')
 ```
 
-<style>
-iframe {
-  width: 100%;
-  height: 400px;
-}
-</style>
 
 ### Basic dotplot using `rCharts` 
 ```{r dotplt1, echo=FALSE,fig.height=400,fig.width=600}
