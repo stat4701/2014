@@ -161,7 +161,7 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
                          ordered = T)
 ```
 
-```html
+<html>
 <meta charset="utf-8">
 <style>
 
@@ -371,8 +371,8 @@ body {
   myChart.draw();
 
 </script>
+</html>
 
-```
 
 
 
