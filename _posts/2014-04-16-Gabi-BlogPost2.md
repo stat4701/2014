@@ -33,7 +33,7 @@ I also played with scatterplots and flippling coordinate axes to see what might 
 Since I also attempted to play with rCharts, I am working on trying to publish these charts and will update shortly.
 
 
-#### Install and import package
+##### Install and import package
 ```{r installLibraries, eval= T}
 #require(devtools)
 #install_github('rCharts', 'ramnathv')
@@ -41,10 +41,9 @@ suppressPackageStartupMessages(require(rCharts,quietly = T))
 library(knitr)
 library(shiny)
 load("~/dev/Rstudio/blogpost2/top10.rdata")
-#rCharts::open_notebook()
 ```
 
-### Setup for Charts
+#### Setup for Charts
 ```{r setupcharts, echo = T, message = F, cache = F}
 require(rCharts)
 options(RCHART_WIDTH = 600, RCHART_HEIGHT = 400)
@@ -60,6 +59,8 @@ n1 <- nPlot(
   data =top10_v2, 
   type ="multiBarChart")
 n1$print("chart10", include_assets = TRUE)
+n1$publish(’chart10’, host = ’gist’)
+
 ```
 
 
@@ -76,7 +77,7 @@ nplt <- nPlot(
 nplt$set(width = 600)
 nplt$print("chart2", include_assets = TRUE)
 ```
----
+
 ### Basic dotplot using `rCharts` 
 ```{r dotplt1, echo=FALSE,fig.height=400,fig.width=600}
 d1<- dPlot(
@@ -92,7 +93,7 @@ d1$set(width = 600)
 d1$print("chart1", include_assets = TRUE)
 ```
 
-
+---
 ## R Code for file manipulation
 ```{r readingfile, eval=F, comment="",echo=T,message=FALSE,cache=TRUE, background="skyblue"}
 options(stringsAsFactors= FALSE)
@@ -160,11 +161,6 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
                          ordered = T)
 ```
 
-
-```{r}
-ls()
-getwd()
-```
 
 
 
