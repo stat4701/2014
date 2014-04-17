@@ -31,3 +31,143 @@ I also played with scatterplots and flippling coordinate axes to see what might 
 
 ### Next steps - rCharts:
 Since I also attempted to play with rCharts, I am working on trying to publish these charts and will update shortly.
+
+
+#### Install and import package
+```{r installLibraries, eval= T}
+#require(devtools)
+#install_github('rCharts', 'ramnathv')
+suppressPackageStartupMessages(require(rCharts,quietly = T))
+library(knitr)
+library(shiny)
+load("~/dev/Rstudio/blogpost2/top10.rdata")
+#rCharts::open_notebook()
+```
+
+### Setup for Charts
+```{r setupcharts, echo = T, message = F, cache = F}
+require(rCharts)
+options(RCHART_WIDTH = 600, RCHART_HEIGHT = 400)
+knitr::opts_chunk$set(comment = NA, results = 'asis', tidy = F, message = F)
+```
+
+### Basic multiBarChart using `rCharts` 
+```{r nPlt1, echo=FALSE, fig.height=400, fig.width=600}
+n1 <- nPlot(
+  chartID = 'chart10',
+  x="occTitle2" , 
+  y= "empMillions", 
+  data =top10_v2, 
+  type ="multiBarChart")
+n1$print("chart10", include_assets = TRUE)
+```
+
+
+### MultibarChart with categories by Employment number
+```{r nPlt2, echo=FALSE,fig.height=400,fig.width=600}
+nplt <- nPlot(
+  chartID ='chart2',
+  x="occTitle2",
+  y="empMillions",
+  group ="Category",
+  data= top10_v2,
+  type="multiBarChart",
+  color = "Category")
+nplt$set(width = 600)
+nplt$print("chart2", include_assets = TRUE)
+```
+---
+### Basic dotplot using `rCharts` 
+```{r dotplt1, echo=FALSE,fig.height=400,fig.width=600}
+d1<- dPlot(
+  x="empMillions",
+  y="occTitle2",
+  groups="Category",
+  data= top10_v2,
+  type="multiBarChart")
+d1$xAxis(type = "addMeasureAxis")
+d1$yAxis(type = "addCategoryAxis", orderRule = "empMillions")
+d1$legend( x = 100, y = 10, width = 700, height = 20, horizontalAlign = "right", orderRule = "Categories")
+d1$set(width = 600)
+d1$print("chart1", include_assets = TRUE)
+```
+
+
+## R Code for file manipulation
+```{r readingfile, eval=F, comment="",echo=T,message=FALSE,cache=TRUE, background="skyblue"}
+options(stringsAsFactors= FALSE)
+file <- read.csv('~/dev/Rstudio/data/oesm13all/oes_data_2013.csv' , strip.white=TRUE)
+
+
+# select only  important data
+occdata <- subset(file, select = c('area','area_title','area_type','naics','naics_title','occ_code','occ_title',
+                                     'group','tot_emp','emp_prse','h_mean','a_mean','a_median')  )
+
+# functions to get rid of spaces and commas
+trim <- function (x) gsub("^\\s+|\\s+$", "", x)
+trim_comma <- function (x) gsub(pattern = ",",replacement = "",x, fixed = TRUE)
+
+# remove any rows with missing values for total employment and average annual and hourly wage 
+occdata <- occdata[(!occdata$tot_emp %in% c("**","*","#")) & 
+                     (!occdata$a_mean %in% c("*","#"))  & 
+                     (occdata$h_mean!="*") ,]
+
+# make sure no commas or white spaces
+occdata$tot_emp <- trim(occdata$tot_emp)
+occdata$tot_emp <- trim_comma(occdata$tot_emp)
+occdata$a_mean <- trim(occdata$a_mean)
+occdata$a_mean <- trim_comma(occdata$a_mean)
+
+
+# subset data with grouped as detail
+detail <- with(occdata, subset(occdata, (group=='detail')))
+
+# subset data by major group
+major <- with(occdata, subset(occdata, (group=='major')))
+
+# convert from character to number
+detail$tot_emp <- as.integer(detail$tot_emp)
+detail$a_mean <- as.integer(detail$a_mean)
+
+# aggregate total employee occupation and sort
+detail_agg <- aggregate(tot_emp ~ occ_title, data = detail, sum, na.rm = TRUE)
+detail_agg <- detail_agg[(order(detail_agg$tot_emp, decreasing = T)),]
+
+# get top10 emploment occupations from detail set
+top10 <- detail_agg[(1:10),]
+
+# create a second version of top10 to play with rCharts 
+top10_v2 <- top10
+# remove underscore from names
+names(top10_v2)<- gsub('\\_','',names(top10_v2))
+
+# add levels for total employement
+top10_v2$empcat[(top10_v2$totemp <13000000)]<-"low employment"
+top10_v2$empcat[(top10_v2$totemp >13000000) & (16000000< top10_v2$totemp)]<-"high employment"
+top10_v2$empcat[is.na(top10_v2$empcat)]<-"medium employment"
+# add column with employment in millions
+top10_v2$totempmil<- signif(top10_v2$totemp/10000000,2)
+
+
+# change occupations to be shorter names
+top10_v2$occtitle2 <- c("Retail","Nurses","Cashiers", "Clerks","FoodPrep","Waiters","Cust Svs","Admin","Janitors","Laborers")
+# change names to be more meaninggul
+names(top10_v2)<-c("occupTitle","employment","Category","empMillions","occTitle2")
+
+#add factor for employment category
+top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
+                                                              "medium employment","high employment")),
+                         ordered = T)
+```
+
+
+```{r}
+ls()
+getwd()
+```
+
+
+
+
+
+
