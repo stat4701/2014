@@ -161,13 +161,20 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
                          ordered = T)
 ```
 
-<html>
-<meta charset="utf-8">
-<style>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-body {
-  font: 10px sans-serif;
-}
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="generator" content="pandoc" />
+
+<title></title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 
 <hr />
 <h3 id="basic-dotplot-using-rcharts">Basic dotplot using <code>rCharts</code></h3>
@@ -180,6 +187,7 @@ body {
     height: 400px;
   }  
   </style>
+
 <div id="chart1" class="rChart dimple"></div>
 <script type="text/javascript">
   var opts = {
