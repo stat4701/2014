@@ -75,8 +75,15 @@ nplt <- nPlot(
   type="multiBarChart",
   color = "Category")
 nplt$set(width = 600)
-nplt$print("chart2", include_assets = TRUE)
+nplt$show('iframe')
 ```
+
+<style>
+iframe {
+  width: 100%;
+  height: 400px;
+}
+</style>
 
 ### Basic dotplot using `rCharts` 
 ```{r dotplt1, echo=FALSE,fig.height=400,fig.width=600}
@@ -90,7 +97,7 @@ d1$xAxis(type = "addMeasureAxis")
 d1$yAxis(type = "addCategoryAxis", orderRule = "empMillions")
 d1$legend( x = 100, y = 10, width = 700, height = 20, horizontalAlign = "right", orderRule = "Categories")
 d1$set(width = 600)
-d1$print("chart1", include_assets = TRUE)
+d1$print("chart1", include_assets = TRUE, cdn = TRUE)
 ```
 
 ---
