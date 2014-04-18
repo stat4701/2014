@@ -160,10 +160,16 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
                                                               "medium employment","high employment")),
                          ordered = T)
 ```
-
-
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3: Creating paragraphs dynamically from data</title>
+		<script type="text/javascript" src="../d3/d3.v3.js"></script>
+		<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 <script type='text/javascript' src=/Library/Frameworks/R.framework/Versions/3.0/Resources/library/rCharts/libraries/dimple/js/dimple.v1.1.1.min.js></script>
 <script type='text/javascript' src=/Library/Frameworks/R.framework/Versions/3.0/Resources/library/rCharts/libraries/dimple/js/d3.v3.js></script> 
+	</head>
+	<body>
  <style>
   .rChart {
     display: block;
@@ -369,6 +375,15 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
   myChart.draw();
 
 </script>
+<script type>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+ </script>
+</body>
 
 
 
