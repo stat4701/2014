@@ -1,9 +1,21 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta charset="utf-8">
+<html lang="en" prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+    <title>Magnific Popup&#58; Responsive jQuery Lightbox Plugin</title>
+    <meta charset="utf-8"> 
+    <meta name="description" content="Light and open source responsive lightbox plugin with focus on performance, for jQuery and Zepto.js. High-DPI (retina) display support, fast tap for touch devices."/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <meta name="author" content="Dmitry Semenov">
+    <link rel="canonical" href="http://dimsemenov.com/plugins/magnific-popup/" />
+    <meta property="og:url" content="http://dimsemenov.com/plugins/magnific-popup/">
+    <meta property="og:title" content="Magnific Popup&#58; Responsive jQuery Lightbox Plugin">
+    <meta property="og:description" content="Light and open source responsive lightbox plugin with focus on performance, for jQuery and Zepto.js. High-DPI (retina) display support, fast tap for touch devices.">
+    <meta property="og:image" content="http://dimsemenov.com/magnific-og-400x400.jpg">
+    <link href="https://plus.google.com/102586375605352607718" rel="publisher" />
+    <link href="site-assets/all.min.css?v=0.9.9" rel="stylesheet" />
 		<script src="http://d3js.org/d3.v3.min.js" type='text/javascript'></script>
-  		<script src="http://dimplejs.org/dist/dimple.v1.1.5.min.js" type='text/javascript'></script>
+  	<script src="http://dimplejs.org/dist/dimple.v1.1.5.min.js" type='text/javascript'></script>
 		<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 		<title>D3: Creating dimple rChartt </title>
 	</head>
