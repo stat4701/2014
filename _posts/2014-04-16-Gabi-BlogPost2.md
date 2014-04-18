@@ -186,10 +186,6 @@ load(&quot;~/dev/Rstudio/blogpost2/top10.rdata&quot;)
 <pre class="r"><code>options(RCHART_WIDTH = 600, RCHART_HEIGHT = 400)
 knitr::opts_chunk$set(comment = NA, results = 'asis', tidy = F, message = F)</code></pre>
 <h3 id="basic-dotplot-using-rcharts">Basic dotplot using <code>rCharts</code></h3>
-
-<script type='text/javascript' src=http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js></script> 
-<script type='text/javascript' src=http://d3js.org/d3.v3.min.js></script>
-
 <p><style>
   .rChart {
     display: block;
