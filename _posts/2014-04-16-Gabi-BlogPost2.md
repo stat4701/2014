@@ -6,33 +6,41 @@ tags: blogpost
 ---
 
 ### Main Source of Data:
-For this 2nd blogpost I came across this chart [here](http://www.businessinsider.com/most-popular-jobs-in-america-2014-4). After looking around a bit I found a pdf report [here](http://www.bls.gov/news.release/pdf/ocwage.pdf) with a little more detail on the occupations. I found the data here 
+For this 2nd blogpost I came across this chart [here](http://www.businessinsider.com/most-popular-jobs-in-america-2014-4). After looking around a bit I found a pdf report [here](http://www.bls.gov/news.release/pdf/ocwage.pdf) with a little more detail on the occupations. I found the data 
 [here](http://www.bls.gov/oes/#news)
 
 ### Thoughts on the original government chart:
 
-I decided to focus solely on the first chart and honestly thought it was a little dull and at least lacking color. My initial thought was that the least I could do was make the chart look prettier. I also wondered if I looked at the data if I would come up with the same numbers and how these figures were summarized, and if there was a better way to represent the data.
+I decided to focus solely on the first chart (top10 occupations) and honestly thought it was a little dull and at least lacking color. My initial thought was that the least I could do was make the chart look prettier and maybe more interesting. I also wondered if I looked at the data if I would come up with the same numbers and how these figures were summarized, and if there was a better way to represent the data.
 
 ### Getting the data and some initial troubles:
 
-Getting the data was not too difficult - all I had to do was download a pretty massive excel file. The excel file contains all the information I need with alot of uneeded information - there are over 400,000 rows and about 30 columns. Here are a couple challenges I came accross:
-* Loading the data in R: I tried different ways to load the file such as read.csv, read.cvs2, read.table but not matter what I did it looks like the file I just big and I stuck with read.csv. 
-* Understanding the different characters I had to remove: As I started looking through the data I noticed that numbers were formatted as characters and that there were empty spaces, commas, symbols such as '*', '**', '#', and not to mention empty useless rows in the data. In order to really understand what other irrelevant information there was in the file I had to unfortunately go back and look at the excel file. So, there was quite a bit of cleaning up to do which took a while and was not as straightforward as I would have liked. 
-* Understanding how the data was being summarized: I still dont think I have this correct. In the data there are different groups such as: detail, broad, major, minor and total. No matter which way I summarized the data using R and Excel, I still did not come up with the same numbers as the originial chart! I got the numbers a little bit close using the detail group, but not quite, so my chart will not convey the same message as the original. 
-* Plotting the occupational titles: When I started playing with visualizations I came accross the problem of being able to simply wrap the occupational title so that the names do not overlap each other. While this may seem like a pretty simple task, it took me several tries to understand what would work best for what I was trying to accomplish. I tried creating wrapper functions to create a new line after a certain number of characters but the occupational titles were not consistent at all. I ended up by just changing the titles manually one to by one, luckily there were only ten.
+Getting the data was not too difficult - all I had to do was download a pretty massive excel file. The excel file contains all the information I need with a lot of unneeded information - there are over 400,000 rows and about 30 columns. While I have worked with many large excel files in my previous career, after having worked this past semester with R, I learned to really appreciate the benefit of not having to scroll through thousands of rows! 
+
+Here are a couple initial challenges I came across:
+* Loading the data in R: I tried different ways to load the file such as read.csv, read.cvs2, and read.table but not matter what I did, it looked like the file was pretty large and I just stuck with read.csv. 
+* Cleaning the data: Understanding the different characters I had to remove was a challenge. As I started looking through the data I noticed that numbers were formatted as characters and that there were empty spaces, commas, symbols such as '*', '**', '#', and not to mention empty useless rows in the data. In order to really understand what other irrelevant information there was in the file I went back to look at the excel file a few times. So, there was quite a bit of cleaning up to do which took a while and was not as straightforward as I would have liked. 
+* Understanding how the data was being summarized: I still don't think I have this correct. In the data there are different groups such as: detail, broad, major, minor and total. No matter which way I summarized the data, I still did not come up with the same numbers as the original chart! I got the numbers a little bit close using the detail group, but not quite, so my chart will not convey the same message as the original. This made me understand how important it is to be able to reproduce calculations and consequently what an important role documentation plays in data analysis and visualization.
+* Plotting the occupational titles: When I started playing with visualizations I came across the problem of not being able to simply wrap the occupational title so that the names do not overlap each other. While this may seem like a pretty simple task, it took me several tries to understand what would work best for what I was trying to accomplish. I tried creating wrapper functions to create a new line after a certain number of characters but the length of the occupational titles were not consistent at all. I ended up just changing the titles manually one to by one, luckily there were only ten of them.
 
 ### Some visualizations:
-Since I hadnt really explored gotplots in ggplot2, I decided to give it a try and created a dot lot of the top 10 occupations. I also played with adding texted within the graph using geom_text function which I had not done before.
+Since I hadn't really explored geom_dotplot in ggplot2, I decided to give it a try and created a dotplot of the top 10 occupations. I also played with adding text within the graph using geom_text function which I had not done before.
 [![dotplt_top10](http://Gabya06.github.io/edav/assets/gaby_assets/dotplt_top10.png)](http://Gabya06.github.io/edav/assets/gaby_assets/dotplt_top10.png).
 
-I also played with scatterplots and flippling coordinate axes to see what might look best. 
+I also played with scatter-plots and flipping coordinate axes to see what might look best. 
 [![scatterplt_top10](http://Gabya06.github.io/edav/assets/gaby_assets/scatterplt_top10.png)](http://Gabya06.github.io/edav/assets/gaby_assets/scatterplt_top10.png).
 
 
-### Next steps - rCharts:
-Since I also attempted to play with rCharts, I am working on trying to publish these charts and will update shortly.
+### rCharts - Motivation and challenges
+After trying out several ways to visualize the top10 occupational titles using ggplot2, I tried using iplot but was not too successful. I was expecting iplot to be interactive but it seemed like a pretty basic interactive graph to me (maybe I am missing something?), so I decided to move on and give rCharts a try.
+In order to work with rCharts, I had to download the package from github since it is not in CRAN yet. There are many nice interactive graphs as tutorials online, but I still haven't been able to find one good tutorial that takes you through all the methods available for the different charts. As I was learning to use rCharts my goal was to be able to plot a few of the basic charts and get an understanding of how rCharts works. While I was reading through the documentation I saw that one of the ways to publish rCharts was using knitr. So my other goal became to learn how to use knitr as well. 
+Once I was able to plot 3 different charts, it was challenging to try and get knitr to display the charts and it was an even bigger challenge to try and get the charts to display in an .md file. Along the way, I learned that I could write the code for the rCharts in R, use knitr to 'knit' to a .md file which (to my surprise) contained D3! Even though I haven't been able to put the ggplots and rCharts all on one page, I am able to display the rCharts by using knitr output file as html. 
+
+### New Graphics - Hopefully an improvement
+-  [New top 10 Occupational Titles](http://Gabya06.github.io/edav/assets/gaby_assets/rchartsd3.html)
 
 
+###Code for rCharts
 ##### Install and import package
 ```{r installLibraries, eval= T}
 #require(devtools)
@@ -160,230 +168,4 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
                                                               "medium employment","high employment")),
                          ordered = T)
 ```
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta charset="utf-8">
-		<script src="http://d3js.org/d3.v3.min.js" type='text/javascript'></script>
-		<script type='text/javascript' src=/Library/Frameworks/R.framework/Versions/3.0/Resources/library/rCharts/libraries/dimple/js/dimple.v1.1.1.min.js></script>
-<script type='text/javascript' src=/Library/Frameworks/R.framework/Versions/3.0/Resources/library/rCharts/libraries/dimple/js/d3.v3.js></script> 
-		<title>D3: Creating dimple rChartt </title>
-	</head>
-	<body>
-<div class="chartContainer">
-<h3 id="install-and-import-package">Install and import package</h3>
-<pre class="r"><code>require(devtools)</code></pre>
-<pre><code>Loading required package: devtools</code></pre>
-<pre class="r"><code>library(rCharts)
-library(knitr)
-load(&quot;~/dev/Rstudio/blogpost2/top10.rdata&quot;)
-#rCharts::open_notebook()
-#read_chunk(&quot;~/dev/Rstudio/blogpost2/plots_rCharts.R&quot;)</code></pre>
-<h3 id="setup-for-charts">Setup for Charts</h3>
-<pre class="r"><code>options(RCHART_WIDTH = 600, RCHART_HEIGHT = 400)
-knitr::opts_chunk$set(comment = NA, results = 'asis', tidy = F, message = F)</code></pre>
-<h3 id="basic-dotplot-using-rcharts">Basic dotplot using <code>rCharts</code></h3>
-<div id = 'chart15a' class = 'rChart dimple'></div>
-<script type="text/javascript">
-  var opts = {
-"dom": "chart15a",
-"width":    600,
-"height":    400,
-"x": "empMillions",
-"y": "occTitle2",
-"chartID": "chart15a",
-"z": "empMillions",
-"groups": "Category",
-"type": "multiBarChart",
-"id": "chart15a" 
-},
-    data = [
- {
- "occupTitle": "Retail\nSalespersons",
-"employment": 22674065,
-"Category": "high employment",
-"empMillions":    2.3,
-"occTitle2": "Retail" 
-},
-{
- "occupTitle": "Reg.Nurses",
-"employment": 17281827,
-"Category": "high employment",
-"empMillions":    1.7,
-"occTitle2": "Nurses" 
-},
-{
- "occupTitle": "Cashiers",
-"employment": 17119402,
-"Category": "high employment",
-"empMillions":    1.7,
-"occTitle2": "Cashiers" 
-},
-{
- "occupTitle": "Office Clerks",
-"employment": 15903173,
-"Category": "medium employment",
-"empMillions":    1.6,
-"occTitle2": "Clerks" 
-},
-{
- "occupTitle": "Food Prep \nand Serv. Workers,\nIncl.Fast Food",
-"employment": 15757493,
-"Category": "medium employment",
-"empMillions":    1.6,
-"occTitle2": "FoodPrep" 
-},
-{
- "occupTitle": "Waiters and\nWaitresses",
-"employment": 13930973,
-"Category": "medium employment",
-"empMillions":    1.4,
-"occTitle2": "Waiters" 
-},
-{
- "occupTitle": "Cust Svc\nReps",
-"employment": 12644049,
-"Category": "low employment",
-"empMillions":    1.3,
-"occTitle2": "Cust Svs" 
-},
-{
- "occupTitle": "Admn.Assist,\nExcl.Legal,Med\nAnd Exec",
-"employment": 12523873,
-"Category": "low employment",
-"empMillions":    1.3,
-"occTitle2": "Admin" 
-},
-{
- "occupTitle": "Janitors and\nCleaners\nExcl.Maids",
-"employment": 12075777,
-"Category": "low employment",
-"empMillions":    1.2,
-"occTitle2": "Janitors" 
-},
-{
- "occupTitle": "Laborers and\nMat.Movers,\nHand Workers",
-"employment": 11206052,
-"Category": "low employment",
-"empMillions":    1.1,
-"occTitle2": "Laborers" 
-} 
-],
-    xAxis = {
- "type": "addCategoryAxis",
-"showPercent": false 
-},
-    yAxis = {
- "type": "addCategoryAxis",
-"showPercent": false,
-"orderRule": "empMillions" 
-},
-    zAxis = {
- "type": "addMeasureAxis",
-"overrideMax":     10 
-},
-    colorAxis = [],
-    legend = {
- "x":     10,
-"y":     10,
-"width":    400,
-"height":     40,
-"horizontalAlign": "center",
-"orderRule": "Categories" 
-};
-  var svg = dimple.newSvg("#" + opts.id, opts.width, opts.height);
-
-  //data = dimple.filterData(data, "Owner", ["Aperture", "Black Mesa"])
-  var myChart = new dimple.chart(svg, data);
-  if (opts.bounds) {
-    myChart.setBounds(opts.bounds.x, opts.bounds.y, opts.bounds.width, opts.bounds.height);//myChart.setBounds(80, 30, 480, 330);
-  }
-  //dimple allows use of custom CSS with noFormats
-  if(opts.noFormats) { myChart.noFormats = opts.noFormats; };
-  //for markimekko and addAxis also have third parameter measure
-  //so need to evaluate if measure provided
-  //x axis
-  var x;
-  if(xAxis.measure) {
-    x = myChart[xAxis.type]("x",opts.x,xAxis.measure);
-  } else {
-    x = myChart[xAxis.type]("x", opts.x);
-  };
-  if(!(xAxis.type === "addPctAxis")) x.showPercent = xAxis.showPercent;
-  if (xAxis.orderRule) x.addOrderRule(xAxis.orderRule);
-  if (xAxis.grouporderRule) x.addGroupOrderRule(xAxis.grouporderRule);  
-  if (xAxis.overrideMin) x.overrideMin = xAxis.overrideMin;
-  if (xAxis.overrideMax) x.overrideMax = xAxis.overrideMax;
-  if (xAxis.overrideMax) x.overrideMax = xAxis.overrideMax;
-  if (xAxis.inputFormat) x.dateParseFormat = xAxis.inputFormat;
-  if (xAxis.outputFormat) x.tickFormat = xAxis.outputFormat;
-  //y axis
-  var y;
-  if(yAxis.measure) {
-    y = myChart[yAxis.type]("y",opts.y,yAxis.measure);
-  } else {
-    y = myChart[yAxis.type]("y", opts.y);
-  };
-  if(!(yAxis.type === "addPctAxis")) y.showPercent = yAxis.showPercent;
-  if (yAxis.orderRule) y.addOrderRule(yAxis.orderRule);
-  if (yAxis.grouporderRule) y.addGroupOrderRule(yAxis.grouporderRule);
-  if (yAxis.overrideMin) y.overrideMin = yAxis.overrideMin;
-  if (yAxis.overrideMax) y.overrideMax = yAxis.overrideMax;
-  if (yAxis.inputFormat) y.dateParseFormat = yAxis.inputFormat;
-  if (yAxis.outputFormat) y.tickFormat = yAxis.outputFormat;
-//z for bubbles
-    var z;
-  if (!(typeof(zAxis) === 'undefined') && zAxis.type){
-    if(zAxis.measure) {
-      z = myChart[zAxis.type]("z",opts.z,zAxis.measure);
-    } else {
-      z = myChart[zAxis.type]("z", opts.z);
-    };
-    if(!(zAxis.type === "addPctAxis")) z.showPercent = zAxis.showPercent;
-    if (zAxis.orderRule) z.addOrderRule(zAxis.orderRule);
-    if (zAxis.overrideMin) z.overrideMin = zAxis.overrideMin;
-    if (zAxis.overrideMax) z.overrideMax = zAxis.overrideMax;
-  }
-  if(d3.keys(colorAxis).length > 0) {
-    myChart[colorAxis.type](colorAxis.colorSeries,colorAxis.palette) ;
-  }
-  
-  //here need think I need to evaluate group and if missing do null
-  //as the first argument
-  //if provided need to use groups from opts
-  if(opts.hasOwnProperty("groups")) {
-    var s = myChart.addSeries( opts.groups, dimple.plot[opts.type] );
-    //series offers an aggregate method that we will also need to check if available
-    //options available are avg, count, max, min, sum
-    if (!(typeof(opts.aggregate) === 'undefined')) {
-      s.aggregate = eval(opts.aggregate);
-    }
-    if (!(typeof(opts.lineWeight) === 'undefined')) {
-      s.lineWeight = eval(opts.lineWeight);
-    }
-    if (!(typeof(opts.barGap) === 'undefined')) {
-      s.barGap = eval(opts.barGap);
-    }    
-  } else var s = myChart.addSeries( null, dimple.plot[opts.type] );
-  //unsure if this is best but if legend is provided (not empty) then evaluate
-  if(d3.keys(legend).length > 0) {
-    var l =myChart.addLegend();
-    d3.keys(legend).forEach(function(d){
-      l[d] = legend[d];
-    });
-  }
-  //quick way to get this going but need to make this cleaner
-  if(opts.storyboard) {
-    myChart.setStoryboard(opts.storyboard);
-  };
-  myChart.draw();
-
-</script>
-</div>
-
-</body>
-</html>
-
-
-
 
