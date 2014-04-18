@@ -32,11 +32,14 @@ I also played with scatter-plots and flipping coordinate axes to see what might 
 
 
 ### rCharts - Motivation and challenges
-After trying out several ways to visualize the top10 occupational titles using ggplot2, I tried using iplot but was not too successful. I was expecting iplot to be interactive but it seemed like a pretty basic interactive graph to me (maybe I am missing something?), so I decided to move on and give rCharts a try.
-In order to work with rCharts, I had to download the package from github since it is not in CRAN yet. There are many nice interactive graphs as tutorials online, but I still haven't been able to find one good tutorial that takes you through all the methods available for the different charts. As I was learning to use rCharts my goal was to be able to plot a few of the basic charts and get an understanding of how rCharts works. While I was reading through the documentation I saw that one of the ways to publish rCharts was using knitr. So my other goal became to learn how to use knitr as well. 
-Once I was able to plot 3 different charts, it was challenging to try and get knitr to display the charts and it was an even bigger challenge to try and get the charts to display in an .md file. Along the way, I learned that I could write the code for the rCharts in R, use knitr to 'knit' to a .md file which (to my surprise) contained D3! Even though I haven't been able to put the ggplots and rCharts all on one page, I am able to display the rCharts by using knitr output file as html. 
+After trying out several ways to visualize the top 10 occupational titles using ggplot2, I tried using iplot but was not too successful. I was expecting iplot to be more interactive and was kind of disappointed because it seems kind of basic for an interactive graph (maybe I am missing something?), so I decided to move on and give rCharts a try.
+In order to work with rCharts, I had to download the package from github since it is not in CRAN yet. There are many nice interactive graphs as tutorials online, but I still haven't been able to find one good tutorial that takes you through all the methods available for the different types of rCharts available. As I was learning to use rCharts my goal was to be able to plot a few of the basic charts and get an understanding of how rCharts works. While I was reading through some documentation I saw that one of the ways to publish rCharts was using knitr. So, my other goal became to learn how to use knitr as well. 
 
-### New Graphics - Hopefully an improvement
+Once I was able to plot 2 different types of rCharts (nvd3 and dimple), I found it challenging to display the charts using knitr because I didn't quite understand the syntax right away. Along the way, I learned that I could write the code for the dimple chart in R and use knitr to 'knit' to a .md file which (to my surprise) contained D3! I guess this is what the [website](http://dimplejs.org/) refers to as 'An object-oriented API for business Analytics powered by D3', I guess must have missed that... 
+In case of the nvd3 charts, I am unable to display them interactively (although I can see them when I 'knit' to .md or export html file) - still not sure how to do this properly- so I attached them as pdf.
+
+### New Chart - Hopefully more interesting than the previous
+-  [nvd3](http://Gabya06.github.io/edav/assets/gaby_assets/nvd3.pdf)
 -  [New top 10 Occupational Titles](http://Gabya06.github.io/edav/assets/gaby_assets/rchartsd3.html)
 
 
@@ -70,7 +73,6 @@ n1$print("chart10", include_assets = TRUE)
 n1$save('n1.html',cdn=T) n1$publish('n1',host='gist')
 ```
 
-
 ### MultibarChart with categories by Employment number
 ```{r nPlt2, echo=FALSE,fig.height=400,fig.width=600}
 nplt <- nPlot(
@@ -84,7 +86,6 @@ nplt <- nPlot(
 nplt$set(width = 600)
 nplt$show('iframe')
 ```
-
 
 ### Basic dotplot using `rCharts` 
 ```{r dotplt1, echo=FALSE,fig.height=400,fig.width=600}
@@ -100,7 +101,6 @@ d1$legend( x = 100, y = 10, width = 700, height = 20, horizontalAlign = "right",
 d1$set(width = 600)
 d1$print("chart1", include_assets = TRUE, cdn = TRUE)
 ```
-
 ---
 ## R Code for file manipulation
 ```{r readingfile, eval=F, comment="",echo=T,message=FALSE,cache=TRUE, background="skyblue"}
