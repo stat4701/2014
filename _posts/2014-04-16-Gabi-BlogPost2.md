@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 ---
 layout: post
 title: Gabi - Blog Post 2
@@ -172,16 +174,33 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
 		<title>D3: Creating dimple rChartt </title>
 	</head>
 	<body>
- <style>
+<div class="container">
+<h3 id="install-and-import-package">Install and import package</h3>
+<pre class="r"><code>require(devtools)</code></pre>
+<pre><code>## Loading required package: devtools</code></pre>
+<pre class="r"><code>library(rCharts)
+library(knitr)
+load(&quot;~/dev/Rstudio/blogpost2/top10.rdata&quot;)
+#rCharts::open_notebook()
+#read_chunk(&quot;~/dev/Rstudio/blogpost2/plots_rCharts.R&quot;)</code></pre>
+<h3 id="setup-for-charts">Setup for Charts</h3>
+<pre class="r"><code>options(RCHART_WIDTH = 600, RCHART_HEIGHT = 400)
+knitr::opts_chunk$set(comment = NA, results = 'asis', tidy = F, message = F)</code></pre>
+<h3 id="basic-dotplot-using-rcharts">Basic dotplot using <code>rCharts</code></h3>
+
+<script type='text/javascript' src=http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js></script> 
+<script type='text/javascript' src=http://d3js.org/d3.v3.min.js></script>
+
+<p><style>
   .rChart {
     display: block;
     margin-left: auto; 
     margin-right: auto;
     width: 600px;
     height: 400px;
-  }  
-  </style>
-<div class="container">
+  }<br>
+  </style></p>
+
 <div id = 'chart15a' class = 'rChart dimple'></div>
 <script type="text/javascript">
   var opts = {
@@ -290,7 +309,7 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
 "horizontalAlign": "center",
 "orderRule": "Categories" 
 };
-  var svg = dimple.newSvg("#chart15a" + opts.id, opts.width, opts.height);
+  var svg = dimple.newSvg("#" + opts.id, opts.width, opts.height);
 
   //data = dimple.filterData(data, "Owner", ["Aperture", "Black Mesa"])
   var myChart = new dimple.chart(svg, data);
