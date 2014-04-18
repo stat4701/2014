@@ -170,10 +170,10 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
 		<title>D3: Creating dimple rChartt </title>
 	</head>
 	<body>
-<div class="container">
+<div class="chartContainer">
 <h3 id="install-and-import-package">Install and import package</h3>
 <pre class="r"><code>require(devtools)</code></pre>
-<pre><code>## Loading required package: devtools</code></pre>
+<pre><code>Loading required package: devtools</code></pre>
 <pre class="r"><code>library(rCharts)
 library(knitr)
 load(&quot;~/dev/Rstudio/blogpost2/top10.rdata&quot;)
@@ -190,8 +190,8 @@ knitr::opts_chunk$set(comment = NA, results = 'asis', tidy = F, message = F)</co
     margin-right: auto;
     width: 600px;
     height: 400px;
-  }<br>
-  </style></p>
+  }  
+</style></p>
 
 <div id = 'chart15a' class = 'rChart dimple'></div>
 <script type="text/javascript">
@@ -395,17 +395,6 @@ knitr::opts_chunk$set(comment = NA, results = 'asis', tidy = F, message = F)</co
 </div>
 
 </div>
-
-<!-- dynamically load mathjax for compatibility with --self-contained -->
-<script type>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
- </script>
-
 
 </body>
 </html>
