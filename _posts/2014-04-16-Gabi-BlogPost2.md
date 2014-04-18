@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 ---
 layout: post
 title: Gabi - Blog Post 2
@@ -162,6 +160,7 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
                                                               "medium employment","high employment")),
                          ordered = T)
 ```
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="utf-8">
