@@ -163,11 +163,10 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>D3: Creating paragraphs dynamically from data</title>
-		<script type="text/javascript" src="../d3/d3.v3.js"></script>
+		<title>D3: Creating dimple rChartt </title>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+  		<script src="http://dimplejs.org/dist/dimple.v1.1.5.min.js"></script>
 		<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-<script type='text/javascript' src=/Library/Frameworks/R.framework/Versions/3.0/Resources/library/rCharts/libraries/dimple/js/dimple.v1.1.1.min.js></script>
-<script type='text/javascript' src=/Library/Frameworks/R.framework/Versions/3.0/Resources/library/rCharts/libraries/dimple/js/d3.v3.js></script> 
 	</head>
 	<body>
  <style>
@@ -179,10 +178,10 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
     height: 400px;
   }  
   </style>
-<div id = 'chart15a' class = 'rChart dimple'></div>
+<div id = 'chart15a' class = 'rChart dimple'>
 <script type="text/javascript">
   var opts = {
- "dom": "chart15a",
+"dom": "chart15a",
 "width":    600,
 "height":    400,
 "x": "empMillions",
@@ -287,7 +286,7 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
 "horizontalAlign": "center",
 "orderRule": "Categories" 
 };
-  var svg = dimple.newSvg("#" + opts.id, opts.width, opts.height);
+  var svg = dimple.newSvg("#chart15a" + opts.id, opts.width, opts.height);
 
   //data = dimple.filterData(data, "Owner", ["Aperture", "Black Mesa"])
   var myChart = new dimple.chart(svg, data);
@@ -383,6 +382,7 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
  </script>
+ </div>
 </body>
 
 
