@@ -7,7 +7,7 @@ tags: blogpost
 
 ### Main Source of Data:
 For this 2nd blogpost I came across this chart [here](http://www.businessinsider.com/most-popular-jobs-in-america-2014-4). After looking around a bit I found a pdf report [here](http://www.bls.gov/news.release/pdf/ocwage.pdf) with a little more detail on the occupations. I found the data 
-[here](http://www.bls.gov/oes/#news)
+[here](http://www.bls.gov/oes/#news).
 
 ### Thoughts on the original government chart:
 
@@ -44,7 +44,7 @@ In case of the nvd3 charts, I am unable to display them interactively (although 
 
 ### Lessons learned in visualization and things to improve on
 This blogpost was definitely a different learning experience than the first. Gathering the data was quite simple, but manipulating the excel file was pretty difficult since it was so large and there were many data issues I had to correct. For the visualization part I tried several different things:
-1) Plotting using ggplot2: This was straightforward since I am more comfortable with R than I was previously. Since I have done bar charts and histograms before I thought it would be a good idea to explore dotplots and inserting text in the chart.
-2) Plotting using iplot: I didn't quite get much out of this, and am hoping to get to explore iplots more for the next blopost since I am sure it can be useful.
-3) Plotting using rCharts: This was quite difficult because I wasn't really aware of what I was getting myself into. Using rcharts in RStudio can be pretty interesting and I like the fact that these charts can be published online. That being said, I had a really tough time understanding who rCharts, knitr and D3 all fit in the picture of publishing charts online.  
+* Plotting using ggplot2: This was straightforward since I am more comfortable with R than I was previously. Since I have done bar charts and histograms before I thought it would be a good idea to explore dotplots and inserting text in the chart.
+* Plotting using iplot: I didn't quite get much out of this, and am hoping to get to explore iplots more for the next blopost since I am sure it can be useful.
+* Plotting using rCharts: This was quite difficult because I wasn't really aware of what I was getting myself into. Using rcharts in RStudio can be pretty interesting and I like the fact that these charts can be published online. That being said, I had a really tough time understanding how rCharts, knitr and D3 all fit in the picture of publishing charts online.  
 While I learned a lot in trying to use rCharts and D3, I do think my visualization is quite simple and would like to really learn how to use D3 and not just by creating rCharts like I did this time. For next time, I would like to get a better understanding of D3 and build a not-so-basic chart. 
