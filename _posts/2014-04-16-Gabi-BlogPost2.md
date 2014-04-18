@@ -164,9 +164,6 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta http-equiv="Content-Style-Type" content="text/css" />
-		<meta name="generator" content="pandoc" />
 		<script src="http://d3js.org/d3.v3.min.js" type='text/javascript'></script>
   		<script src="http://dimplejs.org/dist/dimple.v1.1.5.min.js" type='text/javascript'></script>
 		<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
