@@ -2,16 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta http-equiv="Content-Style-Type" content="text/css" />
-		<meta name="generator" content="pandoc" />
 		<script src="http://d3js.org/d3.v3.min.js" type='text/javascript'></script>
   		<script src="http://dimplejs.org/dist/dimple.v1.1.5.min.js" type='text/javascript'></script>
 		<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 		<title>D3: Creating dimple rChartt </title>
 	</head>
 	<body>
-<div class="container">
+
 <h3 id="install-and-import-package">Install and import package</h3>
 <pre class="r"><code>require(devtools)</code></pre>
 <pre><code>## Loading required package: devtools</code></pre>
@@ -234,22 +231,6 @@ knitr::opts_chunk$set(comment = NA, results = 'asis', tidy = F, message = F)</co
   myChart.draw();
 
 </script>
-
-<div class="references">
-
-</div>
-
-</div>
-
-<!-- dynamically load mathjax for compatibility with --self-contained -->
-<script type>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
- </script>
 
 
 </body>

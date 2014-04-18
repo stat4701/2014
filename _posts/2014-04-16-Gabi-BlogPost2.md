@@ -183,16 +183,6 @@ load(&quot;~/dev/Rstudio/blogpost2/top10.rdata&quot;)
 <pre class="r"><code>options(RCHART_WIDTH = 600, RCHART_HEIGHT = 400)
 knitr::opts_chunk$set(comment = NA, results = 'asis', tidy = F, message = F)</code></pre>
 <h3 id="basic-dotplot-using-rcharts">Basic dotplot using <code>rCharts</code></h3>
-<p><style>
-  .rChart {
-    display: block;
-    margin-left: auto; 
-    margin-right: auto;
-    width: 600px;
-    height: 400px;
-  }  
-</style></p>
-
 <div id = 'chart15a' class = 'rChart dimple'></div>
 <script type="text/javascript">
   var opts = {
@@ -389,11 +379,6 @@ knitr::opts_chunk$set(comment = NA, results = 'asis', tidy = F, message = F)</co
   myChart.draw();
 
 </script>
-
-<div class="references">
-
-</div>
-
 </div>
 
 </body>
