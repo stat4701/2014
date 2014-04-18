@@ -161,24 +161,10 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
                          ordered = T)
 ```
 
-<html xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
-
-<meta charset="utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="Content-Style-Type" content="text/css" />
-<meta name="generator" content="pandoc" />
-
-<title></title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-<hr />
-<h3 id="basic-dotplot-using-rcharts">Basic dotplot using <code>rCharts</code></h3>
-<style>
+<script type='text/javascript' src=/Library/Frameworks/R.framework/Versions/3.0/Resources/library/rCharts/libraries/dimple/js/dimple.v1.1.1.min.js></script>
+<script type='text/javascript' src=/Library/Frameworks/R.framework/Versions/3.0/Resources/library/rCharts/libraries/dimple/js/d3.v3.js></script> 
+ <style>
   .rChart {
     display: block;
     margin-left: auto; 
@@ -187,18 +173,19 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
     height: 400px;
   }  
   </style>
-
-<div id="chart1" class="rChart dimple"></div>
+<div id = 'chart15a' class = 'rChart dimple'></div>
 <script type="text/javascript">
   var opts = {
- "dom": "chart1",
+ "dom": "chart15a",
 "width":    600,
 "height":    400,
 "x": "empMillions",
 "y": "occTitle2",
+"chartID": "chart15a",
+"z": "empMillions",
 "groups": "Category",
 "type": "multiBarChart",
-"id": "chart1" 
+"id": "chart15a" 
 },
     data = [
  {
@@ -273,7 +260,7 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
 } 
 ],
     xAxis = {
- "type": "addMeasureAxis",
+ "type": "addCategoryAxis",
 "showPercent": false 
 },
     yAxis = {
@@ -281,14 +268,17 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
 "showPercent": false,
 "orderRule": "empMillions" 
 },
-    zAxis = [],
+    zAxis = {
+ "type": "addMeasureAxis",
+"overrideMax":     10 
+},
     colorAxis = [],
     legend = {
- "x":    100,
+ "x":     10,
 "y":     10,
-"width":    700,
-"height":     20,
-"horizontalAlign": "right",
+"width":    400,
+"height":     40,
+"horizontalAlign": "center",
 "orderRule": "Categories" 
 };
   var svg = dimple.newSvg("#" + opts.id, opts.width, opts.height);
@@ -379,7 +369,6 @@ top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
   myChart.draw();
 
 </script>
-</html>
 
 
 
