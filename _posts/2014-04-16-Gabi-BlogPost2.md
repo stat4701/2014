@@ -31,141 +31,20 @@ I also played with scatter-plots and flipping coordinate axes to see what might 
 [![scatterplt_top10](http://Gabya06.github.io/edav/assets/gaby_assets/scatterplt_top10.png)](http://Gabya06.github.io/edav/assets/gaby_assets/scatterplt_top10.png).
 
 
-### rCharts - Motivation and challenges
+### rCharts - Motivation and some challenges
 After trying out several ways to visualize the top 10 occupational titles using ggplot2, I tried using iplot but was not too successful. I was expecting iplot to be more interactive and was kind of disappointed because it seems kind of basic for an interactive graph (maybe I am missing something?), so I decided to move on and give rCharts a try.
 In order to work with rCharts, I had to download the package from github since it is not in CRAN yet. There are many nice interactive graphs as tutorials online, but I still haven't been able to find one good tutorial that takes you through all the methods available for the different types of rCharts available. As I was learning to use rCharts my goal was to be able to plot a few of the basic charts and get an understanding of how rCharts works. While I was reading through some documentation I saw that one of the ways to publish rCharts was using knitr. So, my other goal became to learn how to use knitr as well. 
 
 Once I was able to plot 2 different types of rCharts (nvd3 and dimple), I found it challenging to display the charts using knitr because I didn't quite understand the syntax right away. Along the way, I learned that I could write the code for the dimple chart in R and use knitr to 'knit' to a .md file which (to my surprise) contained D3! I guess this is what the [website](http://dimplejs.org/) refers to as 'An object-oriented API for business Analytics powered by D3', I guess must have missed that... 
 In case of the nvd3 charts, I am unable to display them interactively (although I can see them when I 'knit' to .md or export html file) - still not sure how to do this properly- so I attached them as pdf.
 
-### New Chart - Hopefully more interesting than the previous
--  [nvd3](http://Gabya06.github.io/edav/assets/gaby_assets/nvd3.pdf)
--  [New top 10 Occupational Titles](http://Gabya06.github.io/edav/assets/gaby_assets/rchartsd3.html)
+### rChart Chart - Hopefully better than the previous
+-  [nvd3 pdf charts](http://Gabya06.github.io/edav/assets/gaby_assets/nvd3.pdf)
+-  [New top 10 Occupational Titles](http://Gabya06.github.io/edav/assets/gaby_assets/dimpled3.html)
 
-
-###Code for rCharts
-##### Install and import package
-```{r installLibraries, eval= T}
-#require(devtools)
-#install_github('rCharts', 'ramnathv')
-suppressPackageStartupMessages(require(rCharts,quietly = T))
-library(knitr)
-library(shiny)
-load("~/dev/Rstudio/blogpost2/top10.rdata")
-```
-
-#### Setup for Charts
-```{r setupcharts, echo = T, message = F, cache = F}
-require(rCharts)
-options(RCHART_WIDTH = 600, RCHART_HEIGHT = 400)
-knitr::opts_chunk$set(comment = NA, results = 'asis', tidy = F, message = F)
-```
-
-### Basic multiBarChart using `rCharts` 
-```{r nPlt1, echo=FALSE, fig.height=400, fig.width=600}
-n1 <- nPlot(
-  chartID = 'chart10',
-  x="occTitle2" , 
-  y= "empMillions", 
-  data =top10_v2, 
-  type ="multiBarChart")
-n1$print("chart10", include_assets = TRUE)
-n1$save('n1.html',cdn=T) n1$publish('n1',host='gist')
-```
-
-### MultibarChart with categories by Employment number
-```{r nPlt2, echo=FALSE,fig.height=400,fig.width=600}
-nplt <- nPlot(
-  chartID ='chart2',
-  x="occTitle2",
-  y="empMillions",
-  group ="Category",
-  data= top10_v2,
-  type="multiBarChart",
-  color = "Category")
-nplt$set(width = 600)
-nplt$show('iframe')
-```
-
-### Basic dotplot using `rCharts` 
-```{r dotplt1, echo=FALSE,fig.height=400,fig.width=600}
-d1<- dPlot(
-  x="empMillions",
-  y="occTitle2",
-  groups="Category",
-  data= top10_v2,
-  type="multiBarChart")
-d1$xAxis(type = "addMeasureAxis")
-d1$yAxis(type = "addCategoryAxis", orderRule = "empMillions")
-d1$legend( x = 100, y = 10, width = 700, height = 20, horizontalAlign = "right", orderRule = "Categories")
-d1$set(width = 600)
-d1$print("chart1", include_assets = TRUE, cdn = TRUE)
-```
----
-## R Code for file manipulation
-```{r readingfile, eval=F, comment="",echo=T,message=FALSE,cache=TRUE, background="skyblue"}
-options(stringsAsFactors= FALSE)
-file <- read.csv('~/dev/Rstudio/data/oesm13all/oes_data_2013.csv' , strip.white=TRUE)
-
-
-# select only  important data
-occdata <- subset(file, select = c('area','area_title','area_type','naics','naics_title','occ_code','occ_title',
-                                     'group','tot_emp','emp_prse','h_mean','a_mean','a_median')  )
-
-# functions to get rid of spaces and commas
-trim <- function (x) gsub("^\\s+|\\s+$", "", x)
-trim_comma <- function (x) gsub(pattern = ",",replacement = "",x, fixed = TRUE)
-
-# remove any rows with missing values for total employment and average annual and hourly wage 
-occdata <- occdata[(!occdata$tot_emp %in% c("**","*","#")) & 
-                     (!occdata$a_mean %in% c("*","#"))  & 
-                     (occdata$h_mean!="*") ,]
-
-# make sure no commas or white spaces
-occdata$tot_emp <- trim(occdata$tot_emp)
-occdata$tot_emp <- trim_comma(occdata$tot_emp)
-occdata$a_mean <- trim(occdata$a_mean)
-occdata$a_mean <- trim_comma(occdata$a_mean)
-
-
-# subset data with grouped as detail
-detail <- with(occdata, subset(occdata, (group=='detail')))
-
-# subset data by major group
-major <- with(occdata, subset(occdata, (group=='major')))
-
-# convert from character to number
-detail$tot_emp <- as.integer(detail$tot_emp)
-detail$a_mean <- as.integer(detail$a_mean)
-
-# aggregate total employee occupation and sort
-detail_agg <- aggregate(tot_emp ~ occ_title, data = detail, sum, na.rm = TRUE)
-detail_agg <- detail_agg[(order(detail_agg$tot_emp, decreasing = T)),]
-
-# get top10 emploment occupations from detail set
-top10 <- detail_agg[(1:10),]
-
-# create a second version of top10 to play with rCharts 
-top10_v2 <- top10
-# remove underscore from names
-names(top10_v2)<- gsub('\\_','',names(top10_v2))
-
-# add levels for total employement
-top10_v2$empcat[(top10_v2$totemp <13000000)]<-"low employment"
-top10_v2$empcat[(top10_v2$totemp >13000000) & (16000000< top10_v2$totemp)]<-"high employment"
-top10_v2$empcat[is.na(top10_v2$empcat)]<-"medium employment"
-# add column with employment in millions
-top10_v2$totempmil<- signif(top10_v2$totemp/10000000,2)
-
-
-# change occupations to be shorter names
-top10_v2$occtitle2 <- c("Retail","Nurses","Cashiers", "Clerks","FoodPrep","Waiters","Cust Svs","Admin","Janitors","Laborers")
-# change names to be more meaninggul
-names(top10_v2)<-c("occupTitle","employment","Category","empMillions","occTitle2")
-
-#add factor for employment category
-top10_v2$Category <- factor(top10_v2$Category, levels = rev(c("low employment",
-                                                              "medium employment","high employment")),
-                         ordered = T)
-```
-
+### Lessons learned in visualization and things to improve on
+This blogpost was definitely a different learning experience than the first. Gathering the data was quite simple, but manipulating the excel file was pretty difficult since it was so large and there were many data issues I had to correct. For the visualization part I tried several different things:
+1) Plotting using ggplot2: This was straightforward since I am more comfortable with R than I was previously. Since I have done bar charts and histograms before I thought it would be a good idea to explore dotplots and inserting text in the chart.
+2) Plotting using iplot: I didn't quite get much out of this, and am hoping to get to explore iplots more for the next blopost since I am sure it can be useful.
+3) Plotting using rCharts: This was quite difficult because I wasn't really aware of what I was getting myself into. Using rcharts in RStudio can be pretty interesting and I like the fact that these charts can be published online. That being said, I had a really tough time understanding who rCharts, knitr and D3 all fit in the picture of publishing charts online.  
+While I learned a lot in trying to use rCharts and D3, I do think my visualization is quite simple and would like to really learn how to use D3 and not just by creating rCharts like I did this time. For next time, I would like to get a better understanding of D3 and build a not-so-basic chart. 
