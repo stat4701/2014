@@ -15,11 +15,6 @@ This is what I did for the Blog Post #2 in my attempt to make it interactive and
 
 The Maps I have are:
 
-* Snapshots <br>
-[![california] (https://raw.githubusercontent.com/MichaelJ1106/edav/michael_intro/assets/michael_jiang_assets/california.png)](https://raw.githubusercontent.com/MichaelJ1106/edav/michael_intro/assets/michael_jiang_assets/california.png) <br>
-
-here is a quick sample:
-[![fewFruitNoExercise_byState](http://Gabya06.github.io/edav/assets/gaby_assets/fewFruitNoExercise_byState.png)](http://Gabya06.github.io/edav/assets/gaby_assets/fewFruitNoExercise_byState.png)
 
 here is a quick sample:
 [![Asia](http://ganepola.github.io/edav/assets/dyan_assets/Asia+35-11+180+73.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Asia+35-11+180+73.jpg)
