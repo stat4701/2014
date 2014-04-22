@@ -13,18 +13,12 @@ The problem with this map is, it has no interactive visualization capability. It
 This is what I did for the Blog Post #2 in my attempt to make it interactive and have enhanced visualization that was missing in the Blog Post #1 and also provide grounds for further analysis in statistical sense.
 
 
-The Maps I have are:
 
-
-* Here are the snapshots of the maps by the region: <br>
+Here are the snapshots of the maps by the region: 
 
 * Asia: <br>
 
 [![Asia](http://ganepola.github.io/edav/assets/dyan_assets/Asia+35-11+180+73.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Asia+35-11+180+73.jpg)
-
-* Asia: <br>
-
-![Asia](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg)
 
 * Europe: <br>
 
@@ -38,7 +32,7 @@ The Maps I have are:
 
 ![South America](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/southamerica-87.3-54.5-31.55+14.jpg)
 
-The Datasets I have with Geo Codes are: <br>
+The Datasets I have with Geo Codes are: 
 
 [Asia](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Asia-City,Country-English.txt).
 
