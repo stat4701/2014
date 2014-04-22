@@ -5,10 +5,11 @@ description: A color-coded map of the world’s most and least emotional countri
 tags: blogpost
 ---
 
-This Blog Post is a continuation of Blog Post 1 which was about a Color-coded map of the world's most and least emotional countries. 
+* This Blog Post is a continuation of Blog Post 1 which was about a Color-coded map of the world's most and least emotional countries: <br> 
 
 ![World Map](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Map-of-World's-emotional-countries.png)
 
+<br>  
 
 The problem with the above map is, it has no interactive visualization capability. It has a great potential to be enriched by using interactive visualization techniques which is the goal of this Blog Post #2. Also I thought as a Data Science student it would be interesting to find out if there is any statistical correlation of this polled data to some other parameter such as the country's population or the literacy rate.  
 
