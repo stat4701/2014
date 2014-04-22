@@ -20,7 +20,7 @@ The Maps I have are:
 * Snapshots <br>
 [![california] (https://raw.githubusercontent.com/MichaelJ1106/edav/michael_intro/assets/michael_jiang_assets/california.png)](https://raw.githubusercontent.com/MichaelJ1106/edav/michael_intro/assets/michael_jiang_assets/california.png) <br>
 
-[![Asia](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg)].
+[![Asia](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg)](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg).
 
 [Europe](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Europe-27.16+37.5+46+78.5.jpg).
 
