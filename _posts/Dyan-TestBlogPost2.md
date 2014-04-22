@@ -21,7 +21,7 @@ The Maps I have are:
 [![california] (https://raw.githubusercontent.com/MichaelJ1106/edav/michael_intro/assets/michael_jiang_assets/california.png)](https://raw.githubusercontent.com/MichaelJ1106/edav/michael_intro/assets/michael_jiang_assets/california.png) <br>
 
 * Snapshots <br>
-[![Asia] (https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg)](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan-assets/Asia+35-11+180+73.jpg) <br>
+[![Asia] (https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg)](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg) <br>
 
 [![Asia] (https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg)](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg).
 
