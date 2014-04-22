@@ -21,10 +21,10 @@ The Maps I have are:
 [![Asia](http://ganepola.github.io/edav/assets/dyan_assets/Asia+35-11+180+73.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Asia+35-11+180+73.jpg)
 
 
-[![Asia](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg)]
+![Asia](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg)
 
 
-[![Europe](https://ganepola.github.io/edav/gh-pages/assets/dyan_assets/Europe-27.16+37.5+46+78.5.jpg).
+[![Europe](https://ganepola.github.io/edav/gh-pages/assets/dyan_assets/Europe-27.16+37.5+46+78.5.jpg)]
 
 [![North America](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/NorthAmerica-179.5+10.7-49.9+87.9.jpg)].
 
