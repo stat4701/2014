@@ -7,7 +7,7 @@ tags: blogpost
 
 * This Blog Post is a continuation of Blog Post 1 which was about a Color-coded map of the world's most and least emotional countries: <br> 
 
-![World Map](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Map-of-World's-emotional-countries.png)
+![World Map](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Map-of-World's-emotional-countries.jpg)
 
 <br>  
 
