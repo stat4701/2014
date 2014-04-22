@@ -22,7 +22,7 @@ here is a quick sample:
 [![fewFruitNoExercise_byState](http://Gabya06.github.io/edav/assets/gaby_assets/fewFruitNoExercise_byState.png)](http://Gabya06.github.io/edav/assets/gaby_assets/fewFruitNoExercise_byState.png)
 
 here is a quick sample:
-[![Asia](http://Gabya06.github.io/edav/assets/gaby_assets/fewFruitNoExercise_byState.png)](http://Gabya06.github.io/edav/assets/gaby_assets/fewFruitNoExercise_byState.png)
+[![Asia](http://ganepola.github.io/edav/assets/dyan_assets/Asia+35-11+180+73.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Asia+35-11+180+73.jpg)
 
 * Snapshots <br>
 [![Asia] (https://raw.githubusercontent.com/ganepola/edav/assets/dyan_assets/Asia+35-11+180+73.jpg)](https://raw.githubusercontent.com/ganepola/edav/assets/dyan_assets/Asia+35-11+180+73.jpg) <br>
