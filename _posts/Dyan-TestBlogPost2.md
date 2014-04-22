@@ -26,9 +26,9 @@ The Maps I have are:
 
 ![Europe](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Europe-27.16+37.5+46+78.5.jpg)
 
-![North America](https://ganepola.github.io/edav/gh-pages/assets/dyan_assets/NorthAmerica-179.5+10.7-49.9+87.9.jpg)
+![North America](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/NorthAmerica-179.5+10.7-49.9+87.9.jpg)
 
-![South America](https://ganepola.github.io/edav/gh-pages/assets/dyan_assets/southamerica-87.3-54.5-31.55+14.jpg)
+[South America](https://ganepola.github.io/edav/gh-pages/assets/dyan_assets/southamerica-87.3-54.5-31.55+14.jpg)
 
 The Datasets I have with Geo Codes are:
 
