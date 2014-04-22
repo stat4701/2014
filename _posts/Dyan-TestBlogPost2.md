@@ -16,14 +16,13 @@ This is what I did for the Blog Post #2 in my attempt to make it interactive and
 The Maps I have are:
 
 
-here is a quick sample:
+* Here are the snap shots of the maps by the region: <br>
+
 [![Asia](http://ganepola.github.io/edav/assets/dyan_assets/Asia+35-11+180+73.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Asia+35-11+180+73.jpg)
 
 
-* Snapshots <br>
-[![Asia] (https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg)](https://raw.githubusercontent.com/ganepola/edav/assets/dyan_assets/Asia+35-11+180+73.jpg) <br>
+[![Asia] (https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg)](https://raw.githubusercontent.com/ganepola/edav/assets/dyan_assets/Asia+35-11+180+73.jpg)
 
-[![Asia] (https://github.com/ganepola/edav/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg)](https://github.com/ganepola/edav/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg).
 
 [Europe](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Europe-27.16+37.5+46+78.5.jpg).
 
