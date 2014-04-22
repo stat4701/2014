@@ -13,15 +13,16 @@ The problem with this map is, it has no interactive visualization capability. It
 This is what I did for the Blog Post #2 in my attempt to make it interactive and have enhanced visualization that was missing in the Blog Post #1 and also provide grounds for further analysis in statistical sense.
 
 
-
-
 The Maps I have are:
 
 * Snapshots <br>
 [![california] (https://raw.githubusercontent.com/MichaelJ1106/edav/michael_intro/assets/michael_jiang_assets/california.png)](https://raw.githubusercontent.com/MichaelJ1106/edav/michael_intro/assets/michael_jiang_assets/california.png) <br>
 
+here is a quick sample:
+[![fewFruitNoExercise_byState](http://Gabya06.github.io/edav/assets/gaby_assets/fewFruitNoExercise_byState.png)](http://Gabya06.github.io/edav/assets/gaby_assets/fewFruitNoExercise_byState.png)
+
 * Snapshots <br>
-[![Asia] (https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg)](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg) <br>
+[![Asia] (https://raw.githubusercontent.com/ganepola/edav/assets/dyan_assets/Asia+35-11+180+73.jpg)](https://raw.githubusercontent.com/ganepola/edav/assets/dyan_assets/Asia+35-11+180+73.jpg) <br>
 
 [![Asia] (https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg)](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg).
 
