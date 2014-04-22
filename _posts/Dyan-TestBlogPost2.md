@@ -16,21 +16,29 @@ This is what I did for the Blog Post #2 in my attempt to make it interactive and
 The Maps I have are:
 
 
-* Here are the snap shots of the maps by the region: <br>
+* Here are the snapshots of the maps by the region: <br>
+
+* Asia: <br>
 
 [![Asia](http://ganepola.github.io/edav/assets/dyan_assets/Asia+35-11+180+73.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Asia+35-11+180+73.jpg)
 
+* Asia: <br>
 
 ![Asia](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Asia+35-11+180+73.jpg)
 
+* Europe: <br>
 
 ![Europe](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Europe-27.16+37.5+46+78.5.jpg)
 
+* North America: <br>
+
 ![North America](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/NorthAmerica-179.5+10.7-49.9+87.9.jpg)
+
+* South America:
 
 ![South America](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/southamerica-87.3-54.5-31.55+14.jpg)
 
-The Datasets I have with Geo Codes are:
+The Datasets I have with Geo Codes are: <br>
 
 [Asia](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Asia-City,Country-English.txt).
 
