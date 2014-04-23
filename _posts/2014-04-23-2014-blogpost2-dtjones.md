@@ -13,7 +13,7 @@ Based on log level data and ad serving technology, we can understand which users
 Based on domain knowledge, we believe that campaign dimensions such as media partner, targeting type & ad format can influence the optimal frequency. Based on probability theory, we hypothesize that this frequency data assumes a [Poisson distribution](http://en.wikipedia.org/wiki/Poisson_distribution ) because of its discrete domain and the Poisson's insight into the probability of an event after a sequence of influences. 
 
 #Data
-I munged through log level data in SQL Server to arrive at a dataset that consists of users that completed a successful action (converted), the different site, targeting, and ad format combinations to which they were exposed as well as the count of exposures before they converted. The final dataset has 3 columns: record ID, campaign dimension, and frequency. There were ~35,000 observed conversions in this data. 
+I munged through log level data in SQL Server to arrive at a dataset that consists of users that completed a successful action (converted), the different site, targeting, and ad format combinations to which they were exposed as well as the count of exposures before they converted. The final dataset has 3 columns: campaign dimension, most recent exposure time, and frequency. There were ~35,000 observed conversions in this data. 
 
 From there I imported the data into R to parameterize each Poisson distribution, calculated the probability point estimates over a domain for graphing and visualized in ggplot2. 
 
