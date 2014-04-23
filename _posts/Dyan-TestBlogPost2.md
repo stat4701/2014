@@ -9,7 +9,7 @@ tags: blogpost
 
 Map-of-World's-emotional-countries. 
 
-[![map](http://ganepola.github.io/edav/assets/dyan_assets/Map-of-World's-emotional-countries.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/emotional-countries.JPG)
+[![World Map](http://ganepola.github.io/edav/assets/dyan_assets/Map-of-World's-emotional-countries.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/emotional-countries.JPG)
 
 
 ![World Map](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/emotional-countries.JPG)
