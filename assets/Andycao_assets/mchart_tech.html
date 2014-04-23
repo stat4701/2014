@@ -1,0 +1,353 @@
+<script type='text/javascript' src=http://d3js.org/d3.v3.min.js></script> 
+ <style>
+  .rChart {
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    width: 800px;
+    height: 400px;
+  }  
+  </style>
+<div id = 'chart2917b996658' class = 'rChart motionchart'></div>
+
+
+
+
+<p class="attribution"></p>
+
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://d3js.org/d3.v2.js?2.8.1"></script>
+
+<script>
+var params={
+ "dom": "chart2917b996658",
+"width":    800,
+"height":    400,
+"countryHighlights": "",
+"yearMin":   1990,
+"yearMax":   2013,
+"x": "price",
+"y": "marketCap",
+"radius": "marketCap",
+"color": "company",
+"key": "company",
+"ymin": 3.57e+08,
+"ymax": 6.45e+11,
+"xmin":      0,
+"xmax":    617,
+"rmin":      0,
+"rmax": 6.45e+11,
+"xlabel": "price",
+"ylabel": "marketCap",
+"yscale": "log",
+"xscale": "linear",
+"data": "[{\"company\":\"Apple\",\"company\":\"Apple\",\"price\":[[1990,43],[1991,56.38],[1992,59.75],[1993,29.25],[1994,39],[1995,31.87],[1996,20.87],[1997,13.13],[1998,40.94],[1999,102.81],[2000,14.88],[2001,21.9],[2002,14.33],[2003,21.37],[2004,64.4],[2005,71.89],[2006,84.84],[2007,198.08],[2008,85.35],[2009,210.73],[2010,322.56],[2011,405],[2012,532.17],[2013,561.02]],\"marketCap\":[[1990,4915502080],[1991,6516950016],[1992,6952619008],[1993,3407478784],[1994,4645737472],[1995,3924386048],[1996,2881028096],[1997,1704252928],[1998,5312448000],[1999,16686684160],[2000,5136441856],[2001,7905655808],[2002,5065213440],[2003,7662853120],[2004,25895182336],[2005,60791418880],[2006,72981053440],[2007,176000000000],[2008,76406505472],[2009,189000000000],[2010,298000000000],[2011,378000000000],[2012,478000000000],[2013,456000000000]],\"marketCap\":[[1990,4915502080],[1991,6516950016],[1992,6952619008],[1993,3407478784],[1994,4645737472],[1995,3924386048],[1996,2881028096],[1997,1704252928],[1998,5312448000],[1999,16686684160],[2000,5136441856],[2001,7905655808],[2002,5065213440],[2003,7662853120],[2004,25895182336],[2005,60791418880],[2006,72981053440],[2007,176000000000],[2008,76406505472],[2009,189000000000],[2010,298000000000],[2011,378000000000],[2012,478000000000],[2013,456000000000]]},{\"company\":\"Cisco\",\"company\":\"Cisco\",\"price\":[[1990,44.88],[1991,66.25],[1992,78.62],[1993,64.62],[1994,35.13],[1995,74.62],[1996,63.63],[1997,55.75],[1998,92.81],[1999,107.12],[2000,38.25],[2001,18.11],[2002,13.1],[2003,24.23],[2004,19.32],[2005,17.12],[2006,27.33],[2007,27.07],[2008,16.3],[2009,23.94],[2010,20.23],[2011,18.08],[2012,19.65],[2013,22.43]],\"marketCap\":[[1990,396836000],[1991,1254626944],[1992,3550482176],[1993,6244672512],[1994,7836959744],[1995,21107376128],[1996,38885363712],[1997,54153502720],[1998,92315435008],[1999,245000000000],[2000,364000000000],[2001,127000000000],[2002,85204738048],[2003,137000000000],[2004,127000000000],[2005,105000000000],[2006,144000000000],[2007,194000000000],[2008,95641837568],[2009,139000000000],[2010,127000000000],[2011,99685761024],[2012,91827191808],[2013,116000000000]],\"marketCap\":[[1990,396836000],[1991,1254626944],[1992,3550482176],[1993,6244672512],[1994,7836959744],[1995,21107376128],[1996,38885363712],[1997,54153502720],[1998,92315435008],[1999,245000000000],[2000,364000000000],[2001,127000000000],[2002,85204738048],[2003,137000000000],[2004,127000000000],[2005,105000000000],[2006,144000000000],[2007,194000000000],[2008,95641837568],[2009,139000000000],[2010,127000000000],[2011,99685761024],[2012,91827191808],[2013,116000000000]]},{\"company\":\"Facebook\",\"company\":\"Facebook\",\"price\":[[2012,26.62],[2013,54.65]],\"marketCap\":[[2012,63141904384],[2013,157000000000]],\"marketCap\":[[2012,63141904384],[2013,157000000000]]},{\"company\":\"Google\",\"company\":\"Google\",\"price\":[[2004,96.3],[2005,207.22],[2006,230.01],[2007,345.39],[2008,153.67],[2009,309.68],[2010,296.69],[2011,322.63],[2012,353.34],[2013,559.79]],\"marketCap\":[[2004,53470158848],[2005,123000000000],[2006,142000000000],[2007,216000000000],[2008,96944824320],[2009,197000000000],[2010,191000000000],[2011,210000000000],[2012,233000000000],[2013,374000000000]],\"marketCap\":[[2004,53470158848],[2005,123000000000],[2006,142000000000],[2007,216000000000],[2008,96944824320],[2009,197000000000],[2010,191000000000],[2011,210000000000],[2012,233000000000],[2013,374000000000]]},{\"company\":\"IBM\",\"company\":\"IBM\",\"price\":[[1990,113],[1991,89],[1992,50.38],[1993,56.5],[1994,73.5],[1995,91.37],[1996,151.5],[1997,104.62],[1998,184.38],[1999,107.87],[2000,85],[2001,120.96],[2002,77.5],[2003,92.68],[2004,98.58],[2005,82.2],[2006,97.15],[2007,108.1],[2008,84.16],[2009,130.9],[2010,146.76],[2011,183.88],[2012,191.55],[2013,187.57]],\"marketCap\":[[1990,64567181312],[1991,50820603904],[1992,28786087936],[1993,32848252928],[1994,43196760064],[1995,50052849664],[1996,76959121408],[1997,100000000000],[1998,169000000000],[1999,192000000000],[2000,150000000000],[2001,208000000000],[2002,133000000000],[2003,157000000000],[2004,162000000000],[2005,129000000000],[2006,146000000000],[2007,150000000000],[2008,113000000000],[2009,171000000000],[2010,180000000000],[2011,214000000000],[2012,214000000000],[2013,193000000000]],\"marketCap\":[[1990,64567181312],[1991,50820603904],[1992,28786087936],[1993,32848252928],[1994,43196760064],[1995,50052849664],[1996,76959121408],[1997,100000000000],[1998,169000000000],[1999,192000000000],[2000,150000000000],[2001,208000000000],[2002,133000000000],[2003,157000000000],[2004,162000000000],[2005,129000000000],[2006,146000000000],[2007,150000000000],[2008,113000000000],[2009,171000000000],[2010,180000000000],[2011,214000000000],[2012,214000000000],[2013,193000000000]]},{\"company\":\"Intel\",\"company\":\"Intel\",\"price\":[[1990,38.5],[1991,49],[1992,87],[1993,62],[1994,63.88],[1995,56.75],[1996,130.94],[1997,70.25],[1998,118.56],[1999,82.31],[2000,30.06],[2001,31.45],[2002,15.57],[2003,32.05],[2004,23.39],[2005,24.96],[2006,20.25],[2007,26.66],[2008,14.66],[2009,20.4],[2010,21.03],[2011,24.25],[2012,20.62],[2013,25.96]],\"marketCap\":[[1990,7561781760],[1991,9686342656],[1992,18836281344],[1993,25916000256],[1994,26380374016],[1995,46591750144],[1996,111000000000],[1997,115000000000],[1998,207000000000],[1999,277000000000],[2000,202000000000],[2001,216000000000],[2002,108000000000],[2003,203000000000],[2004,147000000000],[2005,148000000000],[2006,117000000000],[2007,156000000000],[2008,78869159936],[2009,112000000000],[2010,115000000000],[2011,121000000000],[2012,100000000000],[2013,124000000000]],\"marketCap\":[[1990,7561781760],[1991,9686342656],[1992,18836281344],[1993,25916000256],[1994,26380374016],[1995,46591750144],[1996,111000000000],[1997,115000000000],[1998,207000000000],[1999,277000000000],[2000,202000000000],[2001,216000000000],[2002,108000000000],[2003,203000000000],[2004,147000000000],[2005,148000000000],[2006,117000000000],[2007,156000000000],[2008,78869159936],[2009,112000000000],[2010,115000000000],[2011,121000000000],[2012,100000000000],[2013,124000000000]]},{\"company\":\"Microsoft\",\"company\":\"Microsoft\",\"price\":[[1990,75.25],[1991,111.25],[1992,85.37],[1993,80.62],[1994,61.13],[1995,87.75],[1996,82.62],[1997,129.25],[1998,138.69],[1999,116.75],[2000,43.38],[2001,66.25],[2002,51.7],[2003,27.37],[2004,26.72],[2005,26.15],[2006,29.86],[2007,35.6],[2008,19.44],[2009,30.48],[2010,27.91],[2011,25.96],[2012,26.71],[2013,37.41]],\"marketCap\":[[1990,8631175168],[1991,19724625920],[1992,23819624448],[1993,22897500160],[1994,35513626624],[1995,51772502016],[1996,98984747008],[1997,157000000000],[1998,348000000000],[1999,586000000000],[2000,231000000000],[2001,358000000000],[2002,277000000000],[2003,295000000000],[2004,291000000000],[2005,272000000000],[2006,292000000000],[2007,332000000000],[2008,173000000000],[2009,269000000000],[2010,235000000000],[2011,218000000000],[2012,224000000000],[2013,299000000000]],\"marketCap\":[[1990,8631175168],[1991,19724625920],[1992,23819624448],[1993,22897500160],[1994,35513626624],[1995,51772502016],[1996,98984747008],[1997,157000000000],[1998,348000000000],[1999,586000000000],[2000,231000000000],[2001,358000000000],[2002,277000000000],[2003,295000000000],[2004,291000000000],[2005,272000000000],[2006,292000000000],[2007,332000000000],[2008,173000000000],[2009,269000000000],[2010,235000000000],[2011,218000000000],[2012,224000000000],[2013,299000000000]]},{\"company\":\"Oracle\",\"company\":\"Oracle\",\"price\":[[1990,7.88],[1991,14.5],[1992,28.37],[1993,28.75],[1994,44.13],[1995,42.38],[1996,41.75],[1997,22.31],[1998,43.13],[1999,112.06],[2000,29.06],[2001,13.81],[2002,10.8],[2003,13.23],[2004,13.72],[2005,12.21],[2006,17.14],[2007,22.58],[2008,17.73],[2009,24.53],[2010,31.3],[2011,25.65],[2012,33.32],[2013,38.26]],\"marketCap\":[[1990,1052793024],[1991,1867292928],[1992,3159967232],[1993,9172166656],[1994,11816929280],[1995,19751917568],[1996,32237686784],[1997,32778299392],[1998,32870135808],[1999,95667503104],[2000,148000000000],[2001,77109657600],[2002,64018350080],[2003,62816518144],[2004,65024958464],[2005,64940400640],[2006,98640896000],[2007,103000000000],[2008,81190141952],[2009,111000000000],[2010,137000000000],[2011,158000000000],[2012,153000000000],[2013,165000000000]],\"marketCap\":[[1990,1052793024],[1991,1867292928],[1992,3159967232],[1993,9172166656],[1994,11816929280],[1995,19751917568],[1996,32237686784],[1997,32778299392],[1998,32870135808],[1999,95667503104],[2000,148000000000],[2001,77109657600],[2002,64018350080],[2003,62816518144],[2004,65024958464],[2005,64940400640],[2006,98640896000],[2007,103000000000],[2008,81190141952],[2009,111000000000],[2010,137000000000],[2011,158000000000],[2012,153000000000],[2013,165000000000]]}]",
+"id": "chart2917b996658" 
+}
+
+/*
+rChart$set(
+ x='Fertility',
+ y='GDP',
+ radius='Population',
+ color='Region',
+ key='Country',
+
+ ymin=250 ,
+ ymax=120000,
+ xmin=0,
+ xmax=10,
+ rmin=0,
+ rmax=21000000,
+
+ xlabel="Fertility",
+ ylabel="GDP",
+
+ yscale='linear',
+ xscale='linear'
+)
+*/
+
+/*
+
+params={}
+params.yearMin=1800
+params.yearMax=2005
+params.countryHighlights=['Bangladesh','India']
+
+params.jsondatafile="nations.json"
+params.x='income'
+params.y='lifeExpectancy'
+params.radius='population'
+params.color='region'
+params.key='name'
+params.xlabel="income per capita, inflation-adjusted (dollars)"
+params.ylabel="life expectancy (years)"
+
+params.ymin=10
+params.ymax=85 
+params.xmin=300 
+params.xmax=1e5
+params.rmin=0
+params.rmax=5e8
+
+params.xscale='log'
+params.yscale='linear'
+//*/
+
+// Various accessors that specify the four dimensions of data to visualize.
+function x(d) {
+    return d[params.x];
+}
+function y(d) {
+    return d[params.y];
+}
+function radius(d) {
+    return d[params.radius];
+}
+function color(d) {
+    return d[params.color];
+}
+function key(d) {
+    return d[params.key];
+}
+
+
+var currentCountry = "";
+
+// Chart dimensions.
+var margin = {top: 19.5, right: 19.5, bottom: 19.5, left: 39.5},
+        width = params.width - margin.right,
+        height = params.height - margin.top - margin.bottom,
+        yearMargin = 105;
+
+// Various scales. These domains make assumptions of data, naturally.
+//d3.scale.log() d3.scale.linear()
+if (params.xscale=='log') var xScale = d3.scale.log().domain([params.xmin, params.xmax]).range([0, width - yearMargin])
+else  var xScale = d3.scale.linear().domain([params.xmin, params.xmax]).range([0, width - yearMargin])
+        if (params.yscale=='log') var yScale = d3.scale.log().domain([params.ymin, params.ymax]).range([height, 0])
+        else var yScale = d3.scale.linear().domain([params.ymin, params.ymax]).range([height, 0])
+        var radiusScale = d3.scale.sqrt().domain([params.rmin, params.rmax]).range([0, 40]),
+        colorScale = d3.scale.category10();
+
+// The x & y axes.
+var xAxis = d3.svg.axis().orient("bottom").scale(xScale).ticks(12, d3.format(",d")),
+        yAxis = d3.svg.axis().scale(yScale).orient("left");
+
+var yearScale = d3.scale.linear()
+        .domain([params.yearMin, params.yearMax])
+        .range([48, height - 64])
+//                .range([box.x + 10, box.x + box.width - 10])
+        .clamp(true);
+
+// Create the SVG container and set the origin.
+var svg = d3.select("#"+params.dom).append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// Add the x-axis.
+svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+// Add the y-axis.
+svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
+
+// Add an x-axis label.
+svg.append("text")
+        .attr("class", "x label")
+        .attr("text-anchor", "end")
+        .attr("x", width - yearMargin)
+        .attr("y", height - 6)
+        .text(params.xlabel);
+
+// Add a y-axis label.
+svg.append("text")
+        .attr("class", "y label")
+        .attr("text-anchor", "end")
+        .attr("y", 6)
+        .attr("dy", ".75em")
+        .attr("transform", "rotate(-90)")
+        .text(params.ylabel);
+
+// Add the year label; the value is set on transition.
+var label = svg.append("text")
+        .attr("class", "year label")
+        .attr("text-anchor", "end")
+        .attr("y", 48)
+        .attr("x", width)
+        .text(params.yearMin);
+
+var country = svg.append("text")
+        .attr("class", "country")
+        .attr("y", height - margin.bottom)
+        .attr("x", margin.left)
+        .text("");
+
+
+function motionChart(nations) {
+	
+	var currentCountries=params.countryHighlights;
+	
+    // A bisector since many nation's data is sparsely-defined.
+    var bisect = d3.bisector(function (d) {
+        return d[0];
+    });
+
+    // Add a dot per nation. Initialize the data at 1800, and set the colors.
+    var dots = svg.append("g")
+            .attr("class", "dots")
+
+    var dot = dots.selectAll(".dot")
+            .data(interpolateData(params.yearMin))
+            .enter().append("circle")
+            .attr("class", "dot")
+            .style("fill", function (d) {
+                return colorScale(color(d));
+            })
+            .style("opacity", function(d){ return currentCountry === "" && ( currentCountries=='' || currentCountries.indexOf(d[params.key])!=-1 ) || currentCountry === d[params.key] ? 1.0 : 0.1; })
+//            .on("click", function(d,i){
+//                var titleElement = this.firstChild;
+//                titleElement.getAttribute("class") === "hidden" ? titleElement.setAttribute("class", "visible") : titleElement.setAttribute("class", "hidden");
+//            })
+//            .on("mouseover", function(d,i) { country.text(d[params.key]); })
+//            .on("touch", function(d,i) { country.text(d[params.key]); })
+//            .on("mouseout", function(d,i) { country.text("")})
+//            .on("click", function(d,i){ country.text(d[params.key]); country.attr("x", d3.mouse(this)[0] + 10); country.attr("y", d3.mouse(this)[1]); })
+            .on("click", function(d){
+                if (currentCountry === d[params.key]){
+                    currentCountry = "";
+                } else {
+                    currentCountry = d[params.key];
+                }
+                country.text(currentCountry);
+                dot.style("opacity", function(d){ return currentCountry === "" && ( currentCountries=='' || currentCountries.indexOf(d[params.key])!=-1) || currentCountry === d[params.key] ? 1.0 : 0.1; })
+            })
+            .call(position)
+            .sort(order);
+
+    // Add a title.
+    dot.append("text")
+            .text(function (d) {
+                return d[params.key];
+            });
+
+    // Add an overlay for the year label.
+    var box = label.node().getBBox();
+
+    var overlay = svg.append("rect")
+            .attr("class", "overlay")
+            .attr("x", box.x)
+            .attr("y", box.y)
+            .attr("width", box.width)
+            .attr("height", height)
+            .on("mouseover", enableInteraction);
+
+    // Start a transition that interpolates the data based on year.
+    svg.transition()
+            .duration(30000)
+            .ease("linear")
+            .tween("year", tweenYear)
+            .each("end", enableInteraction);
+
+    // Positions the dots based on data.
+    function position(dot) {
+        dot.attr("cx", function (d) {
+            return xScale(x(d));
+        })
+                .attr("cy", function (d) {
+                    return yScale(y(d));
+                })
+                .attr("r", function (d) {
+                    return radiusScale(radius(d));
+                });
+    }
+
+    // Defines a sort order so that the smallest dots are drawn on top.
+    function order(a, b) {
+        return radius(b) - radius(a);
+    }
+
+    // After the transition finishes, you can mouseover to change the year.
+    function enableInteraction() {
+
+
+        // Cancel the current transition, if any.
+        svg.transition().duration(0);
+
+        overlay
+                .on("mouseover", mouseover)
+                .on("mouseout", mouseout)
+                .on("mousemove", mousemove)
+                .on("touchmove", mousemove);
+
+        function mouseover() {
+            label.classed("active", true);
+        }
+
+        function mouseout() {
+            label.classed("active", false);
+        }
+
+        function mousemove() {
+//            console.log(d3.mouse(this)[1]);
+            displayYear(yearScale.invert(Number(d3.mouse(this)[1])));
+//            displayYear(yearScale.invert(100));
+        }
+    }
+
+    // Tweens the entire chart by first tweening the year, and then the data.
+    // For the interpolated data, the dots and label are redrawn.
+    function tweenYear() {
+        var year = d3.interpolateNumber(params.yearMin, params.yearMax);
+        return function (t) {
+            displayYear(year(t));
+//            displayYear(year(1980));
+        };
+    }
+
+    // Updates the display to show the specified year.
+    function displayYear(year) {
+//        console.log(year);
+        dot.data(interpolateData(year), key).call(position).sort(order);
+        label.text(Math.round(year))
+                .attr("y", 48 + (year - params.yearMin) * (height - 64)/ (params.yearMax - params.yearMin));
+    }
+
+    // Interpolates the dataset for the given (fractional) year.
+    function interpolateData(year) {
+        return nations.map(function (d) {
+            var tmp={}
+            tmp[params.key]= d[params.key],
+            tmp[params.color]= d[params.color]
+            tmp[params.x]= interpolateValues(d[params.x], year)
+            tmp[params.radius]= interpolateValues(d[params.radius], year)
+            tmp[params.y]= interpolateValues(d[params.y], year)
+            return tmp;
+        });
+    }
+
+    // Finds (and possibly interpolates) the value for the specified year.
+    function interpolateValues(values, year) {
+        var i = bisect.left(values, year, 0, values.length - 1),
+                a = values[i];
+        if (i > 0) {
+            var b = values[i - 1],
+                    t = (year - a[0]) / (b[0] - a[0]);
+            return a[1] * (1 - t) + b[1] * t;
+        }
+        return a[1];
+    }
+}
+
+// Load the data.
+//d3.json(params.jsondatafile, function (nations) {motionChart(nations)});
+
+motionChart(jQuery.parseJSON(params.data))
+</script>
