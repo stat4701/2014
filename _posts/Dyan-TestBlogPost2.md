@@ -38,7 +38,7 @@ For better clarity of the final visualization, I decided to split the world map 
 
 The Datasets I have with Geo Codes are: 
 
-![Asia](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Asia-City,Country-English.txt).
+[Asia](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Asia-City,Country-English.txt).
 
 [Europe](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Europe-City,Country-English.txt).
 
