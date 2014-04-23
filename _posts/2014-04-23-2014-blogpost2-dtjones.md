@@ -20,11 +20,11 @@ From there I imported the data into R to parameterize each Poisson distribution,
 #Chart
 A jitter/scatter plot nicely shows the variability of converter frequency across campaign dimensions:
 
-[Jitter](https://raw.githubusercontent.com/devintjones/edav/djproject/assets/jitter.jpeg)
+![Jitter](https://raw.githubusercontent.com/devintjones/edav/djproject/assets/jitter.jpeg)
 
 And we can better see the distributions in a histogram, and business users can easily see how the parameterized distribution fits the empirical data. I had to scale the probability distributions to the largest value in the histogram to mimic a dual axis plot. 
 
-[FreqDist](https://raw.githubusercontent.com/devintjones/edav/djproject/assets/dist.jpeg)
+![FreqDist](https://raw.githubusercontent.com/devintjones/edav/djproject/assets/dist.jpeg)
 
 Here is my R code that parameterizes the distributions:
 
