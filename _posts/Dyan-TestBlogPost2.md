@@ -18,7 +18,7 @@ This is what I did for the Blog Post #2 in my attempt to make it interactive and
 
 
 
-Here are the snapshots of the maps by the region: 
+For better clarity of the final visualization, I decided to split the world map into four major regions. Here are the snapshots of the maps by the region: 
 
 * Asia: <br>
 
@@ -38,7 +38,7 @@ Here are the snapshots of the maps by the region:
 
 The Datasets I have with Geo Codes are: 
 
-[Asia](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Asia-City,Country-English.txt).
+![Asia](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Asia-City,Country-English.txt).
 
 [Europe](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Europe-City,Country-English.txt).
 
