@@ -9,6 +9,10 @@ tags: blogpost
 
 Map-of-World's-emotional-countries.jpg. 
 
+* Asia: <br>
+
+[![Asia](http://ganepola.github.io/edav/assets/dyan_assets/Map-of-World's-emotional-countries.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Map-of-World's-emotional-countries.jpg)
+
 ![Europe](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Europe-27.16+37.5+46+78.5.jpg)
 
 ![Europe](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Map-of-World's-emotional-countries.jpg)
