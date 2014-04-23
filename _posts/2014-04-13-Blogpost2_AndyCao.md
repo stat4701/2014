@@ -26,17 +26,17 @@ I then spent some time manually scraping [Yahoo! finance](http://finance.yahoo.c
 
 The second improvement I made was to utilitze the [rCharts package](http://rcharts.io/gallery/) created by Ramnath Vaidyanathan and a [helper function](http://www.r-bloggers.com/generating-d3js-motion-charts-from-rcharts/) written by Tony Hirst. So it turned out that I wasn't the only R learner intrigued by Professor Rosling's Gapminder work (what a surprise), Tony Hirst actually already wrote a helper function using rCharts to visualize some of Gapminder's works. Standing on the shoulders of giants, I only need to modify the code slightly to tailor for my need. And the new motion chart looks like this:
 
-![]({{ site.baseurl }}/assets/Andycao_assets/mchart_all.html
+![]({{ site.baseurl }}/assets/Andycao_assets/mchart_all.html)
 
 Similar to the motion chart in Google Doc, viewers can click on any circle to highlight a specific company, and see the progression over time. By moving the mouse along the black bar on the right side, viewers can change the time quickly. I'm not sure why it shows a black bar, instead of years.
 
 One problem with have 26 companies all in the same graph is that the circles tend to group together and overlap each other. So I subset the original data with only tech companies, for a cleaner look. 
 
-![]({{ site.baseurl }}/assets/Andycao_assets/mchart_tech.html
+![]({{ site.baseurl }}/assets/Andycao_assets/mchart_tech.html)
 
 To show the ascendance of Facebook market cap, I created a horizonal bar chart:
 
-![]({{ site.baseurl }}/assets/Andycao_assets/project2_barChart.png
+![]({{ site.baseurl }}/assets/Andycao_assets/project2_barChart.png)
 
 I think this graph really highlighted the astonishing growth of Facebook, although I'm a bit surprised by the fact that Citi Group actually had the second fastest time (24 months). 
 
