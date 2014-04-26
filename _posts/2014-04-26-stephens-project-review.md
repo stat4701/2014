@@ -79,7 +79,7 @@ tags: slides
 <section>
 	<section>
 
-## Improvements yet to be attempted
+## Pending Improvements
 
 #### Logit regression model
 
@@ -90,6 +90,7 @@ tags: slides
 #### Regression tree model
 
 - Broaden scope to include features that are not known initially
+
 </section>
 	<section>
 ## Suggestions?
