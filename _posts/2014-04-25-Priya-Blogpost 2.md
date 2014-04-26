@@ -56,7 +56,7 @@ While working with dodged chart, I also noticed that DotCharts are nicer ways to
 
 Average WeatherDelay by Month
 
-![WeatherDelay]([https://github.com/gnanapriyav/edav/blob/gh-pages/assets/Priya_assets/WeatherDelayByMonth.jpeg)
+![WeatherDelay](https://github.com/gnanapriyav/edav/blob/gh-pages/assets/Priya_assets/WeatherDelayByMonth.jpeg)
 
 It can be inferred that the average weather delay across the country is highest in August and second highest in September. Surprisingly for 2008, average weather delay across the country is lowest in November.
 
