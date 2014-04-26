@@ -14,11 +14,11 @@ tags: blogpost
 The problem with the above map is, it has no interactive visualization capability. It has a great potential to be enriched by using interactive visualization techniques which is the goal of this Blog Post #2. Also I thought as a Data Science student it would be interesting to find out if there is any statistical correlation of this polled data to some other parameter such as the country's population or the literacy rate.  
 
 
-This is what I did for the Blog Post #2 in my attempt to make it interactive and have enhanced visualization that was missing in the Blog Post #1 and also provide grounds for further analysis to get more insight of the data.
+This is what I did for the Blog Post #2 in my attempt to make it interactive and have enhanced visualization capability that was missing in the Blog Post #1 and also provide grounds for further analysis to get more insight of the data.
 
 
 
-For better clarity of the final visualization, I decided to split the world map into four major regions. Here are the snapshots of the maps by the region: 
+For better clarity of the final visualization project, I decided to split the world map into four major regions. Here are the snapshots of the maps by the region: 
 
 * Asia: <br>
 
@@ -36,7 +36,7 @@ For better clarity of the final visualization, I decided to split the world map 
 
 ![South America](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/southamerica-87.3-54.5-31.55+14.jpg)
 
-The Datasets I have with Geo Codes are: 
+The Datasets associated with each of these geographical regions is given below. By splitting the world map into these geographical regions I could overcome the performance problem I mentioned earlier. Now instead of aggregating the entire world's data into the map I could limit the size of the dataset by choosing the region I am interested in. Why include Asia if I am only interested in North America? The datasets I gave with Geo Codes by the region are: 
 
 [Asia](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Asia-City,Country-English.txt).
 
