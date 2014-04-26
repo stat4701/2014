@@ -20,9 +20,11 @@ Also for the interested bloggers I have listed a Data Exercise at the end that c
 
 This is what I did for the Blog Post #2 in my attempt to make it interactive by introducing the visualization capability that was missing in the Blog Post #1. This should provide grounds for further analysis to get more insight of the data.
 
-The source of the data for the above map came from several polls conducted by Gallup over the 2005-2013 period. Unfortunately the survey data was not available to download without paying a huge subscription. A full World Poll Data Set that includes data for many categories of interests including behavioral metrics hasa price tag of $145,000 per year. However to Gallup's credit the complete methodology and specific survey dates were made available [Here](http://www.gallup.com/strategicconsulting/128171/Country-Data-Set-Details.aspx).  
+The source of the data for the above map came from several polls conducted by Gallup over the 2005-2013 period. Unfortunately the survey data was not available to download without paying a huge subscription. A full World Poll Data Set that includes data for many categories of interests including behavioral metrics has a price tag of $145,000 per year. However to Gallup's credit the complete methodology and specific survey dates were made available [Here](http://www.gallup.com/strategicconsulting/128171/Country-Data-Set-Details.aspx).  
 
-During my Blog Review and presentation session in the class, I was directed to do data research using     
+During my Blog Review and presentation session in the class, I was directed to do data research using [iPOLL at ROPER Center that allows to use CUID to Authenticate for Columbia University Membership Organization](http://www.ropercenter.uconn.edu/membership/roper_members.html). 
+
+This site has lot of similar data available for research but didn't have the data I was looking for.       
 
 For better clarity of the final visualization project, I decided to split the world map into four major regions. Here are the snapshots of the maps by the region: 
 
