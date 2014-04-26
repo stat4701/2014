@@ -87,6 +87,7 @@ tags: slides
 - Engineer features differently
 - Better visual representation of results
 
+
 #### Regression tree model
 
 - Broaden scope to include features that are not known initially
@@ -98,7 +99,7 @@ tags: slides
 - Long knitr doc is not easily navigable
 - Repetitive code for ggplot graphing
 - Customization of ggthemes
-- adding fill/stroke colors to theme
+- Adding fill/stroke colors to theme
 - Color-coding of R code in rmd
 </section>
 	<section>
@@ -108,6 +109,6 @@ tags: slides
 - For SQL geeks, SQL view -> RODBC is clean workflow.
 - Beware of the *family* parameter in *glm()*.
 - When too many points, aggregate with ddply.
-- factor-ize numerical values with sapply
+- Factor-ize numerical values with sapply
 </section>
 </section>
