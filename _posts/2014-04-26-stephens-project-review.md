@@ -41,7 +41,7 @@ tags: slides
 - Explore data from a user/inter-personal relationship perspective
 - Explore the textual data (ML project)
 - Share the data (Crossfilter magic in blog post 3)
-- Incorporate data from [CA Communities](https://communities.ca.com/) (and perhaps Stack Overflow)
+- Incorporate data from [CA Communities](https://communities.ca.com/)
 - Broaden the scope of MSDN forums analyzed
 </section>
 </section>
@@ -60,17 +60,17 @@ tags: slides
 - Get a list of forums in each category
 - Get a list of threads in each forum
 - Get details for each thread
+
 [My code](https://github.com/StephenKappel/dataology/tree/master/MsdnForums/ForumScraper)
 </section>
 	<section>
 ## Exploration and Modeling
 [The unabridged narrative](https://github.com/StephenKappel/dataology/blob/master/MsdnForums/ExplorationAndCommentary.md)
-Interesting findings:
 
-- SharePoint and SQL Server forums cluster fairly distinctly. SQL Server forums are: more plentiful, smaller in # of threads, quicker in giving responses/answers, better monitored MSFT employees
-- Shorter titles and questions breed more success
-- MSFT involvement dropped off significantly as the year progressed
-- Time of day and day of week impact time to first reply but not so much time to first answer
+- SharePoint and SQL Server forums cluster fairly distinctly.
+- Shorter titles and questions attract more success.
+- MSFT involvement dropped off significantly as the 2013 progressed.
+- Time of day and day of week impact TTFR much more than TTFA.
 </section>
 </section>
 <section>
@@ -85,13 +85,12 @@ Logit regression model
 Regression tree model
 
 - Broaden scope to include features that are not known initially
-- 
-Break knitr doc into pieces
 </section>
 	<section>
 ## Suggestions?
 
-- Repetitive code for graphing, especially applying in applying fill and stroke colors
+- Making long knitr doc more navigable
+- Repetitive code for graphing, especially in applying fill and stroke colors
 - Color-coding of R code in rmd
 </section>
 	<section>
@@ -100,6 +99,6 @@ Break knitr doc into pieces
 - knitr is awesome!
 - For those comfortable using SQL, building an SQL view and pulling data in with RODBC package worked cleanly.
 - Beware of the *family* parameter in *glm()*.
-- When too many data points to plot separately, aggregate with ddply.
+- When too many points, aggregate with ddply.
 </section>
 </section>
