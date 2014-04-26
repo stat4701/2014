@@ -6,22 +6,22 @@ tags: slides
 ---
 
 <section>
-	<section>
-# Using Data to Understand Technical Support Forums
+<section>
+# Analyzing MSDN Forums Data
 [MsdnForums GitHub Repo](https://github.com/StephenKappel/dataology/tree/master/MsdnForums)
 </section>
-	<section>
+<section>
 ## Why support forums?
 - It's my job
 - Issue deflection
 - Customer engagement
 </section>
 <section>
-## Why [MSDN forums](http://social.msdn.microsoft.com/Forums/en-US/home)?
+## Why MSDN forums?
 - Personal experience
 - Lots of data
 - Competitive intelligence/benchmark
-- Publicly available
+- Publicly available ([check it out](http://social.msdn.microsoft.com/Forums/en-US/home))
 </section>
 <section>
 ## Project outline
@@ -45,7 +45,7 @@ tags: slides
 </section>
 <section>
 ## Database design
-![Database Diagram](https://github.com/StephenKappel/dataology/blob/master/MsdnForums/DatabaseDiagram.PNG)
+![Database Diagram](https://raw.githubusercontent.com/StephenKappel/dataology/master/MsdnForums/DatabaseDiagram.PNG)
 </section>
 <section>
 ## Scraping threads
@@ -64,6 +64,8 @@ Interesting findings:
 - MSFT involvement dropped off significantly as the year progressed
 - Time of day and day of week impact time to first reply but not so much time to first answer
 </section>
+</section>
+<section>
 <section>
 ## Improvements yet to be attempted
 Logit regression model
@@ -79,8 +81,6 @@ Break knitr doc into pieces
 - Repetitive code for graphing, especially applying in applying fill and stroke colors
 - color-coding of R code in rmd
 </section>
-</section>
-<section>
 <section>
 ## Lessons learned
 - knitr is awesome!
