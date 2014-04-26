@@ -1,6 +1,6 @@
 ## BlogPost 2 - Airline on-time performance
 
-###Learning to process/Analyze with large data set in R
+###Learning to process/Analyze Large data set in R
 
 ####Background
 I came across an interesting,but huge data set [here](http://stat-computing.org/dataexpo/2009/the-data.html). This is in fact a Data Expo competition of 2009. The aim of the data expo was to provide graphical summary of important features of the data set. The competition was to analyze 22 years of flight arrival/departure data and to predict departure or arrival delay in the future.
@@ -11,10 +11,9 @@ I have worked with Hive briefly in the past, but I am new to R. So, I took this 
 
 #### Objectives
 
-1. For each Origin/Destination City, I was interested to see the average arrival/departure delay. And, hence to identify the top 5 cities with high/low Arrival/Departure delays.
+1. For each Origin/Destination City, I was interested to calculate the average arrival/departure delay. And, hence to identify the top 5 cities with high/low Arrival/Departure delays.
 1. To identify the correlation between weather delay and Month of the year.
-1. To find out if there is any significant difference between flying in and flying out of a specific airport.
-1. To identify the correlation between security delay and airport/airlines.
+1. To find out if there is any significant difference between flying in and flying out of a specific airport - BlogPost 3
 
 
 ####Background of the Data 
@@ -23,7 +22,7 @@ The data consists of flight arrival and departure details for all commercial fli
 
 ####Challenge working with 690 MB of data in R.
 
-For many days together, I was uploading the large data file as a dataframe in R, until Mike introduced me to data.table package in R. Using data.table, I noticed significant improvement in processing speed of large data sets. Also data.table package is more like SQL in which we can create INDEXs for columns for faster grouping/aggregation.
+For many days together, I was uploading the large data file as a dataframe in R, until Mike introduced me to data.table package in R. Using data.table, I noticed significant improvement in processing speed. Also data.table package is more like SQL in which we can create INDEXs for columns for faster grouping/aggregation. 700 MB data load using data.table package was 890 times faster than the conventional data load using as data frame using read.csv.
 
 You can find data.table vignette [here](http://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.pdf)
 
@@ -31,7 +30,7 @@ Following are the observations/interesting R packages that I came across while w
 
 1. R package [sqldf](http://cran.r-project.org/web/packages/sqldf/sqldf.pdf).  Coming from a conventional RDBMS background, I always tend to think in terms of processing data using a relational database. I found sqldf package extremely helpful. One can write sql queries with group by and joins just as in RDBMS world.
 1. R package [RSQLite](http://cran.r-project.org/web/packages/RSQLite/RSQLite.pdf). This package embeds the SQLite database engine in R and provides an interface with DBI package. I found this only in later part of my data analysis and hence didn't try it out. 
-1. Dangerous "merge" funtion of R. I was looking for method to join two data tables on common columns and noticed that merge function of R which seems to work fine. The result of the merge function merges the two data frames/data tables, but fails to rearrange the rest of the data. 
+1. Dangerous "merge" function of R. I was looking for method to join two data tables on common columns and noticed that merge function of R. At first, it seemed to work fine, but the result it took me significant amount of time to notice that the result of the merge function merges the two data frames/data tables on requested columns, but fails to rearrange the rest of the data. Since the data set was huge, it was very difficult and time consuming to identify this bug. 
 1. R package [plyr]([http://cran.r-project.org/web/packages/plyr/plyr.pdf). I found functions like join, count, arrange very handy for splitting/combining data.
 
 ####Exploratory Data Analysis using ggplot2
@@ -57,7 +56,7 @@ While working with dodged chart, I also noticed that DotCharts are nicer ways to
 
 Average WeatherDelay by Month
 
-![WeatherDelay] ([https://github.com/gnanapriyav/edav/blob/gh-pages/assets/Priya_assets/WeatherDelayByMonth.jpeg)
+![WeatherDelay]([https://github.com/gnanapriyav/edav/blob/gh-pages/assets/Priya_assets/WeatherDelayByMonth.jpeg)
 
 It can be inferred that the average weather delay across the country is highest in August and second highest in September. Surprisingly for 2008, average weather delay across the country is lowest in November.
 
