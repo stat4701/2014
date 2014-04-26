@@ -43,6 +43,7 @@ tags: slides
 - Share the data (Crossfilter magic in blog post 3)
 - Incorporate data from [CA Communities](https://communities.ca.com/)
 - Broaden the scope of MSDN forums analyzed
+
 </section>
 </section>
 <section>
@@ -80,13 +81,13 @@ tags: slides
 
 ## Improvements yet to be attempted
 
-Logit regression model
+#### Logit regression model
 
 - Add co-variates and power terms
 - Engineer features differently
 - Better visual representation of results
 
-Regression tree model
+#### Regression tree model
 
 - Broaden scope to include features that are not known initially
 </section>
