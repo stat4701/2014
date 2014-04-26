@@ -15,6 +15,7 @@ tags: slides
 - It's my job
 - Issue deflection
 - Customer engagement
+
 </section>
 <section>
 ## Why MSDN forums?
@@ -22,6 +23,7 @@ tags: slides
 - Lots of data
 - Competitive intelligence/benchmark
 - Publicly available ([check it out](http://social.msdn.microsoft.com/Forums/en-US/home))
+
 </section>
 <section>
 ## Project outline
