@@ -62,6 +62,7 @@ tags: slides
 - Get a list of forums in each category
 - Get a list of threads in each forum
 - Get details for each thread
+
 </section>
 	<section>
 ## Exploration and Modeling
@@ -70,7 +71,7 @@ tags: slides
 
 - SharePoint and SQL Server forums cluster fairly distinctly.
 - Shorter titles and questions attract more success.
-- MSFT involvement dropped off significantly as the 2013 progressed.
+- MSFT involvement dropped off significantly as 2013 progressed.
 - Time of day and day of week impact TTFR much more than TTFA.
 </section>
 </section>
@@ -84,7 +85,7 @@ Logit regression model
 - Add co-variates and power terms
 - Engineer features differently
 - Better visual representation of results
-- 
+
 Regression tree model
 
 - Broaden scope to include features that are not known initially
@@ -92,16 +93,19 @@ Regression tree model
 	<section>
 ## Suggestions?
 
-- Making long knitr doc more navigable
-- Repetitive code for graphing, especially in applying fill and stroke colors
+- Long knitr doc is not easily navigable
+- Repetitive code for ggplot graphing
+- Customization of ggthemes
+- adding fill/stroke colors to theme
 - Color-coding of R code in rmd
 </section>
 	<section>
 ## Lessons learned
 
 - knitr is awesome!
-- For those comfortable using SQL, building an SQL view and pulling data in with RODBC package worked cleanly.
+- For SQL geeks, SQL view -> RODBC is clean workflow.
 - Beware of the *family* parameter in *glm()*.
 - When too many points, aggregate with ddply.
+- factor-ize numerical values with sapply
 </section>
 </section>
