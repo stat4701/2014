@@ -6,34 +6,38 @@ tags: slides
 ---
 
 <section>
-<section>
+	<section>
 # Analyzing MSDN Forums Data
 [MsdnForums GitHub Repo](https://github.com/StephenKappel/dataology/tree/master/MsdnForums)
 </section>
-<section>
+	<section>
 ## Why support forums?
+
 - It's my job
 - Issue deflection
 - Customer engagement
 
 </section>
-<section>
+	<section>
 ## Why MSDN forums?
+
 - Personal experience
 - Lots of data
 - Competitive intelligence/benchmark
 - Publicly available ([check it out](http://social.msdn.microsoft.com/Forums/en-US/home))
 
 </section>
-<section>
+	<section>
 ## Project outline
+
 - Gather the data ([Python script](https://github.com/StephenKappel/dataology/tree/master/MsdnForums/ForumScraper))
 - Store the data ([SQL Server database](https://github.com/StephenKappel/dataology/blob/master/MsdnForums/DatabaseDiagram.PNG))
 - Aggregate the data (SQL views to give tidy table of forums and tidy table of threads)
 - Explore the non-textual data ([fun with R](https://github.com/StephenKappel/dataology/blob/master/MsdnForums/ExplorationAndCommentary.md))
 </section>
-<section>
+	<section>
 ## Yet to come
+
 - Explore data from a user/inter-personal relationship perspective
 - Explore the textual data (ML project)
 - Share the data (Crossfilter magic in blog post 3)
@@ -42,25 +46,27 @@ tags: slides
 </section>
 </section>
 <section>
-<section>
-# Let's look at the implementation...
+	<section>
+## Let's look at the implementation...
 </section>
-<section>
+	<section>
 ## Database design
 ![Database Diagram](https://raw.githubusercontent.com/StephenKappel/dataology/master/MsdnForums/DatabaseDiagram.PNG)
 </section>
-<section>
+	<section>
 ## Scraping threads
+
 - Get list of forum categories
 - Get a list of forums in each category
 - Get a list of threads in each forum
 - Get details for each thread
 [My code](https://github.com/StephenKappel/dataology/tree/master/MsdnForums/ForumScraper)
 </section>
-<section>
+	<section>
 ## Exploration and Modeling
-[The unabridged narrative]
+[The unabridged narrative](https://github.com/StephenKappel/dataology/blob/master/MsdnForums/ExplorationAndCommentary.md)
 Interesting findings:
+
 - SharePoint and SQL Server forums cluster fairly distinctly. SQL Server forums are: more plentiful, smaller in # of threads, quicker in giving responses/answers, better monitored MSFT employees
 - Shorter titles and questions breed more success
 - MSFT involvement dropped off significantly as the year progressed
@@ -68,23 +74,29 @@ Interesting findings:
 </section>
 </section>
 <section>
-<section>
+	<section>
 ## Improvements yet to be attempted
 Logit regression model
+
 - Add co-variates and power terms
 - Engineer features differently
 - Better visual representation of results
+- 
 Regression tree model
+
 - Broaden scope to include features that are not known initially
+- 
 Break knitr doc into pieces
 </section>
-<section>
+	<section>
 ## Suggestions?
+
 - Repetitive code for graphing, especially applying in applying fill and stroke colors
-- color-coding of R code in rmd
+- Color-coding of R code in rmd
 </section>
-<section>
+	<section>
 ## Lessons learned
+
 - knitr is awesome!
 - For those comfortable using SQL, building an SQL view and pulling data in with RODBC package worked cleanly.
 - Beware of the *family* parameter in *glm()*.
