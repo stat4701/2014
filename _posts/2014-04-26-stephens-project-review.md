@@ -38,7 +38,7 @@ tags: slides
 	<section>
 ## Yet to come
 
-- Explore data from a user/inter-personal relationship perspective
+- Explore data from a user/relationship perspective
 - Explore the textual data (ML project)
 - Share the data (Crossfilter magic in blog post 3)
 - Incorporate data from [CA Communities](https://communities.ca.com/)
@@ -56,15 +56,16 @@ tags: slides
 	<section>
 ## Scraping threads
 
+[My code](https://github.com/StephenKappel/dataology/tree/master/MsdnForums/ForumScraper)
+
 - Get list of forum categories
 - Get a list of forums in each category
 - Get a list of threads in each forum
 - Get details for each thread
-
-[My code](https://github.com/StephenKappel/dataology/tree/master/MsdnForums/ForumScraper)
 </section>
 	<section>
 ## Exploration and Modeling
+
 [The unabridged narrative](https://github.com/StephenKappel/dataology/blob/master/MsdnForums/ExplorationAndCommentary.md)
 
 - SharePoint and SQL Server forums cluster fairly distinctly.
@@ -75,7 +76,9 @@ tags: slides
 </section>
 <section>
 	<section>
+
 ## Improvements yet to be attempted
+
 Logit regression model
 
 - Add co-variates and power terms
