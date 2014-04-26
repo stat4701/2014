@@ -36,6 +36,14 @@ tags: slides
 - Explore the non-textual data ([fun with R](https://github.com/StephenKappel/dataology/blob/master/MsdnForums/ExplorationAndCommentary.md))
 </section>
 	<section>
+## Project outline
+
+- Gather the data ([Python script](https://github.com/StephenKappel/dataology/tree/master/MsdnForums/ForumScraper))
+- Store the data ([SQL Server database](https://github.com/StephenKappel/dataology/blob/master/MsdnForums/DatabaseDiagram.PNG))
+- Aggregate the data (SQL views to give tidy table of forums and tidy table of threads)
+- Explore the non-textual data ([fun with R](https://github.com/StephenKappel/dataology/blob/master/MsdnForums/ExplorationAndCommentary.md))
+</section>
+	<section>
 ## Yet to come
 
 - Explore data from a user/inter-personal relationship perspective
