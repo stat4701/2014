@@ -20,17 +20,29 @@ Also for the interested bloggers I have listed a Data Exercise at the end that c
 
 This is what I did for the Blog Post #2 in my attempt to make it interactive by introducing the visualization capability that was missing in the Blog Post #1. This should provide grounds for further analysis to get more insight of the data.
 
-The source of the data for the above map came from several polls conducted by Gallup over the 2005-2013 period. Unfortunately the survey data was not available to download without paying a huge subscription. A full World Poll Data Set that includes data for many categories of interests including behavioral metrics has a price tag of $145,000 per year. However to Gallup's credit the complete methodology and specific survey dates were made available [Here](http://www.gallup.com/strategicconsulting/128171/Country-Data-Set-Details.aspx).  
+The source of the data for the above map came from several polls conducted by Gallup over the 2005-2013 period. Unfortunately the survey data was not available to download without paying a huge subscription. A full World Poll Data Set that includes data for many categories of interests including behavioral metrics has a price tag of $145,000 per year. However to Gallup's credit the complete methodology and specific survey dates (not Data) can be downloaded using the link in My BlogPost1. Sample of the file is given below for reference.  
 
-Next, my approach was to Inspect the code of the above Map to see whether I could scrape the data from the Web Site.
+* Country Data Set: <br>
+
+[![Country](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Country Data Set Details Snip.JPG)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Country Data Set Details Snip.JPG)
+
+Next, my approach was to Inspect the code of the above Map to see whether I could scrape the data from the Web Site. Sample of the code is given below.  
 
 * Code: <br>
 
 [![Code](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Snippet-of-Gallup-Map.JPG)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Snippet-of-Gallup-Map.JPG)
 
-* Country: <br>
+As you can see in the code highlighted above, the data are images (JPG) and not readily available to scrape from the Website. Next I turn my attention to the "Emotional State of the World" chart whose link was given on the Website. That chart has the data I was looking for. Sample of that chart is given below.
 
-[![Country](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Country Data Set Details Snip.JPG)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Country Data Set Details Snip.JPG)
+* Emotional State of the World: <br>
+
+[![EmotionalState](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Emotional State of the World Snip.JPG)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Emotional State of the World Snip.JPG)
+
+However Scraping this chart threw more challenges to my effort. The data is arranged in two columns that are side by side and scraping as one continuous column was time consuming. Besides, I had to run the scrapped data through an OCR converter to convert it into text format so I can use the data on My New Map. This was tedious and I had to look for other means. 
+
+During my Blog Review and presentation session in the class, I was directed to do data research using [iPOLL at ROPER Center that allows to use CUID to Authenticate for Columbia University Membership Organization](http://www.ropercenter.uconn.edu/membership/roper_members.html). 
+
+This site has lot of similar data available for research but didn't have the data I was looking for. At that point I shifted my focus more on the Visualization aspect than the type of data used for the Visualization. Therfore as a workaround I decided to use World's Poulation Data instead of World's Emotional Rankings. This substitution of the type of data was necessary to speed up the development of the illustration of the map without getting stuck at the data level. My other option was to use some toy data but I opted to use World's Population data as real data.          
 
 
 * NAWORLDMAP: <br>
@@ -49,17 +61,7 @@ NA-Major-City-Population-Over-100K-on-US-Map
 [![NAUSMAPGT100K](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-100K-on-US-Map.JPG)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-100K-on-US-Map.JPG)
 
 
-Next was to convert it to text file using OCR conversion.
 
-* Emotional State of the World: <br>
-
-[![EmotionalState](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Emotional State of the World Snip.JPG)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Emotional State of the World Snip.JPG)
-
-
-
-During my Blog Review and presentation session in the class, I was directed to do data research using [iPOLL at ROPER Center that allows to use CUID to Authenticate for Columbia University Membership Organization](http://www.ropercenter.uconn.edu/membership/roper_members.html). 
-
-This site has lot of similar data available for research but didn't have the data I was looking for. At that point I shifted my focus more on the Visualization aspect than the type of data used for the Visualization. Therfore as a workaround I decided to use World's Poulation Data instead of World's Emotional Rankings. This substitution of the type of data was necessary to speed up the development of the illustration of the map without getting stuck at the data level. My other option was to use some toy data but I opted to use World's Population data as real data.          
 
 For better clarity of the final visualization project, I decided to split the world map into four major regions. Here are the snapshots of the maps by the region: 
 
