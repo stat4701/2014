@@ -22,9 +22,15 @@ This is what I did for the Blog Post #2 in my attempt to make it interactive by 
 
 The source of the data for the above map came from several polls conducted by Gallup over the 2005-2013 period. Unfortunately the survey data was not available to download without paying a huge subscription. A full World Poll Data Set that includes data for many categories of interests including behavioral metrics has a price tag of $145,000 per year. However to Gallup's credit the complete methodology and specific survey dates were made available [Here](http://www.gallup.com/strategicconsulting/128171/Country-Data-Set-Details.aspx).  
 
+Next, my approach was to Inspect the code of the above Map to see whether I could scrape the data from the Web Site. 
+
+Next was to convert it to text file using OCR conversion.
+
+ 
+
 During my Blog Review and presentation session in the class, I was directed to do data research using [iPOLL at ROPER Center that allows to use CUID to Authenticate for Columbia University Membership Organization](http://www.ropercenter.uconn.edu/membership/roper_members.html). 
 
-This site has lot of similar data available for research but didn't have the data I was looking for.       
+This site has lot of similar data available for research but didn't have the data I was looking for. At that point I shifted my focus more on the Visualization aspect than the type of data used for the Visualization. Therfore as a workaround I decided to use World's Poulation Data instead of World's Emotional Rankings. This substitution of the type of data was necessary to speed up the development of the illustration of the map without getting stuck at the data level. My other option was to use some toy data but I opted to use World's Population data as real data.          
 
 For better clarity of the final visualization project, I decided to split the world map into four major regions. Here are the snapshots of the maps by the region: 
 
