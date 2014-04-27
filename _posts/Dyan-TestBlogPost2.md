@@ -26,15 +26,15 @@ Next, my approach was to Inspect the code of the above Map to see whether I coul
 
 * Code: <br>
 
-[![Code](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Snippet-of-Gallup-Map.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Snippet-of-Gallup-Map.jpg).
+[![Code](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Snippet-of-Gallup-Map.jpg)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Snippet-of-Gallup-Map.jpg).
 
 * Country: <br>
 
-[![Country](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Country Data Set Details Snip.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Country Data Set Details Snip.jpg).
+[![Country](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Country Data Set Details Snip.jpg)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Country Data Set Details Snip.jpg).
 
 * NAUSA: <br>
 
-[![NAUSA](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-US-Map.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-US-Map.jpg).
+[![NAUSA](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-US-Map.jpg)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-US-Map.jpg).
 
 
 Next was to convert it to text file using OCR conversion.
@@ -49,26 +49,26 @@ For better clarity of the final visualization project, I decided to split the wo
 
 * Asia: <br>
 
-[![Asia](http://ganepola.github.io/edav/assets/dyan_assets/GeoMaps/Asia+35-11+180+73.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/GeoMaps/Asia+35-11+180+73.jpg)
+[![Asia](http://dganepol.github.io/edav/assets/dyan_assets/GeoMaps/Asia+35-11+180+73.jpg)](http://dganepol.github.io/edav/assets/dyan_assets/GeoMaps/Asia+35-11+180+73.jpg)
 
 * Europe: <br>
 
-![Europe](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/GeoMaps/Europe-27.16+37.5+46+78.5.jpg).
+![Europe](https://raw.githubusercontent.com/dganepol/edav/gh-pages/assets/dyan_assets/GeoMaps/Europe-27.16+37.5+46+78.5.jpg).
 
 * North America: <br>
 
-![North America](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/GeoMaps/NorthAmerica-179.5+10.7-49.9+87.9.jpg).
+![North America](https://raw.githubusercontent.com/dganepol/edav/gh-pages/assets/dyan_assets/GeoMaps/NorthAmerica-179.5+10.7-49.9+87.9.jpg).
 
 * South America: <br>
 
-![South America](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/GeoMaps/southamerica-87.3-54.5-31.55+14.jpg).
+![South America](https://raw.githubusercontent.com/dganepol/edav/gh-pages/assets/dyan_assets/GeoMaps/southamerica-87.3-54.5-31.55+14.jpg).
 
 I have given below  the Datasets associated with each of these geographical regions. By splitting the world map into these geographical regions I could overcome the performance problem I mentioned earlier. Now instead of aggregating the entire world's data into the map I could limit the size of the dataset by choosing the region I am interested in. Why include Asia if I am only interested in North America? The datasets I gave with Geo Codes by the region are: 
 
-[Asia](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Asia-City,Country-English.txt).
+[Asia](https://github.com/dganepol/edav/blob/gh-pages/assets/dyan_assets/Asia-City,Country-English.txt).
 
-[Europe](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Europe-City,Country-English.txt).
+[Europe](https://github.com/dganepol/edav/blob/gh-pages/assets/dyan_assets/Europe-City,Country-English.txt).
 
-[North America](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/NA-City,ST-English.txt).
+[North America](https://github.com/dganepol/edav/blob/gh-pages/assets/dyan_assets/NA-City,ST-English.txt).
 
-[South America](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/SA-City,Country-English.txt).
+[South America](https://github.com/dganepol/edav/blob/gh-pages/assets/dyan_assets/SA-City,Country-English.txt).
