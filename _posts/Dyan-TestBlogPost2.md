@@ -53,7 +53,7 @@ Next was to convert it to text file using OCR conversion.
 
 * Emotional State of the World: <br>
 
-[![NAUSMAPGT100K](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-100K-on-US-Map.JPG)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Emotional State of the World Snip.JPG)
+[![EmotionalState](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Emotional State of the World Snip.JPG)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Emotional State of the World Snip.JPG)
 
 
 
