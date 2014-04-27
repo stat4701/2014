@@ -36,11 +36,18 @@ Next, my approach was to Inspect the code of the above Map to see whether I coul
 
 * NAUSMAP: <br>
 
-[![NAUSMAP](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-US-Map.JPG)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-US-Map.JPG)
+
+[![NAUSMAP](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-NAUS-Map.JPG)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-NAUS-Map.JPG)
 
 * NAWORLDMAP: <br>
 
 [![NAWORLDMAP](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-World-Map.JPG)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-World-Map.JPG)
+
+* NAUSMAPGT100K: <br>
+NA-Major-City-Population-Over-100K-on-US-Map
+
+[![NAUSMAPGT100K](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-100K-on-US-Map.JPG)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-100K-on-US-Map.JPG)
+
 
 Next was to convert it to text file using OCR conversion.
 
