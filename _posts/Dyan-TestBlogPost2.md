@@ -26,13 +26,15 @@ Next, my approach was to Inspect the code of the above Map to see whether I coul
 
 * Code: <br>
 
-[![Code](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Snippet-of-Gallup-Map.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Snippet-of-Gallup-Map.jpg).
+[![Code](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Snippet-of-Gallup-Map.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Snippet-of-Gallup-Map.jpg).
 
+* Country: <br>
 
-[![Country](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Country Data Set Details Snip.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Country Data Set Details Snip.jpg).
+[![Country](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Country Data Set Details Snip.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Country Data Set Details Snip.jpg).
 
+* NAUSA: <br>
 
-[![NAUSA](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-US-Map.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-US-Map.jpg).
+[![NAUSA](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-US-Map.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-US-Map.jpg).
 
 
 Next was to convert it to text file using OCR conversion.
