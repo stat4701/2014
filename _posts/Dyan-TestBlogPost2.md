@@ -22,11 +22,15 @@ This is what I did for the Blog Post #2 in my attempt to make it interactive by 
 
 The source of the data for the above map came from several polls conducted by Gallup over the 2005-2013 period. Unfortunately the survey data was not available to download without paying a huge subscription. A full World Poll Data Set that includes data for many categories of interests including behavioral metrics has a price tag of $145,000 per year. However to Gallup's credit the complete methodology and specific survey dates were made available [Here](http://www.gallup.com/strategicconsulting/128171/Country-Data-Set-Details.aspx).  
 
-Next, my approach was to Inspect the code of the above Map to see whether I could scrape the data from the Web Site. 
+Next, my approach was to Inspect the code of the above Map to see whether I could scrape the data from the Web Site.
+
+* Code: <br>
+
+[![Code](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Snippet-of-Gallup-Map.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Snippet-of-Gallup-Map.jpg)
 
 Next was to convert it to text file using OCR conversion.
 
- 
+
 
 During my Blog Review and presentation session in the class, I was directed to do data research using [iPOLL at ROPER Center that allows to use CUID to Authenticate for Columbia University Membership Organization](http://www.ropercenter.uconn.edu/membership/roper_members.html). 
 
@@ -36,19 +40,19 @@ For better clarity of the final visualization project, I decided to split the wo
 
 * Asia: <br>
 
-[![Asia](http://ganepola.github.io/edav/assets/dyan_assets/Asia+35-11+180+73.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Asia+35-11+180+73.jpg)
+[![Asia](http://ganepola.github.io/edav/assets/dyan_assets/Asia+35-11+180+73.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/GeoMaps/Asia+35-11+180+73.jpg)
 
 * Europe: <br>
 
-![Europe](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Europe-27.16+37.5+46+78.5.jpg)
+![Europe](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/GeoMaps/Europe-27.16+37.5+46+78.5.jpg)
 
 * North America: <br>
 
-![North America](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/NorthAmerica-179.5+10.7-49.9+87.9.jpg)
+![North America](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/GeoMaps/NorthAmerica-179.5+10.7-49.9+87.9.jpg)
 
 * South America:
 
-![South America](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/southamerica-87.3-54.5-31.55+14.jpg)
+![South America](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/GeoMaps/southamerica-87.3-54.5-31.55+14.jpg)
 
 I have given below  the Datasets associated with each of these geographical regions. By splitting the world map into these geographical regions I could overcome the performance problem I mentioned earlier. Now instead of aggregating the entire world's data into the map I could limit the size of the dataset by choosing the region I am interested in. Why include Asia if I am only interested in North America? The datasets I gave with Geo Codes by the region are: 
 
