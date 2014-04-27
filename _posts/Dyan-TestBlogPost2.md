@@ -28,6 +28,13 @@ Next, my approach was to Inspect the code of the above Map to see whether I coul
 
 [![Code](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Snippet-of-Gallup-Map.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Snippet-of-Gallup-Map.jpg).
 
+
+[![Country](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Country Data Set Details Snip.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Country Data Set Details Snip.jpg).
+
+
+[![NAUSA](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-US-Map.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-US-Map.jpg).
+
+
 Next was to convert it to text file using OCR conversion.
 
 
