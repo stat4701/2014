@@ -40,10 +40,10 @@ As you can see in the code highlighted above, the data are images (JPG) and not 
 
 However Scraping this chart threw more challenges to my effort. The data is arranged in two columns that are side by side and scraping as one continuous column was time consuming. Besides, I had to run the scrapped data through an OCR converter to convert it into text format so I can use the data on My New Map. This was tedious and I had to look for other means. 
 
-During my Blog Review and presentation session in the class, I was directed to do data research using [iPOLL at ROPER Center that allows to use CUID to Authenticate for Columbia University Membership Organization](http://www.ropercenter.uconn.edu/membership/roper_members.html). 
+During my Blog Review and presentation session in the class, I was directed by my professor to do data research using [iPOLL at ROPER Center that allows to use CUID to Authenticate for Columbia University Membership Organization](http://www.ropercenter.uconn.edu/membership/roper_members.html). 
 
-This site has lot of similar data available for research but didn't have the data I was looking for. At that point I shifted my focus more on the Visualization aspect than the type of data used for the Visualization. Therfore as a workaround I decided to use World's Poulation Data instead of World's Emotional Rankings. This substitution of the type of data was necessary to speed up the development of the illustration of the map without getting stuck at the data level. My other option was to use some toy data but I opted to use World's Population data as real data.          
-
+This site has lot of similar data available for research but didn't have the data I was looking for. At that point I shifted my focus more on the Visualization aspect than the type of data used for the Visualization. Therefore as a workaround I decided to use World's Poulation Data instead of World's Emotional State Rankings. This substitution of the type of data was necessary to speed up the development of the illustration of the map without getting stuck at the data level. My other option was to use some toy data but I opted to use World's Population data as it is real data.          
+World's population by city with city's Geo-codes and Geo-coded Maps were downloaded through the courtesy of Open Street Map and GeoNames. Data were organized into four major Geographical regions making it easy to load data for each region. Total number of cities in the four regions combined is 129,300 (Asia = 38,200, Europe = 64,000, North America = 18,800, South America = 8,300). The Gallup Map had data for only 150 countries. Therefore to limit the number of cities to a mangeable size I selected to filter cities that have population greater than 100,000 in the North American region only. This gave me a list of 500 cities with the Geo-codes. I was also interested to plot North Amrican cities with population greater than 1 million. There were 30 such cities in the North American region. This provided me enough data to play with in my Visualization project. I maped thae data on a World Map and also for better clarity I also mapped the data on a map of the North American region. I used a Plug and Play software as a development tool to produce the maps given below.      
 
 * NAWORLDMAP: <br>
 
@@ -63,7 +63,7 @@ NA-Major-City-Population-Over-100K-on-US-Map
 
 
 
-For better clarity of the final visualization project, I decided to split the world map into four major regions. Here are the snapshots of the maps by the region: 
+For better clarity of the final visualization project, I decided to split the world map into four major regions. Here are the snapshots of the maps by the region without any data mapped on them. 
 
 * Asia: <br>
 
@@ -81,7 +81,7 @@ For better clarity of the final visualization project, I decided to split the wo
 
 ![South America](https://raw.githubusercontent.com/dganepol/edav/gh-pages/assets/dyan_assets/GeoMaps/southamerica-87.3-54.5-31.55+14.jpg).
 
-I have given below  the Datasets associated with each of these geographical regions. By splitting the world map into these geographical regions I could overcome the performance problem I mentioned earlier. Now instead of aggregating the entire world's data into the map I could limit the size of the dataset by choosing the region I am interested in. Why include Asia if I am only interested in North America? The datasets I gave with Geo Codes by the region are: 
+I have given below  the Datasets (population) associated with each of these geographical regions along with their respectve Geo-codes. 
 
 [Asia](https://github.com/dganepol/edav/blob/gh-pages/assets/dyan_assets/Asia-City,Country-English.txt).
 
@@ -90,3 +90,7 @@ I have given below  the Datasets associated with each of these geographical regi
 [North America](https://github.com/dganepol/edav/blob/gh-pages/assets/dyan_assets/NA-City,ST-English.txt).
 
 [South America](https://github.com/dganepol/edav/blob/gh-pages/assets/dyan_assets/SA-City,Country-English.txt).
+
+* Data Exercise: <br> 
+
+ To aggregating the entire world's data into the World Map in. Why include Asia if I am only interested in North America? The datasets I gave with Geo Codes by the region are: 
