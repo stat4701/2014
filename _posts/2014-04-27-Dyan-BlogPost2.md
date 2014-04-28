@@ -88,11 +88,11 @@ Here are the snapshots of the maps by the region without any data mapped on them
 
 I have given below the population Datasets (raw data) associated with each of these geographical regions along with their respective Geo-codes. 
 
-[Asia](https://github.com/dganepol/edav/blob/gh-pages/assets/dyan_assets/Asia-City,Country-English.txt).
+[Asia](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/Asia-City,Country-English.txt).
 
-[Europe](https://github.com/dganepol/edav/blob/gh-pages/assets/dyan_assets/Europe-City,Country-English.txt).
+[Europe](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/Europe-City,Country-English.txt).
 
-[North America](https://github.com/dganepol/edav/blob/gh-pages/assets/dyan_assets/NA-City,ST-English.txt).
+[North America](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/NA-City,ST-English.txt).
 
 [South America](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/SA-City,Country-English.txt).
 
