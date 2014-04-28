@@ -19,7 +19,6 @@ tags: finalproject
 
 * Only useful if a decently sized share (say, 10%) of the population can be classified
 
-
 # AdaBoost Decision Trees Committee
 
 * SQL factor construction:
@@ -46,7 +45,7 @@ for combo in apt_to_search:
 	cur.execute(apt_update_query,update_data)						#update the record with findings
 	cnx.commit()			
 ```
-
+* Domain knowledge matters: these sorts of transformations might be hard to discover algorithmically 
 
 ```{python}
 
@@ -132,8 +131,11 @@ def vectorizeCmpFactors(llist):
     v = DictVectorizer(sparse=False)            #v is the 'vectorizer' object turns categorical (string) values into indicator vectors
     X = v.fit_transform(ldict)                  #use the fit_transform method on a list of dictionaries to get the indicator matrix
     return (X,t,v)
+```
 
+* Choose to convert Zipcode to float (to treat it as numeric and not as factor) in order to model geographic distinctions above zipcode level 
 
+```{python}
 def makeTreeAndRecordZipErrors(X_train,t_train,X_test,t_test,clf):
     clf = clf.fit(X_train,t_train)
     predict_arr = clf.predict(X_test)               #get np array of prediction flags
@@ -231,7 +233,13 @@ def dumpDataPack(dataPack):
 
 * (app-in-progress)
 
-* Think I could put images in the tooltips?
+## Todos
+
+* Why won't the update for model0 work?
+
+* What might we visualize for each feature to understand why they have the model importance that they do?
+
+* Think I could put images in the tooltips? (as way of showing something about feature distribution)
 
 ```{javascript}
     // tooltip - show when mouseover on each data
@@ -264,6 +272,12 @@ def dumpDataPack(dataPack):
             __tooltip_init_x = getConfig(['tooltip', 'init', 'x'], 0),
             __tooltip_init_position = getConfig(['tooltip', 'init', 'position'], {top: '0px', left: '50px'});
 ```
+
+* Can we use the feature selection lessons from the models to come up with a decent logistic regression classifier? Add this model to the graph?
+
+* D3App: Should show overall valid/flags rate for each model, and the style is still semi atrocious
+
+
 
 
 
