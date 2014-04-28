@@ -86,16 +86,8 @@ Here are the snapshots of the maps by the region without any data mapped on them
 
 ![South America](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/GeoMaps/southamerica-87.3-54.5-31.55+14.jpg).
 
+
 I have given below the population Datasets (raw data) associated with each of these geographical regions along with their respective Geo-codes. 
-
-[Asia](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/Asia-City,Country-English.txt).
-
-[Europe](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/Europe-City%2CCountry-English.txt).
-
-
-[North America](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/NA-City,ST-English.txt).
-
-[South America](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/SA-City,Country-English.txt).
 
 [Asia](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/Asia-City,Country-English.txt).
 
