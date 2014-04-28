@@ -94,7 +94,7 @@ I have given below the population Datasets (raw data) associated with each of th
 
 [North America](https://github.com/dganepol/edav/blob/gh-pages/assets/dyan_assets/NA-City,ST-English.txt).
 
-[South America](https://github.com/dganepol/edav/blob/gh-pages/assets/dyan_assets/SA-City,Country-English.txt).
+[South America](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/SA-City,Country-English.txt).
 
 
 * Data Exercise: <br> 
