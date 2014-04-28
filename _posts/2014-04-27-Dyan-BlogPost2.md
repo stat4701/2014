@@ -90,6 +90,15 @@ I have given below the population Datasets (raw data) associated with each of th
 
 [Asia](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/Asia-City,Country-English.txt).
 
+[Europe](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/Europe-City%2CCountry-English.txt).
+
+
+[North America](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/NA-City,ST-English.txt).
+
+[South America](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/SA-City,Country-English.txt).
+
+[Asia](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/Asia-City,Country-English.txt).
+
 [Europe](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/Europe-City,Country-English.txt).
 
 [North America](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/NA-City,ST-English.txt).
