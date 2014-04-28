@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Parallel Sets Visualization</title>
+<style>
+@import url("d3.parsets.css");
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+  width: 1060px;
+}
+
+div.charttitle {
+  font-size: 24pt;
+  text-align: center;
+  padding: 10px;
+}
+
+#wrapper {
+    width: 1060px;
+    overflow: hidden;
+}
+
+#menu {
+	width: 210px;
+	float: left;
+}
+
+#vis {
+	overflow: hidden;
+	font: 10px sans-serif;
+}
+
+</style>
+<body>
+<div class="charttitle">Obesity by Gender, Race, and Income Level</div>
+<script src="http://mbostock.github.com/d3/d3.js?1.27.1"></script>
+<script src="d3.bespokeparsets.js"></script> 
+<div id="wrapper">
+<div id="menu"></div>
+<div id="vis"></div>
+</div>
+<script>
+//Parallel sets implemented using http://www.jasondavies.com/parallel-sets/ 
+// and specifically adapted from http://www.theage.com.au/national/parsets
+//Drag and drop functionality adapted from http://jsfiddle.net/xnjGD/6/
+
+//Data for creating the titles, these are the dimensions of the data
+var data = [{name: "Weight"}, {name: "Sex"}, {name: "Race"}, {name: "Income"}];
+
+//Set the margins, height and width of the page
+var margin = {top: 50, right: 10, bottom: 20, left: 10},
+    width = 200 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
+
+var svg = d3.select("#menu").append("svg") //Create svg to hold hold menu
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	
+svg.append("text") //add the title to the menu
+	.attr("x", 0)
+	.attr("y", -30)
+	.attr("font-size", "14px")
+	.attr("font-weight", "bold")
+	.attr("fill", "gray")
+	.text("Data Dimensions");
+	
+var title_data = createTitleArray(data); //create the array to hold the titles and spacing
+
+//Function to specify what actions to take with the drag/drop events
+function onDragDrop(dragHandler, dropHandler) {
+    var drag = d3.behavior.drag();
+    drag.on("drag", dragHandler)
+        .on("dragend", dropHandler);
+    return drag;
+}
+	
+for (var i=0; i<title_data.length; i++) {
+	addText(i, title_data); //Using title array created above, add the menu titles
+}
+
+svg.append("text") //Add the note below the menu
+	.attr("x", 0)
+	.attr("y", 200)
+	.attr("font-size", "10px")
+	.text("Drag and drop above to reorder chart");
+
+//Function to add the text boxes of the dimension titles for re-ordering
+function addText(index, data) {
+    //create a group for each title (since the text and box are different elements and we want to move them together)
+	var group = svg.data([{x: 0, y: 50*i}]).append("g")
+		.attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; })
+		.attr("id", index)
+		.call(onDragDrop(dragmove, dropHandler));
+
+	group.selectAll("rect") //add the boxes
+		.data(data[index])
+		.enter()
+		.append("rect")
+		.attr('width', 100)
+		.attr('height', 20)
+		.attr("x", 0)
+		.attr("y", 0)
+		.style('fill', 'lightgray')
+		.attr('stroke', 'gray');
+		
+	group.selectAll("text") //add the text
+	    .data(data[index])
+		.enter()
+		.append("text")
+		.attr("x", 10)
+		.attr("y", 15)
+		.style("font-size", function(d) {return d.size; })
+		.text(function(d) {return d.name; });
+}	
+
+//Function to reorder the dimensions when a menu item is released
+function dropHandler(d) {
+	var gs = svg.selectAll("g");
+	var id_height = {};
+	var heights = [];
+    //For each menu item, get the item id and current height of the item
+	gs.each( function(d, i) {
+		var t = d3.transform(d3.select(this).attr("transform"));
+		id_height[t.translate[1]] = d3.select(this).attr("id");
+		heights.push(t.translate[1]);
+	});
+
+    //Sort heights to figure out the order of the items
+	var ordered_heights = heights.sort(function(a,b){return a-b});
+	for (var i=0; i<ordered_heights.length; i++) {
+		id_height[ordered_heights[i]] = i;
+	}
+    //For each item, realign to starting position (in their new order)
+	gs.each( function(d, i) {
+		var t = d3.transform(d3.select(this).attr("transform"));
+		var h = t.translate[1];
+		d3.select(this).attr("transform", "translate(" + 0 + "," + id_height[h]*50 + ")");
+	});
+    //Call the function to redraw the graph with the new ordering
+	obesity();
+}
+
+//Function to move the items when they are clicked and dragged
+function dragmove(d) {
+    d.x += d3.event.dx;
+    d.y += d3.event.dy;
+    d3.select(this).attr("transform", "translate(" + d.x + "," + d.y + ")");
+}
+
+//Function to create the array of titles (menu items) for the drap and drop re-ordering
+function createTitleArray(data) {
+	var titles = []; 
+	var spacing = 15;
+	for (var i=0; i<data.length; i++) {
+		titles.push([{"name": data[i].name, "size": "14px", "space": spacing}]);
+		spacing = spacing + 50;
+	}
+	return titles;
+}
+
+//Create chart and set width	
+var chart = d3.parsets();
+chart.width(850);
+categoryFormat = chart.categoryFormat();
+//Create functions to format the tooltip
+percent = d3.format(".2%");
+num_format = d3.format(".2f");
+
+//Create the svg to hold the graphic
+var vis = d3.select("#vis").append("svg")
+  .attr("width", chart.width())
+  .attr("height", chart.height());
+
+//Read in csv with raw data
+function dataFunc(value) {
+ d3.csv(value, function(csv) {
+  vis.datum(csv).call(chart);
+  });
+}
+//TODO fix file location
+var input_data = "obesity.csv"; //raw data, created manually from http://www.cdc.gov/nchs/data/databriefs/db50.pdf
+//create array to hold dimensions
+var dim_array = ["Weight", "Sex", "Race", "Income"];
+//Create initial graph on page load
+obesity();
+
+//Function to create graphic
+function obesity(){
+	var dim = getDimensionArray();
+	d3.select("#vis").selectAll("svg").remove(); //Remove previous svg
+	chart = d3.parsets().dimensions(dim).value(function(d){return +d.count;})
+	chart.width(850);
+	vis = d3.select("#vis").append("svg") //Add new svg
+        .attr("width", chart.width())
+		.attr("height", chart.height());
+    dataFunc(input_data); //attach raw data
+	
+	chart.tooltipFormat(function(d) { //Add tooltip for mouseover
+	var count = d.count
+	    p = count / d.parent.count,
+	    path = [categoryFormat(d.name, d.dimension.name)];
+	while ((d = d.parent) && d.name) path.unshift(categoryFormat(d.name, d.dimension.name));
+	      return num_format(count) + ", " + path.join(", ") + ", " + percent(p);
+})
+}
+
+//Function to add groups for the dimensions
+function getDimensionArray() {
+	var gs = svg.selectAll("g");
+	var dim_arr = [];
+	dim_arr.length = dim_array.length;
+	gs.each( function(d, i) {
+		var t = d3.transform(d3.select(this).attr("transform"));
+		var arr_num = t.translate[1] / 50;
+		dim_arr[arr_num] = dim_array[d3.select(this).attr("id")];
+	});
+	return dim_arr;
+}
+
+</script>
+
+This chart show multi-dimensional obesity data by race, gender, and income level. You can change the order in which the chart
+splits the dimensions out by dragging and dropping the dimensions listed at left to reorder them. It's a bit finicky sometimes, but it does work.
+</body>
