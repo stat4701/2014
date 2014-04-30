@@ -53,9 +53,11 @@ None
 
 * 2013 2014 YTD Actuals by Rank by Reason: <br>
 
-![YTD Actuals](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/2013 2014 YTD Actuals by Rank by Reason.jpg).
+![YTD Actuals](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/2013-2014-YTD Actuals-by-Rank- by-Reason.JPG).
 
-2013 2014 YTD Budget Vs Actuals by Rank by Reason per facility
+* 2013 2014 YTD Actuals by Rank by Reason: <br>
+
+![YTD Fac Actuals ](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/2013 2014 YTD Budget Vs Actuals by Rank by Reason per facility.JPG). 
 
 2014 YTD Actuals 3D View
 
