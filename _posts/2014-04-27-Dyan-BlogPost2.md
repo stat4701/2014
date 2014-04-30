@@ -24,19 +24,19 @@ The source of the data for the above map came from several polls conducted by Ga
 
 * Country Data Set: <br>
 
-[![Country](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Country Data Set Details Snip.JPG)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Country Data Set Details Snip.JPG)
+[![Country](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Country Data Set Details Snip.JPG)](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Country Data Set Details Snip.JPG)
 
 Next, my approach was to inspect the code of the above Map to see whether I could scrape the data from the Web Site. Sample of the code is given below.  
 
 * Code: <br>
 
-[![Code](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Snippet-of-Gallup-Map.JPG)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Snippet-of-Gallup-Map.JPG)
+[![Code](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Snippet-of-Gallup-Map.JPG)](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Snippet-of-Gallup-Map.JPG)
 
 As you can see in the code highlighted above, the data are images (JPG) and not readily available to scrape from the Website. Next I turn my attention to the "Emotional State of the World" chart whose link was given on the Website. That chart has the data I was looking for. Sample of that chart is given below.
 
 * Emotional State of the World: <br>
 
-[![EmotionalState](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Emotional State of the World Snip.JPG)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/Emotional State of the World Snip.JPG)
+[![EmotionalState](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Emotional State of the World Snip.JPG)](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/Emotional State of the World Snip.JPG)
 
 However scraping this chart threw more challenges to my effort. The data is arranged in two columns that are side by side and scraping as one continuous column was time consuming. Besides, I had to run the scrapped data through an OCR converter to convert it into text format so I can use the data on My New Map. This was tedious and I had to look for other means. 
 
@@ -54,48 +54,48 @@ As I move the mouse over the dots or the cylinders on the Maps it displays a too
 
 * NAWORLDMAP: <br>
 
-[![NAWORLDMAP](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-World-Map.JPG)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-World-Map.JPG)
+[![NAWORLDMAP](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-World-Map.JPG)](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-World-Map.JPG)
 
 * NAUSMAP: <br>
 
 
-[![NAUSMAP](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-NAUS-Map.JPG)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-NAUS-Map.JPG)
+[![NAUSMAP](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-NAUS-Map.JPG)](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-1Million-on-NAUS-Map.JPG)
 
 
 * NAUSMAPGT100K: <br>
 NA-Major-City-Population-Over-100K-on-US-Map
 
-[![NAUSMAPGT100K](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-100K-on-US-Map.JPG)](http://dganepol.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-100K-on-US-Map.JPG)
+[![NAUSMAPGT100K](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-100K-on-US-Map.JPG)](http://ganepola.github.io/edav/assets/dyan_assets/Screen-Captures/NA-Major-City-Population-Over-100K-on-US-Map.JPG)
 
 
 Here are the snapshots of the maps by the region without any data mapped on them. 
 
 * Asia: <br>
 
-[![Asia](http://dganepol.github.io/edav/assets/dyan_assets/GeoMaps/Asia+35-11+180+73.jpg)](http://dganepol.github.io/edav/assets/dyan_assets/GeoMaps/Asia+35-11+180+73.jpg)
+[![Asia](http://ganepola.github.io/edav/assets/dyan_assets/GeoMaps/Asia+35-11+180+73.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/GeoMaps/Asia+35-11+180+73.jpg)
 
 * Europe: <br>
 
-![Europe](https://raw.githubusercontent.com/dganepol/edav/gh-pages/assets/dyan_assets/GeoMaps/Europe-27.16+37.5+46+78.5.jpg).
+![Europe](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/GeoMaps/Europe-27.16+37.5+46+78.5.jpg).
 
 * North America: <br>
 
-![North America](https://raw.githubusercontent.com/dganepol/edav/gh-pages/assets/dyan_assets/GeoMaps/NorthAmerica-179.5+10.7-49.9+87.9.jpg).
+![North America](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/GeoMaps/NorthAmerica-179.5+10.7-49.9+87.9.jpg).
 
 * South America: <br>
 
-![South America](https://raw.githubusercontent.com/dganepol/edav/gh-pages/assets/dyan_assets/GeoMaps/southamerica-87.3-54.5-31.55+14.jpg).
+![South America](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/GeoMaps/southamerica-87.3-54.5-31.55+14.jpg).
 
 
 I have given below the population Datasets (raw data) associated with each of these geographical regions along with their respective Geo-codes. 
 
-[Asia](https://github.com/dganepol/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/Asia-City,Country-English.txt).
+[Asia](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/Asia-City,Country-English.txt).
 
-[Europe](https://github.com/dganepol/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/Europe-City,Country-English.txt).
+[Europe](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/Europe-City,Country-English.txt).
 
-[North America](https://github.com/dganepol/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/NA-City,ST-English.txt).
+[North America](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/NA-City,ST-English.txt).
 
-[South America](https://github.com/dganepol/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/SA-City,Country-English.txt).
+[South America](https://github.com/ganepola/edav/blob/gh-pages/assets/dyan_assets/Populations-with-Geocodes/SA-City,Country-English.txt).
 
 
 * Data Exercise: <br> 
