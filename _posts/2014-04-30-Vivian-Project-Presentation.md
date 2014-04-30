@@ -14,7 +14,7 @@ My goal for the project was to analyze housing and demographic data from the US 
 To collect the data, I searched the [US Census fact finder](http://factfinder2.census.gov/faces/nav/jsf/pages/searchresults.xhtml?refresh=t) for demographic and housing data on the Mission District - census tracts 208, 228.1, 228.2, 228.3, 209, 229.1, 229.2, and 229.3. The data were downloaded in 2 types of .csv files: One that coded the annotations, and one that contained all the data. I had to merge the annotations data to the meta data. 
 
 Useful code, courtesy of Jared Lander's R for Everyone book:
-```{r chunkLabel}
+``` {r chunkLabel}
 # get list of the files
 
 
