@@ -52,62 +52,61 @@ It is a complex Data Structure that needs Multi Dimensional Data Visualization.
 
 #### Screen Captures:
 
-1. Chart given below that is generated now from the Reporting System has no visualiation but has all the data needed for one facility only.  
+1.Chart given below that is generated now from the Reporting System has no visualiation but has all the data needed for one facility only.  
 
 * 2013 2014 YTD Budget Vs Actuals by Title by Reason per facility: <br>
 
 ![2013 2014 YTD Budget Vs Actuals by Rank by Reason per facility](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/2013 2014 YTD Budget Vs Actuals by Rank by Reason per facility.JPG). 
 
+2.Chart given below is a visualization of the above table broken down by Title and Reason but no Location data or Budgeted data included. Only the Actual hours are included.
 
-2. Given below is another chart that is currently being used. 
+* 2013 2014 YTD Actuals by Title by Reason: <br>
+
+![2013 2014 YTD Actuals by Rank by Reason](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/2013 2014 YTD Actuals by Rank by Reason.JPG).
+
+3.Another View in use now
+
+* Actual Vs Budget OT given Date range by Title : <br>
+
+![Actual Vs Budget OT given Date range by Title](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/Actual Vs Budget OT given Date range by Title.JPG).
+
+4.Given below is a new chart using Visualization effects. 
 
 * 2014 YTD OT Actuals by Facility by Category by Title: <br>
 
 ![2014 YTD OT Actuals by Facility by Category by Title](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/2014 YTD OT Actuals by Facility by Category by Title.JPG).
 
 
-3. Chart given below is a visualization of the above table broken down by Title and Reason but no Location data or Budgeted data included. Only the Actual hours are included.
-
-* 2013 2014 YTD Actuals by Title by Reason: <br>
-
-![2013 2014 YTD Actuals by Rank by Reason](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/2013 2014 YTD Actuals by Rank by Reason.JPG).
-
-
-4. Chart given below is a Three Dimensional View of the data. Using different color schemes for each category I can visually display four types of data. Budgeted data is missing.
+5.Chart given below is a Three Dimensional View of the data. Using different color schemes for each category I can visually display four types of data. Budgeted data is missing.
 
 * 2014 YTD Actuals 3D View: <br> 
 
 ![2014 YTD Actuals 3D View](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/2014 YTD Actuals 3D View.JPG).
 
-5. 
-
-* Actual Vs Budget OT given Date range by Title : <br>
-
-![Actual Vs Budget OT given Date range by Title](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/Actual Vs Budget OT given Date range by Title.JPG).
 
 
-6. 
+6.Another new View 
 
 * HeatMap : <br>
 
 ![HeatMap](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/HeatMap.JPG).
 
 
-7. 
+7.Another new report  
 
 
 * OT Details Config : <br>
 
 ![OT Details Config](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/OT Details Config.JPG).
 
-8. 
+8.Another View 
 
 * OT Difference and PCT Occurences: <br>
 
 ![OT Difference and PCT Occurences](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/OT Difference and PCT Occurences.JPG).
 
 
-9. 
+9.Another View 
 
 * Total OT YTD Trend: <br>
 
