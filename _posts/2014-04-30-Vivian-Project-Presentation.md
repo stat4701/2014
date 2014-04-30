@@ -87,7 +87,7 @@ I realize that this layout is kind of meaningless for demographic data. Circle p
 
 For the purposes of learning D3, I want to improve on this visualization by adding in the data points for the other years, and being able to filter according to the year. Ideally, I would also like to manually plot the census tracts so that they semi-reflect the geography of SF's mission district.
 
-I'm curious if something like [this](malecki.github.io/edav/archive.html) would be more useful. Have each of the colors represent one ethnicity group, and instead of populating dots according to the mouse movement, find a way to populate the dots according to time. 
+I'm curious if something like [this](http://bl.ocks.org/mbostock/1249681) would be more useful. Have each of the colors represent one ethnicity group, and instead of populating dots according to the mouse movement, find a way to populate the dots according to time. 
 
 
 
