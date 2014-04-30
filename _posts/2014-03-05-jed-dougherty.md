@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Project Update
-description: Self Analysis Data
-tags: blog self drinking sleeping
+title: Jed Makes NFL Combine Graphs
+description: Bad Graph Takedown Number 1
+tags: blog badGraph
 ---
 
 I decided to see if I could create alternate versions of some interesting graphics
