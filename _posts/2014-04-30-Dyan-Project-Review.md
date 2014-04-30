@@ -12,42 +12,45 @@ tags: project
 -------------------------------------------------------------------------
 
 #### Overview
- 
+
  According to Gartner, leading IT research organization in US, “Data Science is about problem solving. It is important for IT leaders decide whether to build, buy or outsource such solutions. Choosing the right solution path will help them to avoid project failures and lost opportunities” – January 2014
 
-To that end, my project will look into two commercially available off-the shelf (COTS) products in the Interactive Visualization market that is consistent with our EDAV course. I will attempt to see how closely they follow and apply the course material we learned in the lectures and also from the text books we read for the course. In the process, I intend to compare the two products using pre-established criteria and data obtained from Web sites and report pros and cons of each. Finally since this is a semester project I will present some use cases from my organization and develop a proof of concept document as the final deliverable. Summary of activities are as follows:
+#### Methodlogy
 
-1. Research Gartner to understand the players and their offerings in the area of interest.
-2. Select two products that fit within the scope of this project and the objectives.
+ My project will look into two or three commercially available off-the shelf (COTS) products in the Interactive Visualization market whose functions and features are similar to what we learnt in the class. I will attempt to see how these products fit into the academic foundation laid in our EDAV course. In the process, I intend to compare the products using a pre-established criteria with real life data obtained from my organization and report pros and cons of each. I will present a use case from an application in my organization and deliver a frame work for Buying, Building and Outsourcing Data Science Solutions using the results of this project.    
+
+ #### Activities:
+
+1. Research Gartner to find out the vendors and their offerings in Data Visualization market. Read about a dozen of Gartner White Papers on this subject to supliment my research. 
+2. Select the products that fit within the scope of this project and the objectives.
 3. Contact the vendors and get permission for trial evaluations.
 4. Test bench the products and learn how to use the two products.
-5. Use public data available and scraped from web sites to demonstrate interactive visualization marketed by these two products. 
-6. Instead of peer code review I would welcome from you datasets that you are particularly interested and I will demonstrate Data Visualization capabilities using the two products. You can be the judge.
-7. I will further analyze the product with several use cases from my organization.
-8. Use all the results thus obtained and develop a proof of concept document and rate the two products.
-9. Finally gather the cost of ownership of the two products and do a financial justification.
-10. Develop a framework for Buying, Building and Outsourcing Data Science Solutions using the results of this project.
-
-#### Accomplishments todate
-
-1. Read twelve (12) Gartner and others research papers. Grasped the subject matter specific to IT industry.
-2. Selected two vendors. To preserve the anonymity I will call them as AdViz and Vizpert.
-3. Signed non-disclosure agreements with both vendors.
-4. Obtained and installed the software AdViz from one vendor.
-5. Started to test drive the product and use with demo data.
-6. Started to look for public data and down load or scraped them for usage with the products.
-
-#### Next Iterations
-
-1. Complete installation and test drive the other product Vizpert.
-2. Use public data and evaluate the two products objectively.
-3. See how these two products fit into the academic foundation laid in our EDAV course.
-4. Plan and execute the activities from steps 6 through 10.      
+5. Use public data available and/or try to scrape data from web sites to demonstrate interactive visualization marketed by these two products. 
+6. Establish a testing criteria to evaluate the products (see section below).
+7. Evaluate the products.
+6. Use all the results thus obtained and develop a framework for Buying, Building and Outsourcing Data Science Solutions using the results of this project.
 
 
-####Blockers 
+#### Criteria:
 
-None
+1. I decided to use a product that I currently use with the data to establish a base line. I analyzed the reports and charts produced by this system and listed their drawbacks and looked at ways to improve. I did an Exploratory Data Analysis and defined a business problem to solve. Then I used the tools to solve the problem and compared the methods and the ouputs.       
+
+
+#### Implementation 
+
+
+#### Blockers 
+
+#### Data Load Error 
+
+* Bug With Oracle Client - Overflow error: <br>
+
+I seem to have found the cause for the overflow error. From support I got: 
+
+"The overflow is a known bug with the .NET Oracle driver--something like there's a limit to the total number of digits that can be handled, so a repeating decimal like 2/3 needs to be rounded to some fairly small number of digits. See 
+
+[OCI-22053](http://connect.microsoft.com/VisualStudio/feedback/details/94626/bug-with-oracleclient-overflow-error-oci-22053).
+
 
 #### Screen Captures
 
