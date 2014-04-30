@@ -33,7 +33,7 @@ tags: project
 
 #### Criteria:
 
-1. I decided to use a product that I currently use with the data to establish a base line. I analyzed the reports and charts produced by this system and listed their drawbacks and looked at ways to improve. I did an Exploratory Data Analysis and defined a business problem to solve. Then I used the tools to solve the problem and compared the methods and the outputs.       
+I decided to use a product that I currently use with the data to establish a base line. I analyzed the reports and charts produced by this system and listed their drawbacks and looked at ways to improve. I did an Exploratory Data Analysis and defined a business problem to solve. Then I used the tools to solve the problem and compared the methods and the outputs.       
 
 
 #### Implementation: 
@@ -52,7 +52,7 @@ It is a complex Data Structure that needs Multi Dimensional Data Visualization.
 
 #### Screen Captures:
 
-1.Chart given below that is generated now from the Reporting System has no visualiation but has all the data needed for one facility only.  
+1.Chart given below is generated now from the Reporting System. It has no visualiation but has all the data needed for one facility only.  
 
 * 2013 2014 YTD Budget Vs Actuals by Title by Reason per facility: <br>
 
@@ -64,13 +64,13 @@ It is a complex Data Structure that needs Multi Dimensional Data Visualization.
 
 ![2013 2014 YTD Actuals by Rank by Reason](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/2013 2014 YTD Actuals by Rank by Reason.JPG).
 
-3.Another View in use now
+3.Another View in use now. Data aggregated for all the locations for a given date range.
 
 * Actual Vs Budget OT given Date range by Title : <br>
 
 ![Actual Vs Budget OT given Date range by Title](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/Actual Vs Budget OT given Date range by Title.JPG).
 
-4.Given below is a new chart using Visualization effects. 
+4.Given below is a new chart using Visualization effects. No budgeted data. 
 
 * 2014 YTD OT Actuals by Facility by Category by Title: <br>
 
@@ -84,34 +84,32 @@ It is a complex Data Structure that needs Multi Dimensional Data Visualization.
 ![2014 YTD Actuals 3D View](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/2014 YTD Actuals 3D View.JPG).
 
 
-
-6.Another new View 
+6.Another new View. Green means under budget.
 
 * HeatMap : <br>
 
 ![HeatMap](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/HeatMap.JPG).
 
 
-7.Another new report  
+7.Another new report. Data can be filtered here and passed on to the other views found on different Tabs.  
 
 
 * OT Details Config : <br>
 
 ![OT Details Config](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/OT Details Config.JPG).
 
-8.Another View 
+8.Another View. Histogram. Displays the number of occurences actual OT hours or the percentages exceeded the Budgeted hours. 
 
 * OT Difference and PCT Occurences: <br>
 
 ![OT Difference and PCT Occurences](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/OT Difference and PCT Occurences.JPG).
 
 
-9.Another View 
+9.Another View. Trend Analysis. Can you guess why it peaked in November 2012? 
 
 * Total OT YTD Trend: <br>
 
 ![Total OT YTD Trend](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/Total OT YTD Trend.JPG).
-
 
 
 #### Blockers: 
