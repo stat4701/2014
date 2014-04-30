@@ -51,11 +51,11 @@ None
 
 #### Screen Captures
 
-* 2013 2014 YTD Actuals by Rank by Reason: <br>
+* 2013 2014 YTD Actuals by Title by Reason: <br>
 
 ![2013 2014 YTD Actuals by Rank by Reason](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/2013 2014 YTD Actuals by Rank by Reason.JPG).
 
-* 2013 2014 YTD Budget Vs Actuals by Rank by Reason per facility: <br>
+* 2013 2014 YTD Budget Vs Actuals by Title by Reason per facility: <br>
 
 ![2013 2014 YTD Budget Vs Actuals by Rank by Reason per facility](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/2013 2014 YTD Budget Vs Actuals by Rank by Reason per facility.JPG). 
 
