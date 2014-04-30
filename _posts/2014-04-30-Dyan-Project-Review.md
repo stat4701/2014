@@ -53,27 +53,39 @@ None
 
 * 2013 2014 YTD Actuals by Rank by Reason: <br>
 
-![YTD Actuals](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/2013-2014-YTD Actuals-by-Rank- by-Reason.JPG).
+![2013 2014 YTD Actuals by Rank by Reason](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/2013 2014 YTD Actuals by Rank by Reason.JPG).
 
-* 2013 2014 YTD Actuals by Rank by Reason: <br>
+* 2013 2014 YTD Budget Vs Actuals by Rank by Reason per facility.JPG): <br>
 
-![YTD Fac Actuals ](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/2013 2014 YTD Budget Vs Actuals by Rank by Reason per facility.JPG). 
+![2013 2014 YTD Budget Vs Actuals by Rank by Reason per facility](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/2013 2014 YTD Budget Vs Actuals by Rank by Reason per facility.JPG). 
 
-2014 YTD Actuals 3D View
+* 2014 YTD Actuals 3D View: <br> 
 
-2014 YTD OT Actuals by Facility by Category by Title
+![2014 YTD Actuals 3D View](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/2014 YTD Actuals 3D View.JPG).
 
-Actual Vs Budget OT given Date range by Title
+* 2014 YTD OT Actuals by Facility by Category by Title: <br>
 
-HeatMap
+![2014 YTD OT Actuals by Facility by Category by Title](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/2014 YTD OT Actuals by Facility by Category by Title.JPG).
 
-OT Details Config
+* Actual Vs Budget OT given Date range by Title : <br>
 
+![Actual Vs Budget OT given Date range by Title](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/Actual Vs Budget OT given Date range by Title.JPG).
 
-OT Difference and PCT Occurences
+* HeatMap : <br>
 
+![HeatMap](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/HeatMap.JPG).
 
-Total OT YTD Trend
+* OT Details Config : <br>
+
+![OT Details Config](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/OT Details Config.JPG).
+
+* OT Difference and PCT Occurences: <br>
+
+![OT Difference and PCT Occurences](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/OT Difference and PCT Occurences.JPG).
+
+* Total OT YTD Trend: <br>
+
+![Total OT YTD Trend](https://raw.githubusercontent.com/ganepola/edav/gh-pages/assets/dyan_assets/Project-Images/Total OT YTD Trend.JPG).
 
 
 
