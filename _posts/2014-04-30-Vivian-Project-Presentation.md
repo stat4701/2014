@@ -15,7 +15,6 @@ To collect the data, I searched the [US Census fact finder](http://factfinder2.c
 
 Useful code, courtesy of Jared Lander's R for Everyone book:
 ``` {r chunkLabel}
-# get list of the files
 
 
 theFiles <- dir(path="../2009-2012-RaceEthnicity/", pattern = "\\.csv")
