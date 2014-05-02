@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Engine v1 -- Zijian Yi
+title: Data Engine v1 -- Zijian Yi -- Blog Post 1
 description: My data engine version 1
 tags: blog
 ---
@@ -14,7 +14,7 @@ Today I want to introduce my tidy data engine.
 
 Let's start with the structure of the engine as below
 
-![Structure](https://raw.github.com/Arrowzeke/edav_project/master/images/engine.png)
+![Structure](https://raw.github.com/Arrowzeke/edav_data_engine/master/images/engine.png)
 
 The Engine includes two main components, the "requester" and the "local server". The job of requester is fetch data from remote data source and parse the raw data to internal standard format and pass to local server. Then the local server will analyze formatted data and push the results to blogger to visualize them.
 
@@ -59,7 +59,7 @@ The us map demo below uses topojson to draw a dynamic map, and update the city n
 
 #### Source Code
 
-[Github](https://github.com/Arrowzeke/edav_project)
+[Github](https://github.com/Arrowzeke/edav_data_engine)
 
 -------------------------------------------------------------------------------
 
