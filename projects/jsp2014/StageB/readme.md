@@ -11,4 +11,4 @@ tags: project, josh plotkin, jsp2014
 	* extractdata extracts the VP$IP and PFR data from the databases
 	* separateregs consolidates the data, and uses k-means and Gaussian Mixture Models to pull apart the recreational population from the regulars population.
 *  Here is a dropbox link to Stage B's csv files, which will not fit on github: __[download me](https://www.dropbox.com/sh/9o6r265quccnr5c/bbWJefvTcH)__
-* _[iPython notebook viewer](http://nbviewer.ipython.org/github/joshplotkin/edav/blob/gh-pages/projects/jsp2014/StageA/PYTHON/StageA.ipynb?create=1)__ with the progression of and (many) associated plots for the process of separating out the two populations of players.
+* __[iPython notebook viewer](http://nbviewer.ipython.org/github/joshplotkin/edav/blob/gh-pages/projects/jsp2014/StageB/PYTHON/StageB.ipynb?create=1)__ with the progression of and (many) associated plots for the process of separating out the two populations of players.
