@@ -23,7 +23,7 @@ I was inspired by Josh Worth's ["If the moon were only 1 pixel"](http://joshwort
 
 I want to replicate a similar effect, where you can scroll to the right for information and the counter increases from 0 to 14,600. Instead of showing you the planets in Josh Worth's visualization, I would like to present the amount of water you would have consumed to intake that many pills.
 
-## What I have so far [Click Here](../assets/pills.html)
+## What I have so far [Click Here](http://vivianpeng.com/pillshtml)
 
 Though Josh Worth's code looked relatively simple to replicate, I could not get his counter to work. I'm not familiar with jQuery, and spent a day trying to crash learn it. Instead, I looked for an alternative in D3.
 
