@@ -26,7 +26,7 @@ The insights will be aggregated at the following levels:
 - Geography (city and state) view (by HCP and Specialty)
 - Specialties view (by Geo and HCP)
 
-This effort is a part of the session end proejct submission requierments for [Exploratory Data Analysis](http://malecki.github.io/edav/) and [Machine Learning for Data Science](http://www1.ccls.columbia.edu/~ansaf/4721/index.html) courses in the Data Science program at Columbia University, New York.
+This effort is a part of the session end project submission requierments for [Exploratory Data Analysis](http://malecki.github.io/edav/) and [Machine Learning for Data Science](http://www1.ccls.columbia.edu/~ansaf/4721/index.html) courses in the Data Science program at Columbia University, New York.
 [Rajesh Madala](www.linkedin.com/pub/rajesh-madala/6/283/336), [Mandeep Sigh](www.linkedin.com/pub/mandeep-singh-cfa/2/236/214) and [Mayank Misra](https://www.linkedin.com/in/mayankmisra) worked on this project.  
 
 The scope was adjusted in April to focus on the New York, New Jersey, Connecticut tristate area and the HCPs involved with Oncology as a specialty.  
@@ -114,7 +114,7 @@ The shear size of datafile, the lack of error handling and an inability to confi
 ### Relational Database (Oracle)
  - Store NPI dataset:  
  sqlldr system/Bhaani data = npi_data.csv control = npi_data.ctl
- The Load Contorl file:
+ The Load Control file:
  
 ```
 OPTIONS (SKIP=1)
@@ -391,7 +391,7 @@ colnames(cities) <- c("City","Freq","long","lat")
 cities <- cities[order(cities$Freq,decreasing=T),]
 top_cities <- cities[1:10,]
 states <- map_data("state")
-tri_states <- subset(states, region %in% c( "connecticut", "new jersey", "new york")) 
+tri_states <- subset(states, region %in% c( "Connecticut", "new jersey", "new york")) 
 p <- ggplot(tri_states, aes(x=long, y=lat, group = group)) 
 p <- p + geom_polygon(fill="grey10", colour="white") 
 p <- p + xlim(-80, -70) 
