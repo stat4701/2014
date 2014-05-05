@@ -13,6 +13,16 @@ The inspiration behind this blog post comes from one of my work assignments at D
 
 I designed this infographic that was meant to take along time to scroll down for the information you need.
 
-<object type="application/pdf" height="600" width="900" data="http://dvqlxo2m2q99q.cloudfront.net/000_clients/52732/file/527321477PAWO.pdf" id="pdf_content">
-<p>PDF cannot be displayed.</p>
-</object>
+[Click Here](http://vivianpeng.com/14600_infographic_scroll.pdf)
+
+You can imagine how painstakingly long it took for me to draw out 14,600 pills in AdobeIllustrator. There has to be a better way!
+
+## My plan for a better design
+
+I was inspired by Josh Worth's ["If the moon were only 1 pixel"](http://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html) scrolling data visualization. I liked that the user had to continually scroll to the right to get the information, and the tracker at the bottom calculates the number of pixels scrolled and converts it into km distance from the sun.
+
+I want to replicate a similar effect, where you can scroll to the right for information and the counter increases from 0 to 14,600. Instead of showing you the planets in Josh Worth's visualization, I would like to present the amount of water you would have consumed to intake that many pills.
+
+## What I have so far
+
+[Click Here](../assets/pills.html)
