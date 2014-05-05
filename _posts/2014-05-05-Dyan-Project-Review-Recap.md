@@ -30,7 +30,7 @@ Following 5 charts were developed while experimenting with one of the Visualizat
 3. Heat map. If the actual OT hours is under budget it showed green boxes. Otherwise it showed red to mean over budget.   
 4. Histogram. Two (2) histograms, one with the differences and one with the ratios were selected for OT on the X-Axis.
 
-5. Trend Analysis. This represented a snap shot of all the YTD actual OT consumed. Sharp peak in November of 2012 was due to OT during Sandy disaster.  
+5. Trend Analysis. This represented a snap shot of all the YTD actual OT consumed. Sharp peak in November of 2012 was due to Over Time during Sandy disaster.  
 
 
 #### Blockers:
