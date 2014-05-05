@@ -43,7 +43,7 @@ Results using the other tool are still pending due to an error in loading the fi
 
 2. If this can't be done visually in one screen, then conceptually design a chart that can provide the answers to my hypothetical 5-W questions. 
 
-3. Finally develop a framework for Buying, Building and Outsourcing Data Science Solutions:
+3. Finally develop a framework for Buying, Building and Outsourcing Data Science Solutions.
 
 
 </section>
