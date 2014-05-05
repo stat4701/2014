@@ -61,11 +61,11 @@ I decided to do all the work in python for the project. There were many question
 Many variations of graphs like :
 
 Ave rating of 'Food' businesses by school 
-<img src = "https://raw.githubusercontent.com/sunandakp/edav/gh-pages/assets/Sunanda_assets/Figure_Ratingdist" width = "100%">
+<img src = "https://raw.githubusercontent.com/sunandakp/edav/gh-pages/assets/Sunanda_assets/Figure_Ratingdist.png" width = "100%">
 
 Cafes vs Bars by Region:
 
-<img src = "https://raw.githubusercontent.com/sunandakp/edav/gh-pages/assets/Sunanda_assets/Southmidwest.png" width = "100%">
+<img src = "https://raw.githubusercontent.com/sunandakp/edav/gh-pages/assets/Sunanda_assets/South-midwest.png" width = "100%">
 <img src = "https://raw.githubusercontent.com/sunandakp/edav/gh-pages/assets/Sunanda_assets/EastCoast.png" width = "100%">
 <img src = "https://raw.githubusercontent.com/sunandakp/edav/gh-pages/assets/Sunanda_assets/WestCoast.png" width = "100%">
 
