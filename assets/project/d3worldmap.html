@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>World Map - Test Data</title>
+<style>
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 85px;
+  height: 25px;
+  padding: 8px;
+  font: 12px sans-serif;
+  background: lightgray;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+</style>
+<div id="menu"></div>
+<div id="map"></div>
+<div id="country-details"></div>
+<script src="http://d3js.org/d3.v2.js?2.9.1"></script>
+<script>
+var map_scale = 1000; //scale value for map, higher numbers "zoom" in the map farther
+var width = 1060;
+var height = 600;
+var margin = margin = {top: 100, right: 20, bottom: 20, left: 20};
+var num_format = d3.format(".3f"); //format function for output of numbers
+var map_default_color = "#ABDDA4";
+var highlight_color = '#2F6D4F';
+var menu_highlight_color = "#984ea3";
+var projection = d3.geo.mercator().scale([map_scale]);
+var map_svg = '';
+var p = '';
+var g = '';
+var colors = d3.scale.linear() //color scale for countries on map
+	.domain([-3.5, 0, 3.5])
+    .range(["#8c510a", "#f5f5f5", "#081d58"]);
+
+//For the menu
+var menu_items = [['Test', 'PISA', 'TIMSS'],
+		['Round Filter', '1-2-3', '1-2', '1-3', '2-3'],
+		['Round', '1', '2', '3'],
+		['Subject', 'Math', 'Science'],
+		['Stat', 'Mean', 'StDev'],
+		['Gender', 'Male', 'Female'],
+		['Content', 'Num', 'Alg', 'Geom', 'Data']];
+
+createMenus(menu_items);
+
+function createMenus(menu_items) {
+	//Add svg and g to hold menu categories
+	var svg_title = d3.select("#menu").append("svg")
+		.attr("height", 150)
+		.attr("width", width)
+		.append('g').attr('transform', 'translate(100,20)')
+		.attr("class", "menu_lists")
+		.attr("id", "menu_cats");
+	
+	//Add groups to hold the menu items
+	var categories = svg_title.selectAll("menu")
+		.data(menu_items) //add data
+	   .enter().append("g")
+		.attr('transform', function (d,i) { return 'translate(' + ((width/menu_items.length-20)*i+75) + ',0)'; })
+		.attr("class", "items")
+		.attr("id", function(d) {return d[0];});  
+		
+	//Add menu items, make "All" or category titles larger and a darker color
+	var text = categories.selectAll("text")
+		.data(function(d) { return d; })
+	  .enter().append("text")
+		.attr("x", 0)
+		.attr("y", function(d,i) {return i*20;})
+		.attr("class", "unselected")
+		.style("fill", function(d,i) {
+			if (i === 0) {
+				var text_color = highlight_color;
+			}
+			else {
+				var text_color = map_default_color;
+			}
+			return text_color; 
+		})
+		.style("font-size", function(d,i) {
+			if (i === 0) {
+				var font = '14px';
+			}
+			else {
+				var font = '12px';
+			}
+			return font; 
+		})
+		.text(function(d,i) {return d; })
+		.on("click", function(d,i) {makeSelected(this)}); //when selected, highlight and change class to indicate selection
+}
+
+function makeSelected(element) {
+	//When a menu item is selected, highlight it and change class
+	element.style.fill = highlight_color;
+	var parent = element.parentNode;
+	var children = parent.children;
+	for (var i=0; i<children.length; i++) {
+		if (children[i] === element) {
+			children[i].style.fill = menu_highlight_color;
+			children[i].setAttribute("class", "selected");
+		}
+		else if (i === 0){
+			children[i].style.fill = highlight_color;
+			children[i].setAttribute("class", "unselected");
+		}
+		else {
+			children[i].style.fill = map_default_color;
+			children[i].setAttribute("class", "unselected");
+		}
+	}
+	updateMap(parent.parentNode); //update the map to reflect data from selected categories
+}
+
+function getValueArray(element) {
+	//Loops though the children of the element to get the array holding the seleccted values
+	var children = element.children;
+	var value_array = [];
+	for (var i=0; i<children.length; i++) {
+		var cat_val = getValue(children[i]);
+		value_array.push(cat_val);
+	}
+	return value_array;
+}
+
+function updateMap(element) {
+	var value_array = getValueArray(element);
+	updateColors(value_array);
+}
+
+function getValue(element) {
+	//Gets the selected value for the element (menu category) passed in
+	var children = element.children;
+	var selected_value = "";
+	for (var i=0; i<children.length; i++) {
+		if (children[i].getAttribute("class") === "selected") {
+			selected_value = children[i].textContent;
+		}
+	}
+	if (selected_value === "") {
+		//TODO: fix this snowflake code (some categories don't have an "all" so we set the selected element to the first one)
+		if (element.getAttribute("id") === 'Stat' || element.getAttribute("id") === 'Subject' || element.getAttribute("id") === 'Round') {
+			selected_value = children[1].textContent;
+		}
+		else {
+			selected_value = element.getAttribute("id");
+		}
+	}
+	return selected_value;
+}
+
+
+//For the map itself	
+createMap();
+
+var tooltip = d3.select("#map").append("div") //create a div to hold the tooltip info
+    .attr("class", "tooltip")               
+    .style("opacity", 0);
+	
+function createMap() {
+	g = d3.select("#map").append("svg")
+		.attr("height", height)
+		.attr("width", width)
+		.append('g').attr('transform', 'translate(100,' + margin.top +')');
+		
+	//Get data from json file holding the coordinate data to draw the countries	
+	d3.json("world-countries-no-ant.json", function(collection) {
+		var all_data = collection.features;
+		//Get data to bind to each country that has normalized test scores
+		d3.json("data_munge/take4_country_data.json", function(info) {
+			for (var j=0; j<all_data.length; j++) {
+				if (info.hasOwnProperty(all_data[j]['id'])) {
+					all_data[j]['test_values'] = info[all_data[j]['id']];
+				}
+			}
+		});
+		//Create the path elements and set the attributes
+		p = g.selectAll("path").data(all_data);
+		p.enter().append("path")
+			.attr("d", d3.geo.path().projection(projection))
+			.attr("fill", function(d) { return map_default_color;})
+			.attr('stroke', 'rgba(255,255,255,.2)')
+			.attr('opacity',1)
+			.attr('id', function(d) {return d.id;})
+			.on('mouseover', function(d) { return showTip(d)})
+			.on('mousemove', function(d) { return moveTip(d)})
+			.on('mouseout', function(d) { return hideTip(d)})
+			.on('click', function(d) { return updateCountryDetails(d)});
+	});
+}
+
+function updateColors(values) {
+	g.selectAll("path").attr("fill", function(d) { return getCountryValue(d, values, true);});
+}
+
+function getCountryValue(data, values, as_color) {
+	//Gets the normalized test score value for the data passed in and the values array (holding the menu items selected
+	//as_color is a flag indicating whether to return the value, or the color translation of that value
+	//This function loops through the data object, given the menu values, if at any point there is no next value, that means
+	//  there is no data for that country for those items selected, and so it returns NA or the default color
+	var data_dict_value = data;
+	if (data_dict_value.hasOwnProperty('test_values')) {
+		data_dict_value = data_dict_value['test_values'];
+		for (var i=0; i<values.length; i++) {
+			if (data_dict_value.hasOwnProperty(values[i])) {
+				data_dict_value = data_dict_value[values[i]];
+			}
+			else {
+				if (as_color) {
+					return map_default_color;
+				}
+				else {
+					return 'NA';
+				}	
+			}
+		}
+		if (data_dict_value === 'NA') {
+			if (as_color) {
+				return map_default_color;
+			}
+			else {
+				return 'NA';
+			}
+		}
+		else {
+			if (as_color) {
+				return colors(data_dict_value);
+			}
+			else {
+				return data_dict_value;
+			}
+		}
+	}
+	else {
+		if (as_color) {
+			return map_default_color;
+		}
+		else {
+			return 'NA';
+		}
+		
+	}
+}
+
+//Stub for graph(s) on country specific details
+function updateCountryDetails(country) {
+	d3.select('#country-details').selectAll('svg').remove();
+	var gg = d3.select("#country-details").append("svg")
+		.attr("height", height)
+		.attr("width", width)
+		.append('g').attr('transform', 'translate(100,' + margin.top +')');
+	var txt = gg.selectAll("text").data([country.properties.name]);
+	txt.enter().append("text")
+		.attr("x", 0)
+		.attr("y", function(d,i) {return i*20;})
+		.style("fill", highlight_color)
+		.style("font-size", '14px')
+		.text(function(d,i) {return "Graph for " + d + " goes here..."; });
+}
+
+//Functions to control tooltip (tried to use ds.tip but couldn't control location of the tip as I needed to)
+function showTip(d) {
+	//highlights the hovered over element and displays the tool tip
+	var element = document.getElementById(d.id);
+	element.style.fill = highlight_color;
+	var country_value = getCountryValue(d, getValueArray(document.getElementById("menu_cats")), false);
+	if (!isNaN(parseFloat(country_value))) {
+		country_value = num_format(country_value);
+	}
+	tooltip.transition()        
+		.duration(200)      
+		.style("opacity", 1);
+	tooltip.html("<b>" + d.properties.name + ": </b> " + country_value)
+		.style("left", (d3.event.pageX - 50) + "px")     
+		.style("top", (d3.event.pageY - 50) + "px");
+}
+
+function moveTip(d) {
+	//Moves the tip as the mouse moves over the element
+	tooltip.style("left", (d3.event.pageX - 50) + "px")     
+		.style("top", (d3.event.pageY - 50) + "px");
+}
+
+function hideTip(d) {
+	//Removes the highlighted style from the tip and turns the opacity back to 0
+	var element = document.getElementById(d.id);
+	element.removeAttribute("style");
+	tooltip.transition()        
+		.duration(500)      
+		.style("opacity", 0);
+}
+
+//testing function to check keys in object
+function getKeys(d) {
+	var keys = [];
+	for(var k in d) keys.push(k);
+	return("total " + keys.length + " keys: " + keys);
+}
+
+/*
+TODOs:
+Better colors for scale?
+Add messaging when a bad combo is selected
+Add messaging to tell the user what is selected
+Fix slections, so only valid values are possible
+Add a legend for the color scales
+Add messaging for scale meaning
+Add feature to show country specific details
+*/
+</script>
+

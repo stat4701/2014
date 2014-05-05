@@ -1,0 +1,37 @@
+Weight,Sex,Race,Income,count
+Obese,Male,White,Low Income,2.6
+Obese,Male,White,Mid Income,8.3
+Obese,Male,White,High Income,12.7
+Not Obese,Male,White,Low Income,6.0
+Not Obese,Male,White,Mid Income,15.6
+Not Obese,Male,White,High Income,26.7
+Obese,Male,Black,Low Income,0.7
+Obese,Male,Black,Mid Income,1.8
+Obese,Male,Black,High Income,1.4
+Not Obese,Male,Black,Low Income,1.8
+Not Obese,Male,Black,Mid Income,3.3
+Not Obese,Male,Black,High Income,1.7
+Obese,Male,Mexican-American,Low Income,1.1
+Obese,Male,Mexican-American,Mid Income,1.1
+Obese,Male,Mexican-American,High Income,0.6
+Not Obese,Male,Mexican-American,Low Income,2.6
+Not Obese,Male,Mexican-American,Mid Income,2.5
+Not Obese,Male,Mexican-American,High Income,0.9
+Obese,Female,White,Low Income,4.7
+Obese,Female,White,Mid Income,8.8
+Obese,Female,White,High Income,11.0
+Not Obese,Female,White,Low Income,7.3
+Not Obese,Female,White,Mid Income,16.9
+Not Obese,Female,White,High Income,29.0
+Obese,Female,Black,Low Income,2.1
+Obese,Female,Black,Mid Income,3.0
+Obese,Female,Black,High Income,1.6
+Not Obese,Female,Black,Low Income,1.7
+Not Obese,Female,Black,Mid Income,2.8
+Not Obese,Female,Black,High Income,1.8
+Obese,Female,Mexican-American,Low Income,1.6
+Obese,Female,Mexican-American,Mid Income,1.4
+Obese,Female,Mexican-American,High Income,0.5
+Not Obese,Female,Mexican-American,Low Income,2.0
+Not Obese,Female,Mexican-American,Mid Income,1.7
+Not Obese,Female,Mexican-American,High Income,0.9

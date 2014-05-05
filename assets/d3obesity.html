@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Obesity and Income and Race and Gender</title>
+<style>
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+  width: 1060px;
+}
+
+text {
+  font: 14px sans-serif;
+}
+
+.ax {
+	font: 8px sans-serif;
+}
+
+div.charttitle {
+  font-size: 18pt;
+  text-align: center;
+  padding: 10px;
+}
+
+</style>
+<body>
+<div class="charttitle">Obesity by Income, Race, and Gender</div>
+<script src="http://mbostock.github.com/d3/d3.js?1.27.1"></script>
+<script>
+//Based on http://bl.ocks.org/mbostock/1005090
+
+//Raw data, scraped from http://www.cdc.gov/nchs/data/databriefs/db50.pdf
+var all_data = [{"Sex": "Male", "Race": "Non-Hispanic White", "Income": "Low", "value": .301, "total": 8.6},
+			{"Sex": "Male", "Race": "Non-Hispanic White", "Income": "Mid", "value": .348, "total": 23.9},
+			{"Sex": "Male", "Race": "Non-Hispanic White", "Income": "High", "value": .322, "total": 39.4},
+			{"Sex": "Male", "Race": "Non-Hispanic Black", "Income": "Low", "value": .285, "total": 2.5},
+			{"Sex": "Male", "Race": "Non-Hispanic Black", "Income": "Mid", "value": .355, "total": 5.1},
+			{"Sex": "Male", "Race": "Non-Hispanic Black", "Income": "High", "value": .445, "total": 3.1},
+			{"Sex": "Male", "Race": "Mexican-American", "Income": "Low", "value": .299, "total": 3.7},
+			{"Sex": "Male", "Race": "Mexican-American", "Income": "Mid", "value": .305, "total": 3.6},
+			{"Sex": "Male", "Race": "Mexican-American", "Income": "High", "value": .408, "total": 1.5},
+			{"Sex": "Female", "Race": "Non-Hispanic White", "Income": "Low", "value": .392, "total": 12},
+			{"Sex": "Female", "Race": "Non-Hispanic White", "Income": "Mid", "value": .341, "total": 25.7},
+			{"Sex": "Female", "Race": "Non-Hispanic White", "Income": "High", "value": .275, "total": 40},
+			{"Sex": "Female", "Race": "Non-Hispanic Black", "Income": "Low", "value": .547, "total": 3.8},
+			{"Sex": "Female", "Race": "Non-Hispanic Black", "Income": "Mid", "value": .516, "total": 5.8},
+			{"Sex": "Female", "Race": "Non-Hispanic Black", "Income": "High", "value": .476, "total": 3.4},
+			{"Sex": "Female", "Race": "Mexican-American", "Income": "Low", "value": .449, "total": 3.6},
+			{"Sex": "Female", "Race": "Mexican-American", "Income": "Mid", "value": .455, "total": 3.1},
+			{"Sex": "Female", "Race": "Mexican-American", "Income": "High", "value": .345, "total": 1.4}];
+
+var ymax = 1; //these are percentages, so max val is 1
+var layouts = {norm: {offset: 0, spacing: 20, num_style: d3.format("%")}, abs: {offset: 450, spacing: 5, num_style: d3.format(".1f")}}; //set some data specific to chart type
+
+//Set margins, height, width
+var margin = {top: 30, right: 650, bottom: 20, left: 200},
+    width = 1050 - margin.left - margin.right,
+    height = 520 - margin.top - margin.bottom;
+	
+var num_wide = 2, //define how many charts to have across and down
+	num_tall = 3,
+	//the spacing and sizing of the boxes is different for norm and absolute, specify those here
+	spacing = {wide: width / num_wide, tall: height / num_tall},
+	abs_spacing = [{wide: 0, tall: 0}, {wide: 0, tall: .787}, {wide: 0, tall: (.787+.117)}, {wide: .48, tall: 0}, {wide: .48, tall: .786}, {wide: .48, tall: (.786+.132)}],
+	sizes = [{wide: .48, tall: .787}, {wide: .48, tall: .117}, {wide: .48, tall: .096}, {wide: .52, tall: .786}, {wide: .52, tall: .132}, {wide: .52, tall: .082}];
+
+//specify the different classes as well as the colors to use	
+var sexes = ["Male", "Female"],
+	races = ["Non-Hispanic White", "Non-Hispanic Black", "Mexican-American"],
+	colors = {"Low": {"Obese": "#0C2970", "Not Obese": "#E0D4E4"}, "Mid": {"Obese": "#4A55B1", "Not Obese": "#E0D4E4"}, "High": {"Obese": "#8D87DF", "Not Obese": "#E0D4E4"}};
+
+//Add titles to graphs
+var title_data = [{title: "Obesity Rates", num: 50}, {title: "Obesity Counts (in millions)", num: 470}];
+
+var svg_title = d3.select("body").append("svg")
+	.attr("width", width + margin.left + margin.right)
+	.attr("height", 50);
+
+var text = svg_title.selectAll("text")
+    .data(title_data)
+    .enter()
+    .append("text");
+
+var text_titles = text
+    .attr("x", function(d) { return margin.left+d.num; })
+    .attr("y", 30)
+    .text( function (d) { return d.title; })
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "12px")
+	.attr("fill", "#4A55B1");
+
+//Add graphs themselves		 
+var svg = d3.select("body").append("svg") //Create svg to hold hold graphics
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom);
+
+//Get the data into the right form for binding, one for normed data and one for absolute
+var norm_data = organizeData(all_data, false);
+var abs_data = organizeData(all_data, true);
+
+//Create groups to hold mini-graphs (boxes within the main graphs)
+var gs_norm = createGroups(svg, false, layouts.norm.offset);
+var gs_abs = createGroups(svg, true, layouts.norm.offset);
+
+//Create boxes within each graph
+var count = 0;
+for (var i=0; i<num_wide; i++) {
+	for (var j=0; j<num_tall; j++) {
+		var ticks = true;
+		if (i > 0) {
+			ticks = false;
+		}
+		createBoxes(norm_data[sexes[i]+"_"+races[j]], gs_norm[count], j, ticks, {wide: 1/num_wide, tall: 1/num_tall}, "norm");
+		createBoxes(abs_data[sexes[i]+"_"+races[j]], gs_abs[count], j, false, sizes[count], "abs");
+		count = count + 1;
+	}
+}
+
+//Add labels to x and y axis
+createXLabels("norm");
+createXLabels("abs");
+	
+var yscale = d3.scale.ordinal() //the y axis is the ethnicity
+    .domain(d3.range(num_tall))
+    .rangeRoundBands([margin.top, height+margin.top], .08);
+	
+var y_axis = d3.svg.axis() //setup the y axis creation 
+    .scale(yscale)
+    .tickSize(0)
+    .tickPadding(5)
+	.tickValues(races)
+    .orient("right");
+	
+svg.append("g") //add a group for the y_axis labels
+	.attr("class", "y axis")
+    .call(y_axis);
+
+//Add legend (adapted from http://jsbin.com/ewiwag/2/edit)
+var legend_color = [{"text": "Low PIR (<130%)", "color": "#0C2970"}, {"text": "Mid PIR (130%-350%)", "color": "#4A55B1"}, {"text": "High PIR (>350%)", "color": "#8D87DF"}];
+
+var legend = svg.append("g")
+	.attr("class", "legend")
+	.attr("height", 100)
+	.attr("width", 100)
+	.attr('transform', 'translate(300,50)'); 
+  
+legend.selectAll('rect')
+	.data(legend_color)
+	.enter()
+	.append("rect")
+	.attr("x", width - 65)
+	.attr("y", function(d, i){ return i *  20;})
+	.attr("width", 10)
+	.attr("height", 10)
+	.style("fill", function(d) { return d.color;});
+  
+legend.selectAll('text')
+	.data(legend_color)
+	.enter()
+	.append("text")
+	.attr("x", width - 52)
+	.attr("y", function(d, i){ return i *  20 + 9;})
+	.text(function(d) {return d.text});
+
+//Functions
+function organizeData(data, absolute) {
+	var new_data = {"Male_Non-Hispanic White": [], "Male_Non-Hispanic Black": [], "Male_Mexican-American": [], "Female_Non-Hispanic White": [], "Female_Non-Hispanic Black": [], "Female_Mexican-American": []};
+	for (var i=0; i<all_data.length; i++) {
+		var total = 1;
+		if (absolute) {
+			total = data[i]["total"];
+		}
+		new_data[data[i]["Sex"] + "_" + data[i]["Race"]].push({"status": "Obese", "income": data[i]["Income"], "value": data[i]["value"]*total});
+		new_data[data[i]["Sex"] + "_" + data[i]["Race"]].push({"status": "Not Obese", "income": data[i]["Income"], "value": (ymax - data[i]["value"])*total});
+	}
+	return new_data;
+}
+
+function createGroups(svg, absolute, offset) {
+	var count = 0;
+	var groups = [];
+	for (var i=0; i<num_wide; i++) {
+		for (var j=0; j<num_tall; j++) {
+			if (absolute) {
+				var g = svg.append("g")
+					.attr("transform", "translate(" + (margin.left+(abs_spacing[count]["wide"]*width)) + "," + (margin.top+(abs_spacing[count]["tall"]*height)) + ")");
+					groups.push(g)
+			}
+			else {
+				var g = svg.append("g")
+					.attr("transform", "translate(" + (margin.left+(spacing.wide*i)+offset) + "," + (margin.top+(spacing.tall*j)) + ")");
+					groups.push(g)
+			}
+			count = count + 1
+		}
+	}
+	return groups;
+}
+
+function createXLabels(norm_or_abs) {
+	var xscale = d3.scale.ordinal() //the x axis is gender
+		.domain(d3.range(num_wide))
+		.rangeRoundBands([margin.left+layouts[norm_or_abs]["offset"], width+margin.left+layouts[norm_or_abs]["offset"]], .08);
+	
+	var x_axis = d3.svg.axis() //setup x-axis
+		.scale(xscale)
+		.tickSize(0)
+		.tickPadding(5)
+		.tickValues(sexes)
+		.orient("bottom");
+		
+	svg.append("g") //add group for x-axis
+		.attr("class", "x axis")
+		.call(x_axis);
+}
+
+function createBoxes(data, gs, boxes_tall, add_ticks, size, norm_or_abs) {
+	//set variables based on whether this is norm or absolute
+	var space = layouts[norm_or_abs]["spacing"],
+		n = layouts[norm_or_abs]["num_style"],
+		off = layouts[norm_or_abs]["offset"];
+	
+	var y = d3.scale.linear()
+		.range([0, height*size["tall"]-space]);
+
+	var x = d3.scale.linear()
+		.range([0, width*size["wide"]-5]);
+		
+	var offset = 0;
+	// Nest values by income.
+	var incomes = d3.nest()
+		.key(function(d) { return d.income; })
+		.entries(data);
+		
+	// Compute the total sum, the per-income sum, and the status offset.
+	var sum = incomes.reduce(function(v, p) {
+	  return (p.offset = v) + (p.sum = p.values.reduceRight(function(v, d) {
+		d.parent = p;
+		return (d.offset = v) + d.value;
+	  }, 0));
+	}, 0);
+	
+	if (add_ticks) {
+		// Add y-axis ticks.
+		var ytick = svg.selectAll(".y"+boxes_tall)
+			.data(y.ticks(5))
+			.enter().append("g")
+			.attr("class", "y")
+			.attr("transform", function(d) { return "translate("+ margin.left + "," + (y(1 - d)+margin.top+spacing.tall*boxes_tall) + ")"; });
+
+		ytick.append("line")
+			.attr("x1", -6)
+			.style("stroke", "#000");
+
+		ytick.append("text")
+			.attr("x", -8)
+			.attr("text-anchor", "end")
+			.attr("dy", ".35em")
+			.attr("class", "ax")
+			.text(layouts["norm"]["num_style"]);
+	}
+
+	// Add a group for each income level.
+	var incomes = gs.selectAll(".income")
+		.data(incomes)
+		.enter().append("g")
+		.attr("class", "income")
+		.attr("xlink:title", function(d) { return d.key; })
+		.attr("transform", function(d) { return "translate(" + (x(d.offset / sum)+off) + ")"; });
+
+	// Add a rect for each status (either obese or no obese).
+	var states = incomes.selectAll(".status")
+		.data(function(d) { return d.values; })
+		.enter().append("a")
+		.attr("class", "status")
+		.attr("xlink:title", function(d) { return d.status + " " + d.parent.key + " Income: " + n(d.value); })
+		.append("rect")
+		.attr("y", function(d) { return y(d.offset / d.parent.sum); })
+		.attr("height", function(d) { return y(d.value / d.parent.sum); })
+		.attr("width", function(d) { return x(d.parent.sum / sum); })
+		.style("fill", function(d) { return colors[d.income][d.status]; });
+  
+}
+</script>
+*PIR is poverty income ratio, the ratio of household income to the poverty threshold after accounting for inflation and family size. 
+For this data, a PIR of 130% is equivalent to $29,000 per year for a family of four and is also the cut point for participation
+in the Supplemental Nutrition Assistance Program (SNAP). A PIR of 350% is equivalent to $77,000 per year for a family of four. (
+<a href="http://www.cdc.gov/nchs/data/databriefs/db50.pdf">NCHS Data Brief No.50 December 2010</a>)
+</body>
