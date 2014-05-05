@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Jiun's INITIAL Blog Post 1 + 1
-description: 1. Updating a chart from Data Visualization Gallery in US Census Bureau website
+description: Updating a chart from Data Visualization Gallery in US Census Bureau website ; Updating a table of GDELT Trend Report  
 tags: blogpost 
-2. Updating a table of GDELT Trend Report 
+
 ---
 
 ### Top Languages Other than English Spoken in 1980 and Changes in Relative Rank, 1990-2010
