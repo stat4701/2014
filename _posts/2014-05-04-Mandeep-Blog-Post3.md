@@ -10,7 +10,7 @@ I am so satisified with the ease of using this package that we have also incorpo
 
 Here's a breakdown of what I did for this blog post:
 
-1\. I used the geocode function in the package and passed it the city information which I had in a dataframe created for the source excel data file.
+1\. I used the geocode() function available in the ggmap package and passed it the city information from my dataset.
 
 This is how you capture the longitude and latitude information for the cities and append it to the dataframe:
 ```{r chunkLabel}
