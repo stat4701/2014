@@ -1,4 +1,3 @@
----
 layout: post
 title: Stage B - Josh (jsp2014)
 description: Project Stage B

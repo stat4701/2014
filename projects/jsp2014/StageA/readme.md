@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Stage A - Josh (jsp2014)
 description: Project Stage A
 tags: project, josh plotkin, jsp2014

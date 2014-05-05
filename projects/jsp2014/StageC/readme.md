@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Stage C - Josh (jsp2014)
 description: Project Stage C
 tags: project, josh plotkin, jsp2014
