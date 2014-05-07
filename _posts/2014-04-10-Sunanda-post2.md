@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blog Post 2 - Sunanda
-description: My second blogpost : One less pie
+description: "My second blogpost : One less pie"
 tags: blogpost
 ---
 ## Motivation ##
