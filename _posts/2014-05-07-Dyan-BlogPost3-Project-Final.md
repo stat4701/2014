@@ -34,7 +34,7 @@ tags: blogpost
 
 * No matter what choice you make, it is a good idea to have on staff a data scientist or a team of data scientists who understands the business.    
 
-
+#### THE END
 
 
 
