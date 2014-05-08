@@ -16,7 +16,7 @@ tags: blogpost
 
 * All 5 in 1 Solution: <br>
 
-[![All 5 in 1 Solution](http://ganepola.github.io/edav/assets/dyan_assets/Project-Images/What When Who Why Where.JPG)](http://ganepola.github.io/edav/assets/dyan_assets/Project-Images/What When Who Why Where.JPG)
+[![All 5 in 1 Solution](http://ganepola.github.io/edav/assets/dyan_assets/Project-Images/What When Who Why Where.jpg)](http://ganepola.github.io/edav/assets/dyan_assets/Project-Images/What When Who Why Where.jpg)
 
 #### Decision Framework for Buying, Building, and Outsourcing Data Science Solutions:
 
