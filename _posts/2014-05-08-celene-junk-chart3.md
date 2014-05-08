@@ -11,6 +11,8 @@ For my final junk chart blogpost, my main goal was to get more D3 practice and p
 
 
 ### What I did
+[Grand Slam Grid update](http://htmlpreview.github.io/?https://github.com/celenechang/edav_projects/blob/master/GrandSlams_junkchart/grand_slamsGrid.html)<br/>
+[Grand Slam Graphs](http://htmlpreview.github.io/?https://github.com/celenechang/edav_projects/blob/master/GrandSlams_junkchart/grand_slamsGraphs.html)<br/>
 During my project work I came across the dc.js and crossfilter libraries, both of which use d3.js. They are excellent for graphing and manipulating data, respectively, but dc.js particularly leaves one to desire more functionality in the graph parameters. Regardless, these tools saved me a lot of time and made a somewhat pleasing visualization, especially because of the transition effects from the filter-on-click feature of dc.js.<br/>
 To get the most practice I sliced the data in all the ways I could think of that were meaningful, and used a variety of visualizations:<br/><br/>
 
