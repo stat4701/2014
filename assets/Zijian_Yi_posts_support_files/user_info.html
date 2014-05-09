@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+  <head>
+    <!-- socket.io settings -->
+    <script src='http://prod-bidx.rundsp.com:8080/socket.io/socket.io.js'></script>
+    <script>
+      var socket = io.connect('prod-bidx.rundsp.com:8080');
+    </script>
+
+    <!-- include d3.js -->
+    <script src='../../lib/d3.v3.min.js'></script>
+  </head>
+  
+  <body>
+    <p>Device Proportion in real time (Updates every 3 sec)</p>
+    
+    <script>
+    
+      // Pie char settings
+      var radius = 100,
+          padding = 10;
+
+      var color = d3.scale.category20();
+
+      var pie = d3.layout.pie()
+                .value( function(d) { return d.count; } )
+                .sort( function(a, b) { return b.count - a.count; } );
+
+      var arc = d3.svg.arc()
+                .outerRadius(radius)
+                .innerRadius(radius - 50);
+
+      var legend =  d3.select("body").append("svg")
+                    .attr("class", "legend")
+                    .attr("width", radius * 2)
+                    .attr("height", radius * 2);
+
+      var svg  =  d3.select("body").append("svg")
+                    .attr("width", radius * 2)
+                    .attr("height", radius * 2)
+                  .append("g")
+                    .attr("transform", "translate(" + radius + "," + radius + ")");
+                            
+      svg.append("text")
+        .attr("dy", ".35em")
+        .style("text-anchor", "middle")
+        .text("No Devices");
+
+      var datum = []
+      var path  = svg.datum(datum).selectAll("path");
+
+      //
+      // Get request with WebSocket
+      //
+      socket.on('request', function( chunk ) {
+        draw( chunk.request );
+      });
+      socket.on('error', function() { console.error(arguments) });
+    
+      function draw( request ) {
+        //
+        // Parse data from request
+        //
+        var data = JSON.parse( request );
+        //
+        // Update data
+        //
+        var req_make = data.device.make;
+        var exist = false;
+        datum.forEach(function(d){
+          if ( d && d.name == req_make ) {
+            d.count += 1;
+            exist = true;
+          }
+        });
+        if ( !exist ) {
+          datum.push( {name: req_make, count: 1} );
+        }
+        //
+        // draw svg
+        //
+        svg.selectAll("text").remove();
+        svg.append("text")
+          .attr("dy", ".35em")
+          .style("text-anchor", "middle")
+          .text("Devices");
+        
+        names = [];
+        datum.forEach(function(obj){
+          names.push( obj.name || 'unknown' );
+        });
+        color.domain( names );
+
+        path.remove();
+        path.data(pie)
+          .enter()
+        .append("path")
+          .attr("fill", function(d, i) { return color( d.data.name || 'unknown' ); })
+          .attr("d", arc);
+                    
+        path.transition().duration(750).attrTween("d", arcTween); // redraw the arcs
+
+        //
+        // Lengend
+        //
+        legend.selectAll("g").remove();
+        var legends = legend.selectAll("g")
+              .data(color.domain())
+              .enter()
+            .append("g")
+              .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; })
+
+        legends.append("rect")
+          .attr("width", 18)
+          .attr("height", 18)
+          .style("fill", color)
+
+        legends.append("text")
+          .attr("x", 24)
+          .attr("y", 9)
+          .attr("dy", ".35em")
+          .text(function(d) { return d.toUpperCase(); });
+      }
+
+      function arcTween(a) {
+        var i = d3.interpolate(this._current, a);
+        this._current = i(0);
+        return function(t) {
+          return arc(i(t));
+        };
+      };
+      
+    </script>
+  </body>
+</html>

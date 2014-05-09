@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxF622l_SPihbXnVXVRa5PWtPilKDVr3E&sensor=false">
+    </script>
+    <script type="text/javascript">
+      var mapOptions = {
+			center: new google.maps.LatLng(40.714353,-74.005973),
+			zoom: 12,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+	
+	var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+	var markerOptions = {
+		position: new google.maps.LatLng(40.714353,-74.005973),
+		map: map
+		};
+	var NYmarker = new google.maps.Marker(markerOptions);
+	NYmarker.setMap(map);
+
+	var infoWindowOptions = {
+		content: 'This is New York City!'
+	};
+
+	var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
+		google.maps.event.addListener(NYmarker,'click',function(e){
+  
+		infoWindow.open(map, NYmarker);
+  
+	});
+	
+	
+	var BOmarkerOptions = {
+		position: new google.maps.LatLng(42.358431,-71.059773),
+		map: map
+		};
+	var BOmarker = new google.maps.Marker(BOmarkerOptions);
+	BOmarker.setMap(map);
+
+	var BOinfoWindowOptions = {
+		content: 'This is Boston!'
+	};
+
+	var infoWindow = new google.maps.InfoWindow(BOinfoWindowOptions);
+		google.maps.event.addListener(BOmarker,'click',function(e){
+  
+		infoWindow.open(map, BOmarker);
+  
+	});
+	  
+	  
+	  
+	  
+    </script>
+  </head>
+  <body>
+    <div id="map-canvas"/>
+  </body>
+</html>

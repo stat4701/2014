@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+
+  <head>
+    <!-- socket.io settings -->
+    <script src='http://prod-bidx.rundsp.com:8080/socket.io/socket.io.js'></script>
+    <script>
+      var socket = io.connect('prod-bidx.rundsp.com:8080');
+    </script>
+
+    <!-- include libraries -->
+    <script type='text/javascript' src='../../lib/d3.v3.min.js'></script>
+    <script type='text/javascript' src='../../lib/topojson.v1.min.js'></script>
+    <script type='text/javascript' src='../../lib/planetaryjs.min.js'></script>
+    <script type='text/javascript' src='../../lib/moment.min.js'></script>
+    
+    <!-- CSS setting -->
+    <style type='text/css'>
+      .subunit.USB { fill: #d3d3d3; }
+      .subunit.USH { fill: #d3d3d3; }
+      .subunit.USK { fill: #d3d3d3; }
+
+      .subunit-label {
+        fill: #777;
+        fill-opacity: .5;
+        font-size: 20px;
+        font-weight: 300;
+        text-anchor: middle;
+      }
+
+      .county-boundary {
+        fill: none;
+        stroke: #fff;
+        stroke-width: .5px;
+      }
+
+      .state-boundary {
+        fill: none;
+        stroke: #fff;
+      }
+
+      .place,
+      .place-main-label {
+        fill: #444;
+        font-size: 14px;
+      }
+      .place-side-label {
+        fill: #888;
+        font-size: 14px;
+      }
+
+      text {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        pointer-events: none;
+      }
+
+      body {
+        background-color: rgb(0, 26, 34);
+/*        background: url('./sky.jpg');*/
+        color: white;
+      }
+      
+      #graph-container {
+        position: relative;
+        margin: 0 auto ;
+        width: 1200px;
+        height: 600px;
+      }
+      
+      #pieCatSvg {
+        position: absolute;
+        left    : 0;
+        top     : 0;
+        width   : 600px;
+        height  : 300px;
+      }
+      
+      #pieDevSvg {
+        position: absolute;
+        left    : 0;
+        bottom  : 0;
+        width   : 600px;
+        height  : 300px;
+      }
+
+      #globeCanvas {
+        position: absolute;
+        right   : 0;
+        bottom  : 0;
+        z-index : 0;
+        width   : 800px;
+        height  : 600px;
+        cursor  : move;
+      }
+      
+      #timeSpan {
+        position: absolute;
+        width   : 800px;
+        bottom  : 30px;
+        right   : 0;
+        text-align: right;
+      }
+            
+    </style>
+    
+  </head>
+  
+  <body>
+    <div id='title'>
+      <center><H3><font color='white' size='6px'>Real Time Visualization of Ad Requests</font></H3></center>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id='graph-container'>
+      <svg id='pieCatSvg'></svg>
+      <svg id='pieDevSvg'></svg>
+      <canvas id='globeCanvas' width='800' height='600'></canvas>
+      <span id='timeSpan'>Loading...</span>
+    </div>
+    <script>
+    
+      //
+      // Get request via WebSocket and draw dynamic graphs
+      //
+      socket.on('request', function( chunk ) {
+        drawPieCat( chunk.request.cat );
+        drawPieDev( chunk.request.dev );
+        drawGlobe( chunk.request.geo );
+      });
+      socket.on('error', function() { console.error(arguments) });
+    
+      // Pie char settings
+      var radius = 110,
+          padding = 50;
+          textOffset = 14;
+          tweenDuration = 750;
+          totalRequests = 20;
+
+      var color = d3.scale.category20();
+
+      //===================================================================
+      //  Pie chart for Topic Categories
+      //===================================================================
+      
+      var color_cat = d3.scale.category20();
+          
+      var lines_cat, valueLabels_cat, nameLabels_cat;
+      var pieData_cat = [];    
+      var oldPieData_cat = [];
+      
+      var pie_cat = d3.layout.pie()
+                .value( function(d) { return d.count; } )
+                .sort( function(a, b) { return b.count - a.count; } );
+    
+      var arc_cat = d3.svg.arc()
+                .outerRadius(radius)
+                .innerRadius(radius - 50);
+        
+      var pieChart_cat = d3.select('#pieCatSvg')
+                      
+      var arcGroup_cat = pieChart_cat.append('g')
+        .attr('transform', 'translate(' + (radius + 200) + ',' + (radius + 40) + ')');
+    
+      var labelGroup_cat = pieChart_cat.append('g')
+        .attr('transform', 'translate(' + (radius + 200) + ',' + (radius + 40) + ')');
+      
+      var centerGroup_cat = pieChart_cat.append('g')
+        .attr('transform', 'translate(' + (radius + 200) + ',' + (radius + 40) + ')');
+
+      var paths_cat = arcGroup_cat.append('circle')
+        .attr('fill', '#001A22')
+        .attr('r', radius )
+      
+      centerGroup_cat.append('text')
+        .attr('dy', '.35em')
+        .style('text-anchor', 'middle')
+        .style('fill', 'white')
+        .text('No Topics');
+    
+      function drawPieCat( categories ) {
+        //
+        // remove old pie chart
+        //
+        centerGroup_cat.selectAll('text').remove();
+        labelGroup_cat.selectAll('text').remove();
+        arcGroup_cat.selectAll('circle').remove();
+
+        //
+        // update data
+        //
+        names_cat = [];
+        categories.forEach( function(d) {
+          names_cat.push( d.name || 'unknown' );
+        });
+        color_cat.domain( names_cat );
+        
+        oldPieData_cat = pieData_cat;
+        pieData_cat = pie_cat(categories);
+
+        //
+        // draw new pie chart
+        //
+        // center text
+        centerGroup_cat.append('text')
+          .attr('dy', '.35em')
+          .style('text-anchor', 'middle')
+          .style('fill', 'white')
+          .text('Topic');
+        
+        // paths
+        paths_cat = arcGroup_cat.selectAll('path').data(pieData_cat);
+        paths_cat.enter().append('path')
+          .attr('stroke', 'white')
+          .attr('stroke-width', 3)
+          .attr('fill', function(d, i) { return color_cat( d.data.name || 'unknown' ); })
+          .attr('d', arc_cat)
+          .transition()
+            .duration(tweenDuration)
+            .attrTween('d', pieTween_cat);
+        paths_cat
+          .transition()
+          .duration(tweenDuration)
+          .attrTween('d', pieTween_cat);
+        paths_cat.exit()
+          .transition()
+            .duration(tweenDuration)
+            .attrTween('d', removePieTween_cat)
+          .remove();
+        
+        // lines
+        lines_cat = labelGroup_cat.selectAll('line').data(pieData_cat);
+        lines_cat.enter().append('line')
+          .attr('x1', 0)
+          .attr('x2', 0)
+          .attr('y1', -radius-3)
+          .attr('y2', -radius-8)
+          .attr('stroke', 'gray')
+          .attr('transform', function(d) {
+            return 'rotate(' + (d.startAngle+d.endAngle)/2 * (180/Math.PI) + ')';
+          });
+        lines_cat.transition()
+          .duration(tweenDuration)
+          .attr('transform', function(d) {
+            return 'rotate(' + (d.startAngle+d.endAngle)/2 * (180/Math.PI) + ')';
+          });
+        lines_cat.exit().remove();
+
+        // labels
+        valueLabels_cat = labelGroup_cat.selectAll('text.value').data(pieData_cat)
+          .attr('dy', function(d){
+            if ((d.startAngle+d.endAngle)/2 > Math.PI/2 && (d.startAngle+d.endAngle)/2 < Math.PI*1.5 ) {
+              return 30;
+            } else {
+              return 5;
+            }
+          })
+          .attr('text-anchor', function(d){
+            if ( (d.startAngle+d.endAngle)/2 < Math.PI ){
+              return 'beginning';
+            } else {
+              return 'end';
+            }
+          })
+          .text(function(d){
+            var percentage = (d.data.count/totalRequests)*100;
+            return percentage.toFixed(1) + '%';
+          });
+
+        valueLabels_cat.enter().append('text')
+          .attr('transform', function(d) {
+            return 'translate(' + Math.cos(((d.startAngle+d.endAngle - Math.PI)/2)) * (radius+textOffset) + ',' + Math.sin((d.startAngle+d.endAngle - Math.PI)/2) * (radius+textOffset) + ')';
+          })
+          .attr('dy', function(d){
+            if ((d.startAngle+d.endAngle)/2 > Math.PI/2 && (d.startAngle+d.endAngle)/2 < Math.PI*1.5 ) {
+              return 30;
+            } else {
+              return 5;
+            }
+          })
+          .attr('text-anchor', function(d){
+            if ( (d.startAngle+d.endAngle)/2 < Math.PI ){
+              return 'beginning';
+            } else {
+              return 'end';
+            }
+          })
+          .style('fill', 'white')
+          .text(function(d){
+            var percentage = (d.data.count/totalRequests)*100;
+            return percentage.toFixed(1) + '%';
+          });
+
+        valueLabels_cat.transition().duration(tweenDuration).attrTween('transform', textTween_cat);
+
+        valueLabels_cat.exit().remove();
+
+
+        //name labels
+        nameLabels_cat = labelGroup_cat.selectAll('text.units').data(pieData_cat)
+          .attr('dy', function(d){
+            if ((d.startAngle+d.endAngle)/2 > Math.PI/2 && (d.startAngle+d.endAngle)/2 < Math.PI*1.5 ) {
+              return 10;
+            } else {
+              return -14;
+            }
+          })
+          .attr('text-anchor', function(d){
+            if ((d.startAngle+d.endAngle)/2 < Math.PI ) {
+              return 'beginning';
+            } else {
+              return 'end';
+            }
+          })
+          .style('fill', 'white')
+          .text(function(d){
+            return d.data.name;
+          });
+
+        nameLabels_cat.enter().append('text')
+          .attr('transform', function(d) {
+            return 'translate(' + Math.cos(((d.startAngle+d.endAngle - Math.PI)/2)) * (radius+textOffset) + ',' + Math.sin((d.startAngle+d.endAngle - Math.PI)/2) * (radius+textOffset) + ')';
+          })
+          .attr('dy', function(d){
+            if ((d.startAngle+d.endAngle)/2 > Math.PI/2 && (d.startAngle+d.endAngle)/2 < Math.PI*1.5 ) {
+              return 10;
+            } else {
+              return -14;
+            }
+          })
+          .attr('text-anchor', function(d){
+            if ((d.startAngle+d.endAngle)/2 < Math.PI ) {
+              return 'beginning';
+            } else {
+              return 'end';
+            }
+          })  
+          .style('fill', 'white')
+          .text(function(d){
+            return d.data.name;
+          });
+
+        nameLabels_cat.transition().duration(tweenDuration).attrTween('transform', textTween_cat);
+
+        nameLabels_cat.exit().remove();
+            
+      }
+          
+      function pieTween_cat(d, i) {
+        var s0;
+        var e0;
+        if(oldPieData_cat[i]){
+          s0 = oldPieData_cat[i].startAngle;
+          e0 = oldPieData_cat[i].endAngle;
+        } else if (!(oldPieData_cat[i]) && oldPieData_cat[i-1]) {
+          s0 = oldPieData_cat[i-1].endAngle;
+          e0 = oldPieData_cat[i-1].endAngle;
+        } else if(!(oldPieData_cat[i-1]) && oldPieData_cat.length > 0){
+          s0 = oldPieData_cat[oldPieData_cat.length-1].endAngle;
+          e0 = oldPieData_cat[oldPieData_cat.length-1].endAngle;
+        } else {
+          s0 = 0;
+          e0 = 0;
+        }
+        var i = d3.interpolate({startAngle: s0, endAngle: e0}, {startAngle: d.startAngle, endAngle: d.endAngle});
+        return function(t) {
+          var b = i(t);
+          return arc_cat(b);
+        };
+      }
+
+      function removePieTween_cat(d, i) {
+        s0 = 2 * Math.PI;
+        e0 = 2 * Math.PI;
+        var i = d3.interpolate({startAngle: d.startAngle, endAngle: d.endAngle}, {startAngle: s0, endAngle: e0});
+        return function(t) {
+          var b = i(t);
+          return arc_cat(b);
+        };
+      }
+
+      function textTween_cat(d, i) {
+        var a;
+        if(oldPieData_cat[i]){
+          a = (oldPieData_cat[i].startAngle + oldPieData_cat[i].endAngle - Math.PI)/2;
+        } else if (!(oldPieData_cat[i]) && oldPieData_cat[i-1]) {
+          a = (oldPieData_cat[i-1].startAngle + oldPieData_cat[i-1].endAngle - Math.PI)/2;
+        } else if(!(oldPieData_cat[i-1]) && oldPieData_cat.length > 0) {
+          a = (oldPieData_cat[oldPieData_cat.length-1].startAngle + oldPieData_cat[oldPieData_cat.length-1].endAngle - Math.PI)/2;
+        } else {
+          a = 0;
+        }
+        var b = (d.startAngle + d.endAngle - Math.PI)/2;
+
+        var fn = d3.interpolateNumber(a, b);
+        return function(t) {
+          var val = fn(t);
+          return 'translate(' + Math.cos(val) * (radius+textOffset) + ',' + Math.sin(val) * (radius+textOffset) + ')';
+        };
+      }
+
+      //===================================================================
+      //  Pie chart for Devices
+      //===================================================================
+
+      var color_dev = d3.scale.category20b();
+
+      var lines_dev, valueLabels_dev, nameLabels_dev;
+      var pieData_dev = [];    
+      var oldPieData_dev = [];
+
+      var pie_dev = d3.layout.pie()
+                .value( function(d) { return d.count; } )
+                .sort( function(a, b) { return b.count - a.count; } );
+
+      var arc_dev = d3.svg.arc()
+                .outerRadius(radius)
+                .innerRadius(radius - 50);
+
+      var pieChart_dev = d3.select('#pieDevSvg')
+
+      var arcGroup_dev = pieChart_dev.append('g')
+        .attr('transform', 'translate(' + (radius + 200) + ',' + (radius + 40) + ')');
+
+      var labelGroup_dev = pieChart_dev.append('g')
+        .attr('transform', 'translate(' + (radius + 200) + ',' + (radius + 40) + ')');
+
+      var centerGroup_dev = pieChart_dev.append('g')
+        .attr('transform', 'translate(' + (radius + 200) + ',' + (radius + 40) + ')');
+
+      var paths_dev = arcGroup_dev.append('circle')
+        .attr('fill', '#001A22')
+        .attr('r', radius )
+
+      centerGroup_dev.append('text')
+        .attr('dy', '.35em')
+        .style('text-anchor', 'middle')
+        .style('fill', 'white')
+        .text('No Devices');
+
+      function drawPieDev( categories ) {
+        //
+        // remove old pie chart
+        //
+        centerGroup_dev.selectAll('text').remove();
+        labelGroup_dev.selectAll('text').remove();
+        arcGroup_dev.selectAll('circle').remove();
+
+        //
+        // update data
+        //
+        names_dev = [];
+        categories.forEach( function(d) {
+          names_dev.push( d.name || 'unknown' );
+        });
+        color_dev.domain( names_dev );
+
+        oldPieData_dev = pieData_dev;
+        pieData_dev = pie_dev(categories);
+
+        //
+        // draw new pie chart
+        //
+        // center text
+        centerGroup_dev.append('text')
+          .attr('dy', '.35em')
+          .style('text-anchor', 'middle')
+          .style('fill', 'white')
+          .text('Device');
+
+        // paths
+        paths_dev = arcGroup_dev.selectAll('path').data(pieData_dev);
+        paths_dev.enter().append('path')
+          .attr('stroke', 'white')
+          .attr('stroke-width', 3)
+          .attr('fill', function(d, i) { return color_dev( d.data.name || 'unknown' ); })
+          .attr('d', arc_dev)
+          .transition()
+            .duration(tweenDuration)
+            .attrTween('d', pieTween_dev);
+        paths_dev
+          .transition()
+          .duration(tweenDuration)
+          .attrTween('d', pieTween_dev);
+        paths_dev.exit()
+          .transition()
+            .duration(tweenDuration)
+            .attrTween('d', removePieTween_dev)
+          .remove();
+
+        // lines
+        lines_dev = labelGroup_dev.selectAll('line').data(pieData_dev);
+        lines_dev.enter().append('line')
+          .attr('x1', 0)
+          .attr('x2', 0)
+          .attr('y1', -radius-3)
+          .attr('y2', -radius-8)
+          .attr('stroke', 'gray')
+          .attr('transform', function(d) {
+            return 'rotate(' + (d.startAngle+d.endAngle)/2 * (180/Math.PI) + ')';
+          });
+        lines_dev.transition()
+          .duration(tweenDuration)
+          .attr('transform', function(d) {
+            return 'rotate(' + (d.startAngle+d.endAngle)/2 * (180/Math.PI) + ')';
+          });
+        lines_dev.exit().remove();
+
+        // labels
+        valueLabels_dev = labelGroup_dev.selectAll('text.value').data(pieData_dev)
+          .attr('dy', function(d){
+            if ((d.startAngle+d.endAngle)/2 > Math.PI/2 && (d.startAngle+d.endAngle)/2 < Math.PI*1.5 ) {
+              return 30;
+            } else {
+              return 5;
+            }
+          })
+          .attr('text-anchor', function(d){
+            if ( (d.startAngle+d.endAngle)/2 < Math.PI ){
+              return 'beginning';
+            } else {
+              return 'end';
+            }
+          })
+          .text(function(d){
+            var percentage = (d.data.count/totalRequests)*100;
+            return percentage.toFixed(1) + '%';
+          });
+
+        valueLabels_dev.enter().append('text')
+          .attr('transform', function(d) {
+            return 'translate(' + Math.cos(((d.startAngle+d.endAngle - Math.PI)/2)) * (radius+textOffset) + ',' + Math.sin((d.startAngle+d.endAngle - Math.PI)/2) * (radius+textOffset) + ')';
+          })
+          .attr('dy', function(d){
+            if ((d.startAngle+d.endAngle)/2 > Math.PI/2 && (d.startAngle+d.endAngle)/2 < Math.PI*1.5 ) {
+              return 30;
+            } else {
+              return 5;
+            }
+          })
+          .attr('text-anchor', function(d){
+            if ( (d.startAngle+d.endAngle)/2 < Math.PI ){
+              return 'beginning';
+            } else {
+              return 'end';
+            }
+          })
+          .style('fill', 'white')
+          .text(function(d){
+            var percentage = (d.data.count/totalRequests)*100;
+            return percentage.toFixed(1) + '%';
+          });
+
+        valueLabels_dev.transition().duration(tweenDuration).attrTween('transform', textTween_dev);
+
+        valueLabels_dev.exit().remove();
+
+
+        //name labels
+        nameLabels_dev = labelGroup_dev.selectAll('text.units').data(pieData_dev)
+          .attr('dy', function(d){
+            if ((d.startAngle+d.endAngle)/2 > Math.PI/2 && (d.startAngle+d.endAngle)/2 < Math.PI*1.5 ) {
+              return 10;
+            } else {
+              return -14;
+            }
+          })
+          .attr('text-anchor', function(d){
+            if ((d.startAngle+d.endAngle)/2 < Math.PI ) {
+              return 'beginning';
+            } else {
+              return 'end';
+            }
+          })
+          .style('fill', 'white')
+          .text(function(d){
+            return d.data.name;
+          });
+
+        nameLabels_dev.enter().append('text')
+          .attr('transform', function(d) {
+            return 'translate(' + Math.cos(((d.startAngle+d.endAngle - Math.PI)/2)) * (radius+textOffset) + ',' + Math.sin((d.startAngle+d.endAngle - Math.PI)/2) * (radius+textOffset) + ')';
+          })
+          .attr('dy', function(d){
+            if ((d.startAngle+d.endAngle)/2 > Math.PI/2 && (d.startAngle+d.endAngle)/2 < Math.PI*1.5 ) {
+              return 10;
+            } else {
+              return -14;
+            }
+          })
+          .attr('text-anchor', function(d){
+            if ((d.startAngle+d.endAngle)/2 < Math.PI ) {
+              return 'beginning';
+            } else {
+              return 'end';
+            }
+          })  
+          .style('fill', 'white')
+          .text(function(d){
+            return d.data.name;
+          });
+
+        nameLabels_dev.transition().duration(tweenDuration).attrTween('transform', textTween_dev);
+
+        nameLabels_dev.exit().remove();
+
+      }
+
+      function pieTween_dev(d, i) {
+        var s0;
+        var e0;
+        if(oldPieData_dev[i]){
+          s0 = oldPieData_dev[i].startAngle;
+          e0 = oldPieData_dev[i].endAngle;
+        } else if (!(oldPieData_dev[i]) && oldPieData_dev[i-1]) {
+          s0 = oldPieData_dev[i-1].endAngle;
+          e0 = oldPieData_dev[i-1].endAngle;
+        } else if(!(oldPieData_dev[i-1]) && oldPieData_dev.length > 0){
+          s0 = oldPieData_dev[oldPieData_dev.length-1].endAngle;
+          e0 = oldPieData_dev[oldPieData_dev.length-1].endAngle;
+        } else {
+          s0 = 0;
+          e0 = 0;
+        }
+        var i = d3.interpolate({startAngle: s0, endAngle: e0}, {startAngle: d.startAngle, endAngle: d.endAngle});
+        return function(t) {
+          var b = i(t);
+          return arc_dev(b);
+        };
+      }
+
+      function removePieTween_dev(d, i) {
+        s0 = 2 * Math.PI;
+        e0 = 2 * Math.PI;
+        var i = d3.interpolate({startAngle: d.startAngle, endAngle: d.endAngle}, {startAngle: s0, endAngle: e0});
+        return function(t) {
+          var b = i(t);
+          return arc_dev(b);
+        };
+      }
+
+      function textTween_dev(d, i) {
+        var a;
+        if(oldPieData_dev[i]){
+          a = (oldPieData_dev[i].startAngle + oldPieData_dev[i].endAngle - Math.PI)/2;
+        } else if (!(oldPieData_dev[i]) && oldPieData_dev[i-1]) {
+          a = (oldPieData_dev[i-1].startAngle + oldPieData_dev[i-1].endAngle - Math.PI)/2;
+        } else if(!(oldPieData_dev[i-1]) && oldPieData_dev.length > 0) {
+          a = (oldPieData_dev[oldPieData_dev.length-1].startAngle + oldPieData_dev[oldPieData_dev.length-1].endAngle - Math.PI)/2;
+        } else {
+          a = 0;
+        }
+        var b = (d.startAngle + d.endAngle - Math.PI)/2;
+
+        var fn = d3.interpolateNumber(a, b);
+        return function(t) {
+          var val = fn(t);
+          return 'translate(' + Math.cos(val) * (radius+textOffset) + ',' + Math.sin(val) * (radius+textOffset) + ')';
+        };
+      }
+      
+      // //===================================================================
+      // //  Bar Chart
+      // //===================================================================
+      // 
+      // var timeSlot = 20;
+      // var dataList = [];
+      // 
+      // var barW = 28,
+      //     barH = 350;
+      // 
+      // var barChart = d3.select('#barSvg');
+      // 
+      // barChart.append('line')
+      //   .attr('x1', 50)
+      //   .attr('x2', barW * timeSlot)
+      //   .attr('y1', barH - 100)
+      //   .attr('y2', barH - 100)
+      //   .style('stroke', 'white')
+      //   .style('stroke-width', 3);
+      // 
+      // function drawBarChart( devices ) {
+      //   var barX = d3.scale.ordinal()
+      //       .rangeRoundBands([0, barW * timeSlot], .1);
+      //   var barY = d3.scale.linear()
+      //       .range([barH, 0]);
+      //   
+      //   // Maintain a fix length queue for barChart        
+      //   if ( dataList.length == timeSlot ) {
+      //     dataList.shift();
+      //   }
+      //   
+      //   var d_names = [];
+      //   devices.forEach( function(d) {
+      //     d_names.push( d.name || 'unknown' );
+      //   });
+      //   color.domain(d_names);
+      //   
+      //   data = {}
+      //   devices.forEach(function(d) {
+      //     var y0 = 0;
+      //     data.time = Date.now();
+      //     data.counts = color.domain().map(function(name) { return {name: name, y0: y0, y1: y0 += d.count}; });
+      //     data.total = data.counts[data.counts.length - 1].y1;
+      //     data[d.name] = d.count;
+      //   });
+      //   dataList.push( data );
+      // 
+      //   barX.domain(dataList.map( function(d){ return d.time }));
+      //   barY.domain([0, d3.max(dataList, function(d) { return d.total; })]);
+      // 
+      //   var slots = barChart.selectAll(".slot")
+      //     .data(dataList)
+      //     .enter().append("g")
+      //     .attr("transform", function(d) { return "translate(" + barX( d.time ) + ",0)"; });
+      // 
+      //   slots.selectAll("rect").remove();
+      //   
+      //   var rects = slots.selectAll("rect")
+      //     .data(function(d) { return d.counts; })
+      //     .enter().append("rect")
+      //     .attr("x", function(d) { return barX(d.time); })
+      //     .attr("y", function(d) { return barY(d.y1); })
+      //     .attr("width", barW)
+      //     .attr("height", function(d) { return barY(d.y0) - barY(d.y1); })
+      //     .style("fill", function(d) { return color(d.name); })
+      //     .transition()
+      //       .duration(tweenDuration)
+      //       .attr("x", function(d) { return barX( d.time ); });
+      //   
+      //   rects.transition()
+      //       .duration(tweenDuration)
+      //       .attr("x", function(d) { return barX( d.time ); });
+      // 
+      //   // rects.exit().remove();
+      //   
+      // }
+            
+          
+      //===================================================================
+      //  Globe
+      //===================================================================
+    
+      var canvas = document.getElementById('globeCanvas');
+    
+      // Create our Planetary.js planet and set some initial values;
+      // we use several custom plugins, defined at the bottom of the file
+      var planet = planetaryjs.planet();
+      // planet.loadPlugin(autocenter({extraHeight: -120}));
+      planet.loadPlugin(autoscale({extraHeight: -120}));
+      planet.loadPlugin(planetaryjs.plugins.earth({
+        topojson: { file:   'world-110m.json' },
+        oceans:   { fill:   '#001320' },
+        land:     { fill:   '#06304e' },
+        borders:  { stroke: '#001320' }
+      }));
+      planet.loadPlugin(planetaryjs.plugins.pings());
+      planet.loadPlugin(planetaryjs.plugins.drag({
+        onDragStart: function() {
+          this.plugins.autorotate.pause();
+        },
+        onDragEnd: function() {
+          this.plugins.autorotate.resume();
+        }
+      }));
+      planet.loadPlugin(autorotate(5));
+      planet.projection.rotate([100, -10, 0]);
+      planet.draw(canvas);
+        
+      // Create a scale for mapping request amount to ping angle sizes
+      var angles = d3.scale.pow()
+        .exponent(3)
+        .domain([1, 20])
+        .range([5, 25]);
+      // Create a scale for mapping request amount to ping TTLs
+      var ttls = d3.scale.pow()
+        .exponent(3)
+        .domain([1, 20])
+        .range([5000, 10000]);
+        
+      function drawGlobe( geos ) {
+        for( var i in geos ){
+          planet.plugins.pings.add( parseFloat( geos[i].lon || '-77.0' ), parseFloat( geos[i].lat || '38.0' ), {
+            // Here we use the `angles` and `colors` scales we built earlier
+            // to convert magnitudes to appropriate angles and colors.
+            angle: angles(geos[i].count),
+            color: color(geos[i].count),
+            ttl:   ttls(geos[i].count)
+          });
+        }
+      }
+      
+      d3.timer(function() {
+        d3.select('#timeSpan').text(moment(new Date).utc().format('MMM DD YYYY HH:mm:ss UTC'));
+      });
+      
+      // Plugin to automatically scale the planet's projection based
+      // on the window size when the planet is initialized
+      function autoscale(options) {
+        options = options || {};
+        return function(planet) {
+          planet.onInit(function() {
+            var width  = canvas.width + (options.extraWidth || 0);
+            var height = canvas.height + (options.extraHeight || 0);
+            planet.projection.scale(Math.min(width, height) / 2);
+          });
+        };
+      };
+    
+      // Plugin to automatically rotate the globe around its vertical
+      // axis a configured number of degrees every second.
+      function autorotate(degPerSec) {
+        return function(planet) {
+          var lastTick = null;
+          var paused = false;
+          planet.plugins.autorotate = {
+            pause:  function() { paused = true;  },
+            resume: function() { paused = false; }
+          };
+          planet.onDraw(function() {
+            if (paused || !lastTick) {
+              lastTick = new Date();
+            } else {
+              var now = new Date();
+              var delta = now - lastTick;
+              var rotation = planet.projection.rotate();
+              rotation[0] += degPerSec * delta / 1000;
+              if (rotation[0] >= 180) rotation[0] -= 360;
+              planet.projection.rotate(rotation);
+              lastTick = now;
+            }
+          });
+        };
+      };
+
+
+    </script>
+  </body>
+</html>

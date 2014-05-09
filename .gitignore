@@ -1,1 +1,11 @@
 _site
+
+# Logs
+*.vimlog
+*.log
+
+# OS weirdness
+*.DS_Store
+
+.Rhistory
+Thumbs.db
