@@ -30,6 +30,10 @@ write.csv(circle_data,"circle_data.csv",row.names=FALSE)
 
 D3 chord diagram can be found [here](https://github.com/gnanapriyav/edav/tree/gh-pages/assets/Priya_assets/BlogPost3/flights.html). 
 
+[D3 chord diagram inspiration](http://www.delimited.io/blog/2013/12/8/chord-diagrams-in-d3)
+
+[snapshot] (https://github.com/gnanapriyav/edav/tree/gh-pages/assets/Priya_assets/BlogPost3/Flight traffic.png). I am able to view the chord diagram in Firefox, but doesn't show up in google chrome. I guess there is some settings issue. Please view the visualization in firefox to enjoy the interactiveness.
+
 ### Future Enhancements
 1. For this course, I used only 2008 data (which is close to 700MB). As part of future project, I would like to generate statistics/visualization using data for the past 20 years which is available in [data expo site](http://stat-computing.org/dataexpo/2009/). There are more than 120 million records in total and I wish to use Hadoop/Hbase in AWS (Amazon Web Services).
 
