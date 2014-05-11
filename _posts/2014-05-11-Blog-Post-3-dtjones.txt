@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Final Poject: Social Listening Software
+title: Blog Post 3: Clustering Actors
 description: 
 tags: blogpost, dtjones
 ---
