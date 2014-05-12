@@ -193,35 +193,34 @@ Out[8]:
 ```{python}
 #get a full zip set from another dataset where I already filled in missing values
 #the dataset is 'dec' because I decoded it from JSON; the first year of that data was '2009'
-fullZipSet = set(dec['2009'].keys())
 
 def assembleZiprates(zr1,zr2,zr3):
+    fullZipSet = set(dec['2009'].keys())
     models = {"model1":zr1,"model2":zr2,"model3":zr3}
+    labels = {"model1":[],"model2":[],"model3":[]}
     assert len(zr1[0]) == len(zr2[0]) == len(zr3[0])
-    #implement the R 'cut' function in numpy...   
+    #implement the R 'cut' function in numpy;    
     if len(zr1[0]) < 4:                         #check to make sure input data dimensions look unlabeled
         for mod,dataset in models.items():
             #grab the rates
             ratearr = np.array([np.float(x[1]) for x in dataset])
             #set percentile cutoffs:
-            bincuts = []
-            for quantile in range(4,101,16):
-                bincuts.append(np.percentile(ratearr,float(quantile)))
+            bincuts = [np.percentile(ratearr,float(quantile)) for quantile in range(4,101,16)]                            
             cutlabels = np.digitize(ratearr,np.array(bincuts))
             #make sure we have the right number of labels for good measure
             assert len(cutlabels) == len(dataset)
             dataset = [dataset[i] + [cutlabels[i]] for i in range(len(dataset))]
             models[mod] = dataset
+            labels[mod] = bincuts
     #assemble the data in json-ready structure
     print len(zr1[0])
-    #python mega comprehension; loop rows in outer layer and fields in inner layer for each of three datasets to make a dict of 3 models 
     dataPack = {mod:{"Z"+str(dat[i][0]):{"rate":dat[i][1],"flagCount":dat[i][2],"fillKey":dat[i][3]} for i in range(len(dat))} for mod,dat in models.items()}
     for mod in models.keys():
         missingData = [k for k in fullZipSet if k not in dataPack[mod].keys()]
         print len(missingData)
         for key in missingData:
             dataPack[mod][key] = {"rate":'0',"flagCount":'0',"fillKey":"missingData"}
-    return dataPack    
+    return (dataPack,labels)    
 
 def dumpDataPack(dataPack):
     fp = open("dataPack.json","wB")
