@@ -1,3 +1,10 @@
+---
+layout: post
+title: Airline On-Time Performance Chord Diagram
+description: Priya Blogpost 3
+tags: blogpost
+---
+
 ## BlogPost 3 - Airline on-time performance - D3 Chord Diagram
 
 In my previous blogpost, I did preliminary analysis on [2008 Airlines Dataset](http://stat-computing.org/dataexpo/2009/the-data.html). As part of my previous analysis, I have extracted statistics with number of flights between each Origin-Destination City pair. This dataset (FlightsBetCities.csv) can be found in assets folder. You can find snapshot of the data [here](https://github.com/gnanapriyav/edav/tree/gh-pages/assets/Priya_assets/BlogPost3/Datasnapshot.png).
@@ -5,7 +12,7 @@ In my previous blogpost, I did preliminary analysis on [2008 Airlines Dataset](h
 Objective for this blogpost is to visualize the traffic between cities among top 50 origin/destination pairs.
 
 ###Data Extraction 
-```R
+```r
 #Read the file 
 FlightsBetCities <- read.csv("FlightsBetCities.csv")
 #Load library plyr
