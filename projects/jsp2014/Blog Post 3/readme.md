@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Blog Post 3 - Josh (jsp2014)
 description: Blog Post 3
 tags: project, blog post 3, blog, josh plotkin, jsp2014
