@@ -1,0 +1,34 @@
+Ranking of Educational Institutions
+
+Blog Objective:
+
+This exercise involved evaluating an existing data blog to assess the scope of analytics and presentation to users highlighting compelling conclusions. Data pertaining to University ranking with specific reference to comparison between 2014 and 2013 ranks of those universities that were found in the last 50 years was analyzed.
+
+Scope:
+
+The primary data dimensions involved the current rank, previous year ranks, country and the year they were institutionalized. The data set was obtained from guardian newspaper website.
+
+Goal:
+
+I wanted to use some of the packages of R that I have not tried before that would
+help me both analyze and visualize information in a far more effective way.
+
+Assessment: 
+
+I used 2 packages GGobi  and Rgooglemaps for analysis.
+
+Here are the scatter plot  results from GGobi and maps
+<img src = "https://raw.githubusercontent.com/anetaramesh/edav/gh-pages/assets/ScatterMatrix.png" width = "100%">
+
+
+Here is a visualization using Googlemaps :
+
+
+<img src = "https://raw.githubusercontent.com/anetaramesh/edav/gh-pages/assets/RGooglemaps.png" width = "100%">
+
+
+Interactive  R google maps
+
+
+<img src = "https://raw.githubusercontent.com/anetaramesh/edav/gh-pages/assets/googleVis/GeoMapID4c81c1150f.html" width = "100%">
+
