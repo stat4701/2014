@@ -35,8 +35,15 @@ No money 4 clusters:
 6 clusters, ER, log budget:
 ![6_logbudget](https://raw.githubusercontent.com/devintjones/edav/djproject/assets/clusters_6_logbudget.jpeg)
 
-#Conclusion
-will update this when I see all graphs in succession
+6 clusters, log er, log budget:
+![6_log_log](https://raw.githubusercontent.com/devintjones/edav/djproject/assets/6_log_log.jpeg)
+
+#Findings & Next Steps
+Based on the above charts, it is apparent that the scale of budget and earnings ratio heavily influence the distance calculation in k-means. Additionally we can see that if the k parameter is set too high, groupings seem to become arbitrary. 
+
+In the case with 6 clusters and log of ER and budget, we can identify a few cases where there is low budget and high ER opportunities in blue and low ER actors in yellow. Additonally, green appears to include high budget actors that appear in action, adventure, and fantasy movies predominantly. Red appears to be average. 
+
+These clusters could potentially be used for casting or for movie earnings ratio predition based on the additional historical metadata we have. It could also be interesting to explore a network graph of co-starring actors. 
 
 <!-- use tags blogpost1 blogpost2 blogpost3 for easy grouping -->
 <!-- please reserve for @malecki's use only tags 'slides', 'emails' -->
