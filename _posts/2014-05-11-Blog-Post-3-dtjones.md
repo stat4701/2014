@@ -19,6 +19,8 @@ From here I ran k-means to cluster the data, and created a function to subset th
 
 After I had the code setup to plot the top 12 genre subets colored by cluster, I experimented with the features in the algorithm and the k-means parameter. 
 
+[R code here](https://github.com/devintjones/edav/blob/djproject/assets/blogpost3_dtjones.R)
+
 #Charts
 I first tested 10 clusters with no transformations on the variables
 ![raw](https://raw.githubusercontent.com/devintjones/edav/djproject/assets/clusters_raw.jpeg)
