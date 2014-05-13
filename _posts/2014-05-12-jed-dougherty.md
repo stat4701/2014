@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blog Post: Movie Data
+title: Movie Budget and Expense Data
 description: Movie Data
 tags: blog movies d3
 ---
