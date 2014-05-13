@@ -72,6 +72,8 @@ queue()
 var st = svg.append("g")
         .attr("class", "panel")
 
+var labels = svg.append("g").selectAll(".state-label")
+
 svg.append("text")
         .attr("class", "title")
         .attr("x", (width / 2))             
@@ -97,8 +99,7 @@ function ready(error, us, states) {
       .on("mouseout", mOut)  
       .on("click", clicked);
 
-  svg.append("g").selectAll(".state-label")
-      .data(statemap)
+  labels.data(statemap)
     .enter().append("text")
       .attr("class", "state-label")
       .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
@@ -132,19 +133,21 @@ function mOut() {
 }
 
 function clicked(d) {
-  var x, y, k;
+  var x, y, k, o;
 
   if (d && centered !== d) {
     var centroid = path.centroid(d);
     x = centroid[0];
     y = centroid[1];
     k = 4;
-    centered = d;
+    centered = d
+    o = 0;
   } else {
     x = width / 2;
     y = height / 2;
     k = 1;
-    centered = null;
+    centered = null
+    o = 100;
   }
 
   st.selectAll("path")
@@ -154,6 +157,12 @@ function clicked(d) {
       .duration(500)
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
       .style("stroke-width", 1.5 / k + "px");
+
+  labels.classed("active", centered && function(d) { return d === centered; });
+
+  labels.transition()
+     .duration(500)
+     .attr('opacity', o)
 }
 
 </script>
