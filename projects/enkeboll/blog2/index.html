@@ -96,8 +96,8 @@ function ready(error, us, states) {
       .style("stroke-width", "1px")
       .style("opacity", 0.8)
       .on("mouseover", mOver)
-      .on("mouseout", mOut)  
-      .on("click", clicked);
+      .on("mouseout", mOut);
+      //.on("click", clicked);
 
   labels.data(statemap)
     .enter().append("text")
