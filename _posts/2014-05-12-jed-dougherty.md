@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Project Update
+title: Blog Post: Movie Data
 description: Movie Data
 tags: blog movies d3
 ---
