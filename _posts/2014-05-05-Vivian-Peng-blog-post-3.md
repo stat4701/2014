@@ -38,7 +38,7 @@ As you can see, I still have a lot of work to go. Even though the overall time I
 
 My final product uses D3 to interpolate the number of pills taken, from 0 to 146000. As you scroll to the right, 14,600 'pills'. I created a sample dataset that randomly generates numbers from 0 to 14,6000 and for each of those datapoints I draw a circle. This is the code used to generate the data and draw the circles:
 
-```{r chunkLabel}
+<pre><code>
 var dataset = [],
     i = 0;
 
@@ -59,7 +59,7 @@ var sampleSVG = d3.select("#viz")
         .attr("cx", function(d,i){return  5+ (i*10)})
         .attr("cy", 20);
 
-```{r chunkLabel}
+</code></pre>
 
 The images were drawin in AdobeIllustrator, and the positioning of the text were just hardcoded by calculating the number of pills at that point, and the distance between each pill. It's not the most elegant code, but it gets what I want. Ideally I would have liked the counter to stay at the middle of the screen, and the user can interact with it by scrolling left or right. I couldn't figure out how to do so, since I don't have an index for the pills and couldn't bind the animation to a position.
 
