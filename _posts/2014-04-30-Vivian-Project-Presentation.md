@@ -15,7 +15,6 @@ To collect the data, I searched the [US Census fact finder](http://factfinder2.c
 
 Useful code, courtesy of Jared Lander's R for Everyone book:
 ``` {r chunkLabel}
-# get list of the files
 
 
 theFiles <- dir(path="../2009-2012-RaceEthnicity/", pattern = "\\.csv")
@@ -89,5 +88,12 @@ For the purposes of learning D3, I want to improve on this visualization by addi
 
 I'm curious if something like [this](http://bl.ocks.org/mbostock/1249681) would be more useful. Have each of the colors represent one ethnicity group, and instead of populating dots according to the mouse movement, find a way to populate the dots according to time. 
 
+
+## 5-14-14 Update
+Here is a link to my final visualization: [Click Here!](http://vivianpeng.com/circlepack_flatdynamic.html)
+
+I was able to get the nodes to update dynamically from data in different JSON files. I also solved my issue of getting the year name from JSON. I had to use "root.name" to access the value for root nodes.
+
+Here is a link to my final project repo: [Click Here!](https://github.com/veeps/MissionHousing/tree/master/FinalProject)
 
 
