@@ -23,7 +23,7 @@ I was inspired by Josh Worth's ["If the moon were only 1 pixel"](http://joshwort
 
 I want to replicate a similar effect, where you can scroll to the right for information and the counter increases from 0 to 14,600. Instead of showing you the planets in Josh Worth's visualization, I would like to present the amount of water you would have consumed to intake that many pills.
 
-## What I have so far [Click Here](http://vivianpeng.com/pillshtml)
+## What I have so far
 
 Though Josh Worth's code looked relatively simple to replicate, I could not get his counter to work. I'm not familiar with jQuery, and spent a day trying to crash learn it. Instead, I looked for an alternative in D3.
 
@@ -32,3 +32,35 @@ I liked Mike Bostock's text animation from his [Wealth & Health of Nations](http
 For now, I drew circles to represent the pills. The chunk of code I used should render 14,600 pills, but I can't get that section to scroll in order to show all the 'pills'. 
 
 As you can see, I still have a lot of work to go. Even though the overall time I put into creating this hacked-together-version of a visualization was longer than actually drawing the pills in Illustrator, the code used to populate circles via a for loop is very helpful. I'm sure it will come in handy the next time I have to illustrate some insane number of items.
+
+
+## Update 5-14-14 [Click Here](http://vivianpeng.com/pills.html)
+
+My final product uses D3 to interpolate the number of pills taken, from 0 to 146000. As you scroll to the right, 14,600 'pills'. I created a sample dataset that randomly generates numbers from 0 to 14,6000 and for each of those datapoints I draw a circle. This is the code used to generate the data and draw the circles:
+
+```{r chunkLabel}
+var dataset = [],
+    i = 0;
+
+    for(i=0; i<14600; i++){
+        dataset.push(Math.round(Math.random()));
+    }        
+
+var sampleSVG = d3.select("#viz")
+      .append("svg")
+      .attr("width", 116800)
+      .attr("height", 200);
+
+    sampleSVG.selectAll("circle")
+        .data(dataset)
+        .enter().append("circle")
+        .style("fill", "black")
+        .attr("r", 2)
+        .attr("cx", function(d,i){return  5+ (i*10)})
+        .attr("cy", 20);
+
+```{r chunkLabel}
+
+The images were drawin in AdobeIllustrator, and the positioning of the text were just hardcoded by calculating the number of pills at that point, and the distance between each pill. It's not the most elegant code, but it gets what I want. Ideally I would have liked the counter to stay at the middle of the screen, and the user can interact with it by scrolling left or right. I couldn't figure out how to do so, since I don't have an index for the pills and couldn't bind the animation to a position.
+
+Overall, I'm happy with how this looks. I wanted it to be intentionally annoying to scroll all the way to the right to get the infromation at the end. I think I can improve on this by adding more dynamic interaction, and using a custom svg for the pills instead of using circles.
