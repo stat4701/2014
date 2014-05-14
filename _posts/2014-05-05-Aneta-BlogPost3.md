@@ -1,3 +1,9 @@
+---
+layout: post
+title: Aneta - Blog Post 3
+tags: blogpost
+---
+
 ## Automobile Insurance Data Trends
 
 For my 3rd Blog Post, I choose to look at 18 years of Auto Insurance expenditures by states. The data source was from US census.gov that provided average expenditures per insured vehicle by 50 states. The average expenditure equals total premiums written divided by liability car-years, where a car-year is equal to 365 days of insured coverage for a single vehicle.
