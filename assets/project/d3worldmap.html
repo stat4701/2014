@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>World Map - Test Data</title>
+<style>
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 85px;
+  height: 25px;
+  padding: 8px;
+  font: 12px sans-serif;
+  background: lightgray;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#country-line path {
+	stroke: steelblue;
+	stroke-width: 1;
+	fill: none;
+}
+
+#details {
+    width: 1060px;
+    overflow: hidden;
+}
+#country-line {
+    width: 500px;
+    float:left;
+}
+#country-bar {
+    overflow: hidden;
+}
+
+#map-title {
+  font-size: 16pt;
+  padding: 20px;
+}
+
+#legend {
+  font-size: 14pt;
+  padding: 5px;
+}
+
+#display-text {
+  font-size: 12pt;
+  padding: 10px;
+}
+
+
+</style>
+<div id="map-title">PISA and TIMSS Comparison by Country</div>
+<div id="menu"></div>
+<div id="map"></div>
+<div id="legend"></div>
+<div id="message-text"></div>
+<div id="details">
+	<div id="country-line"></div>
+	<div id="country-bar"></div>
+</div>
+<script src="http://d3js.org/d3.v2.js?2.9.1"></script>
+<script type="text/javascript" src="column-chart-mod.js"></script>
+<script>
+/* References/Credit
+Using columnChart library for bar chart from here: http://bl.ocks.org/llad/3766585
+ modified slightly to allow for dynamic coloring and range
+Line chart adapted from: http://bl.ocks.org/benjchristensen/2579599
+Map coordinates taken from: https://bitbucket.org/john2x/d3test/src/2ce4dd511244/d3/examples/data/world-countries.json (antarctica subsequently removed)
+Legend code adapted from: http://bl.ocks.org/mbostock/1086421
+*/
+var map_scale = 1000; //scale value for map, higher numbers "zoom" in the map farther
+var width = 1060;
+var height = 600;
+var margin = margin = {top: 100, right: 20, bottom: 20, left: 20};
+var num_format = d3.format(".3f"); //format function for output of numbers
+var map_default_color = "#ABDDA4";
+var highlight_color = '#2F6D4F';
+var menu_highlight_color = "#984ea3";
+var projection = d3.geo.mercator().scale([map_scale]);
+var map_svg = '';
+var p = '';
+var g = '';
+var current_country_data = []; 
+var map_colors = {'single': {'low': '#ca0020', 'mid': "#ffffff", 'high': "#0571b0"}, 'compare': {'low': '#e66101', 'mid': "#ffffff", 'high': "#5e3c99"}};
+var colorNeg;
+var colorPos;
+
+//For the menu
+var menu_items = [['Test', 'Compare', 'PISA', 'TIMSS'],
+		['Round Filter', '1-2-3', '1-2', '1-3', '2-3', 'Any'],
+		['Round', '1', '2', '3'],
+		['Subject', 'Math', 'Science'],
+		['Stat', 'Mean', 'StDev'],
+		['Gender', 'Both', 'Male', 'Female'],
+		['Content', 'All', 'Num', 'Alg', 'Geom', 'Data']];
+
+createMenus(menu_items);
+
+function createMenus(menu_items) {
+	//Add svg and g to hold menu categories
+	var svg_title = d3.select("#menu").append("svg")
+		.attr("height", 150)
+		.attr("width", width)
+		.append('g').attr('transform', 'translate(100,20)')
+		.attr("class", "menu_lists")
+		.attr("id", "menu_cats");
+	
+	//Add groups to hold the menu items
+	var categories = svg_title.selectAll("menu")
+		.data(menu_items) //add data
+	   .enter().append("g")
+		.attr('transform', function (d,i) { return 'translate(' + ((width/menu_items.length-20)*i+75) + ',0)'; })
+		.attr("class", "items")
+		.attr("id", function(d) {return d[0];});  
+		
+	//Add menu items, make category titles larger and a darker color
+	var text = categories.selectAll("text")
+		.data(function(d) { return d; })
+	  .enter().append("text")
+		.attr("x", 0)
+		.attr("y", function(d,i) {return i*20;})
+		.attr("class", function(d,i) {
+			if (i === 0) {
+				var text_class = 'cat_title';
+			}
+			else if (i === 1) {
+				var text_class = 'selected';
+			}
+			else {
+				var text_class = 'unselected';
+			}
+			return text_class;
+		})
+		.style("fill", function(d,i) {
+			if (i === 0) {
+				var text_color = highlight_color;
+			}
+			else if (i === 1) {
+				var text_color = menu_highlight_color;
+			}
+			else {
+				var text_color = map_default_color;
+			}
+			return text_color; 
+		})
+		.style("font-size", function(d,i) {
+			if (i === 0) {
+				var font = '14px';
+			}
+			else {
+				var font = '12px';
+			}
+			return font; 
+		})
+		.text(function(d,i) {return d; })
+		.on("click", function(d,i) {makeSelected(this)}); //when selected, highlight and change class to indicate selection
+}
+
+function makeSelected(element) {
+	//When a menu item is selected, highlight it and change class
+	element.style.fill = highlight_color;
+	var parent = element.parentNode;
+	var children = parent.children;
+	for (var i=0; i<children.length; i++) {
+		if (children[i] === element) {
+			children[i].style.fill = menu_highlight_color;
+			children[i].setAttribute("class", "selected");
+		}
+		else if (i === 0){
+			children[i].style.fill = highlight_color;
+			children[i].setAttribute("class", "unselected");
+			//return;
+		}
+		else {
+			children[i].style.fill = map_default_color;
+			children[i].setAttribute("class", "unselected");
+		}
+	}
+	updateColorScales(); //update the color scales when the selections change
+	updateMap(parent.parentNode); //update the map to reflect data from selected categories
+	updateCountryDetails(false); //update the detail graphs below the maps
+	updateLegend(); //update the legend when the selections change
+	updateMessage(); //update the message to the user on what is being displayed
+}
+
+function getValueArray(element) {
+	//Loops though the children of the element to get the array holding the selected values
+	var children = element.children;
+	var value_array = [];
+	for (var i=0; i<children.length; i++) {
+		var cat_val = getValue(children[i]);
+		value_array.push(cat_val);
+	}
+	return value_array;
+}
+
+function updateMap(element) {
+	//When called, gets the value array (the filter selections) and calls function to update the colors on the map
+	var value_array = getValueArray(element);
+	updateColors(value_array);
+}
+
+function getValue(element) {
+	//Gets the selected value for the element (menu category) passed in
+	var children = element.children;
+	var selected_value = "";
+	for (var i=0; i<children.length; i++) {
+		if (children[i].getAttribute("class") === "selected") {
+			selected_value = children[i].textContent;
+		}
+	}
+	if (selected_value === "") {
+		selected_value = children[1].textContent;
+	}
+	return selected_value;
+}
+
+
+//For the map itself	
+createMap();
+
+var tooltip = d3.select("#map").append("div") //create a div to hold the tooltip info
+    .attr("class", "tooltip")               
+    .style("opacity", 0);
+	
+function createMap() {
+	g = d3.select("#map").append("svg")
+		.attr("height", height)
+		.attr("width", width)
+		.append('g').attr('transform', 'translate(100,' + margin.top +')');
+		
+	//Get data from json file holding the coordinate data to draw the countries	
+	d3.json("world-countries-no-ant.json", function(collection) {
+		var all_data = collection.features;
+		//Get data to bind to each country that has normalized test scores
+		d3.json("data_munge/take4_country_data.json", function(info) {
+			for (var j=0; j<all_data.length; j++) {
+				if (info.hasOwnProperty(all_data[j]['id'])) {
+					all_data[j]['test_values'] = info[all_data[j]['id']];
+				}
+			}
+		});
+		//Create the path elements and set the attributes
+		p = g.selectAll("path").data(all_data);
+		p.enter().append("path")
+			.attr("d", d3.geo.path().projection(projection))
+			.attr("fill", function(d) { return map_default_color;})
+			.attr('stroke', 'rgba(255,255,255,.2)')
+			.attr('opacity',1)
+			.attr('id', function(d) {return d.id;})
+			.on('mouseover', function(d) { return showTip(d)})
+			.on('mousemove', function(d) { return moveTip(d)})
+			.on('mouseout', function(d) { return hideTip(d)})
+			.on('click', function(d) { return updateCountryDetails(d)});
+	});
+}
+
+function updateColors(values) {
+	g.selectAll("path").attr("fill", function(d) { return getCountryValue(d, values, true);});
+}
+
+function updateColorScales() {
+	//When called, figures out what mode we are in (compare or single test) and creates the appropriate scales for the map colors
+	var selected = getValueArray(document.getElementById("menu_cats"))[0];
+	var mode = '';
+	if (selected === 'Compare') {
+		mode = 'compare';
+	}
+	else {
+		mode = 'single';
+	}
+	colorNeg = d3.scale.linear() //update color scale for countries on map
+		.domain([-2.5, 0])
+		//.interpolate(d3.interpolateHcl)
+		.range([map_colors[mode].low, map_colors[mode].mid]);
+	colorPos = d3.scale.linear() //color scale for countries on map
+		.domain([0, 2.5])
+		//.interpolate(d3.interpolateHcl)
+		.range([map_colors[mode].mid, map_colors[mode].high]);
+}
+
+function getCountryValue(data, values, as_color) {
+	//Gets the normalized test score value for the data passed in and the values array (holding the menu items selected
+	//as_color is a flag indicating whether to return the value, or the color translation of that value
+	//This function loops through the data object, given the menu values, if at any point there is no next value, that means
+	//  there is no data for that country for those items selected, and so it returns NA or the default color
+	var data_dict_value = data;
+	if (data_dict_value.hasOwnProperty('test_values')) {
+		data_dict_value = data_dict_value['test_values'];
+		for (var i=0; i<values.length; i++) {
+			if (data_dict_value.hasOwnProperty(values[i])) {
+				data_dict_value = data_dict_value[values[i]];
+			}
+			else {
+				if (as_color) {
+					return map_default_color;
+				}
+				else {
+					return 'NA';
+				}	
+			}
+		}
+		if (data_dict_value === 'NA') {
+			if (as_color) {
+				return map_default_color;
+			}
+			else {
+				return 'NA';
+			}
+		}
+		else {
+			if (as_color) {
+				if (data_dict_value < 0) {
+					return colorNeg(data_dict_value);
+				}
+				else {
+					return colorPos(data_dict_value);
+				}
+			}
+			else {
+				return data_dict_value;
+			}
+		}
+	}
+	else {
+		if (as_color) {
+			return map_default_color;
+		}
+		else {
+			return 'NA';
+		}
+		
+	}
+}
+
+//Code for country-specific graphs
+function updateCountryDetails(country_data) {
+	//If there are no details, return, otherwise set the country data
+	if (!country_data && current_country_data == '') {
+		return;
+	}
+	else if (!country_data) {
+		country_data = current_country_data;
+	}
+	current_country_data = country_data;
+	
+	//create bar chart using columnChart library from http://bl.ocks.org/llad/3766585
+	var details = getBarChartData(country_data);
+	d3.select("#country-bar")
+	  .datum(details)
+		.call(columnChart()
+		  .width((width-50)/2)
+		  .height(400)
+		  .x(function(d, i) { return d[0]; })
+		  .y(function(d, i) { return d[1]; }));
+	
+	//add title to bar chart
+	var gg = d3.select("#country-bar").select("svg");
+	gg.select("#title").remove();
+	var txt = gg.append("text")
+		.attr("x", 50)
+		.attr("y", 10)
+		.attr("id", "title")
+		.style("fill", highlight_color)
+		.style("font-size", '14px')
+		.text(country_data.properties.name + ' Male vs Female Scores for Math and Science');
+	
+	//Create line graph, adapted from http://bl.ocks.org/benjchristensen/2579599
+	var gg_line = d3.select("#country-line").select("svg");
+	gg_line.remove();
+	
+	//Dimensions of line graph
+	var line_margins = {top: 80, left: 10, bottom: 80, right: 150};
+	var line_width = width/3 - line_margins.left - line_margins.right;
+	var line_height = 400 - line_margins.top - line_margins.bottom;
+		
+	//get data to display
+	var line_data = getLineChartData(country_data);
+	//create scales 
+	var x = d3.scale.linear().domain([1, line_data.length]).range([0, line_width]);
+	var y = d3.scale.linear().domain([-3,3]).range([line_height, 0]);
+
+	// create a line function that can convert data[] into x and y points
+	var line = d3.svg.line()
+		.x(function(d,i) { return x(i+1); })
+		.y(function(d) { return y(d); });
+
+	// Create svg to hold graph
+	var graph = d3.select("#country-line").append("svg:svg")
+		.attr("width", line_width + line_margins.left + line_margins.right)
+		.attr("height", line_height + line_margins.top + line_margins.bottom)
+		.append("svg:g")
+		.attr("transform", "translate(" + line_margins.right + "," + line_margins.top + ")");
+
+	//create axis
+	var xAxis = d3.svg.axis().scale(x).tickSize(4).tickSubdivide(false).ticks(line_data.length-1);
+		graph.append("svg:g")
+			.attr("class", "x axis")
+			.attr("transform", "translate(0," + line_height + ")")
+			.call(xAxis);
+	var yAxisLeft = d3.svg.axis().scale(y).ticks(4).orient("left");
+		graph.append("svg:g")
+			.attr("class", "y axis")
+			.attr("transform", "translate(-25,0)")
+			.call(yAxisLeft);
+	
+	//add line
+  	graph.append("svg:path").attr("d", line(line_data));
+	
+	//add x-axis label
+	gg_line = d3.select("#country-line").select("svg");
+	gg_line.append("text") 
+		.attr("transform", "translate(" + ((line_width + line_margins.left + 1.5*line_margins.right) / 2) + " ," + (line_height + line_margins.bottom + 50) + ")")
+        .style("fill", highlight_color)
+		.style("font-size", '12px')
+        .text("Round");
+		
+	//add y-axis label
+	gg_line.append("text") 
+		.attr("transform", "rotate(-90)")
+        .attr("y", line_width - line_margins.right)
+        .attr("x", -1 * line_height)
+        .attr("dy", "1em")
+        .style("fill", highlight_color)
+		.style("font-size", '12px')
+        .text("Scaled Score");
+	
+	//remove existing title and add a new one
+	gg_line.select("#title").remove();
+	var txt = gg_line.append("text")
+		.attr("x", 100)
+		.attr("y", 10)
+		.attr("id", "title")
+		.style("fill", highlight_color)
+		.style("font-size", '14px')
+		.text(country_data.properties.name + ' Line Chart Title');
+}
+
+function getBarChartData(country_data) {
+	//When called, gets the currently selected filter items and then gets the appropriate values for the bar chart
+	//Returns an array with those values
+	var detail_arr = [];
+	var val_array = getValueArray(document.getElementById("menu_cats"));
+	var genders = ['Male', 'Female'];
+	var subjects = ['Math', 'Science'];
+	for (var i=0; i<subjects.length; i++) {
+		for (var j=0; j<genders.length; j++) {
+			val_array[5] = genders[j];
+			val_array[3] = subjects[i];
+			var name_str = '';
+			if (val_array[0] === 'Test') {
+				name_str = name_str + 'PISA Adv';
+			}
+			else {
+				name_str = name_str + val_array[0];
+			}
+			name_str = name_str + ' ' + subjects[i] + ' ' + genders[j];
+			var country_val = getCountryValue(country_data, val_array, false);
+			if (isNaN(country_val)) {
+				country_val = 0;
+			}
+			var bar_color = '';
+			if (genders[j] === 'Male') {
+				bar_color = '#b3cde3';
+			}
+			else {
+				bar_color = '#fbb4ae';
+			}
+			detail_arr.push([name_str, country_val, bar_color]);
+		}
+	}
+	return detail_arr;
+}
+
+function getLineChartData(country_data) {
+	//When called, gets the currently selected filter items and then gets the appropriate values for the line chart
+	//Returns an array with those values
+	var detail_arr = [];
+	var val_array = getValueArray(document.getElementById("menu_cats"));
+	var rounds = [1, 2, 3];
+	for (var i=0; i<rounds.length; i++) {
+		val_array[2] = i;
+			var name_str = '';
+			var country_val = getCountryValue(country_data, val_array, false);
+			if (isNaN(country_val)) {
+				country_val = 0;
+			}
+			detail_arr.push(country_val);
+	}
+	return detail_arr;
+}
+
+//Functions to control tooltip (tried to use ds.tip but couldn't control location of the tip as I needed to)
+function showTip(d) {
+	//highlights the hovered over element and displays the tool tip
+	var element = document.getElementById(d.id);
+	element.style.fill = highlight_color;
+	var country_value = getCountryValue(d, getValueArray(document.getElementById("menu_cats")), false);
+	if (!isNaN(parseFloat(country_value))) {
+		country_value = num_format(country_value);
+	}
+	tooltip.transition()        
+		.duration(200)      
+		.style("opacity", 1);
+	tooltip.html("<b>" + d.properties.name + ": </b> " + country_value)
+		.style("left", (d3.event.pageX - 50) + "px")     
+		.style("top", (d3.event.pageY - 50) + "px");
+}
+
+function moveTip(d) {
+	//Moves the tip as the mouse moves over the element
+	tooltip.style("left", (d3.event.pageX - 50) + "px")     
+		.style("top", (d3.event.pageY - 50) + "px");
+}
+
+function hideTip(d) {
+	//Removes the highlighted style from the tip and turns the opacity back to 0
+	var element = document.getElementById(d.id);
+	element.removeAttribute("style");
+	tooltip.transition()        
+		.duration(500)      
+		.style("opacity", 0);
+}
+
+//Legend section
+updateLegend(); //create legend initially
+
+function updateLegend() {
+	var selected = getValueArray(document.getElementById("menu_cats"))[0];
+	var legend_data;
+	var color_data;
+	//Set data for legend text, this could be made less brittle
+	if (selected === 'Compare') {
+		legend_data = [{"content": "TIMSS Advantage", "location": 265, "color": "#FFFFFF"}, {"content": "PISA Advantage", "location": 650, "color": "#FFFFFF"}];
+		color_data = map_colors.compare;
+	}
+	else {
+		legend_data = [{"content": "Below Average", "location": 265, "color": "#FFFFFF"}, {"content": "Above Average", "location": 650, "color": "#FFFFFF"}];;
+		color_data = map_colors.single;
+	}
+	d3.select("#legend").selectAll('svg').remove();
+	//Create gradients for legend, code taken from example referenced above
+	var legend = d3.select("#legend").append("svg:svg")
+		.attr("width", width+margin.right)
+		.attr("height", 30)
+		.attr("transform", 'translate('+0+',0)');
+
+	var gradient1 = legend.append("svg:defs")
+	  .append("svg:linearGradient")
+		.attr("id", "gradient1")
+		.attr("x1", "0%")
+		.attr("y1", "0%")
+		.attr("x2", "100%")
+		.attr("y2", "0%")
+		.attr("spreadMethod", "pad");
+
+	gradient1.append("svg:stop")
+		.attr("offset", "0%")
+		.attr("stop-color", color_data.low)
+		.attr("stop-opacity", 1);
+
+	gradient1.append("svg:stop")
+		.attr("offset", "100%")
+		.attr("stop-color", color_data.mid)
+		.attr("stop-opacity", 1);
+		
+	var gradient2 = legend.append("svg:defs")
+		.append("svg:linearGradient")
+		.attr("id", "gradient2")
+		.attr("x1", "0%")
+		.attr("y1", "0%")
+		.attr("x2", "90%")
+		.attr("y2", "0%")
+		.attr("spreadMethod", "pad");
+
+	gradient2.append("svg:stop")
+		.attr("offset", "10%")
+		.attr("stop-color", color_data.mid)
+		.attr("stop-opacity", 1);
+
+	gradient2.append("svg:stop")
+		.attr("offset", "100%")
+		.attr("stop-color", color_data.high)
+		.attr("stop-opacity", 1);
+	//create rects using the gradients for the legend
+	legend.append("svg:rect")
+		.attr("width", 300)
+		.attr("height", 25)
+		.attr("transform", "translate(225, 0)")
+		.style("fill", "url(#gradient1)");
+		
+	legend.append("svg:rect")
+		.attr("width", 300)
+		.attr("height", 25)
+		.attr("transform", "translate(525, 0)")
+		.style("fill", "url(#gradient2)");
+	//Set legend text using data specified above	
+	legend.selectAll("text")
+		.data(legend_data)
+	  .enter().append("text")
+		.attr("x", function(d,i) {return d.location;})
+		.attr("y", 20)
+		.attr("fill", function(d,i) {return d.color;})
+		.text(function(d,i) {return d.content; });
+}
+//end legend section
+
+//testing function to check keys in object
+function getKeys(d) {
+	var keys = [];
+	for(var k in d) keys.push(k);
+	return("total " + keys.length + " keys: " + keys);
+}
+
+//Messaging section
+updateMessage();
+
+function updateMessage() {
+	//Gets the selected values and updates the message to the user appropriately
+	var message = createMessage();
+	d3.select("#message-text").selectAll('svg').remove();
+	var msvg = d3.select("#message-text").append("svg:svg")
+		.attr("width", 1060)
+		.attr("height", 70);
+	for (var i=0; i<message.length; i++) {
+		msvg.append("text")
+			.attr("transform", "translate(100," + (20+i*18) +")")
+			.style("fill", highlight_color)
+			.text(message[i]);
+	}
+}
+
+function createMessage() {
+	//Creates and returns the message to the user
+	var filters = getValueArray(document.getElementById("menu_cats"));
+	var text_arr = [filters[0] + ' for Round ' + filters[2] + ', countries participating in rounds: ' + filters[1] + '. '];
+	text_arr[0] = text_arr[0] + 'Displaying ' + filters[3] + ' ' + filters[4] + ' scores for ' + filters[5] + ' gender(s) ' + ' in ' + filters[6] + ' content area(s).';
+	if (filters[0] === 'Compare') {
+		text_arr.push('Relatively better performance on PISA is darker blue and on TIMSS is darker red. ');
+	}
+	else {
+		text_arr.push('Better performance on ' + filters[0] + ' is darker blue, while worse performance is darker red. ');
+	}
+	text_arr[1] = text_arr[1] + 'If the filters selected result in no data, the map will be blank.';
+	return text_arr;
+}
+</script>
+
