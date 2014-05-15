@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Final Poject: Social Listening Software
+title: "Final Poject: Social Listening Software"
 description: 
 tags: finalproject, dtjones
 ---

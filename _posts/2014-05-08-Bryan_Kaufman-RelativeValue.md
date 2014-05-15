@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blog Post 3: Looking at the Relative Value of NBA Draft Picks
+title: "Blog Post 3: Looking at the Relative Value of NBA Draft Picks"
 description: examining the history of draft picks in NBA
 tags: blogpost3
 ---
@@ -16,7 +16,7 @@ tags: blogpost3
 There have been some discussion on multiple blog posts about the NBA draft; however, the one that inspired me to write this blog post is [here](http://www.82games.com/barzilai1.htm).  This blog post does some great work - but I wanted to both update and expand on its (Excel) visualizations. This blog post is also a continuation of the work I did for my project.  Here is the visualization from the website:
 
 
-![site]({{ site.url }}/assets/webrel.gif)
+![site]({{ site.baseurl }}/assets/webrel.gif)
 
 
 ##Obtaining the Data / Data Munging##
@@ -43,7 +43,7 @@ I then wrote a function for the first four and seven years of two player metrics
 The next step after data munging was creating effective visualizations to see the relative value of draft picks.  Since four years is the absolute minimum a team can hold a rookies rights, it was my determination to use the 4 year PER Minutes.   I created the following visualization as my first initial one:
 
 
-![first]({{ site.url }}/assets/firstviz.png)
+![first]({{ site.baseurl }}/assets/firstviz.png)
 
 
 It's important to note this is an initial visualization to see my data set.  I wanted something basic and that would allow me to see any trends.  Since I had individual data points I figured the best use would be to create a scatterplot using geom_point.   This visualization confirmed to me that overall the trend is the higher the draft pick (high draft pick = lower number) the better chance the player will be more productive.  It was actually more surprising to me to see one second round data point (pick number great than 30) jump up as an outlier.  I would of assumed that all second round picks were on an absolute basis as close to 0 as possible, since some teams don't even sign their second round pick.
@@ -51,7 +51,7 @@ It's important to note this is an initial visualization to see my data set.  I w
 Next, I thought the most important way to visualize draft positions was through a text plot. I felt this would be effective because it would allow me to show three variables, two of performance and the text as the pick number.   Here is the visualization:
 
 
-![second]({{ site.url }}/assets/textdraft.png)
+![second]({{ site.baseurl }}/assets/textdraft.png)
 
 
 I decided to do 7 years for this.  I also subsetted my dataset - my initial visualization showed me that the second round wasn't of great important visually.  For the most part, the median second round pick gives close to 0 absolute value.  I put the PER and the WS on opposite axis in order to show different all-in-one levels of performance- again, showing the advantage of a text visualization.  Again, the 1 pick is an outlier on both Win Shares and PER Minutes.  The most interesting gap to me if after pick number 5.  There seems to be a drop off historically if you are not picking in the top 5.  The next drop off seems to be after top 10.  
@@ -59,7 +59,7 @@ I decided to do 7 years for this.  I also subsetted my dataset - my initial visu
 I next decided to improve upon the visualization from the blog post.  Here is my final product:
 
 
-![third]({{ site.url }}/assets/finalrel.png)
+![third]({{ site.baseurl }}/assets/finalrel.png)
 
 
 I initially had this as a scatterplot, but after testing a text graph I thought this would be of better fit.  It clearly shows the information that I want, and using the stat_smooth technique, I am able to include the best fit curve.  I also wanted to include the regression equation as part of the visualization.  If there is empty space that can benefit the end user, I wanted to put it to use.  

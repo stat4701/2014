@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blog Post 2: 3 and D Players
+title: "Blog Post 2: 3 and D Players"
 description: examining the league's best 3 and D Players
 tags: blogpost2
 ---
@@ -18,7 +18,7 @@ Recently, in the NBA, with the rise of analytics, there has been the creation of
 I wanted to look if anyone has done research on this topic: who are the best 3 and D players in the NBA?  I recently saw [this article](http://www.poundingtherock.com/2013/8/17/4626210/an-attempt-to-find-and-rank-the-leagues-best-3-and-d-role-players).  The article provided some nice information but the visualization could be improved upon, as shown below, and the data was not up to date.  
 
 
-![3andDViz]({{ site.url }}/assets/web.PNG)
+![3andDViz]({{ site.baseurl }}/assets/web.PNG)
 
 
 ##Obtaining the right data##
@@ -90,7 +90,7 @@ merge2.to_csv('merge2.csv')
 
 After the majority of data munging was finished, I opened the .csv files in R.  My initial goal was to explore the data set that I created. I created the following visualization to essentially locate any trends and see if there was any additional data munging needed:
 
-![intialchart]({{ site.url }}/assets/leagueview.png)
+![intialchart]({{ site.baseurl }}/assets/leagueview.png)
 
 
 As previously said, this chart was mainly for my exploratory use.  The chart essentially has defensive ability on the x-axis (represented by Defensive xRAPM) and Three Point Rate on the Y Axis.   This allows me to look at the whole league and decide where I should set some conditions within the dataset.  I also put the Catch and Shoot 3PT% as the size of the bubble.  Clearly, there needed to be some addiitonal munging given that there was someone who hit 100% on an extremely low three point rate.  
@@ -106,7 +106,7 @@ After I did my initial exploring and subsequent munging, I had a cleaner dataset
 I decided to visualize this information in two ways.  As I previously said, defense is extremely hard to quantity defense.   For my first visualization with the clean dataset, I decided to put both the X and Y axis as defensive metrics.  This would help to show the best defenders using both metrics.  I then put the size of the player's name as the player's Catch and Shoot Three Point Percentage.  The visualization is shown below
 
 
-![defensive]({{ site.url }}/assets/defender3d.png)
+![defensive]({{ site.baseurl }}/assets/defender3d.png)
 
 
 I did not want to fill the visualization with too much information, so I left out the three point rate.  Simply by looking at the chart, it is clear who is a great defender and shoots threes efficiently.  It's interesting that Andre Iguodala and Draymond Green both play for the same team as do Danny Green and Kawhi Leonard.  The biggest text size for a player is Kyle Korver, who has the highest rate but his individual Defensive Rating clearly is where he struggles. Again, it is really clear how Andre Iguodala is constantly a great plus-minus player.  He provides a lot defensively and is a complement on the offensive end with his catch and shoot ability. In my opinion, two interesting names on the list are DeMarre Carroll and Anthony Tolliver.   While most of the names are familiar ones, these two stick out as solid 3 and D players that may not get enough credit.  
@@ -114,7 +114,7 @@ I did not want to fill the visualization with too much information, so I left ou
 I next wanted to create a similar visualization; this time I wanted to illustrate defensive ability and three point ability on separate axis.  Since I view Defensive xRAPM as the better metric, I made it the X axis.   I wanted to incorporate both statistics of three point shooting, rate and catch and shoot efficiency . Below is the visualization.
 
 
-![both]({{ site.url }}/assets/best3andD.png)
+![both]({{ site.baseurl }}/assets/best3andD.png)
 
 
 This visualization truly shows how great of a player Kyle Korver is; again, the size of his name shows how effective of a three point shooter he is.  Tolliver again is impressive.  He's a better defender than the majority of the good defenders; an extremely high amount of FGs that he attempts are threes, and he is relatively efficient off the catch and shoot.  In addition, one could argue the best '3 and D' player is Danny Green.  He is exceptional defensively, has a three point rate over 60% and, given the size of his name, it is clear that he is efficient.    Andre Iguodala almost looks like an outlier due to how skilled he is defensively!

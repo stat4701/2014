@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blog Post 3: Clustering Actors
+title: "Blog Post 3: Clustering Actors"
 description: 
 tags: blogpost, dtjones
 ---

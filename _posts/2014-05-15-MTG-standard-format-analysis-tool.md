@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Magic: The Gathering Standard Format Analysis Tool (Born of the Gods)
+title: "Magic: The Gathering Standard Format Analysis Tool (Born of the Gods)"
 description: awcastleton final project
 tags: project
 ---
