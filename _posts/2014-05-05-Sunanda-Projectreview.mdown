@@ -61,13 +61,13 @@ I decided to do all the work in python for the project. There were many question
 Many variations of graphs like :
 
 Ave rating of 'Food' businesses by school 
-<img src = "https://github.com/sunandakp/edav/tree/gh-pages/assets/Sunanda_assets/Figure_Ratingdist" width = "100%">
+<img src = "https://raw.githubusercontent.com/sunandakp/edav/gh-pages/assets/Sunanda_assets/Figure_Ratingdist.png" width = "100%">
 
 Cafes vs Bars by Region:
 
-<img src = "https://github.com/sunandakp/edav/tree/gh-pages/assets/Sunanda_assets/Southmidwest.png" width = "100%">
-<img src = "https://github.com/sunandakp/edav/tree/gh-pages/assets/Sunanda_assets/EastCoast.png" width = "100%">
-<img src = "https://github.com/sunandakp/edav/tree/gh-pages/assets/Sunanda_assets/WestCoast.png" width = "100%">
+<img src = "https://raw.githubusercontent.com/sunandakp/edav/gh-pages/assets/Sunanda_assets/South-midwest.png" width = "100%">
+<img src = "https://raw.githubusercontent.com/sunandakp/edav/gh-pages/assets/Sunanda_assets/EastCoast.png" width = "100%">
+<img src = "https://raw.githubusercontent.com/sunandakp/edav/gh-pages/assets/Sunanda_assets/WestCoast.png" width = "100%">
 
 
 
@@ -90,5 +90,4 @@ Cafes vs Bars by Region:
 * Exploratory data analysis works both ways: Finding data for a question you have (Data is ugly and not always free), asking the right questions of the dataset that's available. 
 * Very easy to get inaccurate answers, thereby misleading others. 
 * Appreciation for tweaking out every last ounce of information a dataset can give you.
-
 
