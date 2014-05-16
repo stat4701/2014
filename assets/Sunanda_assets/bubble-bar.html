@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+<title> Visualization of Yelp Academic dataset </title>
+  <style type = "text/css">
+
+body{margin:100px;}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+.legend rect {
+  fill:white;
+  stroke:black;
+  opacity:0.8;}
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+.x.axis path{
+	display:none;
+} 
+.bar:hover {
+    fill: #bcbcbc ;
+  }
+.d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #efefef;
+    border-radius: 2px;
+  }
+/* Creates a small triangle extender for the tooltip */
+ .d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+  }
+
+  /* Style northward tooltips differently */
+ .d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+  }
+</style> </head>
+
+<div class = "row">
+    <div class="span12">
+	<h3> Distribution of schools by average rating and review count per Business. Color coded by region. Size proportional to total reviews from that school</h4>
+    </div>
+</div>
+
+<div class="row">
+  <div class="span6" id = "area1"></div>
+  
+</div>
+
+<div class = "row">
+    <div class = "span12">
+    	<h3> Distribution of star ratings by school </h3>
+    </div>
+</div>
+
+<div class = "row">
+	<div class="span12" id = "area2"></div>
+
+</div>
+
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="https://github.com/jashkenas/underscore/underscore.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.min.js"></script>
+<script>
+
+var width = 500,
+    height = 500, 
+    margin = 80;
+
+var chart1=d3.select("#area1").append("svg").attr("width",width).attr("height",height);
+var x=d3.scale.linear().domain([3,4.5]).range([margin,width-margin]);
+var y=d3.scale.linear().domain([0,80]).range([height-margin,margin]);
+var r=d3.scale.linear().domain([0,500]).range([0,20]);
+var o=d3.scale.linear().domain([10000,100000]).range([.5,1]);
+var c=d3.scale.category10().domain(["East","West","South","MidWest"]);
+var region = ["East","West","South","MidWest"]
+var xAxis = d3.svg.axis()
+  .scale(x)
+  .orient("bottom");
+
+var yAxis = d3.svg.axis()
+  .scale(y)
+  .orient("left");
+
+chart1.append("g")
+  .attr("class", "axis")
+  .attr("transform", "translate(0," + (height-margin) + ")")
+  .call(xAxis)
+  .append("text")
+  //.attr("transform", "rotate(-90)")
+  .attr("y", 30)
+  .attr("x",200)
+  //.attr("dx", ".71em")
+  .style("text-anchor", "middle")
+  .text("Average rating per business");
+
+chart1.append("g")
+  .attr("class", "axis")
+   .attr("transform", "translate(" + margin + ",0)")
+  .call(yAxis)
+  .append("text")
+  .attr("transform", "rotate(-90)")
+  .attr("y", 6)
+  .attr("x",-150)
+  .attr("dy", ".71em")
+  .style("text-anchor", "middle")
+  .text("Average review count per business");
+//svg.selectAll(".h").data(d3.range(-8,10,2)).enter()
+ // .append("line").classed("h",1)
+ // .attr("x1",margin).attr("x2",height-margin)
+ // .attr("y1",y).attr("y2",y)
+  
+//svg.selectAll(".v").data(d3.range(1,5)).enter()
+  //.append("line").classed("v",1)
+  //.attr("y1",margin).attr("y2",width-margin)
+  //.attr("x1",x).attr("x2",x)
+  
+
+
+d3.csv("Schoolstars.csv",function(csv) {
+  // we first sort the data
+  //csv.sort(function(a,b) {return b.population-a.population;});
+  
+  // then we create the marks, which we put in an initial position
+
+  chart1.selectAll("circle").data(csv).enter()
+    .append("circle")
+    .attr("cx",function(d) {return x(0);})
+    .attr("cy",function(d) {return y(0);})
+    .attr("r",function(d) {return r(0);})
+
+    .style("fill",function(d) {return c(d.Region);})
+    .style("opacity",function(d) {return o(+d.sRCount);})
+
+      .append("title")
+      .text(function(d) {return d.SchoolName;})
+
+  // now we initiate - moving the marks to their position
+
+  chart1.selectAll("circle").transition().duration(1000)
+    .attr("cx",function(d) {return x(+d.aveBStars);})
+    .attr("cy",function(d) {return y(+d.aveBRCount);})
+    .attr("r",function(d) {return r(2.5*Math.sqrt(+d.sRCount));})
+  
+  //why won't the legend show up!!!
+
+  var legend = chart1.selectAll(".legend")
+                        .data(csv)
+                        .enter().append("g")
+                        .attr("class", "legend")
+                        .attr("transform", function(d, i) { return "translate(-500," + i * 20 + ")"; });
+  legend.append("rect")
+                          .attr("x", width - 18)
+                          .attr("width", 18)
+                          .attr("height", 18)
+                          .style("fill", function(d){return c(d.Region)});
+
+                    legend.append("text")
+                          .attr("x", width - 24)
+                          .attr("y", 9)
+                          .attr("dy", ".35em")
+                          .style("text-anchor", "end")
+                    .text(function(d) { return d.Region; }); 
+
+
+})
+
+
+var marginbar = {top: 45, right: 100, bottom: 20, left: 20},
+    widthbar = 500 - marginbar.left - marginbar.right,
+    heightbar = 90 - marginbar.top - marginbar.bottom;
+
+//var formatPercent = d3.format(".0%");
+
+var colorbar = d3.scale.linear()
+          .range(["#ca0020","#f4a582","#f7f7f7","#92c5de","#0571b0"])
+          .domain([100,500,1000,5000,10000,15000]);
+
+var xbar = d3.scale.ordinal()
+    .rangeRoundBands([0, widthbar], .1);
+
+// Scales. Note the inverted domain fo y-scale: bigger is up!
+var ybar = d3.scale.linear()
+    .range([heightbar, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(xbar)
+    .orient("bottom");
+    
+var yAxis = d3.svg.axis()
+    .scale(ybar)
+    .orient("left")
+   // .tickFormat(formatPercent);
+
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<strong>" + d.SchoolName + "\t" + d.Stars + "Stars</strong><br/><span style='color:#fff'>" + d.Count + " reviews</span>";
+  })
+
+// load the data
+d3.csv("schoolstars1.csv", type, function(data) {
+
+  
+
+  // Choosing schoolnames as keys
+  var schools = d3.nest()
+      .key(function(d) { return d.SchoolName; })
+      .entries(data);
+
+  
+
+  // Compute the minimum and maximum stars and count across. How would you write it to use the fact that stars is just a fixed array
+  xbar.domain(data.map(function(d) { return d.Stars; }));
+  ybar.domain([0, d3.max(schools, function(s) { return s.values[0].Count; })]);
+
+  // Add an SVG element to chart2 which holds the barcharts and assigning it to area2
+  var chart2 = d3.select("#area2").selectAll("svg")
+    .data(schools)
+    .enter()
+    .append("svg:svg")
+    .attr("width", widthbar + marginbar.left + marginbar.right)
+    .attr("height", heightbar + marginbar.top + marginbar.bottom)
+  .append("g")
+    .attr("transform", "translate(" + marginbar.left + "," + marginbar.top + ")");
+
+ 
+// selectively hiding path for x axis of chart 2 by calling x axis class (look at style section, x.axis.path). What happens when you want some other property of axis changed when
+//you have another chart??
+  chart2.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + heightbar + ")")
+      .call(xAxis);
+
+  chart2.append("g")
+      // Hide y axis
+      // .attr("class", "y axis")
+      // .call(yAxis)
+    .append("text")
+    .attr("x", widthbar - 15)
+    .attr("y", heightbar)
+    .attr("dy", ".71em")
+    .attr("text-anchor", "start")
+    .attr("font-size", "1.1em")
+    .text(function(d) { return d.key});
+
+  // Accessing nested data: https://groups.google.com/forum/#!topic/d3-js/kummm9mS4EA
+  // data(function(d) {return d.values;}) 
+  // this will dereference the values for nested data for each group
+  chart2.selectAll(".bar")
+      .data(function(d) {return d.values;})
+      .enter()
+      .append("rect")
+      .attr("class", "bar")
+      .attr("x", function(d) { return xbar(d.Stars); })
+      .attr("width", xbar.rangeBand())
+      .attr("y", function(d) { return ybar(d.Count); })
+      .attr("height", function(d) { return heightbar - ybar(d.Count); })
+      .attr("fill", function(d) {return colorbar(d.Count)})
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide)
+
+  chart2.call(tip);
+
+});
+
+function type(d) {
+  d.Count = +d.Count;
+  return d;
+}
+</script>
+
+
+</body>
+</html>
