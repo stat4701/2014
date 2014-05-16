@@ -1,0 +1,146 @@
+SchoolName,Stars,Count
+Brown University,1,801
+Brown University,2,1115
+Brown University,3,1831
+Brown University,4,3651
+Brown University,5,2934
+CalTech,1,1545
+CalTech,2,1426
+CalTech,3,2791
+CalTech,4,6279
+CalTech,5,5838
+CPSU,1,770
+CPSU,2,844
+CPSU,3,1505
+CPSU,4,3349
+CPSU,5,3950
+Carnegie,1,479
+Carnegie,2,773
+Carnegie,3,1458
+Carnegie,4,2547
+Carnegie,5,1951
+Columbia,1,1295
+Columbia,2,1711
+Columbia,3,3225
+Columbia,4,5183
+Columbia,5,3046
+Cornell,1,341
+Cornell,2,460
+Cornell,3,752
+Cornell,4,1405
+Cornell,5,1416
+GaTech,1,1006
+GaTech,2,1491
+GaTech,3,2737
+GaTech,4,5295
+GaTech,5,3967
+Harvard,1,3709
+Harvard,2,5326
+Harvard,3,9729
+Harvard,4,16865
+Harvard,5,12733
+Harvey Mudd,1,841
+Harvey Mudd,2,903
+Harvey Mudd,3,1525
+Harvey Mudd,4,3234
+Harvey Mudd,5,3827
+MIT,1,3709
+MIT,2,5326
+MIT,3,9729
+MIT,4,16865
+MIT,5,12733
+Princeton,1,725
+Princeton,2,875
+Princeton,3,1419
+Princeton,4,2334
+Princeton,5,1984
+Purdue,1,211
+Purdue,2,247
+Purdue,3,450
+Purdue,4,1001
+Purdue,5,920
+RPI,1,269
+RPI,2,367
+RPI,3,576
+RPI,4,1153
+RPI,5,988
+Rice,1,581
+Rice,2,784
+Rice,3,1524
+Rice,4,3222
+Rice,5,2693
+Stanford,1,1452
+Stanford,2,1813
+Stanford,3,2922
+Stanford,4,5037
+Stanford,5,4766
+UCLA,1,1727
+UCLA,2,2253
+UCLA,3,4327
+UCLA,4,7011
+UCLA,5,6038
+UCSD,1,1438
+UCSD,2,1451
+UCSD,3,2507
+UCSD,4,3940
+UCSD,5,3580
+UC-Berkeley,1,2074
+UC-Berkeley,2,3178
+UC-Berkeley,3,6135
+UC-Berkeley,4,10564
+UC-Berkeley,5,9028
+UIUC,1,552
+UIUC,2,704
+UIUC,3,1105
+UIUC,4,2165
+UIUC,5,2237
+UMCP,1,595
+UMCP,2,615
+UMCP,3,1025
+UMCP,4,1869
+UMCP,5,1348
+Umass-Amherst,1,234
+Umass-Amherst,2,309
+Umass-Amherst,3,445
+Umass-Amherst,4,963
+Umass-Amherst,5,1067
+Umich-Ann Arbor,1,758
+Umich-Ann Arbor,2,1128
+Umich-Ann Arbor,3,2117
+Umich-Ann Arbor,4,3787
+Umich-Ann Arbor,5,3123
+UNC,1,359
+UNC,2,644
+UNC,3,1322
+UNC,4,2935
+UNC,5,2363
+Upenn,1,1019
+Upenn,2,1389
+Upenn,3,2510
+Upenn,4,3988
+Upenn,5,2773
+USC,1,1044
+USC,2,990
+USC,3,1885
+USC,4,3199
+USC,5,3196
+UT-Austin,1,1028
+UT-Austin,2,1253
+UT-Austin,3,2275
+UT-Austin,4,4589
+UT-Austin,5,4533
+Uwash,1,1337
+Uwash,2,1792
+Uwash,3,3016
+Uwash,4,5759
+Uwash,5,4912
+Uwaterloo,1,64
+Uwaterloo,2,91
+Uwaterloo,3,205
+Uwaterloo,4,335
+Uwaterloo,5,261
+Virginia Tech,1,129
+Virginia Tech,2,169
+Virginia Tech,3,259
+Virginia Tech,4,544
+Virginia Tech,5,335
