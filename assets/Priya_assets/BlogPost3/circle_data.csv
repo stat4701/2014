@@ -1,0 +1,51 @@
+origin,dest,flightscount
+"Las Vegas,NV","Phoenix,AZ",381
+"Phoenix,AZ","Las Vegas,NV",351
+"Los Angeles,CA","Las Vegas,NV",325
+"Las Vegas,NV","Los Angeles,CA",311
+"San Diego,CA","Oakland,CA",301
+"Los Angeles,CA","Phoenix,AZ",295
+"Los Angeles,CA","Oakland,CA",287
+"San Diego,CA","Phoenix,AZ",285
+"Oakland,CA","San Diego,CA",285
+"Salt Lake City,UT","Phoenix,AZ",280
+"Oakland,CA","Los Angeles,CA",279
+"Denver,CO","Salt Lake City,UT",278
+"Salt Lake City,UT","Denver,CO",274
+"Las Vegas,NV","Burbank,CA",267
+"Las Vegas,NV","San Diego,CA",267
+"Burbank,CA","Las Vegas,NV",265
+"Phoenix,AZ","San Diego,CA",265
+"Los Angeles,CA","San Francisco,CA",265
+"Phoenix,AZ","Salt Lake City,UT",259
+"Las Vegas,NV","Oakland,CA",258
+"Burbank,CA","Oakland,CA",257
+"San Francisco,CA","Los Angeles,CA",253
+"San Diego,CA","Las Vegas,NV",252
+"Los Angeles,CA","San Jose,CA",251
+"Phoenix,AZ","Los Angeles,CA",244
+"San Antonio,TX","Dallas,TX",242
+"San Jose,CA","Los Angeles,CA",242
+"Oakland,CA","Burbank,CA",241
+"Dallas,TX","San Antonio,TX",241
+"San Diego,CA","Sacramento,CA",239
+"Oakland,CA","Las Vegas,NV",232
+"Reno,NV","Las Vegas,NV",223
+"Las Vegas,NV","Reno,NV",222
+"Chicago,IL","Kansas City,MO",219
+"Ontario,CA","Phoenix,AZ",218
+"Salt Lake City,UT","Las Vegas,NV",217
+"Las Vegas,NV","Salt Lake City,UT",217
+"Chicago,IL","Las Vegas,NV",214
+"Phoenix,AZ","Ontario,CA",214
+"Sacramento,CA","San Diego,CA",213
+"Dallas,TX","Austin,TX",212
+"Albuquerque,NM","Phoenix,AZ",212
+"Baltimore,MD","Providence,RI",212
+"Las Vegas,NV","Chicago,IL",210
+"Orlando,FL","Baltimore,MD",208
+"Austin,TX","Dallas,TX",207
+"Kansas City,MO","Chicago,IL",206
+"New Orleans,LA","Houston,TX",204
+"Houston,TX","New Orleans,LA",204
+"Baltimore,MD","Orlando,FL",202

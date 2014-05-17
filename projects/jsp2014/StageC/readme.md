@@ -14,4 +14,4 @@ tags: project, josh plotkin, jsp2014
 	* merges the 10 files together
 	* performs a Bayesian analysis on winrate and standard deviation.
 *  Here is a dropbox link to Stage c's csv files, which will not fit on github: __[download me](https://www.dropbox.com/sh/rywkbemje177yia/JFZcJ_N4bU)__
-* __[iPython notebook viewer]http://nbviewer.ipython.org/github/joshplotkin/edav/blob/gh-pages/projects/jsp2014/StageC/PYTHON/StageC.ipynb)__
+* __[iPython notebook viewer](http://nbviewer.ipython.org/github/joshplotkin/edav/blob/gh-pages/projects/jsp2014/StageC/PYTHON/StageC.ipynb)__
