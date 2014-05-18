@@ -1,0 +1,168 @@
+<!DOCTYPE html> <meta charset="utf-8">
+<style>
+
+.background {
+  fill: none;
+  pointer-events: all;
+}
+
+text.title {
+  font: 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+.state-label {
+  fill: #000;
+  font: 16px "Helvetica Nueue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  text-anchor: middle;
+}
+.legend {
+  background-color: #fff;
+  width: 300px;
+  height: 60px;
+  border: 1px solid #bbb;
+  margin: 10px;
+}
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="http://d3js.org/queue.v1.min.js"></script>
+<script>
+
+var width = 960,
+    height = 500,
+    centered;
+
+var rateById = d3.map();
+
+var color = d3.scale.linear()
+    .domain([.6, .75, .9])
+    .range(["#e41a1c", "#377eb8", "#4daf4a"]);
+
+var projection = d3.geo.albersUsa()
+    .scale(1070)
+    .translate([width / 2, height / 2]);
+
+var path = d3.geo.path()
+    .projection(projection);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+svg.append("rect")
+    .attr("class", "background")
+    .attr("width", width)
+    .attr("height", height)
+    .on("click", clicked);
+
+function setVars(d) {
+  rateById.set(d.id, +(d.FemaleEarnings / d.MaleEarnings) )
+}
+
+queue()
+   .defer(d3.json, "us-10m.json")
+   .defer(d3.tsv, "states_final.tsv", function(d) { setVars(d) })
+   .await(ready);
+
+var st = svg.append("g")
+        .attr("class", "panel")
+
+var labels = svg.append("g").selectAll(".state-label")
+
+svg.append("text")
+        .attr("class", "title")
+        .attr("x", (width / 2))             
+        .attr("y", 30)  
+        .text("What a Woman Makes for Every Dollar a Man Makes");
+
+function ready(error, us, states) {
+  // states
+  var statemap = topojson.feature(us, us.objects.states).features;
+
+  st.selectAll("path")
+      .data(statemap)
+    .enter().append("path")
+      .style("fill", function(d) {return color(rateById.get(d.id)); })
+      .attr("d", function(d) { d.color = null; return path(d); })
+      .attr("class", "state")
+      .style("stroke", "black")
+      .style("stroke-linejoin", "round")
+      .style("stroke-linecap", "round")
+      .style("stroke-width", "1px")
+      .style("opacity", 0.8)
+      .on("mouseover", mOver)
+      .on("mouseout", mOut);
+      //.on("click", clicked);
+
+  labels.data(statemap)
+    .enter().append("text")
+      .attr("class", "state-label")
+      .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+      .attr("dy", ".35em")
+      .text(function(d) { return "$" + rateById.get(d.id).toFixed(2); })
+      ;
+}
+
+function mOver() {
+  // re-append current state to the end so that the 
+  // borders are all on the top layer
+  d3.select(this.parentNode.appendChild(this))
+    .style({"stroke": "LightGray", "stroke-width": "1px"})
+    .style({"opacity": 1})
+}
+
+d3.selection.prototype.moveToBack = function() {
+  return this.each(function() {
+    var firstChild = this.parentNode.firstChild;
+    if (firstChild) {
+      this.parentNode.insertBefore(this, firstChild);
+    }
+  });
+};
+
+function mOut() {
+  d3.select(this)
+    .style({"stroke": "black", "stroke-width": "1px"})
+    .style({"opacity": .8})
+    .moveToBack();
+}
+
+function clicked(d) {
+  var x, y, k, o;
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 4;
+    centered = d
+    o = 0;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null
+    o = 100;
+  }
+
+  st.selectAll("path")
+      .classed("active", centered && function(d) { return d === centered; });
+
+  st.transition()
+      .duration(500)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+
+  labels.classed("active", centered && function(d) { return d === centered; });
+
+  labels.transition()
+     .duration(500)
+     .attr('opacity', o)
+}
+
+</script>
