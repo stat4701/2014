@@ -91,4 +91,3 @@ Cafes vs Bars by Region:
 * Very easy to get inaccurate answers, thereby misleading others. 
 * Appreciation for tweaking out every last ounce of information a dataset can give you.
 
-
