@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Project: Exploring the Risk in Tanking in the NBA
+title: "Project: Exploring the Risk in Tanking in the NBA"
 description: basketball analytics
 tags: finalproject
 ---
