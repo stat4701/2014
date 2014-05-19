@@ -10,4 +10,4 @@ tags: blogpost, project
 
 All progress on the final project can be tracked at [the project GH repo](https://github.com/enkeboll/venmo-viz).
 
-The most recent deployed version (not guaranteed to be working) can be found at [Venmo Visualizer][http://venmo-viz.herokuapp.com/]
+The most recent deployed version (not guaranteed to be working) can be found at [Venmo Visualizer](http://venmo-viz.herokuapp.com/)
