@@ -1,6 +1,41 @@
 <!DOCTYPE html> <meta charset="utf-8">
 <style>
 
+@import url(blog2.css);
+
+svg {
+  font: 10px sans-serif;
+}
+
+.bar rect {
+  fill: steelblue;
+}
+
+.bar:hover rect {
+  fill: brown;
+}
+
+.value {
+  fill: white;
+}
+
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.axis path {
+  stroke: none;
+}
+
+.x.axis line {
+  stroke: #fff;
+  stroke-opacity: .8;
+}
+
+.y.axis path {
+  stroke: black;
+}
+
 .background {
   fill: none;
   pointer-events: all;
@@ -9,86 +44,274 @@
 text.title {
   font: 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-anchor: middle;
+  font-weight: bold;
   pointer-events: none;
 }
 
-.state-label {
-  fill: #000;
-  font: 16px "Helvetica Nueue", Helvetica, Arial, sans-serif;
-  font-weight: 200;
+#tooltip {
   text-anchor: middle;
-}
-.legend {
-  background-color: #fff;
-  width: 300px;
-  height: 60px;
-  border: 1px solid #bbb;
-  margin: 10px;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  fill: "black";
 }
 
+.legend {
+  font-size: 12px;
+}
+
+<
 </style>
 <body>
+<div id="map"></div>
+
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/topojson.v1.min.js"></script>
 <script src="http://d3js.org/queue.v1.min.js"></script>
+
+<p id="menu" style="font-family:Helvetica"><b>What a woman makes for every dollar a man makes</b><br>
+Adjusted by statewise purchasing power for:<select></select>
 <script>
 
-var width = 960,
-    height = 500,
-    centered;
+var centered, legend, val;
 
-var rateById = d3.map();
+var margin = {top: 10, left: 10, bottom: 10, right: 10}
+  , width = parseInt(d3.select('#map').style('width'))
+  , width = width - margin.left - margin.right
+  , mapRatio = .5
+  , height = width * 0.52;
 
+var color_domain = [.6, .75, .9]
+var ext_color_domain = [0.5, .6, .7, .8, .9, 1]
+var legend_labels = ["$.50 and less", "$.60", "$.70", "$.80", "$.90", "$1 and more"]
 var color = d3.scale.linear()
-    .domain([.6, .75, .9])
+    .domain(color_domain)
     .range(["#e41a1c", "#377eb8", "#4daf4a"]);
 
 var projection = d3.geo.albersUsa()
-    .scale(1070)
+    .scale(width)
     .translate([width / 2, height / 2]);
 
 var path = d3.geo.path()
     .projection(projection);
 
-var svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height);
+var map = d3.select('#map').append('svg')
+    .style('height', height + 'px')
+    .style('width', width + 'px');
 
-svg.append("rect")
+map.append("rect")
     .attr("class", "background")
     .attr("width", width)
     .attr("height", height)
     .on("click", clicked);
 
-function setVars(d) {
-  rateById.set(d.id, +(d.FemaleEarnings / d.MaleEarnings) )
-}
-
 queue()
    .defer(d3.json, "us-10m.json")
-   .defer(d3.tsv, "states_final.tsv", function(d) { setVars(d) })
+   .defer(d3.tsv, "states_final.tsv")
    .await(ready);
 
-var st = svg.append("g")
+var statedata;
+
+d3.tsv("states_final.tsv", function(data) {
+  statedata = data
+  data.forEach(function(d) {
+
+  })
+})
+
+// BAR GRAPH VARIABLES
+var format = d3.format("$.2f"),
+    states;
+
+barWidth = .2 * width
+
+var x = d3.scale.linear()
+    .range([barWidth, 0]);
+
+var y = d3.scale.ordinal()
+    .rangeRoundBands([0, height-2], .1);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom")
+    .tickSize(-height - margin.bottom)
+    .tickFormat(format);
+
+map.append("g")
+    .attr("class", "x axis");
+
+map.append("g")
+    .attr("class", "y axis")
+  .append("line")
+    .attr("class", "domain")
+    .attr("transform", "translate("+width+", 0)")
+    // .attr("y1", "90%");
+
+// other variables
+var st = map.append("g")
         .attr("class", "panel")
 
-var labels = svg.append("g").selectAll(".state-label")
+var menu = d3.select("#menu select")
+    .on("change", change);
 
-svg.append("text")
+var usData, stData;
+
+// begin choropleth
+function ready(error, us, stateData) {
+  stData = stateData;
+  usData = us
+
+  stData.forEach(function(d) {
+    d.id = +d.id;
+    d.Rate = +(d['FemaleEarnings'] / d['MaleEarnings']);
+    d.Index = +(100/d['Index'] * d['Rate']);
+    d.Grocery = +(100/d['Grocery'] * d['Rate']);
+    d.Housing = +(100/d['Housing'] * d['Rate']);
+    d.Utilities = +(100/d['Utilities'] * d['Rate']);
+    d.Trans = +(100/d['Transportation'] * d['Rate']);
+    d.Health = +(100/d['Health'] * d['Rate']);
+    d.Misc = +(100/d['Misc'] * d['Rate']);
+  });
+
+  var subsets = d3.keys(stData[0]).filter(function(key) {
+    return key != "id" && key != "Abbrev" && key != "State" && key != "PopRank" &&
+           key != "FemaleEarnings" && key != "MaleEarnings" && key != "WageRank" &&
+           key != "Transportation";
+  }) 
+
+  menu.selectAll("option")
+      .data(subsets)
+    .enter().append("option")
+      .text(function(d) { return d; });
+
+  menu.property("value", "Rate");
+
+  title = map.append("text")
         .attr("class", "title")
         .attr("x", (width / 2))             
         .attr("y", 30)  
         .text("What a Woman Makes for Every Dollar a Man Makes");
 
-function ready(error, us, states) {
-  // states
-  var statemap = topojson.feature(us, us.objects.states).features;
+  // Legend 
+  var legend = map.selectAll("g.legend")
+    .data(ext_color_domain)
+  .enter().append("g")
+    .attr("class", "legend");
 
-  st.selectAll("path")
-      .data(statemap)
-    .enter().append("path")
-      .style("fill", function(d) {return color(rateById.get(d.id)); })
-      .attr("d", function(d) { d.color = null; return path(d); })
+  var ls_w = 20, ls_h = 20;
+
+  legend.append("rect")
+    .attr("x", 20)
+    .attr("y", function(d, i){ return (i*ls_h) + 2*ls_h;})
+    .attr("width", ls_w)
+    .attr("height", ls_h)
+    .style("fill", function(d, i) { return color(d); })
+    .style("opacity", 0.8)
+    .style({"stroke-width": 1, "stroke": "black"});
+
+  legend.append("text")
+    .style({"font": "12px 'Helvetica Neue', Helvetica, Arial, sans-serif"})
+    .attr("x", 50)
+    .attr("y", function(d, i){ return (i*ls_h) + 2*ls_h + 13;})
+    .text(function(d, i){ return legend_labels[i]; });
+
+  redraw();
+}; // <-- end choropleth
+  
+function redraw() {
+  subset = menu.property("value")
+
+  // create a deep copy of the simple array stData so sort doesn't mess it up
+  var sorted=[];
+  for(var i=0; i<stData.length; i++){
+     sorted.push(stData[i]);
+  }
+
+  // sort the new array based on the currently selected value `subset`
+  // sorted.sort(function(a,b) { return b[subset] - a[subset]; }).reverse()
+  sorted.sort(function(a,b) { return b[subset] - a[subset]; })
+  // Horizontal Bar Graph
+  y.domain(sorted.map(function(d) { return d.Abbrev }))
+  
+  var bar = map.selectAll(".bar") 
+        .data(sorted, function(d) { return d.Abbrev; });
+
+  var barEnter = bar.enter().insert("g", ".axis")
+      .attr("class", "bar")
+      .attr("transform", function(d) { 
+        return "translate(0," + (y(d.Abbrev) + height) + ")"; 
+      })
+      .style("fill-opacity", 0);
+
+  barEnter.append("rect")
+      .attr("x", val && function(d) { return width - x(d[val])})
+      .attr("width", val && function(d) { return x(d[val]); })
+      .attr("height", y.rangeBand());
+
+  barEnter.append("text")
+      .attr("class", "barlabel")
+      .attr("x", -3)
+      .attr("y", y.rangeBand() / 2)
+      .attr("dy", ".35em")
+      .attr("text-anchor", "end")
+      .text(function(d) { return d.Abbrev; });
+
+  barEnter.append("text")
+      .attr("class", "barvalue")
+      .attr("x", val && function(d) { return x(d[val]) - 3; })
+      .attr("y", y.rangeBand() / 2)
+      .attr("dy", ".35em")
+      .attr("text-anchor", "end");
+
+  x.domain([0.28, 1]);
+  val = subset;
+  
+  var barUpdate = d3.transition(bar)
+      .attr("transform", function(d) { return "translate(0," + (d.y0 = y(d.Abbrev)) + ")"; })
+      .style("fill-opacity", 1);
+
+  barUpdate.select("rect")
+      .attr("x", function(d) { return width - x(d[val])})
+      .attr("width", function(d) { return x(d[val]); });
+
+  barUpdate.select(".value")
+      .attr("x", function(d) { return x(d[val]) - 3; })
+      .text(function(d) { return format(d[val]); });
+
+  var barExit = d3.transition(bar.exit())
+      .attr("transform", function(d) { return "translate(0," + (d.y0 + height) + ")"; })
+      .style("fill-opacity", 0)
+      .remove();
+
+  barExit.select("rect")
+      .attr("width", function(d) { return x(d[val]); });
+
+  barExit.select(".value")
+      .attr("x", function(d) { return x(d[val]) - 3; })
+      .text(function(d) { return format(d[val]); });
+
+  d3.transition(map).select(".x.axis")
+      .call(xAxis)
+      .attr("transform","translate(" + .8*width + ","+(height-10)+")");
+
+  // states
+  var statemap = topojson.feature(usData, usData.objects.states).features;
+
+  var sta = st.selectAll("path")
+              .data(statemap)
+
+  var stEnter = sta.enter().append("path")
+      .style("fill", function(d) {
+        try {
+          return color(stData.filter(function(e) { 
+            return e.id === d.id 
+          })[0][subset]); 
+        }
+        catch(err) {
+          return "none"
+        }
+      })
+      .attr("d", function(d) { return path(d); })
       .attr("class", "state")
       .style("stroke", "black")
       .style("stroke-linejoin", "round")
@@ -96,24 +319,42 @@ function ready(error, us, states) {
       .style("stroke-width", "1px")
       .style("opacity", 0.8)
       .on("mouseover", mOver)
-      .on("mouseout", mOut);
-      //.on("click", clicked);
+      .on("mouseout", mOut)
+      .on("click", clicked);
 
-  labels.data(statemap)
-    .enter().append("text")
-      .attr("class", "state-label")
-      .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
-      .attr("dy", ".35em")
-      .text(function(d) { return "$" + rateById.get(d.id).toFixed(2); })
-      ;
+  var stUpdate = d3.transition(sta)
+      .style("fill", function(d) {
+        try {
+          return color(stData.filter(function(e) { 
+            return e.id === d.id 
+          })[0][subset]); 
+        }
+        catch(err) {
+          return "none"
+        }
+      });
+
 }
 
-function mOver() {
+function mOver(d) {
   // re-append current state to the end so that the 
   // borders are all on the top layer
   d3.select(this.parentNode.appendChild(this))
     .style({"stroke": "LightGray", "stroke-width": "1px"})
     .style({"opacity": 1})
+  if (!centered) {
+    // overlay
+    map.append("text")
+        .attr("id", "tooltip")
+        .attr("x", path.centroid(d)[0])
+        .attr("y", path.centroid(d)[1])
+        // TODO: fix mOver for updated data
+        .text(function() {
+          return stData.filter(function(e) { 
+            return e.id === d.id
+          })[0].Abbrev
+        });
+    }
 }
 
 d3.selection.prototype.moveToBack = function() {
@@ -130,39 +371,220 @@ function mOut() {
     .style({"stroke": "black", "stroke-width": "1px"})
     .style({"opacity": .8})
     .moveToBack();
+
+  d3.select("#tooltip").remove();
 }
 
 function clicked(d) {
-  var x, y, k, o;
-
+  d3.selectAll(".box").remove()
   if (d && centered !== d) {
-    var centroid = path.centroid(d);
-    x = centroid[0];
+    // click in (zoom in)
+    centroid = path.centroid(d);
+    x = centroid[0] + 50; // offset to leave room for overlay
     y = centroid[1];
     k = 4;
     centered = d
-    o = 0;
+    o = 0
+    oDelay = 0;
+
+    var textBox = map.append("g")
+    textBox.append("rect")
+        .attr("class", "box")
+        .attr("x", width/2 + margin['left']/2)
+        .attr("y", margin['top'])
+        .attr("width", width/2 - margin['left']/2 - margin['right'])
+        .attr("height", height - margin['top'] - margin['bottom'])
+        .attr("opacity", .85)
+        .attr("fill", "Gray")
+        .style({"stroke-width": 2, "stroke": "black"})
+    
+    textBox.append("text")
+        .attr("class", "box")
+        .attr("x", width/2 + margin['left']/2 + margin['left'])
+        .attr("y", margin['top']*5)
+        .attr("width", width/2 - margin['left']/2 + margin['left']*2)
+        .style({"font": "34px 'Helvetica Neue', Helvetica, Arial, sans-serif",
+                "font-weight": "bold",
+                "fill": "white",
+                "stroke-width": 1,
+                "stroke": "black",
+                "text-decoration": "underline"
+              })
+        .text(function() {
+            return stData.filter(function(e) { 
+            return e.id === d.id 
+          })[0].State
+        });
+
+     //I REALIZE THAT THIS IS UGLY and that I should use d3's joins but... oh well
+     textBox.append("text")
+        .attr("class", "box")
+        .attr("x", width/2 + margin['left']/2 + margin['left'])
+        .attr("y", margin['top']*9)
+        .attr("width", width/2 - margin['left']/2 + margin['left']*2)
+        .style({"font": "24px 'Helvetica Neue', Helvetica, Arial, sans-serif",
+                "font-weight": "bold",
+                "fill": "black",
+              })
+        .text(function() {
+            return "State Average PP: $" + stData.filter(function(e) { 
+            return e.id === d.id 
+          })[0].Rate.toFixed(2)
+        })
+        .style(function() { return {"fill": "red", "stroke": "black"} ;}
+        );
+     textBox.append("text")
+        .attr("class", "box")
+        .attr("x", width/2 + margin['left']/2 + margin['left'])
+        .attr("y", margin['top']*13)
+        .attr("width", width/2 - margin['left']/2 + margin['left']*2)
+        .style({"font": "24px 'Helvetica Neue', Helvetica, Arial, sans-serif",
+                "font-weight": "bold",
+                "fill": "black",
+              })
+        .text(function() {
+            return "Grocery PP: $" + stData.filter(function(e) { 
+            return e.id === d.id 
+          })[0].Grocery.toFixed(2)
+        });
+     textBox.append("text")
+        .attr("class", "box")
+        .attr("x", width/2 + margin['left']/2 + margin['left'])
+        .attr("y", margin['top']*17)
+        .attr("width", width/2 - margin['left']/2 + margin['left']*2)
+        .style({"font": "24px 'Helvetica Neue', Helvetica, Arial, sans-serif",
+                "font-weight": "bold",
+                "fill": "black",
+              })
+        .text(function() {
+            return "Housing PP: $" + stData.filter(function(e) { 
+            return e.id === d.id 
+          })[0].Housing.toFixed(2)
+        });
+     textBox.append("text")
+        .attr("class", "box")
+        .attr("x", width/2 + margin['left']/2 + margin['left'])
+        .attr("y", margin['top']*21)
+        .attr("width", width/2 - margin['left']/2 + margin['left']*2)
+        .style({"font": "24px 'Helvetica Neue', Helvetica, Arial, sans-serif",
+                "font-weight": "bold",
+                "fill": "black",
+              })
+        .text(function() {
+            return "Utilities PP: $" + stData.filter(function(e) { 
+            return e.id === d.id 
+          })[0].Utilities.toFixed(2)
+        });
+     textBox.append("text")
+        .attr("class", "box")
+        .attr("x", width/2 + margin['left']/2 + margin['left'])
+        .attr("y", margin['top']*25)
+        .attr("width", width/2 - margin['left']/2 + margin['left']*2)
+        .style({"font": "24px 'Helvetica Neue', Helvetica, Arial, sans-serif",
+                "font-weight": "bold",
+                "fill": "black",
+              })
+        .text(function() { 
+            return "Transportation PP: $" + stData.filter(function(e) { 
+            return e.id === d.id 
+          })[0].Trans.toFixed(2)
+        })
+        .attr("fill", function(d) { (val == "Trans") ? "red" : "black" });
+     textBox.append("text")
+        .attr("class", "box")
+        .attr("x", width/2 + margin['left']/2 + margin['left'])
+        .attr("y", margin['top']*29)
+        .attr("width", width/2 - margin['left']/2 + margin['left']*2)
+        .style({"font": "24px 'Helvetica Neue', Helvetica, Arial, sans-serif",
+                "font-weight": "bold",
+                "fill": "black",
+              })
+        .text(function() {
+            return "Health PP: $" + stData.filter(function(e) { 
+            return e.id === d.id 
+          })[0].Health.toFixed(2)
+        });
+     textBox.append("text")
+        .attr("class", "box")
+        .attr("x", width/2 + margin['left']/2 + margin['left'])
+        .attr("y", margin['top']*33)
+        .attr("width", width/2 - margin['left']/2 + margin['left']*2)
+        .style({"font": "24px 'Helvetica Neue', Helvetica, Arial, sans-serif",
+                "font-weight": "bold",
+                "fill": "black",
+              })
+        .text(function() {
+            return "Misc PP: $" + stData.filter(function(e) { 
+            return e.id === d.id 
+          })[0].Misc.toFixed(2)
+        });
+     textBox.append("text")
+        .attr("class", "box")
+        .attr("x", width/2 + margin['left']/2 + margin['left'])
+        .attr("y", margin['top']*37)
+        .attr("width", width/2 - margin['left']/2 + margin['left']*2)
+        .style({"font": "24px 'Helvetica Neue', Helvetica, Arial, sans-serif",
+                "font-weight": "bold",
+                "fill": "black",
+              })
+        .text(function() {
+            return "Unadjusted PP: $" + stData.filter(function(e) { 
+            return e.id === d.id 
+          })[0].Rate.toFixed(2)
+        });
+     textBox.append("text")
+        .attr("class", "box")
+        .attr("x", width/2 + margin['left']/2 + margin['left'])
+        .attr("y", margin['top']*40)
+        .attr("width", width/2 - margin['left']/2 + margin['left']*2)
+        .style({"font": "14px 'Helvetica Neue', Helvetica, Arial, sans-serif",
+                "fill": "white"})
+        .text("PP = Purchasing Power");
+      // end ugliness
+
   } else {
+    // zoom out
     x = width / 2;
     y = height / 2;
     k = 1;
     centered = null
-    o = 100;
+    o = 1
+    oDelay = 500;
+
   }
 
-  st.selectAll("path")
-      .classed("active", centered && function(d) { return d === centered; });
+  map.selectAll("#tooltip").transition()
+     .delay(oDelay)
+     .attr('opacity', o);
+
+  map.selectAll(".bar").transition()
+     .delay(oDelay)
+     .attr('opacity', o);
+
+  title.transition()
+     .attr('opacity', o)
+     .duration(600);
 
   st.transition()
       .duration(500)
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
       .style("stroke-width", 1.5 / k + "px");
 
-  labels.classed("active", centered && function(d) { return d === centered; });
+  map.selectAll('.legend')
+      .transition()
+      .attr('opacity', o)
+      .duration(600);
+}
 
-  labels.transition()
-     .duration(500)
-     .attr('opacity', o)
+function change() {
+  d3.transition()
+      .duration(750)
+      .each(redraw);
 }
 
 </script>
+<!-- If you want direct links, repeat this
+<a href="javascript:javascript:menu.property('value', 'Rate'),change()">Rate</a> |
+<a href="javascript:javascript:menu.property('value', 'Index'),change()">Standard of Living</a> | 
+<a href="javascript:menu.property('value', 'Grocery'),change()">Grocery</a> 
+-->
