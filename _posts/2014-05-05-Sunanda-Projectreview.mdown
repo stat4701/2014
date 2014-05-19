@@ -1,0 +1,93 @@
+---
+layout: post
+title: Project review presentation -Sunanda
+description: My project review presentation
+tags: project
+---
+## Re-evaluated Goal (Not necessarily in sequential order):
+
+* For a given zipcode visualize the most frequently used restaurant review services 
+* Build a visualization to predict the business rating for a given user and business.
+* Visualize the 'trends' in local businesses around Columbia University using the Yelp academic dataset 
+
+
+##Ended up with##
+
+* Point 3 : Analysis of businesses around 30 universities
+
+## About the dataset ##
+
+### A 346 MB json file. Contains: ###
+
+* Data and reviews about businesses near 30 schools
+* Three different types of json objects : User ,Review, Business
+* 330 071 reviews
+* 130 873 users
+* 13 490  businesses
+
+
+
+##Data Munging##
+
+I decided to do all the work in python for the project. There were many questions to be asked about the dataset and one of the toughest parts was to ask the most interesting ones and do as true an analysis as possible.
+
+* Conversion of JSON to pandas dataframe was relatively straightforward. The JSON was not a 'clean' one, there were missing braces here and there and other such errors. So did a brute force loading of each json line.
+
+###New stuff I learnt###
+
+* workspace storage / persistence : As discussed in piazza
+* dicts and defaultdict
+* messing around with dicts of lists/dataframes and lists of dicts and all other various combinations
+
+##Questions##
+
+* Party schools vs Caffeine addicts
+* Stars distributions by school (which schools are more critical)
+* Are critical reviewers perceived to be more 'useful' (Measuring criticality by the average star rating that the reviewer gives)
+* Cuisine diversity by school
+
+###More Questions - I won't get to by this project deadline###
+
+* Increasing the variance of the ave. business rating by correcting for reviewer bias
+* Around which area can you get your money's worth?
+*
+
+
+
+## Exploratory Graphs ##
+
+* A combination of R and python : 
+
+Many variations of graphs like :
+
+Ave rating of 'Food' businesses by school 
+<img src = "https://raw.githubusercontent.com/sunandakp/edav/gh-pages/assets/Sunanda_assets/Figure_Ratingdist.png" width = "100%">
+
+Cafes vs Bars by Region:
+
+<img src = "https://raw.githubusercontent.com/sunandakp/edav/gh-pages/assets/Sunanda_assets/South-midwest.png" width = "100%">
+<img src = "https://raw.githubusercontent.com/sunandakp/edav/gh-pages/assets/Sunanda_assets/EastCoast.png" width = "100%">
+<img src = "https://raw.githubusercontent.com/sunandakp/edav/gh-pages/assets/Sunanda_assets/WestCoast.png" width = "100%">
+
+
+
+## Improvement in Visualizations to come ##
+
+* Convert all exploratory graphs into an interactive d3 that will let me choose betwee the kind of parameters I want to compare. The braod categories include : Food related businesses vs All businesses, Various kind of rating distributions, Diversity - in businesses and within categories of businesses. They will be mainly bar charts, line charts and scatter plots but more interactive that the screen shots shown today.
+
+* I have been trying to come up with a one piece visualization that summarizes the salient features of the data given. Things I have roughly sketched:
+
+** A graph with nodes as the different json objects and edges that show how the data is linked. 
+** A treemap to summarize all the review data. But, I don't like treemaps very much. Any suggestions on how else I can visualize this data(has some hierarchy: total review count -> by major business type -> by subcategories etc.)
+
+## Visualization I had originally envisioned ##
+
+* A more intuitive map that maps the businesses by user's interest : By categories, by review ratings(the corrected ones), by distance etc. 
+
+## Self- Review ##
+
+* Got a true sense of what exploratory data analysis is about. Coming from a background where we measure the data with a specific question in mind, it was interesting to come up with questions given a dataset. 
+* Exploratory data analysis works both ways: Finding data for a question you have (Data is ugly and not always free), asking the right questions of the dataset that's available. 
+* Very easy to get inaccurate answers, thereby misleading others. 
+* Appreciation for tweaking out every last ounce of information a dataset can give you.
+

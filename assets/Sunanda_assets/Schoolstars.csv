@@ -1,0 +1,30 @@
+SchoolName,Region,1star,2star,3star,4star,5star,sRCount,aveBRCount,aveBStars
+Brown University,East,801,1115,1831,3651,2934,11086.0,22.172,3.641
+California Institute of Technology,West,1545,1426,2791,6279,5838,19402.0,38.804,3.678
+California Polytechnic State University,West,770,844,1505,3349,3950,11260.0,22.52,3.794
+Carnegie Mellon University,East,479,773,1458,2547,1951,7583.0,15.166,3.626
+Columbia University,East,1295,1711,3225,5183,3046,15487.0,30.974,3.37
+Cornell University,East,341,460,752,1405,1416,4659.0,10.784722222222221,3.5891203703703702
+Georgia Institute of Technology,South,1006,1491,2737,5295,3967,15455.0,30.91,3.575
+Harvard University,East,3709,5326,9729,16865,12733,51298.0,51.298,3.5835
+Harvey Mudd College,West,841,903,1525,3234,3827,11138.0,22.276,3.887
+Massachusetts Institute of Technology,East,3709,5326,9729,16865,12733,51298.0,51.298,3.5835
+Princeton University,East,725,875,1419,2334,1984,7904.0,15.808,3.367
+Purdue University,MidWest,211,247,450,1001,920,3041.0,7.737913486005089,3.713740458015267
+Rensselaer Polytechnic Institute,East,269,367,576,1153,988,3529.0,7.842222222222222,3.542222222222222
+Rice University,South,581,784,1524,3222,2693,9401.0,18.802,3.704
+Stanford University,West,1452,1813,2922,5037,4766,17536.0,35.072,3.764
+University of California - Los Angeles,West,1727,2253,4327,7011,6038,23097.0,46.194,3.587
+University of California - San Diego,West,1438,1451,2507,3940,3580,14118.0,28.236,3.644
+University of California at Berkeley,West,2074,3178,6135,10564,9028,33348.0,66.696,3.629
+University of Illinois - Urbana-Champaign,MidWest,552,704,1105,2165,2237,7188.0,14.376,3.509
+University of Maryland - College Park,East,595,615,1025,1869,1348,5813.0,11.626,3.361
+University of Massachusetts - Amherst,East,234,309,445,963,1067,3179.0,10.667785234899329,3.662751677852349
+University of Michigan - Ann Arbor,MidWest,758,1128,2117,3787,3123,11634.0,23.268,3.656
+University of North Carolina - Chapel Hill,South,359,644,1322,2935,2363,8147.0,16.294,3.842
+University of Pennsylvania,East,1019,1389,2510,3988,2773,12495.0,24.99,3.469
+University of Southern California,West,1044,990,1885,3199,3196,11220.0,22.44,3.555
+University of Texas - Austin,South,1028,1253,2275,4589,4533,14534.0,29.068,3.731
+University of Washington,West,1337,1792,3016,5759,4912,17998.0,35.996,3.642
+University of Waterloo,East,64,91,205,335,261,1014.0,4.447368421052632,3.692982456140351
+Virginia Tech,South,129,169,259,544,335,1503.0,7.9523809523809526,3.5555555555555554

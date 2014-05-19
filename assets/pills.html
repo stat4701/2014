@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<title>Pills</title>
+<style>
+
+#chart{
+  margin-left: -40px;
+  height: 400px;
+}
+
+text {
+  font: 10px sans-serif;
+}
+
+.label {
+  fill: #777;
+}
+
+.year.label{
+  font: 500 196px "Helvetica Neue";
+  fill: #ddd;
+}
+
+.year.label.active{
+  fill: #aaa;
+}
+
+.div{
+  width: 1000;
+  height: 50;
+  overflow-x: scroll;
+}
+
+.overlay{
+  fill:none;
+  pointer-events:all;
+  cursor: ew-resize;
+}
+</style>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<body>
+  <div id="viz"></div>
+<script>
+
+var margin = {top: 19.5, right: 19.5, bottom: 19.5, left: 39.5},
+    width = 960- margin.right,
+    height = 200 - margin.top - margin.bottom;
+
+var svg = d3.select("body").append("svg")
+  .attr("width", width + margin.left + margin.right )
+  .attr("height", height + margin.top + margin.bottom)
+
+var label = svg.append("text")
+    .attr("class", "year label")
+    .attr("text-anchor", "end")
+    .attr("y", height )
+    .attr("x", width)
+    .text(0);
+
+    var dataset = [],
+    i = 0;
+
+    for(i=0; i<14600; i++){
+        dataset.push(Math.round(Math.random()));
+    }        
+
+    var sampleSVG = d3.select("#viz")
+      .append("svg")
+      .attr("height", 200);
+
+    sampleSVG.selectAll("circle")
+        .data(dataset)
+        .enter().append("circle")
+        .style("fill", "black")
+        .attr("r", 2)
+        .attr("cx", function(d,i){return 5 + (i*10)})
+        .attr("cy", 20);
+
+var box = label.node().getBBox();
+
+
+var overlay = svg.append("rect")
+    .attr("class", "overlay")
+    .attr("x", 200)
+    .attr("y", 200)
+    .attr("width", 500)
+    .attr("height", 200)
+    .on("mouseover", enableInteraction);
+
+
+svg.transition()
+    .duration(6000)
+    .ease("linear")
+    .tween("year", tweenYear)
+    .each("end", enableInteraction);
+
+function enableInteraction() {
+  var yearScale = d3.scale.linear()
+  .domain([0, 14600])
+  .range([box.x + 10, box.x + box.width -10])
+  .clamp(true);
+
+
+  svg.transition().duration(0);
+
+  overlay
+    .on("mouseover", mouseover)
+    .on("mouseout", mouseout)
+    .on("mousemove", mousemove)
+    .on("touchmove", mousemove);
+
+function mouseover() {
+  label.classed("active", true);
+}
+
+function mouseout(){
+  label.classed("active", false);
+}
+
+function mousemove(){
+  displayYear(yearScale.invert(d3.mouse(this)[0]));
+}
+
+}
+
+function tweenYear(){
+  var year = d3.interpolateNumber(0,14600);
+  return function(t) { displayYear(year(t)); };
+}
+
+function displayYear(year){
+  label.text(Math.round(year));
+}
+
+
+
+</script> 
+</body>
