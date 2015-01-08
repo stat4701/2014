@@ -66,15 +66,40 @@ None of the following are going to happen here:
 
 # Requirements
 
-### Three ‘blog post’ entries (20% each = 60%)
-  Submitted as pull requests of markdown on github, examining published graphs and improving them. Entries should include:
+### In-class Topic Presentations (30%)
+
+Each class period two or three people will ‘own’ a portion of the assigned external resources (readings, libraries, tutorials). Ownership means you will be the class's expert on the thing you own and present. Non-owners (the rest of the class) are expected to familiarize themselves enough to follow the presentation and engage with questions and suggestions, but not necessarily to have worked examples (though it is encouraged).
+
+Some earlier topics involve ramping up with some basic tools: python, R, git, github, html, javascript, etc. Later topics involve specific libraries and techniques. Because the class is large, we must decide whether topic presentations will be joint or individual -- do you want to present twice with a partner, or once on your own?
+
+You can use whatever tool you want for your presentation, but you will be responsible for providing notes either on the class wiki or as a section to the class page on gh-pages or both. (In other words, no one is going to look at your powerpoint. If you do it right, your blogpost will spread through twitter as a resource for data scientists everywhere.)
+
+### Bad Graph Critique and Improvement blog post
+
+
+  This is an individual effort styled after Kaiser Fung’s [Junk Charts](http://junkcharts.com), with a heavy, tedious technical component.
+
+  1. Think about the graph(s) and write about it critically using the theoretical framework underpinning data visualization (marks, scales, transformations, statistics, etc; the Grammar of Graphics; visual semantics). This part doesn’t involve any code.
+  1. In light of your own criticism, design an improvement. You might want to sketch on paper, a napkin, or a board, and include a picture.
+  1. Attempt to implement your improvement.
+  1. Document your implementation.
+  1. Make your discussion, design, implementation, and documentation publicly available on your fork of the repository. This involves fighting with github, Jekyll, and gh-pages.
+  1. Prepare and submit your blog post from your fork as a pull request to the class repository. This means that it merges cleanly, includes only the files it should, and is rebased onto `upstream/gh-pages`.
+
+  Submitted as pull requests of markdown or html on github, examining published graphs and improving them. Entries should include:
      - source of original with link
      - discussion of what was wrong with the graph in the first place
      - theoretical improvements — if the problem is a color scale, what are you replacing a rainbow with?
+
+  Either in your post or in a link (such as to Plunker or a Gist / bl.ocks rendering): 
      - methods (preferably code; inline, included, or linked to a branch on your fork of the repo) for retrieving and extracting the data used.
      - if the data in ‘raw’ form was not suitable for plotting, code to reshape / ‘clean’ the data
      - if applicable, a link to the clean data file you used
      - code (inline, markdown) to create your replacement graphic(s)
+
+
+
+
 ### A project in your area of specialization using statistical graphics (30%)
    - Iteration/sprint plans, progress assessments (10%)
    - The actual project including a presentation (similar in form to another blog post), explaining code / tools / libraries you learned doing the project (20%)
