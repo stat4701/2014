@@ -72,12 +72,14 @@ Each class period two or three people will ‘own’ a portion of the assigned e
 
 Some earlier topics involve ramping up with some basic tools: python, R, git, github, html, javascript, etc. Later topics involve specific libraries and techniques. Because the class is large, we must decide whether topic presentations will be joint or individual -- do you want to present twice with a partner, or once on your own?
 
-You can use whatever tool you want for your presentation, but you will be responsible for providing notes either on the class wiki or as a section to the class page on gh-pages or both. (In other words, no one is going to look at your powerpoint. If you do it right, your blogpost will spread through twitter as a resource for data scientists everywhere.)
+You can use whatever tool you want for your presentation, but you will be responsible for providing notes either on the class wiki or as a section to the class page on gh-pages or both. (In other words, no one is going to look at your powerpoint. If you do it right, your blogpost will spread via twitter as a resource for data scientists everywhere.)
+
+Time estimate: first reading: 2 hours; deep reading, following links, etc: 2–6 hours; preparing presentation: 1–2 hours; preparing blogpost/wiki notes for the class: 3 hours; editing notes after you present: 2 hours. (Total: 15 hours)
 
 ### Bad Graph Critique and Improvement blog post
 
 
-  This is an individual effort styled after Kaiser Fung’s [Junk Charts](http://junkcharts.com), with a heavy, tedious technical component.
+  This is an individual effort styled after Kaiser Fung’s [Junk Charts](http://junkcharts.com), with a heavy, tedious technical component. Time estimate: Search, acquisition, and critique, 2–4 hours; design: 1–2 hours; implementation: 4–8 hours; your own gh-pages: 2–4 hours; clean pull request: 1–2 hours. (Total: 20 hours)
 
   1. Think about the graph(s) and write about it critically using the theoretical framework underpinning data visualization (marks, scales, transformations, statistics, etc; the Grammar of Graphics; visual semantics). This part doesn’t involve any code.
   1. In light of your own criticism, design an improvement. You might want to sketch on paper, a napkin, or a board, and include a picture.
@@ -98,7 +100,7 @@ You can use whatever tool you want for your presentation, but you will be respon
      - code (inline, markdown) to create your replacement graphic(s)
 
 
-
+### Weekly homework attempts
 
 ### A project in your area of specialization using statistical graphics (30%)
    - Iteration/sprint plans, progress assessments (10%)
